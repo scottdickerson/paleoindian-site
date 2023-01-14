@@ -1,0 +1,33 @@
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .navitem {
+  background-color: gray;
+  text-transform: uppercase;
+  font-size: 1rem;
+
+  flex-grow: 1;
+  flex-basis: 10%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar .navitem a {
+  padding: 2rem;
+  display: block;
+}
+
+.navitem.selected {
+  flex-basis: 100%;
+  font-size: 2rem;
+  cursor: not-allowed;
+  pointer-events: none;
+}
