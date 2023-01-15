@@ -1,0 +1,59 @@
+.main h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+}
+
+.videoSection {
+  display: flex;
+  gap: 1rem;
+  padding: 0rem 2rem;
+
+  video {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.videoSection {
+  flex-wrap: wrap;
+}
+.videoWrapper {
+  flex-basis: 100%;
+}
+.storyNavigation {
+  flex-basis: 100%;
+  max-width: unset;
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  //   .videoSection {
+  //     flex-direction: column;
+  //   }
+  //   .videoWrapper {
+  //     flex-basis: 100%;
+  //   }
+  //   .storyNavigation {
+  //     flex-basis: 100%;
+  //     max-width: unset;
+  //   }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .videoSection {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .videoWrapper {
+    flex-basis: 80%;
+  }
+
+  .storyNavigation {
+    max-width: 300px;
+    flex-basis: 20%;
+  }
+}

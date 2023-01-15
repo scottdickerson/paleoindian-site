@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.scss";
-
-const inter = Inter({ subsets: ["latin"] });
+import { StoryNavigation } from "@/components/story-navigation";
 
 export default function Home() {
   return (
@@ -18,17 +16,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>Texas Paleoindian</h1>
+        <h1 className={styles.title}>Time Before Texas</h1>
+        <div className={styles.videoSection}>
+          <div className={styles.videoWrapper}>
+            <video controls src="videos/austin-tx.mp4"></video>
+          </div>
+          <StoryNavigation isOnHomePage className={styles.storyNavigation} />
+        </div>
         <ul>
-          <li>
-            <Link href="/origin-stories">Origin Stories</Link>
-          </li>
-          <li>
-            <Link href="/daily-life">Daily Life</Link>
-          </li>
-          <li>
-            <Link href="/ice-age-texas">Ice Age Texas</Link>
-          </li>
           <li>
             <Link href="/txdot-and-tribes">TxDOT and the Tribes</Link>
           </li>

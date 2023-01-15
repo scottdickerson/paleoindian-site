@@ -1,33 +1,140 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .navbar ul {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .navbar .navitem {
-  background-color: gray;
   text-transform: uppercase;
   font-size: 1rem;
 
   flex-grow: 1;
-  flex-basis: 10%;
+  flex-basis: 15%;
   height: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  transition: all ease-in-out 0.5s;
 }
 
 .navbar .navitem a {
-  padding: 2rem;
   display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
 }
 
 .navitem.selected {
-  flex-basis: 100%;
+  flex-basis: 55%;
   font-size: 2rem;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.home {
+  background-color: #1a0e0e;
+  color: gray;
+  max-width: 100px;
+}
+
+.originstories {
+  background-color: lightgray;
+  color: black;
+}
+
+.iceagetexas {
+  background-color: darkslategray;
+  color: black;
+}
+
+.dailylife {
+  background-color: black;
+  color: gray;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar .navitem {
+    height: 50px;
+    font-size: 0.5rem;
+  }
+  .navbar .navitem a {
+    padding: 1rem;
+  }
+  .navbar .navitem.selected {
+    font-size: 1rem;
+  }
+  .navbar .home {
+    flex-basis: 100%;
+    max-width: unset;
+  }
+  .navbar .ul {
+    flex-basis: 100%;
+  }
+}
+
+// @media screen and (min-width: $desktop-breakpoint) {
+//   .navbar .navitem {
+//     font-size: 0.5rem;
+//   }
+//   .navbar .navitem a {
+//     padding: 1rem;
+//   }
+//   .navbar .navitem.selected {
+//     font-size: 1rem;
+//   }
+
+// }
+
+// Version that will show on the Home Page
+
+.isOnHomePage {
+  ul {
+    gap: 1rem;
+  }
+  align-items: stretch;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    ul {
+      flex-wrap: wrap;
+      .navitem {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    ul {
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .navitem a {
+      white-space: wrap;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    ul {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .navitem a {
+      white-space: nowrap;
+      font-size: 1.5rem;
+    }
+  }
 }
