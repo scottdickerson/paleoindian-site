@@ -15,15 +15,16 @@
 .navbar .navitem {
   text-transform: uppercase;
   font-size: 1rem;
+  padding: 1rem;
 
   flex-grow: 1;
   flex-basis: 15%;
-  height: 100px;
+  height: 60px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  transition: all ease-in-out 0.5s;
+  transition: flex-basis ease-in-out 0.5s, font-size ease-in-out 0.5s;
 }
 
 .navbar .navitem a {
@@ -63,51 +64,32 @@
   color: gray;
 }
 
-@media screen and (max-width: $mobile-breakpoint) {
+@media screen and (max-width: $tablet-breakpoint) {
   .navbar {
     flex-wrap: wrap;
-  }
-  .navbar .navitem {
-    height: 50px;
-    font-size: 0.5rem;
-  }
-  .navbar .navitem a {
-    padding: 1rem;
-  }
-  .navbar .navitem.selected {
-    font-size: 1rem;
   }
   .navbar .home {
     flex-basis: 100%;
     max-width: unset;
+    height: 40px;
   }
   .navbar .ul {
     flex-basis: 100%;
   }
 }
 
-// @media screen and (min-width: $desktop-breakpoint) {
-//   .navbar .navitem {
-//     font-size: 0.5rem;
-//   }
-//   .navbar .navitem a {
-//     padding: 1rem;
-//   }
-//   .navbar .navitem.selected {
-//     font-size: 1rem;
-//   }
-
-// }
-
 // Version that will show on the Home Page
 
 .isOnHomePage {
   ul {
     gap: 1rem;
+    .navitem a {
+      font-size: 1.5rem;
+    }
   }
   align-items: stretch;
 
-  @media screen and (max-width: $mobile-breakpoint) {
+  @media screen and (max-width: $tablet-breakpoint) {
     ul {
       flex-wrap: wrap;
       .navitem {
@@ -121,9 +103,17 @@
       flex-direction: row;
       align-items: stretch;
     }
-    .navitem a {
-      white-space: wrap;
-      font-size: 1.5rem;
+    .navitem {
+      height: 100px;
+      a {
+        white-space: wrap;
+      }
+    }
+  }
+
+  @media screen and (max-width: $desktop-breakpoint) {
+    ul .navitem {
+      height: 150px;
     }
   }
 
@@ -134,7 +124,6 @@
     }
     .navitem a {
       white-space: nowrap;
-      font-size: 1.5rem;
     }
   }
 }

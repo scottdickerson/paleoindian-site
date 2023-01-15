@@ -1,8 +1,9 @@
 .main h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   padding: 1rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .videoSection {
@@ -25,22 +26,6 @@
 .storyNavigation {
   flex-basis: 100%;
   max-width: unset;
-}
-
-@media screen and (min-width: $mobile-breakpoint) {
-}
-
-@media screen and (min-width: $tablet-breakpoint) {
-  //   .videoSection {
-  //     flex-direction: column;
-  //   }
-  //   .videoWrapper {
-  //     flex-basis: 100%;
-  //   }
-  //   .storyNavigation {
-  //     flex-basis: 100%;
-  //     max-width: unset;
-  //   }
 }
 
 @media screen and (min-width: $desktop-breakpoint) {
