@@ -41,7 +41,7 @@ export const StorySection = ({
       });
       observer.observe(sectionRef.current);
     }
-  }, [id]);
+  }, [id, setHighlightedSection]);
 
   return (
     <section className={styles.section} id={id} ref={sectionRef}>

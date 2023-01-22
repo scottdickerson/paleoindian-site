@@ -29,7 +29,7 @@ const OriginStories = () => {
   return (
     <StoryPage>
       {ORIGIN_STORY_SECTIONS.map((section) => (
-        <StorySection {...section}></StorySection>
+        <StorySection key={section.id} {...section}></StorySection>
       ))}
       <TocScrollable storySections={ORIGIN_STORY_SECTIONS}></TocScrollable>
     </StoryPage>

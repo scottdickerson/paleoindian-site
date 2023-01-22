@@ -10,7 +10,8 @@
   justify-content: center;
   z-index: 2;
 
-  @media screen and (min-width: $tablet-breakpoint) {
+  @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+    // TODO: extract this to it's own variable
     display: flex;
   }
 }
