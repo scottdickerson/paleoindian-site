@@ -1,0 +1,40 @@
+.toccontainer {
+  position: fixed;
+  top: 200px;
+  right: 1rem;
+  bottom: 200px;
+  width: $toc_width;
+  display: none; // by default hide the TOC
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  @media screen and (min-width: $tablet-breakpoint) {
+    display: flex;
+  }
+}
+
+.toc {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.toc .tocitem {
+  padding: 1rem;
+  background-color: gray;
+  color: black;
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+
+  &.highlighted {
+    background-color: darkslategray;
+    color: white;
+  }
+}

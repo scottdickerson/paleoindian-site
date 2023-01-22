@@ -1,0 +1,5 @@
+.storyPage {
+  @media screen and (min-width: $tablet-breakpoint) {
+    margin-right: $toc_width; // only save space if the toc is visible
+  }
+}
