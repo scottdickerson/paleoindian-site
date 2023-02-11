@@ -1,12 +1,6 @@
-import {
-  PropsWithChildren,
-  ReactNode,
-  useContext,
-  useEffect,
-  useRef,
-} from "react";
+import { PropsWithChildren, useContext, useEffect, useRef } from "react";
 import styles from "../styles/StorySection.module.scss";
-import * as DOMPurify from "dompurify";
+// import * as DOMPurify from "dompurify";
 import { StoryPageContext } from "./story-page";
 import { useInView } from "framer-motion";
 
