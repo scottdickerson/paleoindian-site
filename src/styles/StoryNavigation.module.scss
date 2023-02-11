@@ -10,11 +10,16 @@
   justify-content: stretch;
   align-items: center;
   flex-grow: 1;
+  width: 100vw;
+  overflow-x: auto;
 }
 
 .navbar .navitem {
   text-transform: uppercase;
   font-size: 1rem;
+  @media screen and (max-width: $tablet-breakpoint) {
+    font-size: 0.9375rem;
+  }
   padding: 1rem;
 
   flex-grow: 1;
@@ -24,7 +29,18 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  transition: flex-basis ease-in-out 0.5s, font-size ease-in-out 0.5s;
+  //transition: flex-basis ease-in-out 0.2s, font-size ease-in-out 0.2s;
+
+  &.selected {
+    flex-basis: 55%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    @media screen and (max-width: $tablet-breakpoint) {
+      font-size: 1rem;
+    }
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
 
 .navbar .navitem a {
@@ -34,13 +50,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
-}
-
-.navitem.selected {
-  flex-basis: 55%;
-  font-size: 2rem;
-  cursor: not-allowed;
-  pointer-events: none;
+  white-space: nowrap;
 }
 
 .home {
@@ -73,8 +83,11 @@
     max-width: unset;
     height: 40px;
   }
-  .navbar .ul {
+  .navbar ul {
     flex-basis: 100%;
+    .navitem {
+      height: 40px;
+    }
   }
 }
 
@@ -85,6 +98,7 @@
     gap: 1rem;
     .navitem a {
       font-size: 1.5rem;
+      white-space: normal;
     }
   }
   align-items: stretch;
@@ -105,9 +119,6 @@
     }
     .navitem {
       height: 100px;
-      a {
-        white-space: wrap;
-      }
     }
   }
 

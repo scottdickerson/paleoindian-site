@@ -2,6 +2,7 @@ import { StoryPage } from "@/components/story-page";
 import { StorySection } from "@/components/story-section";
 import { TocScrollable } from "@/components/toc-scrollable";
 import { faker } from "@faker-js/faker";
+import Head from "next/head";
 
 const multiParagraph = new Array(10)
   .fill(`<p>${faker.lorem.paragraphs(3)}<p/>`)
@@ -27,12 +28,19 @@ const ORIGIN_STORY_SECTIONS = [
 
 const OriginStories = () => {
   return (
-    <StoryPage>
-      {ORIGIN_STORY_SECTIONS.map((section) => (
-        <StorySection key={section.id} {...section}></StorySection>
-      ))}
-      <TocScrollable storySections={ORIGIN_STORY_SECTIONS}></TocScrollable>
-    </StoryPage>
+    // nextjs title section
+    <>
+      <Head>
+        <title>Texas Paleoindian - Origin Stories</title>
+      </Head>
+
+      <StoryPage>
+        {ORIGIN_STORY_SECTIONS.map((section) => (
+          <StorySection key={section.id} {...section}></StorySection>
+        ))}
+        <TocScrollable storySections={ORIGIN_STORY_SECTIONS}></TocScrollable>
+      </StoryPage>
+    </>
   );
 };
 

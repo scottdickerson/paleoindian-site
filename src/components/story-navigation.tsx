@@ -54,7 +54,12 @@ export const StoryNavigation = ({
                 [styles.selected]: isSelected,
               })}
             >
-              <Link href={`${key}`}>{value.title}</Link>
+              <Link
+                href={`${key}`}
+                onClick={(event) => event.currentTarget.scrollIntoView()}
+              >
+                {value.title}
+              </Link>
             </li>
           );
         })}

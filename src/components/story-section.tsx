@@ -8,6 +8,7 @@ import {
 import styles from "../styles/StorySection.module.scss";
 import * as DOMPurify from "dompurify";
 import { StoryPageContext } from "./story-page";
+import { useInView } from "framer-motion";
 
 // nextjs section html component
 export interface StorySectionProps {
@@ -29,25 +30,26 @@ export const StorySection = ({
   details,
 }: PropsWithChildren<StorySectionProps>) => {
   const { setHighlightedSection } = useContext(StoryPageContext) || {};
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLHeadingElement>(null);
+
+  const isInView = useInView(sectionRef, {
+    amount: "all",
+    margin: "0px 0px -500px 0px",
+  });
 
   useEffect(() => {
-    if (sectionRef?.current) {
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && setHighlightedSection) {
-          console.log("section intersecting", id, entry);
-          setHighlightedSection(id);
-        }
-      });
-      observer.observe(sectionRef.current);
+    console.log("section intersecting", id, isInView);
+    if (isInView && setHighlightedSection) {
+      setHighlightedSection(id);
     }
-  }, [id, setHighlightedSection]);
+  }, [id, isInView, setHighlightedSection]);
 
   return (
-    <section className={styles.section} id={id} ref={sectionRef}>
+    <section className={styles.section} id={id}>
       <h2
         className={styles.title}
         dangerouslySetInnerHTML={{ __html: title }}
+        ref={sectionRef}
       />
       <h3
         className={styles.summary}

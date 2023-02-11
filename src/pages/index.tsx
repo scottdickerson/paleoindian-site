@@ -8,12 +8,6 @@ export default function Home() {
     <>
       <Head>
         <title>Texas Paleoindian</title>
-        <meta
-          name="description"
-          content="Describes what life was like for the first people to call Texas home."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Time Before Texas</h1>
