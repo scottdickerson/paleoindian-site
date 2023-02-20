@@ -1,11 +1,15 @@
 // responsive video component with src prop
 import styles from "@/styles/Video.module.scss";
-import { useRef, useState } from "react";
+import { MouseEventHandler, useRef, useState } from "react";
 import Image from "next/image";
 
-const PlayButton = () => {
+const PlayButton = ({
+  onClick,
+}: {
+  onClick: MouseEventHandler<HTMLDivElement>;
+}) => {
   return (
-    <div className={styles.playButton}>
+    <div className={styles.playButton} onClick={onClick}>
       <Image src="../images/video/playButton.svg" alt="Play video" fill />
     </div>
   );
