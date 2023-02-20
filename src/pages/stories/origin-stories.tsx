@@ -5,6 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { Video } from "@/components/video";
 import style from "@/styles/OriginStories.module.scss";
+import { Slider } from "@/components/slider";
 
 const ORIGIN_STORY_SECTIONS = [
   {
@@ -14,9 +15,9 @@ const ORIGIN_STORY_SECTIONS = [
     description:
       "<p>Humans started out in Africa. About 70,000 years ago, groups of people began to slowly move around the planet, making incredible journeys into new lands.</p>",
     interactive: (
-      <div className={style.originStoriesImage1}>
+      <div className={style.sharedBeginningsImage}>
         <Image
-          src="/images/origin-stories/image1.svg"
+          src="/images/origin-stories/sharedBeginnings.svg"
           alt="Group of Paleoindians"
           fill
         />
@@ -42,7 +43,12 @@ const ORIGIN_STORY_SECTIONS = [
       "We&apos;re not 100% sure, but a lot longer ago than scientists once thought!",
     description:
       "<p>Archeologists have found many places with ancient campfires, tools, and evidence from people who lived about 13,000 years ago. They thought these were campsites of the first Americans. Then new discoveries of even older places challenged this idea.</p><p> Compare the maps below.</p> ",
-    interactive: <Video src="../videos/austin-tx.mp4" />,
+    interactive: (
+      <Slider
+        img1Src="../images/origin-stories/whenDidPeopleGetHereSlider2.svg"
+        img2Src="../images/origin-stories/whenDidPeopleGetHereSlider1.svg"
+      />
+    ),
     details: `<p>Archeologists try to answer questions by interpreting the evidence they find. Around 1940, archeologists found evidence that people who made distinctive Clovis tools, lived across America about 13,000 years ago. For the next 60 years, most scientists agreed with the interpretation that the people who used Clovis tools were the first people to live in the land that we think of as America.</p>
       <p>In more recent years, archeologists have found a handful of sites with new evidence of even earlier peoples. At first, not all scientists accepted these sites as proof. But, then archeologists in Texas found stone tools and other objects made by people who lived over 16,000 years ago. </p>
       <p>Now, most scientists agree that we just don&apos;t know for sure when people first arrived in the Americas. Learning more about this question is a job for future researchers &ndash; maybe even you!</p>`,
