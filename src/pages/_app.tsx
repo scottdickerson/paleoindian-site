@@ -6,6 +6,7 @@ import {
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
+import { encodeSansFont } from "@/fonts";
 
 const shouldShowHeader = (pathname: string) => {
   return pathname.includes(STORIES_PATH);
@@ -16,13 +17,15 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {shouldShowHeader(pathname) && (
-        <header>
+        <header className={encodeSansFont.className}>
           <StoryNavigation
             selectedPage={pathname as StoryNavigationProps["selectedPage"]}
           />
         </header>
       )}
-      <Component {...pageProps} />
+      <main className={encodeSansFont.className}>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }

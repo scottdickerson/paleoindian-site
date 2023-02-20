@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Texas Paleoindian</title>
       </Head>
-      <main className={styles.main}>
+      <section className={styles.main}>
         <h1 className={styles.title}>Time Before Texas</h1>
         <div className={styles.videoSection}>
           <div className={styles.videoWrapper}>
@@ -28,7 +28,7 @@ export default function Home() {
             <Link href="/about">About</Link>
           </li>
         </ul>
-      </main>
+      </section>
     </>
   );
 }

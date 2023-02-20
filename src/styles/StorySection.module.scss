@@ -1,23 +1,50 @@
 .section {
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   h2,
   h3,
   p {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
+}
+.section + .section {
+  padding-top: 2rem;
 }
 
 .title {
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: $font_black;
   text-transform: uppercase;
+  text-align: center;
+  display: inline-flex;
+  line-height: 43px;
+  padding: 0px 16px;
+  background-color: $section_title_background_color;
+  color: $section_title_color;
+  border-radius: 12px;
 }
 
 .summary {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  font-stretch: condensed;
+  font-weight: $font_condensed_black;
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: 26px;
+  line-height: 35px;
+  font-stretch: condensed;
+  font-weight: $font_semibold;
+}
+
+.interactive {
+  max-width: 800px;
+  height: 208px;
+  margin: auto;
+  position: relative;
+}
+
+.details {
+  font-size: 21px;
+  line-height: 31px;
 }

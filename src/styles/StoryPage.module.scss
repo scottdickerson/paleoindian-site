@@ -2,4 +2,6 @@
   @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
     margin-right: $toc_width; // only save space if the toc is visible
   }
+  overflow-x: hidden;
+  padding-top: 56px;
 }

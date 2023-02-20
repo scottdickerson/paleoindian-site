@@ -16,15 +16,14 @@
 
 .navbar .navitem {
   text-transform: uppercase;
-  font-size: 1rem;
-  @media screen and (max-width: $tablet-breakpoint) {
-    font-size: 0.9375rem;
-  }
-  padding: 1rem;
+  font-size: 20px;
+  // @media screen and (max-width: $tablet-breakpoint) {
+  //   font-size: 0.9375rem;
+  // }
 
   flex-grow: 1;
   flex-basis: 15%;
-  height: 60px;
+  line-height: 84px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -33,11 +32,11 @@
 
   &.selected {
     flex-basis: 55%;
-    font-size: 1.25rem;
-    font-weight: 700;
-    @media screen and (max-width: $tablet-breakpoint) {
-      font-size: 1rem;
-    }
+    font-size: 50px;
+    font-weight: $font_semibold;
+    // @media screen and (max-width: $tablet-breakpoint) {
+    //   font-size: 1rem;
+    // }
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -54,24 +53,24 @@
 }
 
 .home {
-  background-color: #1a0e0e;
-  color: gray;
+  background-color: #425d29;
+  color: #bfcb8d;
   max-width: 100px;
 }
 
 .originstories {
-  background-color: lightgray;
-  color: black;
+  background-color: #bdcd86;
+  color: #33541d;
 }
 
 .iceagetexas {
-  background-color: darkslategray;
-  color: black;
+  background-color: #8dd2ef;
+  color: #172b66;
 }
 
 .dailylife {
-  background-color: black;
-  color: gray;
+  background-color: #172b66;
+  color: #8dd2ef;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {

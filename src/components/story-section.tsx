@@ -3,6 +3,7 @@ import styles from "../styles/StorySection.module.scss";
 // import * as DOMPurify from "dompurify";
 import { StoryPageContext } from "./story-page";
 import { useInView } from "framer-motion";
+import classNames from "classnames";
 
 // nextjs section html component
 export interface StorySectionProps {
@@ -28,7 +29,7 @@ export const StorySection = ({
 
   const isInView = useInView(sectionRef, {
     amount: "all",
-    margin: "0px 0px -500px 0px",
+    margin: "0px 0px -300px 0px",
   });
 
   useEffect(() => {
@@ -46,14 +47,14 @@ export const StorySection = ({
         ref={sectionRef}
       />
       <h3
-        className={styles.summary}
+        className={classNames(styles.summary)}
         dangerouslySetInnerHTML={{ __html: summary }}
       />
       <div
         className={styles.description}
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      {children}
+      <div className={styles.interactive}>{children}</div>
       <div
         className={styles.details}
         dangerouslySetInnerHTML={{ __html: details }}

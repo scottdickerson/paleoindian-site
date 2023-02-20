@@ -41,7 +41,7 @@ export const TocScrollable = ({
                 )}
                 onClick={() => handleSectionClick(section.id)}
               >
-                {section.title}
+                <span>{section.title}</span>
               </a>
             </li>
           ))}

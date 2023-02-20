@@ -26,16 +26,20 @@
 
 .toc .tocitem {
   padding: 1rem;
-  background-color: gray;
-  color: black;
+  background-color: $section_title_background_color;
+  color: $section_title_color;
   display: block;
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
+  font-size: 15px;
+  font-weight: $font_black;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #fdf1d8;
 
   &.highlighted {
-    background-color: darkslategray;
-    color: white;
+    background-color: $section_title_background_color;
   }
 }

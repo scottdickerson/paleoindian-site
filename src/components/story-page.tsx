@@ -19,7 +19,7 @@ export const StoryPage = ({ children }: PropsWithChildren) => {
     <StoryPageContext.Provider
       value={{ highlightedSection, setHighlightedSection }}
     >
-      <main className={styles.storyPage}>{children}</main>;
+      <div className={styles.storyPage}>{children}</div>;
     </StoryPageContext.Provider>
   );
 };
