@@ -1,0 +1,25 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="115.999"
+        height="116.001"
+        viewBox="0 0 115.999 116.001"
+      >
+        <ellipse
+          id="Ellipse_1"
+          data-name="Ellipse 1"
+          cx="58"
+          cy="58"
+          rx="58"
+          ry="58"
+          fill="#fff"
+          opacity="0.631"
+        />
+        <path
+          id="Polygon_1"
+          data-name="Polygon 1"
+          d="M25.1,0,50.2,43.225H0Z"
+          transform="translate(87.892 32.954) rotate(90)"
+          fill="#fff"
+          opacity="0.631"
+        />
+      </svg>

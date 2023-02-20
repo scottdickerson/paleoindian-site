@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/StoryNavigation.module.scss";
 import classNames from "classnames";
+import { rubikDirtFont } from "@/fonts";
 
 export const STORIES_PATH = "/stories";
 
@@ -32,6 +33,7 @@ export const StoryNavigation = ({
   return (
     <nav
       className={classNames(
+        rubikDirtFont.className,
         styles.navbar,
         {
           [styles.isOnHomePage]: isOnHomePage,
