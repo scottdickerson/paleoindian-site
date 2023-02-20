@@ -26,9 +26,10 @@ export const Video = ({ src }: { src: string }) => {
 
   return (
     <>
-      {!isStarted && <PlayButton />}
+      {!isStarted && <PlayButton onClick={handleClick} />}
       <video
         src={src}
+        preload="metadata"
         className={styles.video}
         ref={videoRef}
         onClick={handleClick}
