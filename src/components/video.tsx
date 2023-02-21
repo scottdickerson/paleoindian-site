@@ -32,8 +32,7 @@ export const Video = ({ src }: { src: string }) => {
     <>
       {!isStarted && <PlayButton onClick={handleClick} />}
       <video
-        src={src}
-        preload="metadata"
+        src={`${src}#t=0.001`} // workaround for preview not working on iOS
         className={styles.video}
         ref={videoRef}
         onClick={handleClick}
