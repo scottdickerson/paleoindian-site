@@ -3,6 +3,7 @@ import { StorySectionProps } from "./story-section";
 import styles from "../styles/TocScrollable.module.scss";
 import { StoryPageContext } from "./story-page";
 import classNames from "classnames";
+import Image from "next/image";
 
 export const TocScrollable = ({
   storySections,
@@ -30,6 +31,7 @@ export const TocScrollable = ({
 
   return (
     <div className={styles.toccontainer}>
+      <Image src="/images/toc/tocBackground.svg" alt="" height={600} width={200}></Image>
       <nav>
         <ul className={styles.toc}>
           {storySections.map((section) => (
