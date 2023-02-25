@@ -31,8 +31,8 @@ export const TocScrollable = ({
 
   return (
     <div className={styles.toccontainer}>
-      <Image src="/images/toc/tocBackground.svg" alt="" height={600} width={200}></Image>
-      <nav>
+      <Image src="/images/toc/tocBackground.svg" alt="" fill className={styles.tocBackgroundImage}></Image>
+      <nav className={styles.tocwrapper}>
         <ul className={styles.toc}>
           {storySections.map((section) => (
             <li key={section.id}>
@@ -47,6 +47,7 @@ export const TocScrollable = ({
               </a>
             </li>
           ))}
+          <li className={styles.arrowToTop} ><a onClick={() => handleSectionClick(storySections[0].id)}><Image src="/images/toc/tocArrow.svg" height={48} width={48} alt="Back to top" /></a> </li>
         </ul>
       </nav>
     </div>
