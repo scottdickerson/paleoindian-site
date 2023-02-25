@@ -4,11 +4,11 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
-Add the Tooltip component over the text in details (probably takes a component instead of a string)
-Get the latest image of the slider
-Fix the bug where force reloading a page with a section title not visible doesn't select anything
-Can I use the NextJS Image tag for the Slider image instead of the standard img tag?
-Background page has gradient
+- Fix the bug where force reloading a page with a section title not visible doesn't select anything
+- Add the Tooltip component over the text in details (probably takes a component instead of a string)
+- Get the latest images of the slider, should they have text embedded in them?
+- Can I use the NextJS Image tag for the Slider image instead of the standard img tag?
+- Background gradient on page from Adobe XD looks wrong.
 
 
 ### Responsive image.

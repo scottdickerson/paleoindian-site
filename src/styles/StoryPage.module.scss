@@ -1,3 +1,9 @@
+.storyPageContainer {
+  @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+    background: linear-gradient(to right, rgba(245,233,209,.36) 75%, rgba(137,104,69,.44) 100%); // Add the gradient if the TOC is there. This doesn't look quite right compared to Adobe XD but is very close
+  }
+}
+
 .storyPage {
   @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
     margin-right: $toc_width; // only save space if the toc is visible
