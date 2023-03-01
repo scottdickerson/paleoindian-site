@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import styles from '../styles/StoryNavigation.module.scss'
 import classNames from 'classnames'
-import { rubikDirtFont } from '@/fonts'
+import { Rubik_Dirt } from '@next/font/google'
 
 export const STORIES_PATH = '/stories'
+const rubikDirt = Rubik_Dirt({ subsets: ['latin'], weight: '400' })
 
 // navigation header react component
 // constant for each page
@@ -36,7 +37,7 @@ export const StoryNavigation = ({
     return (
         <nav
             className={classNames(
-                rubikDirtFont.className,
+                rubikDirt.className,
                 styles.navbar,
                 {
                     [styles.isOnHomePage]: isOnHomePage,

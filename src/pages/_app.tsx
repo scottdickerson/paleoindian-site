@@ -6,9 +6,12 @@ import {
 import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { encodeSansFont, rubikDirtFont } from '@/fonts'
 import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
+import { Encode_Sans, Rubik_Dirt } from '@next/font/google'
+
+const encodeSans = Encode_Sans({ subsets: ['latin'] })
+const rubikDirt = Rubik_Dirt({ subsets: ['latin'], weight: '400' })
 
 const isPageAStory = (pathname: string) => {
     return pathname.includes(STORIES_PATH)
@@ -21,8 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
             {isPageAStory(pathname) && (
                 <header
                     className={classNames(
-                        encodeSansFont.className,
-                        rubikDirtFont.className
+                        encodeSans.className,
+                        rubikDirt.className
                     )}
                 >
                     <StoryNavigation
@@ -33,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 </header>
             )}
             <main
-                className={classNames(encodeSansFont.className, {
+                className={classNames(encodeSans.className, {
                     [styles.storyPageContainer]: isPageAStory(pathname),
                 })}
             >
