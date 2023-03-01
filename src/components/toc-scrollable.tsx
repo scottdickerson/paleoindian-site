@@ -18,11 +18,10 @@ export const TocScrollable = ({
     const handleSectionClick = (sectionId: string) => {
         const section = document.getElementById(sectionId)
         if (section) {
+            window.location.hash = sectionId
             if (section.id === storySections[0].id) {
                 //  top story should scroll to top of page so we show the header too
                 window.scrollTo({ top: 0, behavior: 'smooth' })
-            } else {
-                section.scrollIntoView({ behavior: 'smooth' })
             }
             // I don't know WHY I have to do this, but sometimes the section doesn't get highlighted by the intersection observer
             if (setHighlightedSection) {
