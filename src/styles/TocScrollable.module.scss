@@ -1,76 +1,74 @@
 $toc_background_overlap: 30px;
 
 .toccontainer {
-  position: fixed;
-  top: 200px;
-  right: 0rem;
-  bottom: 200px;
-  
-  display: none; // by default hide the TOC
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+    position: fixed;
+    top: $header_height;
+    right: 0rem;
+    bottom: $header_height;
 
-  width: 273px; // this includes the background overlap
-  transform: translateX($toc_background_overlap);
-  @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
-    // TODO: extract this to it's own variable
-    display: flex;
-  }
+    display: none; // by default hide the TOC
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 
+    width: 273px; // this includes the background overlap
+    transform: translateX($toc_background_overlap);
+    @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+        // TODO: extract this to it's own variable
+        display: flex;
+    }
 }
 
 .tocwrapper {
-  padding-left: 1rem;
-  z-index: 3;
-  margin-right: $toc_background_overlap
+    padding-left: 1rem;
+    z-index: 3;
+    margin-right: $toc_background_overlap;
 }
 
 .toc {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 10px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
 }
 
-
 .toc .tocitem {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 58px;
-  padding: 0 1rem;
-  color: $section_title_color;
-  background-color: #fdf1d8;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 15px;
-  cursor: pointer;
-  line-height: 18px;
-  font-weight: $font_black;
-  border-radius: 12px 0 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    padding: 0 1rem;
+    color: $section_title_color;
+    background-color: #fdf1d8;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 18px;
+    font-weight: $font_black;
+    border-radius: 12px 0 0 12px;
 
-  &.highlighted {
-    background-color: $section_title_background_color;
-    cursor: default;
-  }
+    &.highlighted {
+        background-color: $section_title_background_color;
+        cursor: default;
+    }
 }
 
 .tocBackgroundImage {
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
 }
 
 .arrowToTop {
-  position: absolute;
-  bottom: -66px;
-  width: 100%;
-  a {
+    position: absolute;
+    bottom: -66px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-  }
+    a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
 }

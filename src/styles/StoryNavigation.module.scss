@@ -1,139 +1,139 @@
 .navbar {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .navbar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: stretch;
-  align-items: center;
-  flex-grow: 1;
-  width: 100vw;
-  overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex-grow: 1;
+    width: 100vw;
+    overflow-x: auto;
 }
 
 .navbar .navitem {
-  text-transform: uppercase;
-  font-size: 20px;
-  // @media screen and (max-width: $tablet-breakpoint) {
-  //   font-size: 0.9375rem;
-  // }
-
-  flex-grow: 1;
-  flex-basis: 15%;
-  line-height: 84px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  //transition: flex-basis ease-in-out 0.2s, font-size ease-in-out 0.2s;
-
-  &.selected {
-    flex-basis: 55%;
-    font-size: 50px;
-    font-weight: $font_semibold;
+    text-transform: uppercase;
+    font-size: 20px;
     // @media screen and (max-width: $tablet-breakpoint) {
-    //   font-size: 1rem;
+    //   font-size: 0.9375rem;
     // }
-    cursor: not-allowed;
-    pointer-events: none;
-  }
+
+    flex-grow: 1;
+    flex-basis: 15%;
+    line-height: 84px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    //transition: flex-basis ease-in-out 0.2s, font-size ease-in-out 0.2s;
+
+    &.selected {
+        flex-basis: 55%;
+        font-size: 50px;
+        font-weight: $font_semibold;
+        // @media screen and (max-width: $tablet-breakpoint) {
+        //   font-size: 1rem;
+        // }
+        cursor: not-allowed;
+        pointer-events: none;
+    }
 }
 
 .navbar .navitem a {
-  display: block;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
-  white-space: nowrap;
+    display: block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    white-space: nowrap;
 }
 
 .home {
-  background-color: #425d29;
-  color: #bfcb8d;
-  max-width: 100px;
+    background-color: #425d29;
+    color: #bfcb8d;
+    max-width: 100px;
 }
 
 .originstories {
-  background-color: #bdcd86;
-  color: #33541d;
+    background-color: #bdcd86;
+    color: #33541d;
 }
 
 .iceagetexas {
-  background-color: #8dd2ef;
-  color: #172b66;
+    background-color: #8dd2ef;
+    color: #172b66;
 }
 
 .dailylife {
-  background-color: #172b66;
-  color: #8dd2ef;
+    background-color: #172b66;
+    color: #8dd2ef;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
-  .navbar {
-    flex-wrap: wrap;
-  }
-  .navbar .home {
-    flex-basis: 100%;
-    max-width: unset;
-    height: 40px;
-  }
-  .navbar ul {
-    flex-basis: 100%;
-    .navitem {
-      height: 40px;
+    .navbar {
+        flex-wrap: wrap;
     }
-  }
+    .navbar .home {
+        flex-basis: 100%;
+        max-width: unset;
+        height: 40px;
+    }
+    .navbar ul {
+        flex-basis: 100%;
+        .navitem {
+            height: 40px;
+        }
+    }
 }
 
 // Version that will show on the Home Page
 
 .isOnHomePage {
-  ul {
-    gap: 1rem;
-    .navitem a {
-      font-size: 1.5rem;
-      white-space: normal;
-    }
-  }
-  align-items: stretch;
-
-  @media screen and (max-width: $tablet-breakpoint) {
     ul {
-      flex-wrap: wrap;
-      .navitem {
-        flex-basis: 100%;
-      }
+        gap: 1rem;
+        .navitem a {
+            font-size: 1.5rem;
+            white-space: normal;
+        }
     }
-  }
+    align-items: stretch;
 
-  @media screen and (min-width: $tablet-breakpoint) {
-    ul {
-      flex-direction: row;
-      align-items: stretch;
+    @media screen and (max-width: $tablet-breakpoint) {
+        ul {
+            flex-wrap: wrap;
+            .navitem {
+                flex-basis: 100%;
+            }
+        }
     }
-    .navitem {
-      height: 100px;
-    }
-  }
 
-  @media screen and (max-width: $desktop-breakpoint) {
-    ul .navitem {
-      height: 150px;
+    @media screen and (min-width: $tablet-breakpoint) {
+        ul {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        .navitem {
+            height: 100px;
+        }
     }
-  }
 
-  @media screen and (min-width: $desktop-breakpoint) {
-    ul {
-      flex-direction: column;
-      align-items: stretch;
+    @media screen and (max-width: $desktop-breakpoint) {
+        ul .navitem {
+            height: 150px;
+        }
     }
-    .navitem a {
-      white-space: nowrap;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        ul {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .navitem a {
+            white-space: nowrap;
+        }
     }
-  }
 }

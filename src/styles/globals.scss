@@ -84,10 +84,10 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -101,43 +101,43 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 body {
-  line-height: 1;
+    line-height: 1;
 }
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+    content: '';
+    content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 body {
-  background: rgba(245,233,209,.36);
+    background: rgba(245, 233, 209, 0.36);
 }
 body * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 a {
-  text-decoration: none;
-  color: unset;
+    text-decoration: none;
+    color: unset;
 }
 h3,
 p {
-  letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 
 /**
@@ -145,49 +145,51 @@ p {
  * 2. Remove the margin in Firefox and Safari.
  */
 
- button,
- input,
- optgroup,
- select,
- textarea {
-   font-family: inherit; /* 1 */
-   font-size: 100%; /* 1 */
-   line-height: 1.15; /* 1 */
-   margin: 0; /* 2 */
- }
- 
- button {
-  border:unset;
-  background-color: unset;
- }
- /**
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button {
+    border: unset;
+    background-color: unset;
+}
+/**
   * Show the overflow in IE.
   * 1. Show the overflow in Edge.
   */
- 
- button,
- input { /* 1 */
-   overflow: visible;
- }
- 
- /**
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
   * Remove the inheritance of text transform in Edge, Firefox, and IE.
   * 1. Remove the inheritance of text transform in Firefox.
   */
- 
- button,
- select { /* 1 */
-   text-transform: none;
- }
- 
- /**
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
   * Correct the inability to style clickable types in iOS and Safari.
   */
- 
- button,
- [type="button"],
- [type="reset"],
- [type="submit"] {
-  appearance: button;
-   -webkit-appearance: button;
- }
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    appearance: button;
+    -webkit-appearance: button;
+}

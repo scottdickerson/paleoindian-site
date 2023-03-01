@@ -10,8 +10,8 @@
 
 ## TODO
 
-- BUG: Default video html element always shows loading spinner when returning to page
-- Figure out best way to load nitial video without pop of content. Small video
+-   BUG: Default video html element always shows loading spinner when returning to page
+-   Figure out best way to load nitial video without pop of content. Small video
 
 ## Header component
 
