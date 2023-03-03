@@ -6,7 +6,9 @@ import Head from 'next/head'
 import { Video } from '@/components/video'
 import style from '@/styles/OriginStories.module.scss'
 import { Slider } from '@/components/slider'
-import sharedBeginnings from '../../components/images/origin-stories/sharedBeginnings.svg'
+import sharedBeginnings from './origin-stories/sharedBeginnings.svg'
+import clovisMap1 from './origin-stories/Clovis Map 1_Clovis.svg'
+import clovisMap2 from './origin-stories/Clovis Map 2_Pre-Clovis.svg'
 
 const ORIGIN_STORY_SECTIONS = [
     {
@@ -47,8 +49,18 @@ const ORIGIN_STORY_SECTIONS = [
             '<p>Archeologists have found many places with ancient campfires, tools, and evidence from people who lived about 13,000 years ago. They thought these were campsites of the first Americans. Then new discoveries of even older places challenged this idea.</p><p> Compare the maps below.</p> ',
         interactive: (
             <Slider
-                img1Src="../images/origin-stories/Clovis Map 1_Clovis.svg"
-                img2Src="../images/origin-stories/Clovis Map 2_Pre-Clovis.svg"
+                img1={{
+                    src: clovisMap1,
+                    alt: 'Original Clovis sites shown on a map of the United States',
+                    caption:
+                        'Places where people using Clovis tools lived about 13,000 years ago.',
+                }}
+                img2={{
+                    src: clovisMap2,
+                    alt: 'Pre-Clovis sites shown on a map of the United States',
+                    caption:
+                        'Places with some evidence of people living before 13,000 years ago.',
+                }}
             />
         ),
         details: `<p>Archeologists try to answer questions by interpreting the evidence they find. Around 1940, archeologists found evidence that people who made distinctive Clovis tools, lived across America about 13,000 years ago. For the next 60 years, most scientists agreed with the interpretation that the people who used Clovis tools were the first people to live in the land that we think of as America.</p>

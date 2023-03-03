@@ -1,8 +1,24 @@
-.slider {
-    overflow: visible !important;
+.sliderContainer {
     width: calc(100% - 4rem);
 }
 
-.handle {
+.slider {
+    overflow: visible !important;
+    width: 100%
+}
+
+.sliderHandle {
     height: 100%;
+    cursor: pointer;
+}
+
+.sliderCaption {
+    color: white;
+    position:absolute;
+    top:34%;
+    right:11%;
+    width: 29%;
+    line-height: 2vw;
+    font-size: 17px;
+    font-size: 1.25vw;
 }
