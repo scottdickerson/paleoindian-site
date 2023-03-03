@@ -9,6 +9,7 @@ import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
 import { Encode_Sans, Rubik_Dirt } from '@next/font/google'
+import { Footer } from '@/components/footer'
 
 const encodeSans = Encode_Sans({ subsets: ['latin'] })
 const rubikDirt = Rubik_Dirt({ subsets: ['latin'], weight: '400' })
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
             >
                 <Component {...pageProps} />
             </main>
+            {isPageAStory(pathname) && <Footer></Footer>}
         </>
     )
 }

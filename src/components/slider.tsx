@@ -21,7 +21,7 @@ interface SliderProps {
 export const Slider: FC<SliderProps> = ({
     img1: { src: img1Src, alt: img1Alt, caption: img1Caption },
     img2: { src: img2Src, alt: img2Alt, caption: img2Caption },
-    percentageToChangeCaption = 15,
+    percentageToChangeCaption = 5,
 }) => {
     const [caption, setCaption] = useState(img1Caption)
 

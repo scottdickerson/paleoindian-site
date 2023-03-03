@@ -1,14 +1,13 @@
 import { StoryPage } from '@/components/story-page'
 import { StorySection } from '@/components/story-section'
 import { TocScrollable } from '@/components/toc-scrollable'
-import Image from 'next/image'
 import Head from 'next/head'
 import { Video } from '@/components/video'
-import style from '@/styles/OriginStories.module.scss'
 import { Slider } from '@/components/slider'
 import sharedBeginnings from './origin-stories/sharedBeginnings.svg'
 import clovisMap1 from './origin-stories/Clovis Map 1_Clovis.svg'
 import clovisMap2 from './origin-stories/Clovis Map 2_Pre-Clovis.svg'
+import { ResponsiveImage } from '@/components/responsive-image'
 
 const ORIGIN_STORY_SECTIONS = [
     {
@@ -18,14 +17,11 @@ const ORIGIN_STORY_SECTIONS = [
         description:
             '<p>Humans started out in Africa. About 70,000 years ago, groups of people began to slowly move around the planet, making incredible journeys into new lands.</p>',
         interactive: (
-            <div className={style.sharedBeginningsImage}>
-                <Image
-                    src={sharedBeginnings}
-                    alt="Group of Paleoindians"
-                    fill
-                    priority
-                />
-            </div>
+            <ResponsiveImage
+                src={sharedBeginnings}
+                alt="Group of Paleoindians"
+                priority
+            />
         ),
         details:
             '<p>We don&apos;t know exactly how or when but eventually, people came to North America and the land we think of as Texas.</p> <p>This is what we know so far.</p>',
