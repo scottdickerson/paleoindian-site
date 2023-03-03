@@ -4,14 +4,9 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Fix the bug where force reloading a page with a section title not visible doesn't select anything
 -   Add the Tooltip component over the text in details (probably takes a component instead of a string)
--   Get the latest images of the slider, should they have text embedded in them?
--   Can I use the NextJS Image tag for the Slider image instead of the standard img tag?
 -   Fonts take multiple reloads to be applied correctly to the widgets when I'm running on vercel. Is this some kind of race condition do I need to import them somewhere else.
 -   TODO: Should probably split a responsive image component out that wraps a parent div around the NextJS Image with the correct width and the Image correctly.
--   Tooltips inside description
--   What's wrong with the font import? Why do I have to refresh once?
 
 ### Responsive image.
 
