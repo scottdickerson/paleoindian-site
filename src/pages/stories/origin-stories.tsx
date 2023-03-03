@@ -23,6 +23,7 @@ const ORIGIN_STORY_SECTIONS = [
                     src={sharedBeginnings}
                     alt="Group of Paleoindians"
                     fill
+                    priority
                 />
             </div>
         ),

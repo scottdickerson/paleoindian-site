@@ -1,5 +1,5 @@
 .sliderContainer {
-    width: calc(100% - 4rem);
+    width: 100%;
 }
 
 .slider {
@@ -21,4 +21,13 @@
     line-height: 2vw;
     font-size: 17px;
     font-size: 1.25vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+    
+.visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .25s;
 }

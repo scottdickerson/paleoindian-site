@@ -4,6 +4,7 @@ import styles from '@/styles/Slider.module.scss'
 import Image from 'next/image'
 import sliderHandle from './images/slider/sliderHandle.svg'
 import { FC } from 'react'
+import classNames from 'classnames'
 
 interface SliderImage {
     src: string
@@ -75,9 +76,26 @@ export const Slider: FC<SliderProps> = ({
                     }
                 }}
             />
-            <caption>
-                <span className={styles.sliderCaption}>{caption}</span>
-            </caption>
+            <div>
+                {img1Caption && (
+                    <span
+                        className={classNames(styles.sliderCaption, {
+                            [styles.visible]: caption === img1Caption,
+                        })}
+                    >
+                        {img1Caption}
+                    </span>
+                )}
+                {img2Caption && (
+                    <span
+                        className={classNames(styles.sliderCaption, {
+                            [styles.visible]: caption === img2Caption,
+                        })}
+                    >
+                        {img2Caption}
+                    </span>
+                )}
+            </div>
         </div>
     )
 }
