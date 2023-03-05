@@ -24,6 +24,7 @@ $toc_background_overlap: 30px;
     padding-left: 1rem;
     z-index: 3;
     margin-right: $toc_background_overlap;
+    position: relative;
 }
 
 .toc {
@@ -63,11 +64,9 @@ $toc_background_overlap: 30px;
 .arrowToTop {
     position: absolute;
     bottom: -66px;
-    width: 100%;
-    a {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-    }
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }

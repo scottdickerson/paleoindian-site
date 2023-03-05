@@ -40,7 +40,7 @@ export const StorySection = ({
     }, [id, isInView, setHighlightedSection])
 
     return (
-        <section className={styles.section} id={id}>
+        <article className={styles.section} id={id}>
             <h2
                 className={styles.title}
                 dangerouslySetInnerHTML={{ __html: title }}
@@ -59,6 +59,6 @@ export const StorySection = ({
                 className={styles.details}
                 dangerouslySetInnerHTML={{ __html: details }}
             />
-        </section>
+        </article>
     )
 }

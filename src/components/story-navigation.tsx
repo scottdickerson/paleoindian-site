@@ -36,6 +36,7 @@ export const StoryNavigation = ({
 }: StoryNavigationProps) => {
     return (
         <nav
+            aria-label="Primary Navigation"
             className={classNames(
                 rubikDirt.className,
                 styles.navbar,

@@ -43,7 +43,9 @@ export default function App({ Component, pageProps }: AppProps) {
             >
                 <Component {...pageProps} />
             </main>
-            {isPageAStory(pathname) && <Footer></Footer>}
+            {isPageAStory(pathname) && (
+                <Footer className={encodeSans.className}></Footer>
+            )}
         </>
     )
 }
