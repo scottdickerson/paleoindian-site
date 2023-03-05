@@ -4,12 +4,15 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
+-   Fonts take multiple reloads to be applied correctly to the widgets when I'm running on vercel. Is this some kind of race condition do I need to import them somewhere else.
+-   &endash; is showing in the description
+-   Add the Tooltip component over the text in details (probably takes a component instead of a string)
+-   Set max width on articles otherwise it looks real weird
 -   Test Voiceover on Mac to see
 -   Test landmark navigations
--   Add the Tooltip component over the text in details (probably takes a component instead of a string)
--   Fonts take multiple reloads to be applied correctly to the widgets when I'm running on vercel. Is this some kind of race condition do I need to import them somewhere else.
--   TODO: Should probably split a responsive image component out that wraps a parent div around the NextJS Image with the correct width and the Image correctly.
--   &endash; is showing in the description
+-
+
+## Components used
 
 ### Responsive image.
 

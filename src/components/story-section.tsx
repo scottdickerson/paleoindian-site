@@ -1,11 +1,37 @@
-import { PropsWithChildren, useContext, useEffect, useRef } from 'react'
+import {
+    PropsWithChildren,
+    useContext,
+    useEffect,
+    useLayoutEffect,
+    useRef,
+    useState,
+} from 'react'
 import styles from '../styles/StorySection.module.scss'
 // import * as DOMPurify from "dompurify";
 import { StoryPageContext } from './story-page'
-import { useInView } from 'framer-motion'
 import classNames from 'classnames'
+import { useOnScreen } from '@/utils/customHooks'
 
-// nextjs section html component
+export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
+    if (element) {
+        const { top, bottom } = element.getBoundingClientRect()
+        const { innerHeight } = window
+
+        console.log(
+            'takesUpMostOfTheViewport',
+            element.id,
+            (bottom > innerHeight ? innerHeight - top : bottom) >
+                innerHeight * 0.5
+        )
+
+        return (
+            (bottom > innerHeight ? innerHeight - top : bottom) >
+            innerHeight * 0.5
+        )
+    }
+    return false
+}
+
 export interface StorySectionProps {
     /* unique id used to link from the TOC */
     id: string
@@ -25,26 +51,42 @@ export const StorySection = ({
     details,
 }: PropsWithChildren<StorySectionProps>) => {
     const { setHighlightedSection } = useContext(StoryPageContext) || {}
-    const sectionRef = useRef<HTMLHeadingElement>(null)
+    const sectionRef = useRef<HTMLElement>(null)
+    const headingRef = useRef<HTMLHeadingElement>(null)
+    const [scrollProgress, setScrollProgress] = useState(0)
 
-    const isInView = useInView(sectionRef, {
-        amount: 'all',
-        margin: '0px 0px -300px 0px',
-    })
-
+    // const { scrollYProgress } = useScroll({ target: sectionRef })
     useEffect(() => {
-        console.log('section intersecting', id, isInView)
-        if (isInView && setHighlightedSection) {
+        if (window.location.href.includes(id) && setHighlightedSection) {
             setHighlightedSection(id)
         }
-    }, [id, isInView, setHighlightedSection])
+    }, [])
+
+    const isHeadingInView = useOnScreen(headingRef)
+    useEffect(() => {
+        const scrollHandler = () => {
+            setScrollProgress(window.scrollY)
+        }
+        window.addEventListener('scroll', scrollHandler)
+        return () => window.removeEventListener('scroll', scrollHandler)
+    }, [isHeadingInView])
+
+    useLayoutEffect(() => {
+        if (
+            setHighlightedSection &&
+            isHeadingInView &&
+            takesUpMostOfTheViewport(sectionRef.current)
+        ) {
+            setHighlightedSection(id)
+        }
+    }, [scrollProgress])
 
     return (
-        <article className={styles.section} id={id}>
+        <article className={styles.section} id={id} ref={sectionRef}>
             <h2
                 className={styles.title}
                 dangerouslySetInnerHTML={{ __html: title }}
-                ref={sectionRef}
+                ref={headingRef}
             />
             <h3
                 className={classNames(styles.summary)}
