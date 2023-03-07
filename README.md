@@ -12,6 +12,11 @@ yarn dev
 pnpm dev
 ```
 
+## Setup Git LFS
+
+Because we're pushing large video files up, we need to use git lfs:
+https://git-lfs.com/
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.

@@ -2,7 +2,6 @@ import {
     PropsWithChildren,
     useContext,
     useEffect,
-    useLayoutEffect,
     useRef,
     useState,
 } from 'react'
@@ -55,13 +54,6 @@ export const StorySection = ({
     const headingRef = useRef<HTMLHeadingElement>(null)
     const [scrollProgress, setScrollProgress] = useState(0)
 
-    // const { scrollYProgress } = useScroll({ target: sectionRef })
-    useEffect(() => {
-        if (window.location.href.includes(id) && setHighlightedSection) {
-            setHighlightedSection(id)
-        }
-    }, [])
-
     const isHeadingInView = useOnScreen(headingRef)
     useEffect(() => {
         const scrollHandler = () => {
@@ -69,9 +61,9 @@ export const StorySection = ({
         }
         window.addEventListener('scroll', scrollHandler)
         return () => window.removeEventListener('scroll', scrollHandler)
-    }, [isHeadingInView])
+    }, [])
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (
             setHighlightedSection &&
             isHeadingInView &&
@@ -79,7 +71,7 @@ export const StorySection = ({
         ) {
             setHighlightedSection(id)
         }
-    }, [scrollProgress])
+    }, [scrollProgress, isHeadingInView, setHighlightedSection])
 
     return (
         <article className={styles.section} id={id} ref={sectionRef}>

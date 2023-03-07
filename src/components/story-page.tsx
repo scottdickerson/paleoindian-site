@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState, createContext } from 'react'
+import { PropsWithChildren, useState, createContext, useEffect } from 'react'
 import styles from '../styles/StoryPage.module.scss'
 
 interface StoryPageContextValues {
@@ -14,6 +14,11 @@ export const StoryPage = ({ children }: PropsWithChildren) => {
     const [highlightedSection, setHighlightedSection] = useState<string | null>(
         null
     )
+    useEffect(() => {
+        // This useEffect seems meaningless, however it causes all of the child components to re-render which makes them have their refs set
+        console.log('parent useEffect triggered')
+        setHighlightedSection('')
+    }, [])
 
     return (
         <StoryPageContext.Provider

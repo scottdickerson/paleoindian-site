@@ -12,8 +12,7 @@ export const TocScrollable = ({
 }: {
     storySections: StorySectionProps[]
 }) => {
-    const { highlightedSection, setHighlightedSection } =
-        useContext(StoryPageContext) || {}
+    const { highlightedSection } = useContext(StoryPageContext) || {}
 
     const handleSectionClick = (sectionId: string) => {
         const section = document.getElementById(sectionId)
@@ -22,10 +21,6 @@ export const TocScrollable = ({
             if (section.id === storySections[0].id) {
                 //  top story should scroll to top of page so we show the header too
                 window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
-            // I don't know WHY I have to do this, but sometimes the section doesn't get highlighted by the intersection observer
-            if (setHighlightedSection) {
-                setHighlightedSection(sectionId)
             }
         }
     }
@@ -37,6 +32,7 @@ export const TocScrollable = ({
                 alt=""
                 fill
                 className={styles.tocBackgroundImage}
+                priority
             ></Image>
             <nav className={styles.tocwrapper} aria-label="Table of Contents">
                 <ul className={styles.toc}>
@@ -50,6 +46,7 @@ export const TocScrollable = ({
                                     },
                                     styles.tocitem
                                 )}
+                                href={`#${section.id}`} // this is for accessibility
                                 onClick={() => handleSectionClick(section.id)}
                             >
                                 <span>{section.title}</span>

@@ -33,7 +33,9 @@ const ORIGIN_STORY_SECTIONS = [
             'Some of the best stories start &ldquo;a long time ago...&rdquo;',
         description:
             '<p>The Tribal communities of Texas have many traditional stories about their beginnings or origins. These stories often show a deep connection to special places on the landscape.</p> <p>Watch the video below to learn more. </p>',
-        interactive: <Video src="../videos/austin-tx.mp4" />,
+        interactive: (
+            <Video src="../videos/origin-stories/1.2_fullanimatic_02.mp4" />
+        ),
         details:
             '<p>This exhibit is focused on Paleoindians and the ancestors of Texas’ Native Peoples, but every culture around the world tells their own stories about the beginning of the world and people’s place within it. These stories may express ancient peoples&apos; experiences, passed on from generation to generation. They may serve to teach life lessons. Origin stories help us make sense of our world and who we are.</p>',
     },
@@ -70,7 +72,9 @@ const ORIGIN_STORY_SECTIONS = [
         summary: `¯\\_(ツ)_/¯ Unclear, but we&apos;re excited to find out!`,
         description: `<p>Recent discoveries in Texas tell us that people were living here at least 16,000 years ago. But how did the very first people arrive? Well, it&apos;s complicated.</p>
       <p>Watch this video to explore some possibilities. </p>`,
-        interactive: <Video src="../videos/austin-tx.mp4" />,
+        interactive: (
+            <Video src="../videos/origin-stories/1.4_animatic_v03.mp4" />
+        ),
         details: `<p>For a long time, most textbooks taught that people walked across the Bering land bridge through an ice-free corridor, and into North America around the end of the last ice age. Some scientists, Native American scholars, and Tribal communities have long challenged the idea that this was the ONLY path that people took to the Americas. Today, a complicated picture is emerging of multiple migrations of people at different times in the past.</p>
     <p>For now, we don&apos;t know for sure how people first migrated to the land we think of as North America. Keeping an open mind is an important part of learning about the past.</p>`,
     },
@@ -91,7 +95,7 @@ const ORIGIN_STORY_SECTIONS = [
         description: `<p>With each new discovery, researchers can paint a more detailed picture of the first people who called this area home. </p>
     <p>Hear from young researchers who study Paleoindians.</p>`,
         interactive: 'TBD',
-        details: `<p>Most professional archeologists focus on one or two specialties within the larger study of the past. These specialists spend their careers focused on learning as much as they can about their piece of the puzzle. Then, they write articles, give talks, and teach classes to share what they&apos;ve learned. They can also collaborate with &endash; and learn from &endash; Native American communities who ask that their ancestors, cultures, and spiritual beliefs are respected and included. </p>`,
+        details: `<p>Most professional archeologists focus on one or two specialties within the larger study of the past. These specialists spend their careers focused on learning as much as they can about their piece of the puzzle. Then, they write articles, give talks, and teach classes to share what they&apos;ve learned. They can also collaborate with &ndash; and learn from &ndash; Native American communities who ask that their ancestors, cultures, and spiritual beliefs are respected and included. </p>`,
     },
 ]
 

@@ -12,6 +12,13 @@
 
 -   BUG: Default video html element always shows loading spinner when returning to page
 -   Figure out best way to load nitial video without pop of content. Small video
+-   Get Paleoindian Favicon from Katrina
+
+## TODO: Nice to have
+
+-   Google analytics in paleoindian (do I have to pay)
+-   Capturing any console exceptions to a SaaS service
+-   Configure CDN in front of site for Texas Humanities
 
 ## Header component
 
