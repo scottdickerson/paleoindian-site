@@ -32,6 +32,7 @@ export const Footer = ({ className }: FooterProps) => {
                 alt="Crosssection of ground"
                 className={styles.footerImage}
                 fill
+                priority
             ></Image>
         </footer>
     )
