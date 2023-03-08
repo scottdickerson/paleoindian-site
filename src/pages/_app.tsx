@@ -11,10 +11,11 @@ import styles from '@/styles/StoryPage.module.scss'
 import { Encode_Sans, Rubik_Dirt } from '@next/font/google'
 import { Footer } from '@/components/footer'
 
-const encodeSans = Encode_Sans({ subsets: ['latin'] })
+const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
 export const rubikDirt = Rubik_Dirt({
     subsets: ['latin'],
     weight: '400',
+    display: 'swap',
 })
 
 const isPageAStory = (pathname: string) => {
