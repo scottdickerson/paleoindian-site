@@ -28,6 +28,7 @@
     line-height: 43px;
     font-stretch: condensed;
     font-weight: $font_condensed_black;
+    letter-spacing: -1px;
 }
 
 .description {
@@ -50,6 +51,6 @@
 .details p {
     font-size: 21px;
     line-height: 31px;
-    font-weight: $font_medium;
+    font-weight: $font_regular;
     letter-spacing: 0px;
 }

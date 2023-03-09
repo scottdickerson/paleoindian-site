@@ -4,13 +4,18 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Fonts take multiple reloads to be applied correctly to the widgets when I'm running on vercel. Is this some kind of race condition do I need to import them somewhere else.
--   &endash; is showing in the description
 -   Add the Tooltip component over the text in details (probably takes a component instead of a string)
+-   Fix Clovis Point Tooltip PNG width to be narrower around arrows
 -   Set max width on articles otherwise it looks real weird
+-   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
+-   Flip Video component to load from Youtube uploaded videos
+-   Test in incognito browser with Disabled Cache and 3G fast throttling to verify how quickly they load
+-   Tik-tok video section
+
+## TODO Stretch Goals
+
 -   Test Voiceover on Mac to see
 -   Test landmark navigations
--
 
 ## Components used
 

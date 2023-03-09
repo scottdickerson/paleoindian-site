@@ -10,6 +10,7 @@ import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
 import { Encode_Sans, Rubik_Dirt } from '@next/font/google'
 import { Footer } from '@/components/footer'
+import { TooltipProvider } from '@radix-ui/react-tooltip'
 
 const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
 export const rubikDirt = Rubik_Dirt({
@@ -25,7 +26,7 @@ const isPageAStory = (pathname: string) => {
 export default function App({ Component, pageProps }: AppProps) {
     const { pathname } = useRouter()
     return (
-        <>
+        <TooltipProvider>
             <style jsx global>{`
                 html {
                     font-family: ${encodeSans.style.fontFamily};
@@ -48,6 +49,6 @@ export default function App({ Component, pageProps }: AppProps) {
                 <Component {...pageProps} />
             </main>
             {isPageAStory(pathname) && <Footer></Footer>}
-        </>
+        </TooltipProvider>
     )
 }

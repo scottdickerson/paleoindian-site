@@ -1,0 +1,24 @@
+/* styles.css */
+.popoverTrigger {
+    @media (hover: hover) { // only hoverable devices should show the underline
+        text-decoration: underline;
+    }
+    font-weight:inherit;
+    padding: 0;
+}
+  
+.popoverContent {
+    border-radius: 12px;
+    padding: 1.25rem;
+    background-color: $section_title_color;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-stretch: condensed;
+    font-weight: $font_light;
+    line-height: 24px
+}
+  
+.popoverArrow {
+    fill: $section_title_color;
+}

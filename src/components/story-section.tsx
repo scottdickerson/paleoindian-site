@@ -1,5 +1,6 @@
 import {
     PropsWithChildren,
+    ReactNode,
     useContext,
     useEffect,
     useRef,
@@ -38,7 +39,7 @@ export interface StorySectionProps {
     title: string
     summary: string
     description: string
-    details: string
+    details: ReactNode
 }
 
 export const StorySection = ({
@@ -89,10 +90,7 @@ export const StorySection = ({
                 dangerouslySetInnerHTML={{ __html: description }}
             />
             <div className={styles.interactive}>{children}</div>
-            <div
-                className={styles.details}
-                dangerouslySetInnerHTML={{ __html: details }}
-            />
+            <div className={styles.details}>{details}</div>
         </article>
     )
 }
