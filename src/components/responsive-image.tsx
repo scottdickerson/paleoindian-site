@@ -15,11 +15,11 @@ export const ResponsiveImage = ({
 }: ResponsiveImageProps) => {
     return (
         <div
+            {...containerProps}
             className={classNames(
                 styles.responsiveImageContainer,
                 containerProps?.className
             )}
-            {...containerProps}
         >
             <Image
                 {...props}

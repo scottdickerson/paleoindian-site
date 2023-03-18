@@ -33,6 +33,7 @@ const ThumbnailGallery = ({
                     key={id}
                     src={src}
                     alt={alt || ''}
+                    fill
                     containerProps={{
                         className: styles.imageContainer,
                         onClick: () => handleClick(id),
@@ -56,17 +57,19 @@ export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
     const [selectedVideo, setSelectedVideo] = useState<string>()
     return (
         <div className={styles.tiktokPlayer}>
-            {!selectedVideo && (
-                <div className={styles.selectVideoTile}>Select a video</div>
-            )}
-            {selectedVideo && (
-                <video
-                    className={styles.videoTile}
-                    src={videos[selectedVideo].video}
-                    autoPlay
-                    controls
-                ></video>
-            )}
+            <div className={styles.videoTile}>
+                {!selectedVideo && (
+                    <div className={styles.selectVideoTile}>Select a video</div>
+                )}
+                {selectedVideo && (
+                    <video
+                        src={videos[selectedVideo].video}
+                        autoPlay
+                        controls
+                        className={styles.video}
+                    ></video>
+                )}
+            </div>
             <ThumbnailGallery
                 images={Object.entries(videos).map(([id, { thumbnail }]) => ({
                     src: thumbnail,
