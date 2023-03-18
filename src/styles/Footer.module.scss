@@ -1,11 +1,19 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     height: 60px;
     text-transform: uppercase;
 }
+
+@media screen and (min-height: $full_chrome_height) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+
 .footerNav {
     display: flex;
     flex-direction: column;
@@ -19,8 +27,9 @@
     justify-content: space-between;
     gap: 20px;
     height: 100%;
-    padding: 0 3rem;
-    font-size: 17px;
+    padding: 0 1rem;
+    font-size: 10px;
+    text-align: center;
     font-weight: $font_extrabold;
     color: $section_title_background_color;
     line-height: 20px;
@@ -37,12 +46,22 @@
         display:flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding-bottom: 14px;
+        padding-bottom: 4px;
     }
     &:hover {
         color: $section_title_background_color;
     }
     
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .footerLinks {
+        font-size: 17px;
+        padding: 0 3rem;
+        a {
+            padding-bottom: 14px;
+        }
+    }
 }
 
 .footerImage {

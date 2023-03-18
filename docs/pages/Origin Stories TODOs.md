@@ -4,9 +4,11 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Tik-tok video section
--   Fix header with new styles
 -   Fix header to handle the other screen widths
+-   Fix header with new styles
+-
+-   Footer needs to move to the bottom of the screen on any screen height smaller than X
+-   Footer text needs to get much smaller on narrow screen sizes
 -   Fix Rubik Dirt Font
 -   Fix Clovis Point Tooltip PNG width to be narrower around arrows
 -   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here

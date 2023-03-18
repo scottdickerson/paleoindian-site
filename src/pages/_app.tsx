@@ -32,23 +32,25 @@ export default function App({ Component, pageProps }: AppProps) {
                     font-family: ${encodeSans.style.fontFamily};
                 }
             `}</style>
-            {isPageAStory(pathname) && (
-                <header>
-                    <StoryNavigation
-                        selectedPage={
-                            pathname as StoryNavigationProps['selectedPage']
-                        }
-                    />
-                </header>
-            )}
-            <main
-                className={classNames({
-                    [styles.storyPageContainer]: isPageAStory(pathname),
-                })}
-            >
-                <Component {...pageProps} />
-            </main>
-            {isPageAStory(pathname) && <Footer></Footer>}
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                {isPageAStory(pathname) && (
+                    <header>
+                        <StoryNavigation
+                            selectedPage={
+                                pathname as StoryNavigationProps['selectedPage']
+                            }
+                        />
+                    </header>
+                )}
+                <main
+                    className={classNames({
+                        [styles.storyPageContainer]: isPageAStory(pathname),
+                    })}
+                >
+                    <Component {...pageProps} />
+                </main>
+                {isPageAStory(pathname) && <Footer></Footer>}
+            </div>
         </TooltipProvider>
     )
 }
