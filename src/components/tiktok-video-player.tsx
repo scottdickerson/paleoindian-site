@@ -20,11 +20,7 @@ const ThumbnailGallery = ({
     selectedImage,
 }: ThumbnailGalleryProps) => {
     const handleClick = (id: string) => {
-        if (selectedImage === id) {
-            onClick()
-        } else {
-            onClick(id)
-        }
+        onClick(id)
     }
     return (
         <div className={classNames(styles.thumbnailGallery, className)}>
@@ -65,6 +61,7 @@ export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
                     <video
                         src={videos[selectedVideo].video}
                         autoPlay
+                        playsInline
                         controls
                         className={styles.video}
                     ></video>

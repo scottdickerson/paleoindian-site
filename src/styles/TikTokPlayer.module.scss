@@ -9,6 +9,7 @@
 
 .imageContainer {
     background-color: black;
+    cursor: pointer;
 }
 
 .unselectedImage {
@@ -18,7 +19,7 @@
 .tiktokPlayer {
   display:flex;
   width:100%;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .selectVideoTile {
@@ -28,6 +29,9 @@
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23707070' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     color: #d9d9d9;
     font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    padding: 2rem;
     font-weight: $font-regular;
     font-stretch: condensed;
     display:flex;
@@ -37,9 +41,19 @@
 }
 
 .videoTile {
-  width: calc(50%);
+  width: calc(50% - 1.5rem); // adjust for grid gap
   aspect-ratio: 320/568;
 }
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .tiktokPlayer {
+    gap: 1rem; // shrink gap on narrow screens
+  }
+  .videoTile {
+    width: calc(50% - .5rem); // adjust for grid gap
+  }
+}
+
 
 .video {
   width:100%;
