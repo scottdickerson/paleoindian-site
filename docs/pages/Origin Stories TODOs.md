@@ -4,18 +4,20 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Add the Tooltip component over the text in details (probably takes a component instead of a string)
--   Fix Clovis Point Tooltip PNG width to be narrower around arrows
--   Set max width on articles otherwise it looks real weird
--   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
--   Flip Video component to load from Youtube uploaded videos
--   Test in incognito browser with Disabled Cache and 3G fast throttling to verify how quickly they load
 -   Tik-tok video section
+-   Fix header with new styles
+-   Fix header to handle the other screen widths
+-   Fix Rubik Dirt Font
+-   Fix Clovis Point Tooltip PNG width to be narrower around arrows
+-   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
+-   Test in incognito browser with Disabled Cache and 3G fast throttling to verify how quickly they load
 
 ## TODO Stretch Goals
 
 -   Test Voiceover on Mac to see
 -   Test landmark navigations
+-   TOC isn't centered when we're scrolling down, fix to adjust as we scroll down, should this be a sticky that offsets at some percentage so it scrolls up then sticks?
+-   Set max width on articles otherwise it looks real weird
 
 ## Components used
 

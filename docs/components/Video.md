@@ -4,6 +4,9 @@
 -   Test clicking again pauses it
 -   Controls allow you to download the video by default?
 
+-   6 large videos on the site
+-   8 smaller tiktok style videos on the site
+
 ## Compression
 
 -   Compress MP4 as we get them. I'm using handbrake to compress these into smaller filesizes

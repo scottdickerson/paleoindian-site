@@ -26,7 +26,7 @@ const isPageAStory = (pathname: string) => {
 export default function App({ Component, pageProps }: AppProps) {
     const { pathname } = useRouter()
     return (
-        <TooltipProvider>
+        <TooltipProvider delayDuration={200}>
             <style jsx global>{`
                 html {
                     font-family: ${encodeSans.style.fontFamily};

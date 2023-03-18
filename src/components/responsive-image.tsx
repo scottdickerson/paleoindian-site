@@ -2,15 +2,25 @@ import type { ImageProps } from 'next/image'
 import Image from 'next/image'
 import styles from '@/styles/ResponsiveImage.module.scss'
 import classNames from 'classnames'
+import React from 'react'
 
-type ResponsiveImageProps = ImageProps & {}
+type ResponsiveImageProps = ImageProps & {
+    containerProps?: React.HTMLAttributes<HTMLDivElement>
+}
 
 export const ResponsiveImage = ({
     className,
+    containerProps,
     ...props
 }: ResponsiveImageProps) => {
     return (
-        <div className={styles.responsiveImageContainer}>
+        <div
+            className={classNames(
+                styles.responsiveImageContainer,
+                containerProps?.className
+            )}
+            {...containerProps}
+        >
             <Image
                 {...props}
                 className={classNames(styles.responsiveImage, className)}

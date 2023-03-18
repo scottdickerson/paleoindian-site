@@ -190,3 +190,10 @@ button,
     appearance: button;
     -webkit-appearance: button;
 }
+
+/**
+Stop image drag
+    */
+img {
+    pointer-events: none;
+  }

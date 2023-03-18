@@ -4,7 +4,7 @@ import { MouseEventHandler, useRef, useState } from 'react'
 import Image from 'next/image'
 import playButton from './images/video/playButton.svg'
 
-const PlayButton = ({
+export const PlayButton = ({
     onClick,
 }: {
     onClick: MouseEventHandler<HTMLDivElement>
