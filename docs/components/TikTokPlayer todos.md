@@ -1,3 +1,4 @@
 # TODO
 
-Little vertical bounce when selecting the video
+On iOS starting the video will go full screen so just get rid of the select video piece
+Check android device to see as well
