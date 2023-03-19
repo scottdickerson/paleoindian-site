@@ -67,14 +67,7 @@ export const StoryNavigation = ({
                                 }
                             )}
                         >
-                            <Link
-                                href={`${key}`}
-                                onClick={(event) =>
-                                    event.currentTarget.scrollIntoView()
-                                }
-                            >
-                                {value.title}
-                            </Link>
+                            <Link href={`${key}`}>{value.title}</Link>
                         </li>
                     )
                 })}

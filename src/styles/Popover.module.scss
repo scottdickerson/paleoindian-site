@@ -1,8 +1,6 @@
 /* styles.css */
 .popoverTrigger {
-    @media (hover: hover) { // only hoverable devices should show the underline
-        text-decoration: underline;
-    }
+    text-decoration: underline;
     font-weight:inherit;
     padding: 0;
 }
