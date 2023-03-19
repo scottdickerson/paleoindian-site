@@ -69,6 +69,7 @@ export const Slider: FC<SliderProps> = ({
                                 objectFit: 'contain',
                                 objectPosition: 'center',
                                 width: 'unset',
+                                maxWidth: 'unset'
                             }),
                         }}
                     />
