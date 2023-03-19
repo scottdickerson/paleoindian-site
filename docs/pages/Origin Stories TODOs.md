@@ -4,14 +4,8 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Fix header to handle the other screen widths
--   Redesign the nav header so it autowraps. Split the home module story navigation vs the nav header into two pieces
 -   Fix header with new styles
 -   Fix tooltips on touch devices
--   Fix slider pull on mobile to be bigger
--   Fix slider font to be larger on mobile, it's unreadably small
--   Footer needs to move to the bottom of the screen on any screen height smaller than X
--   Footer text needs to get much smaller on narrow screen sizes
 -   Fix Rubik Dirt Font
 -   Fix Clovis Point Tooltip PNG width to be narrower around arrows
 -   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here

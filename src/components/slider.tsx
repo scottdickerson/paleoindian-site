@@ -3,6 +3,9 @@ import { ReactCompareSlider, styleFitContainer } from 'react-compare-slider'
 import styles from '@/styles/Slider.module.scss'
 import Image from 'next/image'
 import sliderHandle from './images/slider/sliderHandle.svg'
+import sliderHandleMobile from './images/slider/sliderHandleMobile.svg'
+import { useMediaQuery } from 'react-responsive'
+
 import { FC } from 'react'
 import classNames from 'classnames'
 
@@ -24,6 +27,7 @@ export const Slider: FC<SliderProps> = ({
     percentageToChangeCaption = 5,
 }) => {
     const [caption, setCaption] = useState(img1Caption)
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
     return (
         <div className={styles.sliderContainer}>
@@ -58,7 +62,7 @@ export const Slider: FC<SliderProps> = ({
                 handle={
                     <Image
                         alt="slider"
-                        src={sliderHandle}
+                        src={isMobile ? sliderHandleMobile : sliderHandle}
                         className={styles.sliderHandle}
                         style={{
                             ...styleFitContainer({
