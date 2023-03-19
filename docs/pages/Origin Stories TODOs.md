@@ -4,10 +4,11 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
+-   Slider handle is not extending fully on Safari or Firefox
+-   Mobile Slider Handler is not showing on iOS device
+-   White font text difficult to read on mobile because not over ocean, drop-shadow fix?
 -   Fix header with new styles
--   Fix tooltips on touch devices
 -   Fix Rubik Dirt Font
--   Fix Clovis Point Tooltip PNG width to be narrower around arrows
 -   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
 -   Test in incognito browser with Disabled Cache and 3G fast throttling to verify how quickly they load
 
@@ -17,6 +18,7 @@ This keeps track of the TODOs and plan design for our first content page
 -   Test landmark navigations
 -   TOC isn't centered when we're scrolling down, fix to adjust as we scroll down, should this be a sticky that offsets at some percentage so it scrolls up then sticks?
 -   Set max width on articles otherwise it looks real weird
+-   Fix Clovis Point Tooltip PNG width to be narrower around arrows
 
 ## Components used
 

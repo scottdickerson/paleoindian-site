@@ -68,6 +68,7 @@ export const Slider: FC<SliderProps> = ({
                             ...styleFitContainer({
                                 objectFit: 'contain',
                                 objectPosition: 'center',
+                                width: 'unset',
                             }),
                         }}
                     />
