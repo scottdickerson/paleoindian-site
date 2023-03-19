@@ -61,7 +61,6 @@ export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
                     <video
                         src={videos[selectedVideo].video}
                         autoPlay
-                        playsInline
                         controls
                         className={styles.video}
                     ></video>
