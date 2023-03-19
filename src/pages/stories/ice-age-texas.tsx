@@ -148,11 +148,11 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     One of the most fascinating Paleoindian archeological sites
                     in Texas isn&apos;t really an archeological site at all
                     &mdash; it&apos;s a beach. Over the years, thousands of
-                    Paleoindian artifacts and the bones of{' '}
+                    Paleoindian artifacts and the bones of
                     <Tooltip
                         trigger="extinct"
                         content="Died off and did not pass on their genes to new generations. "
-                    />{' '}
+                    />
                     animals have washed ashore on a beach near the Texas &mdash;
                     Louisiana border.
                 </p>
@@ -168,95 +168,59 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
             </>
         ),
     },
-    // {
-    //     title: 'A Texas-sized discovery',
-    //     id: 'a-texas-sized-discovery',
-    //     summary: `Science is always changing… and that&apos;s a good thing! `,
-    //     description: `<p>In Texas, archeologists made a discovery that some people thought was impossible. Researchers used scientific tests and critical thinking to rewrite Texas&apos; timeline. </p>
-    // <p>Watch the video to find out how.</p>`,
-    //     interactive: (
-    //         <YouTubeVideo
-    //             {...YOUTUBE_VIDEOS['texas-sized-discovery']}
-    //         ></YouTubeVideo>
-    //     ),
-    //     details: (
-    //         <>
-    //             <p>
-    //                 Remember
-    //                 <Tooltip
-    //                     trigger="Clovis"
-    //                     content={<ClovisPointTooltip />}
-    //                 />
-    //                 tools? When archeologists at the
-    //                 <Tooltip
-    //                     trigger="Gault and Friedkin sites"
-    //                     content="These two archeological sites in Bell County Texas are very close together and probably represent one large area where people lived as long as 16,000 years ago. "
-    //                     width={368}
-    //                 />
-    //                 in Texas discovered
-    //                 <Tooltip
-    //                     trigger="tools"
-    //                     content={
-    //                         <TooltipContentWithImage
-    //                             src={stemmedSpearFPO}
-    //                             alt="Spear point"
-    //                             title="Stemmed Point"
-    //                             description="Friedkin Site, Texas"
-    //                         />
-    //                     }
-    //                 />
-    //                 that were older than those, they used several different
-    //                 methods to demonstrate to the scientific community that they
-    //                 found something important.
-    //             </p>
-    //             <p>
-    //                 Through both
-    //                 <Tooltip
-    //                     trigger="absolute dating"
-    //                     content="Methods to determine specific age of an object (within a time range)."
-    //                     width={220}
-    //                 />
-    //                 and
-    //                 <Tooltip
-    //                     trigger="relative dating"
-    //                     content="Methods to figure out if one artifact is older or younger than another artifact."
-    //                     width={242}
-    //                 />
-    //                 techniques, scientists were able to demonstrate that their
-    //                 new discovery would change what we know about when people
-    //                 arrived in North America. Or at least, what we know so far.
-    //             </p>
-    //         </>
-    //     ),
-    // },
-    // {
-    //     title: 'Learning more',
-    //     id: 'learning-more',
-    //     summary: `There&apos;s always more to learn about the folks who came before us `,
-    //     description: `<p>With each new discovery, researchers can paint a more detailed picture of the first people who called this area home. </p>
-    // <p>Hear from young researchers who study Paleoindians.</p>`,
-    //     interactive: <TikTokPlayer videos={TIKTOK_VIDEOS} />,
-    //     details: (
-    //         <>
-    //             <p>
-    //                 Most professional archeologists focus on one or two
-    //                 specialties within the larger study of the past. These
-    //                 specialists spend their careers focused on learning as much
-    //                 as they can about their piece of the puzzle. Then, they
-    //                 write articles, give talks, and teach classes to share what
-    //                 they&apos;ve learned. They can also collaborate with &ndash;
-    //                 and learn from &ndash; Native American communities who ask
-    //                 that their{' '}
-    //                 <Tooltip
-    //                     trigger="ancestors"
-    //                     content={TOOLTIP_CONTENT.ancestors}
-    //                 />
-    //                 , cultures, and spiritual beliefs are respected and
-    //                 included.
-    //             </p>
-    //         </>
-    //     ),
-    // },
+    {
+        title: 'Extinction',
+        id: 'extinction',
+        summary: `What happened to the mammoths, sabertooth cats, and giant sloths?`,
+        description: `<p>Near the end of the last ice age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
+       <p> What do you think happened?</p>`,
+        interactive: 'TBD animated quiz',
+        details: (
+            <p>
+                Animal species go
+                <Tooltip
+                    trigger="extinct"
+                    content="Died off and did not pass on their genes to new generations. "
+                />
+                all the time, it happens for a lot of reasons. But when many
+                species go extinct all at once, scientists look for a BIG reason
+                and they call it an extinction event. The Earth has had several
+                extinction events. Scientists want to understand why some
+                animals (looking at you crocodiles) lived through several while
+                other animals (RIP saber-toothed cats) didn&apos;t.
+            </p>
+        ),
+    },
+    {
+        title: 'That&apos;s Important?',
+        id: 'thats-important',
+        summary: `It looks like a piece of boring rock to me…`,
+        description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
+        <p>Can you identify the evidence below?</p>`,
+        interactive: 'TBD interactive Zoom out',
+        details: (
+            <>
+                <p>
+                    Archeologists carefully collect everything, including
+                    charred plants, tiny flakes from stone tools, soil samples,
+                    and animal bone fragments. They also document the exact
+                    location and context of each sample. In labs, specialists
+                    can then identify and analyze the samples.
+                </p>
+                <p>
+                    It may not look important at first glance, but this evidence
+                    helps us understand what Texas&apos; environment was like
+                    and how Paleoindian peoples interacted with their world.
+                </p>
+                <p>
+                    Beware: some collectors dig into archeological sites to find
+                    “arrowheads” and destroy all this important evidence! If you
+                    come across an archeological site, please keep your hands to
+                    yourself.
+                </p>
+            </>
+        ),
+    },
 ]
 
 const OriginStories = () => {
