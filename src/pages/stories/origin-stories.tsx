@@ -2,7 +2,7 @@ import { StoryPage } from '@/components/story-page'
 import { Slider } from '@/components/slider'
 import { ResponsiveImage } from '@/components/responsive-image'
 import { Tooltip } from '@/components/tooltip'
-import { YouTubeVideo } from '@/components/youtube-player'
+import { YouTubeVideo } from '@/components/youtube-video'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { StorySectionProps } from '@/components/story-section'
 

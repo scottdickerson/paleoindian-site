@@ -1,11 +1,12 @@
 import { StoryPage } from '@/components/story-page'
 import { Slider } from '@/components/slider'
 import { Tooltip } from '@/components/tooltip'
-// import { YouTubeVideo } from '@/components/youtube-player'
+import { YouTubeVideo } from '@/components/youtube-video'
 import { StorySectionProps } from '@/components/story-section'
 
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
+import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card.png'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -65,120 +66,108 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         interactive: <>TBD</>,
         details: (
             <p>
-                Large body size is an adaptation to cold climates and many
-                ice-age animals were bigger than modern types of similar
-                animals. In fact, they are sometimes called mega-fauna which is
-                just scientists speak for “really huge animals.” These animals
-                evolved during the last ice age and some went extinct as the ice
-                age ended. Others still have descendants living today.
+                Large body size is an
+                <Tooltip
+                    trigger="adaptation"
+                    content="Certain physical or behavioral characteristics that help an organism survive in an environment."
+                />
+                to cold climates and many ice-age animals were bigger than
+                modern types of similar animals. In fact, they are sometimes
+                called mega-fauna which is just scientists speak for “really
+                huge animals.” These animals
+                <Tooltip
+                    trigger="evolved"
+                    content="Emerged as a distinct species or type of animal from earlier ancestor animal populations."
+                />
+                during the last
+                <Tooltip
+                    trigger="ice age"
+                    content="Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas."
+                />
+                and some went
+                <Tooltip
+                    trigger="extinct"
+                    content="Died off and did not pass on their genes to new generations."
+                />
+                as the ice age ended. Others still have
+                <Tooltip
+                    trigger="descendants"
+                    content="A person or animal's children, grand-children, great-grandchildren and all their relatives who live after them."
+                />
+                living today.
             </p>
         ),
     },
-    // {
-    //     title: 'When did people get here?',
-    //     id: 'when-did-people-get-here',
-    //     summary:
-    //         'We&apos;re not 100% sure, but a lot longer ago than scientists once thought!',
-    //     description:
-    //         '<p>Archeologists have found many places with ancient campfires, tools, and evidence from people who lived about 13,000 years ago. They thought these were campsites of the first people in the Americas. Then new discoveries of even older places challenged this idea.</p><p> Compare the maps below.</p> ',
-    //     interactive: (
-    //         <Slider
-    //             img1={{
-    //                 src: clovisMap1,
-    //                 alt: 'Original Clovis sites shown on a map of the United States',
-    //                 caption:
-    //                     'Places where people using Clovis tools lived about 13,000 years ago.',
-    //             }}
-    //             img2={{
-    //                 src: clovisMap2,
-    //                 alt: 'Pre-Clovis sites shown on a map of the United States',
-    //                 caption:
-    //                     'Places with some evidence of people living before 13,000 years ago.',
-    //             }}
-    //         />
-    //     ),
-    //     details: (
-    //         <>
-    //             <p>
-    //                 Archeologists try to answer questions by
-    //                 <Tooltip
-    //                     trigger="interpreting"
-    //                     content="Decide and explain what something means."
-    //                 />
-    //                 the evidence they find. Around 1940, archeologists found
-    //                 evidence that people who made distinctive
-    //                 <Tooltip
-    //                     trigger="Clovis"
-    //                     content={<ClovisPointTooltip />}
-    //                 />
-    //                 tools, lived across America about 13,000 years ago. For the
-    //                 next 60 years, most scientists agreed with the
-    //                 interpretation that the people who used Clovis tools were
-    //                 the first people to live in the land that we think of as
-    //                 America.
-    //             </p>
-    //             <p>
-    //                 In more recent years, archeologists have found a handful of
-    //                 sites with new evidence of even earlier peoples. At first,
-    //                 not all scientists accepted these sites as proof. But, then
-    //                 archeologists in Texas found stone tools and other objects
-    //                 made by people who lived over 16,000 years ago.
-    //             </p>
-    //             <p>
-    //                 Now, most scientists agree that we just don&apos;t know for
-    //                 sure when people first arrived in the Americas. Learning
-    //                 more about this question is a job for future researchers
-    //                 &ndash; maybe even you!
-    //             </p>
-    //         </>
-    //     ),
-    // },
-    // {
-    //     title: 'How did People get here?',
-    //     id: 'how-did-people-get-here',
-    //     summary: `¯\\_(ツ)_/¯ Unclear, but we&apos;re excited to find out!`,
-    //     description: `<p>Recent discoveries in Texas tell us that people were living here at least 16,000 years ago. But <strong>how</strong> did the very first people arrive? Well, it&apos;s complicated.</p>
-    //   <p>Watch this video to explore some possibilities. </p>`,
-    //     interactive: (
-    //         <YouTubeVideo {...YOUTUBE_VIDEOS['how-did-people-get-here']} />
-    //     ),
-    //     details: (
-    //         <>
-    //             <p>
-    //                 For a long time, most textbooks taught that people walked
-    //                 across the
-    //                 <Tooltip
-    //                     trigger="Bering land bridge"
-    //                     content="A very narrow strip of land that connected Asia to North American long ago.  It connected what is now Russia to Alaska."
-    //                     width={286}
-    //                 />
-    //                 through an ice-free corridor, and into North America around
-    //                 the end of the last
-    //                 <Tooltip
-    //                     trigger="ice age"
-    //                     content="Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas."
-    //                     width={306}
-    //                 />
-    //                 . Some scientists, Native American scholars, and Tribal
-    //                 communities have long challenged the idea that this was the
-    //                 ONLY path that people took to the Americas. Today, a
-    //                 complicated picture is emerging of multiple
-    //                 <Tooltip
-    //                     trigger="migrations"
-    //                     content="Long journeys taken by animals or humans moving from one home to another."
-    //                     width={244}
-    //                 />
-    //                 of people at different times in the past.
-    //             </p>
-    //             <p>
-    //                 For now, we don&apos;t know for sure how people first
-    //                 migrated to the land we think of as North America. Keeping
-    //                 an open mind is an important part of learning about the
-    //                 past.
-    //             </p>
-    //         </>
-    //     ),
-    // },
+    {
+        title: 'Monsters and Mayhem',
+        id: 'monsters-and-mayhem',
+        summary: 'According to these stories, the monsters had to go!',
+        description:
+            '<p>Some Tribal communities have stories of a time when Earth was new and filled with monsters! Maybe they were telling campfire stories, or maybe they were describing their changing world.</p><p>Watch the video below to hear some amazing stories.</p>',
+        interactive: (
+            <YouTubeVideo
+                src="https://youtu.be/G65hcqn3ghM"
+                thumbnail={{
+                    src: monstersAndMayhemThumbnail,
+                    alt: 'Monsters screaming!',
+                }}
+            />
+        ),
+        details: (
+            <p>
+                Native Americans from across Texas and America tell
+                <Tooltip
+                    trigger="origin"
+                    content="The point or place where something begins."
+                />
+                stories of dark, chaotic times when people had to deal with some
+                pretty scary monsters. Every culture has its own stories. In
+                some, the monsters are wiped out by a sudden change like a flood
+                or fire. In other stories, the first people must flee to
+                survive. Archeological sites show us that Paleoindians lived
+                alongside incredible animals that became
+                <Tooltip
+                    trigger="extinct"
+                    content="Died off and did not pass on their genes to new generations."
+                />
+                in a changing climate. It&apos;s possible that their memories
+                became the stuff of legend!
+            </p>
+        ),
+    },
+    {
+        title: 'More Offshore?',
+        id: 'more-offshore',
+        summary: 'Science is better, down where it&apos;s wetter',
+        description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
+        <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
+        interactive: 'Dan to add flipper interactive here',
+        details: (
+            <>
+                <p>
+                    One of the most fascinating Paleoindian archeological sites
+                    in Texas isn&apos;t really an archeological site at all
+                    &mdash; it&apos;s a beach. Over the years, thousands of
+                    Paleoindian artifacts and the bones of{' '}
+                    <Tooltip
+                        trigger="extinct"
+                        content="Died off and did not pass on their genes to new generations. "
+                    />{' '}
+                    animals have washed ashore on a beach near the Texas &mdash;
+                    Louisiana border.
+                </p>
+                <p>
+                    Archeologists agree that the artifacts and bones are from an
+                    underwater area that was once dry land. But now, due to
+                    rising sea levels, what was once a grassy, coastal plain is
+                    now ocean floor about 100 miles out at sea! To study these
+                    sites, some scientists take the plunge and turn to
+                    underwater archeology, a growing field in the study of
+                    Paleoindian sites.
+                </p>
+            </>
+        ),
+    },
     // {
     //     title: 'A Texas-sized discovery',
     //     id: 'a-texas-sized-discovery',

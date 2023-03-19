@@ -1,3 +1,3 @@
-import { YouTubeVideoProps } from './youtube-player'
+import { YouTubeVideoProps } from './youtube-video'
 
 export type YouTubeVideosType = Record<string, YouTubeVideoProps>
