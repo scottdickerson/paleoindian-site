@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
 }
 
@@ -8,22 +8,22 @@
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    align-items: center;
+    align-items: stretch;
     flex-grow: 1;
     width: 100vw;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .navbar .navitem {
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 10px;
     // @media screen and (max-width: $tablet-breakpoint) {
     //   font-size: 0.9375rem;
     // }
 
     flex-grow: 1;
     flex-basis: 15%;
-    line-height: 84px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -32,7 +32,7 @@
 
     &.selected {
         flex-basis: 55%;
-        font-size: 50px;
+        font-size: 20px;
         font-weight: $font_semibold;
         // @media screen and (max-width: $tablet-breakpoint) {
         //   font-size: 1rem;
@@ -43,14 +43,29 @@
 }
 
 .navbar .navitem a {
-    display: block;
+    flex-grow: 1;
     height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction:column;
+    align-items: stretch;
+    text-align:center;
     justify-content: center;
-    padding: 0 2rem;
-    white-space: nowrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+@media screen and (min-width: $tablet-breakpoint) {
+    .navbar .navitem {
+         font-size: 20px;
+         &.selected {
+             font-size: 50px;
+         }
+         a {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+         }
+     }
+ }
 
 .home {
     background-color: #425d29;
@@ -92,48 +107,48 @@
 
 // Version that will show on the Home Page
 
-.isOnHomePage {
-    ul {
-        gap: 1rem;
-        .navitem a {
-            font-size: 1.5rem;
-            white-space: normal;
-        }
-    }
-    align-items: stretch;
+// .isOnHomePage {
+//     ul {
+//         gap: 1rem;
+//         .navitem a {
+//             font-size: 1.5rem;
+//             white-space: normal;
+//         }
+//     }
+//     align-items: stretch;
 
-    @media screen and (max-width: $tablet-breakpoint) {
-        ul {
-            flex-wrap: wrap;
-            .navitem {
-                flex-basis: 100%;
-            }
-        }
-    }
+//     @media screen and (max-width: $tablet-breakpoint) {
+//         ul {
+//             flex-wrap: wrap;
+//             .navitem {
+//                 flex-basis: 100%;
+//             }
+//         }
+//     }
 
-    @media screen and (min-width: $tablet-breakpoint) {
-        ul {
-            flex-direction: row;
-            align-items: stretch;
-        }
-        .navitem {
-            height: 100px;
-        }
-    }
+//     @media screen and (min-width: $tablet-breakpoint) {
+//         ul {
+//             flex-direction: row;
+//             align-items: stretch;
+//         }
+//         .navitem {
+//             height: 100px;
+//         }
+//     }
 
-    @media screen and (max-width: $desktop-breakpoint) {
-        ul .navitem {
-            height: 150px;
-        }
-    }
+//     @media screen and (max-width: $desktop-breakpoint) {
+//         ul .navitem {
+//             height: 150px;
+//         }
+//     }
 
-    @media screen and (min-width: $desktop-breakpoint) {
-        ul {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .navitem a {
-            white-space: nowrap;
-        }
-    }
-}
+//     @media screen and (min-width: $desktop-breakpoint) {
+//         ul {
+//             flex-direction: column;
+//             align-items: stretch;
+//         }
+//         .navitem a {
+//             white-space: nowrap;
+//         }
+//     }
+// }
