@@ -7,6 +7,7 @@ This keeps track of the TODOs and plan design for our first content page
 -   Add new Tabbed interface to header
 -   Fix Rubik Dirt Font
 -   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
+-   Export any large SVGs as PNGs at web format, hook up srcsets
 
 ## TODO Stretch Goals
 

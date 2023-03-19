@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ReactCompareSlider, styleFitContainer } from 'react-compare-slider'
 import styles from '@/styles/Slider.module.scss'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import sliderHandle from './images/slider/sliderHandle.svg'
 import sliderHandleMobile from './images/slider/sliderHandleMobile.svg'
 import { useMediaQuery } from 'react-responsive'
@@ -10,7 +10,7 @@ import { FC } from 'react'
 import classNames from 'classnames'
 
 interface SliderImage {
-    src: string
+    src: StaticImageData
     alt: string
     caption: string
 }
@@ -69,7 +69,7 @@ export const Slider: FC<SliderProps> = ({
                                 objectFit: 'contain',
                                 objectPosition: 'center',
                                 width: 'unset',
-                                maxWidth: 'unset'
+                                maxWidth: 'unset',
                             }),
                         }}
                     />
