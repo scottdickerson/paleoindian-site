@@ -1,11 +1,4 @@
-import {
-    PropsWithChildren,
-    ReactNode,
-    useContext,
-    useEffect,
-    useRef,
-    useState,
-} from 'react'
+import { ReactNode, useContext, useEffect, useRef, useState } from 'react'
 import styles from '../styles/StorySection.module.scss'
 // import * as DOMPurify from "dompurify";
 import { StoryPageContext } from './story-page'
@@ -40,6 +33,7 @@ export interface StorySectionProps {
     summary: string
     description: string
     details: ReactNode
+    interactive: ReactNode
 }
 
 export const StorySection = ({
@@ -47,9 +41,9 @@ export const StorySection = ({
     title,
     summary,
     description,
-    children,
     details,
-}: PropsWithChildren<StorySectionProps>) => {
+    interactive,
+}: StorySectionProps) => {
     const { setHighlightedSection } = useContext(StoryPageContext) || {}
     const sectionRef = useRef<HTMLElement>(null)
     const headingRef = useRef<HTMLHeadingElement>(null)
@@ -89,7 +83,7 @@ export const StorySection = ({
                 className={styles.description}
                 dangerouslySetInnerHTML={{ __html: description }}
             />
-            <div className={styles.interactive}>{children}</div>
+            <div className={styles.interactive}>{interactive}</div>
             <div className={styles.details}>{details}</div>
         </article>
     )

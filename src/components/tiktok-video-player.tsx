@@ -45,7 +45,7 @@ const ThumbnailGallery = ({
     )
 }
 
-interface TikTokPlayerProps {
+export interface TikTokPlayerProps {
     videos: Record<string, { thumbnail: StaticImageData; video: string }>
 }
 

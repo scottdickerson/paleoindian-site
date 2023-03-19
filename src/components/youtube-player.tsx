@@ -6,23 +6,16 @@ import styles from '@/styles/ResponsiveImage.module.scss'
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
-const VideoThumbnail = ({
-    url,
-    alt,
-}: {
-    url: StaticImageData
-    alt: string
-}) => <Image src={url} alt={alt} className={styles.responsiveImage}></Image>
-
-interface YouTubeVideoProps {
-    url: string
+export interface YouTubeVideoProps {
+    src: string
     thumbnail: { src: StaticImageData; alt: string }
 }
 
-export const YouTubeVideo = ({
-    url,
-    thumbnail: { src: thumbnailSrc, alt: thumbnailAlt },
-}: YouTubeVideoProps) => {
+const VideoThumbnail = ({ src, alt }: YouTubeVideoProps['thumbnail']) => (
+    <Image src={src} alt={alt} className={styles.responsiveImage}></Image>
+)
+
+export const YouTubeVideo = ({ src, thumbnail }: YouTubeVideoProps) => {
     const [isStarted, setIsStarted] = useState(false)
 
     const handleClick = () => {
@@ -43,11 +36,11 @@ export const YouTubeVideo = ({
             {!isStarted && (
                 <>
                     <PlayButton onClick={handleClick}></PlayButton>
-                    <VideoThumbnail url={thumbnailSrc} alt={thumbnailAlt} />
+                    <VideoThumbnail {...thumbnail} />
                 </>
             )}
             <ReactPlayer
-                url={url}
+                url={src}
                 height="100%"
                 width="100%"
                 playing={isStarted}

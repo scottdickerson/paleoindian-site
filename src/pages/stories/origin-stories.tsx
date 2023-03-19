@@ -1,56 +1,24 @@
 import { StoryPage } from '@/components/story-page'
-import { StorySection } from '@/components/story-section'
-import { TocScrollable } from '@/components/toc-scrollable'
-import Head from 'next/head'
 import { Slider } from '@/components/slider'
-import sharedBeginnings from './origin-stories/sharedBeginnings.svg'
-import clovisMap1 from './origin-stories/Clovis Map 1_Clovis.svg'
-import clovisMap2 from './origin-stories/Clovis Map 2_Pre-Clovis.svg'
 import { ResponsiveImage } from '@/components/responsive-image'
 import { Tooltip } from '@/components/tooltip'
-import { ClovisPointTooltip } from '@/components/origin-stories/clovis-point-tooltip'
-import { TooltipContentWithImage } from '@/components/tooltip-content-with-image'
-import stemmedSpearFPO from './origin-stories/Stemmed Spear FPO.png'
-import sacredStoriesThumbnail from './origin-stories/1.2 Sacred Stories - Title Card.png'
-import howDidPeopleGetHereThumbnail from './origin-stories/1.4 How Did People Get Here - Title Card.png'
-import texasSizedDiscoveryThumbnail from './origin-stories/1.5 Texas Sized Discovery - Title Card.png'
 import { YouTubeVideo } from '@/components/youtube-player'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
-import abbyReinhardtThumbnail from './origin-stories/tiktok/Abby Reinhardt.png'
-import abigayleFriehaufThumbnail from './origin-stories/tiktok/Abigayle Friehauf.png'
-import angusDunnThumbnail from './origin-stories/tiktok/Angus Dunn.png'
-import nicholasBentleyThumbnail from './origin-stories/tiktok/Nicholas Bentley.png'
+import { StorySectionProps } from '@/components/story-section'
 
-const TOOLTIP_CONTENT = {
-    ancestors: 'A person related to you that lived a long time ago.',
-}
+import { ClovisPointTooltip } from '@/data/origin-stories/tooltips/clovis-point-tooltip'
+import { TooltipContentWithImage } from '@/components/tooltip-content-with-image'
+import sharedBeginnings from '@/data/origin-stories/images/sharedBeginnings.svg'
+import clovisMap1 from '@/data/origin-stories/slider/Clovis Map 1_Clovis.svg'
+import clovisMap2 from '@/data/origin-stories/slider/Clovis Map 2_Pre-Clovis.svg'
+import stemmedSpearFPO from '@/data/origin-stories/tooltips/Stemmed Spear FPO.png'
+import {
+    TIKTOK_VIDEOS,
+    TOOLTIP_CONTENT,
+    YOUTUBE_VIDEOS,
+} from '@/data/origin-stories/data'
 
-const YOUTUBE_VIDEO_LINKS = {
-    'sacred-stories': 'https://youtu.be/G65hcqn3ghM',
-    'how-did-people-get-here': 'https://youtu.be/mZ8CcuEzMas',
-    'texas-sized-discovery': 'https://youtu.be/0Gb77xpxWvY',
-}
-
-const TIKTOK_VIDEOS = {
-    abbyReinhardt: {
-        thumbnail: abbyReinhardtThumbnail,
-        video: '/videos/origin-stories/Abby Reinhardt.mp4',
-    },
-    abigayleFriehauf: {
-        thumbnail: abigayleFriehaufThumbnail,
-        video: '/videos/origin-stories/Abigayle Friehauf.mp4',
-    },
-    angusDunn: {
-        thumbnail: angusDunnThumbnail,
-        video: '/videos/origin-stories/Angus Dunn.mp4',
-    },
-    nicholasBentley: {
-        thumbnail: nicholasBentleyThumbnail,
-        video: '/videos/origin-stories/Nicholas Bentley.mp4',
-    },
-}
-
-const ORIGIN_STORY_SECTIONS = [
+const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
     {
         title: 'Shared Beginnings',
         id: 'shared-beginnings',
@@ -82,15 +50,7 @@ const ORIGIN_STORY_SECTIONS = [
             'Some of the best stories start &ldquo;a long time ago...&rdquo;',
         description:
             '<p>The Tribal communities of Texas have many traditional stories about their beginnings or origins. These stories often show a deep connection to special places on the landscape.</p> <p>Watch the video below to learn more. </p>',
-        interactive: (
-            <YouTubeVideo
-                url={YOUTUBE_VIDEO_LINKS['sacred-stories']}
-                thumbnail={{
-                    src: sacredStoriesThumbnail,
-                    alt: 'Sacred Stories',
-                }}
-            ></YouTubeVideo>
-        ),
+        interactive: <YouTubeVideo {...YOUTUBE_VIDEOS['sacred-stories']} />,
         details: (
             <>
                 <p>
@@ -179,13 +139,7 @@ const ORIGIN_STORY_SECTIONS = [
         description: `<p>Recent discoveries in Texas tell us that people were living here at least 16,000 years ago. But <strong>how</strong> did the very first people arrive? Well, it&apos;s complicated.</p>
       <p>Watch this video to explore some possibilities. </p>`,
         interactive: (
-            <YouTubeVideo
-                url={YOUTUBE_VIDEO_LINKS['how-did-people-get-here']}
-                thumbnail={{
-                    src: howDidPeopleGetHereThumbnail,
-                    alt: 'How did people get here',
-                }}
-            ></YouTubeVideo>
+            <YouTubeVideo {...YOUTUBE_VIDEOS['how-did-people-get-here']} />
         ),
         details: (
             <>
@@ -232,11 +186,7 @@ const ORIGIN_STORY_SECTIONS = [
     <p>Watch the video to find out how.</p>`,
         interactive: (
             <YouTubeVideo
-                url={YOUTUBE_VIDEO_LINKS['texas-sized-discovery']}
-                thumbnail={{
-                    src: texasSizedDiscoveryThumbnail,
-                    alt: 'Scientist and a statue of thinker statue by Rodan ',
-                }}
+                {...YOUTUBE_VIDEOS['texas-sized-discovery']}
             ></YouTubeVideo>
         ),
         details: (
@@ -321,23 +271,10 @@ const ORIGIN_STORY_SECTIONS = [
 
 const OriginStories = () => {
     return (
-        // nextjs title section
-        <>
-            <Head>
-                <title>Texas Paleoindian - Origin Stories</title>
-            </Head>
-
-            <StoryPage>
-                {ORIGIN_STORY_SECTIONS.map((section) => (
-                    <StorySection key={section.id} {...section}>
-                        {section.interactive}
-                    </StorySection>
-                ))}
-                <TocScrollable
-                    storySections={ORIGIN_STORY_SECTIONS}
-                ></TocScrollable>
-            </StoryPage>
-        </>
+        <StoryPage
+            title="Texas Paleoindian - Origin Stories"
+            storySections={ORIGIN_STORY_SECTIONS}
+        />
     )
 }
 

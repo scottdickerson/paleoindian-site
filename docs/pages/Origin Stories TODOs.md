@@ -4,13 +4,9 @@ This keeps track of the TODOs and plan design for our first content page
 
 ## TODO NEXT STEPS
 
--   Slider handle is not extending fully on Safari or Firefox
--   Mobile Slider Handler is not showing on iOS device
--   White font text difficult to read on mobile because not over ocean, drop-shadow fix?
--   Fix header with new styles
+-   Add new Tabbed interface to header
 -   Fix Rubik Dirt Font
 -   SVG files for slider are really huge causing slow loading of fonts and other things. Ping Katrina for help here
--   Test in incognito browser with Disabled Cache and 3G fast throttling to verify how quickly they load
 
 ## TODO Stretch Goals
 
