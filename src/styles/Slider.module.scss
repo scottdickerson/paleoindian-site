@@ -12,15 +12,20 @@
     cursor: pointer;
 }
 
+.captionContainer {
+    position: absolute;
+    top: 0;
+    right: 11%;
+    bottom: 0;
+    width: 29%;
+}
+
 .sliderCaption {
     color: white;
     position:absolute;
     top:34%;
-    right:11%;
-    width: 29%;
     line-height: 2vw;
-    font-size: 17px;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;

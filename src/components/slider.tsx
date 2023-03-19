@@ -80,7 +80,7 @@ export const Slider: FC<SliderProps> = ({
                     }
                 }}
             />
-            <div>
+            <div className={styles.captionContainer}>
                 {img1Caption && (
                     <span
                         className={classNames(styles.sliderCaption, {
