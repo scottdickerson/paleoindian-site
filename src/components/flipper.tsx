@@ -6,7 +6,7 @@ export const Flipper = () => {
     const flipperImages = FlipperImages.map((flipperImage) => flipperImage.closed)
 
     const handleFlipperImageClick = () => {
-        console.log('flipper image clicked')
+        console.log('Flipper image clicked')
     }
     
     return (
