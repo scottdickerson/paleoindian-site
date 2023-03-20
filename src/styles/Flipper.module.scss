@@ -1,8 +1,7 @@
 .flipperWrapper {
     position: relative;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    max-height: 800px;
     display: flex;
 }
