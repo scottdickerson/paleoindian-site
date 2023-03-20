@@ -3,17 +3,12 @@ import Image from 'next/image'
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 export const Flipper = () => {
-    let opened = false;
-
     const handleFlipperImageClick = () => {
         let opened = true;
         return opened
     }
-    
-    const flipperImages = FlipperImages.map((image) => {
-        return image.closed
-    })
 
+    const flipperImages = FlipperImages.map((image) => image.closed)
 
     return (
         <div className={styles.flipperWrapper}>
