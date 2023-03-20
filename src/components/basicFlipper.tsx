@@ -10,7 +10,7 @@ export default function DansFlipper() {
             {flipperImages.map((image) => (
                 <div>
                     <Image 
-                        src={image.opened ? image.opened : image.closed}
+                        src={image.closed}
                         className={`${styles.flipperImage} ${styles[image.id]}`}
                         alt="Flipper"
                         layout='responsive'
