@@ -1,10 +1,11 @@
 import styles from '../styles/Flipper.module.css'
 import Image from 'next/image'
-import { useState } from 'react'
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 export default function DansFlipper() {
-    const [flipperImages] = useState(FlipperImages)
+    
+    const flipperImages = FlipperImages;
+
     return (
         <div className={styles.flipperWrapper}>
             {flipperImages.map((image) => (
