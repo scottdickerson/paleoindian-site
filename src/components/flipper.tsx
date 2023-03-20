@@ -10,35 +10,50 @@ import flipper7 from '@/data/ice-age-texas/flipper/More Offshore Illustration-08
 import flipper8 from '@/data/ice-age-texas/flipper/More Offshore Illustration-04@2x.png'
 
 export const Flipper = () => {
+    const flipperImages = [
+        flipper1,
+        flipper2,
+        flipper3,
+        flipper4,
+        flipper5,
+        flipper6,
+        flipper7,
+        flipper8,
+    ]
+
+    const handleFlipperImageClick = () => {
+        console.log(`Clicked!`)
+    }
+    
     return (
         <div className={styles.flipperWrapper}>
-            <div onClick={() => {console.log(`Clicked!`)}}>
+            <div onClick={() => handleFlipperImageClick()}>
                 <Image 
-                    src={flipper1}
+                    src={flipperImages[0]}
                     className={`${styles.flipperImage} ${styles.flipper1}`}
                     alt="Flipper"
                     layout='responsive'
                 />
             </div>
-            <div onClick={() => {console.log(`Clicked!`)}}>
+            <div onClick={() => handleFlipperImageClick()}>
                 <Image 
-                    src={flipper3}
+                    src={flipperImages[2]}
                     className={`${styles.flipperImage} ${styles.flipper2}`}
                     alt="Flipper"
                     layout='responsive'
                 />
             </div>
-            <div onClick={() => {console.log(`Clicked!`)}}>
+            <div onClick={() => handleFlipperImageClick()}>
                 <Image 
-                    src={flipper5}
+                    src={flipperImages[4]}
                     className={`${styles.flipperImage} ${styles.flipper3}`}
                     alt="Flipper"
                     layout='responsive'
                 />
             </div>
-            <div onClick={() => {console.log(`Clicked!`)}}>
+            <div onClick={() => handleFlipperImageClick()}>
                 <Image 
-                    src={flipper7}
+                    src={flipperImages[6]}
                     className={`${styles.flipperImage} ${styles.flipper4}`}
                     alt="Flipper"
                     layout='responsive'
