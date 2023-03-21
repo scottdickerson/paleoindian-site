@@ -28,4 +28,4 @@ export const FlipperImages = [
         closed: flipper7,
         opened: flipper8,
     },
-]
+];
