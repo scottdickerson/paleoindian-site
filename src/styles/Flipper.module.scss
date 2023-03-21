@@ -1,5 +1,18 @@
 .flipperWrapper {
     display: flex;
+    position: relative;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto;
+}
+
+.flipper {
+    position: relative;
+}
+
+.text {
+    position: absolute; 
+    font-size: 1rem;
+    width: fit-content;
+    font-weight: 600;
+    top: 10%;
 }
