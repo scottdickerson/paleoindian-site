@@ -11,7 +11,6 @@ export default function Flipper() {
     newIsOpened[index] = !newIsOpened[index];
     setIsOpened(newIsOpened);
   };
-
   return (
     <div className={styles.flipperWrapper}>
       {FlipperImages.map((image, index) => (
@@ -20,9 +19,8 @@ export default function Flipper() {
             src={isOpened[index] ? image.opened : image.closed}
             className={styles.flipper}
             alt={`Flipper ${index + 1}`}
-            layout="responsive"
           />
-          <div className={`${styles.text} ${styles.text[index]}`}>
+          <div className={`${styles.text} ${isOpened[index] ? styles.textIsOpened : styles.textIsClosed}`}>
             {isOpened[index] ? image.openedText : image.closedText}
           </div>
         </div>
