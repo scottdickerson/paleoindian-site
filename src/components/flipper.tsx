@@ -13,14 +13,15 @@ export default function Flipper() {
     return (
       <div className={styles.flipperWrapper}>
         {images.map((image, index) => (
+          <div onClick={toggleIsOpened}>
           <Image
             key={index}
             src={image}
             className={styles.flipper}
             alt={`Flipper ${index + 1}`}
-            onClick={toggleIsOpened}
             layout="responsive"
           />
+          </div>
         ))}
       </div>
     );
