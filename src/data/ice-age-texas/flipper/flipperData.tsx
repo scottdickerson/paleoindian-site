@@ -12,20 +12,28 @@ export const FlipperImages = [
         id: "flipperOne",
         closed: flipper1,
         opened: flipper2,
+        closedText: "Flipper One Closed",
+        openedText: "Flipper One Opened",
     },
     {
         id: "flipperTwo",
         closed: flipper3,
         opened: flipper4,
+        closedText: "Flipper Two Closed",
+        openedText: "Flipper Two Opened",
     },
     {
         id: "flipperThree",
         closed: flipper5,
         opened: flipper6,
+        closedText: "Flipper Three Closed",
+        openedText: "Flipper Three Opened",
     },
     {
         id: "flipperFour",
         closed: flipper7,
         opened: flipper8,
+        closedText: "Flipper Four Closed",
+        openedText: "Flipper Four Opened",
     },
 ];
