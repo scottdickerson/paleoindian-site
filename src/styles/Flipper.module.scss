@@ -7,12 +7,15 @@
 
 .flipper {
     position: relative;
+    justify-content: center;    
 }
 
 .text {
     position: absolute; 
     font-size: 1rem;
-    width: fit-content;
+    width: 9rem;
+    padding-left: 1rem;
     font-weight: 600;
     top: 10%;
+    word-wrap: break-word;
 }
