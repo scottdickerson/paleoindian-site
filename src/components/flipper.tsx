@@ -22,7 +22,7 @@ export default function Flipper() {
             alt={`Flipper ${index + 1}`}
             layout="responsive"
           />
-          <div className={styles.text}>
+          <div className={`${styles.text} ${styles.text[index]}`}>
             {isOpened[index] ? image.openedText : image.closedText}
           </div>
         </div>
