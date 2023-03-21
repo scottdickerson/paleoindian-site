@@ -4,25 +4,26 @@ import { useState } from 'react';
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 export default function Flipper() {
-    const [isOpened, setIsOpened] = useState(false);
-    const toggleIsOpened = () => setIsOpened(!isOpened);
-    const closedImages = FlipperImages.map((image) => image.closed);
-    const openedImages = FlipperImages.map((image) => image.opened);
-    const images = isOpened ? openedImages : closedImages;
-    
-    return (
-      <div className={styles.flipperWrapper}>
-        {images.map((image, index) => (
-          <div onClick={toggleIsOpened}>
+  const [isOpened, setIsOpened] = useState(new Array(FlipperImages.length).fill(false));
+
+  const toggleIsOpened = (index:any) => {
+    const newIsOpened = [...isOpened];
+    newIsOpened[index] = !newIsOpened[index];
+    setIsOpened(newIsOpened);
+  };
+
+  return (
+    <div className={styles.flipperWrapper}>
+      {FlipperImages.map((image, index) => (
+        <div key={index} onClick={() => toggleIsOpened(index)}>
           <Image
-            key={index}
-            src={image}
+            src={isOpened[index] ? image.opened : image.closed}
             className={styles.flipper}
             alt={`Flipper ${index + 1}`}
             layout="responsive"
           />
-          </div>
-        ))}
-      </div>
-    );
+        </div>
+      ))}
+    </div>
+  );
 }
