@@ -14,7 +14,7 @@ export default function Flipper() {
   return (
     <div className={styles.flipperWrapper}>
       {FlipperImages.map((image, index) => (
-        <div key={index} onClick={() => toggleIsOpened(index)}>
+        <div key={index} className={styles.imageWrapper} onClick={() => toggleIsOpened(index)}>
           <Image
             src={isOpened[index] ? image.opened : image.closed}
             className={styles.flipper}
