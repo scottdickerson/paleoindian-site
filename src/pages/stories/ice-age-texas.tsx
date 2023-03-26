@@ -7,6 +7,8 @@ import { StorySectionProps } from '@/components/story-section'
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card.png'
+import { Question } from '@/components/question'
+import climateChangeThumbnail from '@/data/ice-age-texas/quiz/Climate-Change.png'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -174,7 +176,32 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: `What happened to the mammoths, sabertooth cats, and giant sloths?`,
         description: `<p>Near the end of the last ice age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
        <p> What do you think happened?</p>`,
-        interactive: 'TBD animated quiz',
+        interactive: (
+            <Question
+                question="Was it climate change?"
+                thumbnail={climateChangeThumbnail}
+                choices={[
+                    {
+                        choice: 'YES',
+                        moreInformation: {
+                            title: 'YES',
+                            details: `Climate change can lead to species extinction. 
+                For example, a changing plant community 
+                could impact an animal's food source.`,
+                        },
+                    },
+                    {
+                        choice: 'NO',
+                        moreInformation: {
+                            title: 'NO',
+                            details: `Many of the species that died at the end 
+                        of the ice age had previously survived 
+                        other periods of major climate change.`,
+                        },
+                    },
+                ]}
+            />
+        ),
         details: (
             <p>
                 Animal species go
@@ -192,7 +219,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         ),
     },
     {
-        title: 'That&apos;s Important?',
+        title: "That's Important?",
         id: 'thats-important',
         summary: `It looks like a piece of boring rock to me…`,
         description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
