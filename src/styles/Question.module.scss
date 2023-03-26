@@ -1,12 +1,20 @@
 .parent {
-    display: grid;
-    grid-template-areas: 'header header' 'question choice1' 'question choice2';
-    grid-template-rows: 52px 140px 140px;
-    grid-template-columns: 463px 352px;
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
+    display: flex;
+    flex-flow: column;
     width: 100%;
     color: #4783b0;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+@container (min-width: 768px) {
+    // if we have room then we can use grid
+    .parent {
+        display: grid;
+        grid-template-areas: 'header header' 'question choice1' 'question choice2';
+        grid-template-rows: 52px auto auto;
+        grid-template-columns: 57% 43%;
+    }
 }
 
 .question {
@@ -23,6 +31,7 @@
 .image {
     grid-area: question;
     position: relative;
+    aspect-ratio: 463/260; // images are all this size
 }
 
 .choice {
@@ -31,6 +40,7 @@
     justify-content: center;
     cursor: pointer;
     padding: 1rem;
+    min-height: 125px;
 }
 
 .choiceDetails {

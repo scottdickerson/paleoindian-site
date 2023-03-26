@@ -1,7 +1,8 @@
 import styles from '@/styles/Question.module.scss'
 import classNames from 'classnames'
+import { useInView } from 'framer-motion'
 import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 interface ChoiceDetailsProps {
     title: string
@@ -15,7 +16,7 @@ const ChoiceDetails = ({ title, details }: ChoiceDetailsProps) => (
     </div>
 )
 
-interface QuestionProps {
+export interface QuestionProps {
     question: string
     thumbnail: StaticImageData
     animation: StaticImageData
@@ -31,17 +32,28 @@ interface QuestionProps {
 export const Question = ({
     question,
     thumbnail,
+    animation,
     alt,
     choices,
 }: QuestionProps) => {
     const [choice1Clicked, setChoice1Clicked] = useState(false)
     const [choice2Clicked, setChoice2Clicked] = useState(false)
+    const questionRef = useRef<HTMLImageElement>(null)
+    const isInView = useInView(questionRef, {
+        amount: 1,
+        once: true,
+    })
 
     return (
         <div className={styles.parent}>
             <div className={styles.question}>{question}</div>
             <div className={styles.image}>
-                <Image src={thumbnail} alt={alt} fill />
+                <Image
+                    src={!isInView ? thumbnail : animation}
+                    alt={alt}
+                    fill
+                    ref={questionRef}
+                />
             </div>
             <button
                 className={classNames(
