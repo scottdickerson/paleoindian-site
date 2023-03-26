@@ -6,7 +6,7 @@ import { StorySectionProps } from '@/components/story-section'
 
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
-import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card.png'
+import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card@2x.png'
 import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [

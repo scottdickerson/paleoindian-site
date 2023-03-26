@@ -9,8 +9,8 @@ import { StorySectionProps } from '@/components/story-section'
 import { ClovisPointTooltip } from '@/data/origin-stories/tooltips/clovis-point-tooltip'
 import { TooltipContentWithImage } from '@/components/tooltip-content-with-image'
 import sharedBeginnings from '@/data/origin-stories/images/sharedBeginnings.svg'
-import clovisMap1 from '@/data/origin-stories/slider/Clovis Map 1_Clovis.svg'
-import clovisMap2 from '@/data/origin-stories/slider/Clovis Map 2_Pre-Clovis.svg'
+import clovisMap1 from '@/data/origin-stories/slider/Clovis Map - 1@2x.png'
+import clovisMap2 from '@/data/origin-stories/slider/Clovis Map - 2@2x.png'
 import stemmedSpearFPO from '@/data/origin-stories/tooltips/Stemmed Spear FPO.png'
 import {
     TIKTOK_VIDEOS,

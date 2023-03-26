@@ -1,8 +1,8 @@
 import { TikTokPlayerProps } from '../../components/tiktok-video-player'
 import { YouTubeVideosType } from '../../components/types'
-import sacredStoriesThumbnail from './videos/1.2 Sacred Stories - Title Card.png'
-import howDidPeopleGetHereThumbnail from './videos/1.4 How Did People Get Here - Title Card.png'
-import texasSizedDiscoveryThumbnail from './videos/1.5 Texas Sized Discovery - Title Card.png'
+import sacredStoriesThumbnail from './videos/1.2 Sacred Stories - Title Card@2x.png'
+import howDidPeopleGetHereThumbnail from './videos/1.4 How Did People Get Here - Title Card@2x.png'
+import texasSizedDiscoveryThumbnail from './videos/1.5 Texas Sized Discovery - Title Card@2x.png'
 
 import abbyReinhardtThumbnail from './tiktok/Abby Reinhardt.png'
 import abigayleFriehaufThumbnail from './tiktok/Abigayle Friehauf.png'
