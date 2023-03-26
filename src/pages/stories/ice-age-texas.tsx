@@ -7,6 +7,7 @@ import { StorySectionProps } from '@/components/story-section'
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card.png'
+import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -174,7 +175,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: `What happened to the mammoths, sabertooth cats, and giant sloths?`,
         description: `<p>Near the end of the last ice age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
        <p> What do you think happened?</p>`,
-        interactive: 'TBD animated quiz',
+        interactive: <ExtinctionQuiz />,
         details: (
             <p>
                 Animal species go
@@ -192,7 +193,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         ),
     },
     {
-        title: 'That&apos;s Important?',
+        title: "That's Important?",
         id: 'thats-important',
         summary: `It looks like a piece of boring rock to me…`,
         description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
