@@ -8,6 +8,7 @@ import Flipper from '@/components/flipper'
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card.png'
+// import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -142,7 +143,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: 'Science is better, down where it&apos;s wetter',
         description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
         <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
-        interactive: <Flipper />,
+        interactive: <Flipper/>,
         details: (
             <>
                 <p>

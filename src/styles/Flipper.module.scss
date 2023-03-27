@@ -3,6 +3,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
+    aspect-ratio: auto;
     width: 100vw;
 }
 
@@ -30,6 +31,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    width: 100%; 
     @media screen and (min-width: 768px) {
       min-height: 60vh;
     }
