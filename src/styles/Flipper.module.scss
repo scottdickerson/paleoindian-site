@@ -25,7 +25,7 @@
     word-spacing: 10vw;
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 768px) {
   .text {
     font-size: 2.4vw;
     right: 2px;
@@ -39,6 +39,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    aspect-ratio: 1/1;
     width: 100%;
     @media screen and (min-width: 768px) {
       min-height: 60vh;
