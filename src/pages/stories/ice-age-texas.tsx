@@ -7,7 +7,9 @@ import { StorySectionProps } from '@/components/story-section'
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card@2x.png'
+import boneFragments from '@/data/ice-age-texas/zoomer/TARL blog example Jurgens-Fig1-e1513702362955@2x.png'
 import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
+import { Zoomer } from '@/components/zoomer'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -198,7 +200,14 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: `It looks like a piece of boring rock to me…`,
         description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
         <p>Can you identify the evidence below?</p>`,
-        interactive: 'TBD interactive Zoom out',
+        interactive: (
+            <Zoomer
+                src={boneFragments}
+                transformOrigin="35% 50%"
+                scale={8}
+                alt="Bone fragments"
+            />
+        ),
         details: (
             <>
                 <p>
