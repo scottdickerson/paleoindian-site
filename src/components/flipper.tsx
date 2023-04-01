@@ -19,6 +19,7 @@ export default function Flipper() {
             src={isOpened[index] ? image.opened : image.closed}
             className={styles.flipper}
             alt={`Flipper ${index + 1}`}
+            // Hello world!
           />
           <div className={`${styles.text} ${isOpened[index] ? styles.textIsOpened : styles.textIsClosed}`}>
             {isOpened[index] ? image.openedText : image.closedText}
