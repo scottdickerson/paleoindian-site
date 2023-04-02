@@ -11,9 +11,11 @@ import boneFragments from '@/data/ice-age-texas/zoomer/TARL blog example Jurgens
 import lithicDebitage from '@/data/ice-age-texas/zoomer/ARCH-Debitage1-1024x908@2x.png'
 import charredOak from '@/data/ice-age-texas/zoomer/TARL example charred oak@2x.png'
 import humanCoprolites from '@/data/ice-age-texas/zoomer/Hindes Cave-cop1@2x.png'
+import { cardData } from '@/data/ice-age-texas/cards/data'
 import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
+import Cards from '@/components/cards'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -70,7 +72,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: 'Giant lions, giant tigers, giant bears, oh my!',
         description:
             '<p>Ice-age Texas was home to amazing animals that are now gone. Early ancestors of Native Americans lived alongside and even hunted these animals.</p><p>Flip through the cards for fun facts about fantastic fauna!',
-        interactive: <>TBD</>,
+        interactive: <Cards cards={cardData} />,
         details: (
             <p>
                 Large body size is an
