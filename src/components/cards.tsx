@@ -17,15 +17,15 @@ export const calculateVisibleCardArray = (
     for (let i = leftMostCard; i <= rightMostCard; i++) {
         visibleCardArray.push(cardData.at(i % cardData.length))
     }
-    console.log('visibleCardArray', visibleCardArray)
     return visibleCardArray
 }
 
 interface CardProps {
     cards: { id: string; image: StaticImageData; caption: string }[]
+    pdf: string
 }
 
-const Cards = ({ cards }: CardProps) => {
+const Cards = ({ cards, pdf }: CardProps) => {
     const [current, setCurrent] = useState(2)
     const length = cards.length
     const cardContainerRef = useRef<HTMLDivElement>(null)
@@ -119,11 +119,11 @@ const Cards = ({ cards }: CardProps) => {
                 <span className={styles.text}>
                     {visibleCards.at(current % 5).caption}
                 </span>
-                <button className={styles.downloadButton}>
+                <a className={styles.downloadButton} href={pdf} download>
                     <span className={styles.playAlong}>Play along!</span> Click
                     here to download printable cards and play the
                     hunter-gatherer game.
-                </button>
+                </a>
                 {/* This div is to handle the swipe animation */}
                 <motion.div
                     className={styles.swipeContainer}

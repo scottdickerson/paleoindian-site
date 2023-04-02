@@ -72,7 +72,9 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: 'Giant lions, giant tigers, giant bears, oh my!',
         description:
             '<p>Ice-age Texas was home to amazing animals that are now gone. Early ancestors of Native Americans lived alongside and even hunted these animals.</p><p>Flip through the cards for fun facts about fantastic fauna!',
-        interactive: <Cards cards={cardData} />,
+        interactive: (
+            <Cards cards={cardData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
+        ),
         details: (
             <p>
                 Large body size is an
