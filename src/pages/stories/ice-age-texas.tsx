@@ -8,8 +8,12 @@ import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card@2x.png'
 import boneFragments from '@/data/ice-age-texas/zoomer/TARL blog example Jurgens-Fig1-e1513702362955@2x.png'
+import lithicDebitage from '@/data/ice-age-texas/zoomer/ARCH-Debitage1-1024x908@2x.png'
+import charredOak from '@/data/ice-age-texas/zoomer/TARL example charred oak@2x.png'
+import humanCoprolites from '@/data/ice-age-texas/zoomer/Hindes Cave-cop1@2x.png'
 import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
+import { ZoomerSection } from '@/components/zoomer-section'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -201,12 +205,56 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
         <p>Can you identify the evidence below?</p>`,
         interactive: (
-            <Zoomer
-                src={boneFragments}
-                transformOrigin="35% 50%"
-                scale={8}
-                alt="Bone fragments"
-            />
+            <ZoomerSection>
+                <Zoomer
+                    src={boneFragments}
+                    transformOrigin="35% 50%"
+                    scale={8}
+                    alt="Bone fragments"
+                    details={{
+                        title: 'Bone fragments',
+                        subtitle: 'Estimated age, Site location',
+                        details:
+                            'Tiny bone leftovers can tell us what people ate for dinner, what kind of hunting strategies they used, and even if a certain camp was a seasonal hunting location.',
+                    }}
+                />
+                <Zoomer
+                    src={lithicDebitage}
+                    transformOrigin="50% 0%"
+                    scale={12}
+                    alt="Lithic debitage"
+                    details={{
+                        title: 'Lithic debitage',
+                        subtitle: 'Estimated age, Site location',
+                        details:
+                            'When people chip away at stone to make tools, tiny flakes like these break off. Archeologists study them to identify where the stone came from and even what kind thing the stone-tool artist was making.  ',
+                    }}
+                />
+                <Zoomer
+                    src={charredOak}
+                    transformOrigin="35% 50%"
+                    scale={8}
+                    alt="Charred wood"
+                    details={{
+                        title: 'Charred wood',
+                        subtitle: 'Estimated age, Site location',
+                        details:
+                            'Charred wood samples from ancient campfires can tell us when a campfire burned and what species of trees were in the area. Seeds from ancient campfires can help us understand what people ate and the local ecosystem.',
+                    }}
+                />
+                <Zoomer
+                    src={humanCoprolites}
+                    transformOrigin="35% 50%"
+                    scale={8}
+                    alt="Human coprolites"
+                    details={{
+                        title: 'Human coprolites',
+                        subtitle: 'Estimated age, Site location',
+                        details:
+                            "These terrific turds provide information about a person's diet, health, and even genetics. To date, no Paleoindian coprolites have been found in Texas, but finding a #2 is a #1 priority!",
+                    }}
+                />
+            </ZoomerSection>
         ),
         details: (
             <>
