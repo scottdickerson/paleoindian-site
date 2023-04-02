@@ -1,16 +1,18 @@
 import { Quiz } from '@/components/quiz'
 import climateChangeThumbnail from '@/data/ice-age-texas/quiz/Climate-Change@2x.png'
-import comet from '@/data/ice-age-texas/quiz/Comet@2x.png'
-import people from '@/data/ice-age-texas/quiz/People@2x.png'
-import questionMark from '@/data/ice-age-texas/quiz/Question Mark@2x.png'
+import climateChangeAnimated from '@/data/ice-age-texas/quiz/Climate-Change-animation.gif'
+import cometThumbnail from '@/data/ice-age-texas/quiz/Comet@2x.png'
+import cometAnimated from '@/data/ice-age-texas/quiz/Comet-animation.gif'
+import peopleThumbnail from '@/data/ice-age-texas/quiz/People@2x.png'
+import peopleAnimated from '@/data/ice-age-texas/quiz/People-animation.gif'
 
 export const ExtinctionQuiz = () => (
     <Quiz
         questions={[
             {
                 question: 'Was it climate change?',
-                thumbnail: questionMark,
-                animation: climateChangeThumbnail,
+                thumbnail: climateChangeThumbnail,
+                animation: climateChangeAnimated,
                 alt: 'A woolly mammoth getting burned by the sun.',
                 choices: [
                     {
@@ -35,8 +37,8 @@ export const ExtinctionQuiz = () => (
             },
             {
                 question: 'Was it a comet?',
-                thumbnail: questionMark,
-                animation: comet,
+                thumbnail: cometThumbnail,
+                animation: cometAnimated,
                 alt: 'A comet in space.',
                 choices: [
                     {
@@ -57,8 +59,8 @@ export const ExtinctionQuiz = () => (
             },
             {
                 question: 'Was it people?',
-                thumbnail: questionMark,
-                animation: people,
+                thumbnail: peopleThumbnail,
+                animation: peopleAnimated,
                 alt: 'A paleoindian hunting an animal.',
                 choices: [
                     {
