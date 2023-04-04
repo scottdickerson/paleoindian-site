@@ -15,36 +15,36 @@
   top: 5%;
   padding: 0 1vw;
   min-width: 100%;
-  font-size: 1.2vw;
+  font-size: 2.2vw;
   font-weight: 500;
+  @media screen and (min-width: 650px) {
+    font-size: 1.8vw;
+  }
+  @media screen and (min-width: 800px) {
+    font-size: 1.2vw;
+  }
 }
 
 .textIsClosed {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     font-weight: bold;
     word-spacing: 10vw;
+    @media screen and (max-width: 650px) {
+      font-size: 3vw;
+      word-spacing: 20vw;
+    }
 }
 
-@media screen and (max-width: 768px) {
-  .text {
-    font-size: 2.4vw;
-    right: 2px;
+.flipper {
+  position: relative;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    height: 30vh;
   }
-  .textIsClosed {
-    font-size: 2.5vw;
+  @media screen and (min-width: 900px) {
+    min-height: 50vh;
   }
 }
-
-  .flipper {
-    position: relative;
-    justify-content: center;
-    align-items: center;  
-    width: 100%;
-    @media screen and (max-width: 500px) {
-      height: 30vh;
-    }
-    @media screen and (min-width: 900px) {
-      min-height: 50vh;
-    }
-  }
   
