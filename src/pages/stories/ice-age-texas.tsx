@@ -19,7 +19,7 @@ import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
 
 // For the flipper data
-// import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
+import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -157,7 +157,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
         <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
         interactive: <Flipper
-                        // data={[FlipperImages]}
+                        images={FlipperImages}
         />,
         details: (
             <>
