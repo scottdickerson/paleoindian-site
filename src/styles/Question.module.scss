@@ -1,0 +1,82 @@
+.parent {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    color: #4783b0;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+@container (min-width: 768px) {
+    // if we have room then we can use grid
+    .parent {
+        display: grid;
+        grid-template-areas: 'header header' 'question choice1' 'question choice2';
+        grid-template-rows: 52px auto auto;
+        grid-template-columns: 57% 43%;
+    }
+}
+
+.question {
+    text-align: center;
+    font-size: 25px;
+    line-height: 39px;
+    font-weight: $font_extrabold;
+    font-stretch: condensed;
+    grid-area: header;
+    background-color: rgba(95, 88, 66, 0.1);
+    padding: 10px 0px;
+}
+
+.image {
+    grid-area: question;
+    position: relative;
+    aspect-ratio: 463/260; // images are all this size
+}
+
+.choice {
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1rem;
+    min-height: 125px;
+}
+
+.choiceDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: $font_black;
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: $font_medium;
+    }
+}
+
+.choiceNotClicked {
+    background-color: #4783b0;
+    color: #8dd2ef;
+    font-size: 35px;
+    font-weight: $font_black;
+    letter-spacing: 1px;
+    align-items: center;
+}
+.choiceClicked {
+    background-color: #8dd2ef;
+    color: black;
+    align-items: flex-start;
+    cursor: default;
+}
+.choice1 {
+    grid-area: choice1;
+}
+.choice2 {
+    grid-area: choice2;
+}
