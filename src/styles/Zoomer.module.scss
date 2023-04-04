@@ -1,0 +1,84 @@
+.zoomerContainer {
+    position: relative;
+
+    color: white;
+}
+
+.zoomer {
+    clip-path: inset(0% 0% 0% 0%);
+    img {
+        transition: all 0.5s ease;
+    }
+}
+
+.zoomerQuestion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: $font_black;
+    padding: 18px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    @media screen and (max-width: $tablet-breakpoint) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+.zoomerDetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 18px 20px;
+    background-image: linear-gradient(rgba(59, 59, 59, 0), rgba(61, 61, 61, 1));
+    font-weight: $font_black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    pointer-events: none;
+
+    h3 {
+        font-size: 26px;
+        line-height: 20px;
+    }
+    h4 {
+        font-size: 18px;
+        font-weight: $font_bold;
+        line-height: 20px;
+        padding-bottom: 0.5rem;
+    }
+    p {
+        font-size: 18px;
+        line-height: 24px;
+        font-stretch: condensed;
+        font-weight: $font_medium;
+    }
+    @media screen and (max-width: $tablet-breakpoint) {
+        h3 {
+            font-size: 20px;
+            line-height: 15px;
+        }
+        h4 {
+            font-size: 13px;
+            line-height: 13px;
+        }
+        p {
+            font-size: 10px;
+            line-height: 13px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 ## TODO
 
--   Get Paleoindian Favicon from Katrina
+-   Review all font sizes, line-height, and weights at the different breakpoints for all components!
 
 ## TODO: Nice to have
 

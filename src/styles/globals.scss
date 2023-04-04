@@ -88,6 +88,7 @@ video {
     padding: 0;
     border: 0;
     vertical-align: baseline;
+    overscroll-behavior: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -136,7 +137,6 @@ a {
     text-decoration: none;
     color: unset;
 }
-
 
 /**
  * 1. Change the font styles in all browsers.
@@ -197,6 +197,4 @@ Stop image drag
     */
 img {
     pointer-events: none;
-  }
-
- 
+}
