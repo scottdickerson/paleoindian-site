@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 type Images = {
-  opened: any;
-  closed: any;
-  openedText: any;
-  closedText: any;
+  opened: Images;
+  closed: Images;
+  openedText: Text;
+  closedText: Text;
 }
 
 type Props = {
