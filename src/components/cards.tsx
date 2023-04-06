@@ -34,20 +34,23 @@ const Cards = ({ cards, pdf }: CardProps) => {
         // Switch all the cards up one
         setCurrent(current === length - 1 ? 0 : current + 1)
         // Handle the card flip direction
-        cardContainerRef?.current?.style.setProperty(
-            '--flipDirection',
-            '-180deg'
-        )
+
+        // FLIP DIRECTIONS DON'T CURRENTLY WORK
+
+        // cardContainerRef?.current?.style.setProperty(
+        //     '--flipDirection',
+        //     '180deg'
+        // )
     }
 
     const prevSlide = () => {
         // Switch all the cards down one
         setCurrent(current === 0 ? length - 1 : current - 1)
         // Handle the card flip direction
-        cardContainerRef?.current?.style.setProperty(
-            '--flipDirection',
-            '180deg'
-        )
+        // cardContainerRef?.current?.style.setProperty(
+        //     '--flipDirection',
+        //     '180deg'
+        // )
     }
 
     if (!Array.isArray(cards) || cards.length <= 0) {
