@@ -4,7 +4,6 @@ $cards_visible3_width: 900px;
 .container {
     width: 70vw; // responsive
     perspective: 1000px;
-    --flipDirection: 180deg;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -115,7 +114,6 @@ $cards_visible3_width: 900px;
 }
 
 .flipCard {
-    /* FOR THE FLIP ANIMATION */
     transform: rotateY(var(--flipDirection));
     transition: transform .7s;
     transform-style: preserve-3d;
