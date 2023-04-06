@@ -114,6 +114,7 @@ $cards_visible3_width: 900px;
 }
 
 .flipCard {
+    --flipDirection: 180deg;
     transform: rotateY(var(--flipDirection));
     transition: transform .7s;
     transform-style: preserve-3d;
