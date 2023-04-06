@@ -2,6 +2,8 @@ import styles from '@/styles/Flipper.module.scss'
 import Image from 'next/image'
 import { useState } from 'react';
 
+//try deployment again
+
 type Images = {
   opened: Images;
   closed: Images;
