@@ -34,7 +34,7 @@ const Cards = ({ cards, pdf }: CardProps) => {
         setCurrent(current === length - 1 ? 0 : current + 1)
         cardContainerRef?.current?.style.setProperty(
             '--flipDirection',
-            '180deg'
+            '-180deg'
         )
     }
 
@@ -42,7 +42,7 @@ const Cards = ({ cards, pdf }: CardProps) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
         cardContainerRef?.current?.style.setProperty(
             '--flipDirection',
-            '-180deg'
+            '180deg'
         )
     }
 
