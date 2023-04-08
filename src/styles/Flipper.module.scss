@@ -1,0 +1,116 @@
+$text_medium_breakpoint: 80px;
+$text_large_breakpoint: 130px;
+
+.flipperWrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.mobileWarningBackground {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.35;
+    background-color: gray;
+}
+
+.mobileWarning {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-weight: $font_condensed_black;
+}
+
+.imageWrapper {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    aspect-ratio: 137/305;
+    container-type: size;
+}
+
+.text {
+    position: absolute;
+    top: 5%;
+    padding: 0 0.25rem;
+    min-width: 100%;
+    font-weight: 500;
+    font-size: 0.25rem;
+    opacity: 0;
+    @container (min-width: 80px) {
+        font-size: 0.5rem;
+        line-height: 0.6rem;
+        opacity: 1;
+        padding: 0 10%;
+    }
+    @container (min-width: 100px) {
+        font-size: 0.75rem;
+        line-height: 0.85rem;
+    }
+    @container (min-width: 145px) {
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    @container (min-width: 190px) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    @container (min-width: 220px) {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+    @container (min-width: 290px) {
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+}
+
+.textIsClosed {
+    font-weight: $font_condensed_black;
+    word-spacing: 10rem;
+    font-size: 0.5rem;
+    line-height: 0.65rem;
+    @container (min-width: 80px) {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
+    @container (min-width: 100px) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    @container (min-width: 120px) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+    @container (min-width: 140px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    @container (min-width: 200px) {
+        font-size: 2rem;
+        line-height: 2.65rem;
+    }
+}
+
+.flipper {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

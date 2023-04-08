@@ -3,6 +3,7 @@ import { Slider } from '@/components/slider'
 import { Tooltip } from '@/components/tooltip'
 import { YouTubeVideo } from '@/components/youtube-video'
 import { StorySectionProps } from '@/components/story-section'
+import Flipper from '@/components/flipper'
 
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
@@ -16,6 +17,9 @@ import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
+
+// For the flipper data
+import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -152,7 +156,9 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: 'Science is better, down where it&apos;s wetter',
         description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
         <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
-        interactive: 'Dan to add flipper interactive here',
+        interactive: <Flipper
+                        images={FlipperImages}
+        />,
         details: (
             <>
                 <p>
