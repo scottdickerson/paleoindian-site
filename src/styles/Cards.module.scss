@@ -91,6 +91,7 @@ $cards_visible3_width: 900px;
     border-radius: 15px;
     transform-origin: 50% 200%;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-style: preserve-3d;
 }
 
 .cardFront,
@@ -115,9 +116,8 @@ $cards_visible3_width: 900px;
 
 .flipCard {
     --flipDirection: 180deg;
-    transform: rotateY(var(--flipDirection));
-    transition: transform .7s;
-    transform-style: preserve-3d;
+    transform: rotateY(var(--flipDirection)) translateZ(-250px);
+    transition: transform 0.7s;
 }
 
 .card2 {

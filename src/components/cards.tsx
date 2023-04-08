@@ -32,18 +32,18 @@ const Cards = ({ cards, pdf }: CardProps) => {
 
     const nextSlide = () => {
         setCurrent(current === length - 1 ? 0 : current + 1)
-    //     cardContainerRef?.current?.style.setProperty(
-    //         '--flipDirection',
-    //         '-180deg'
-    //     )
+        cardContainerRef?.current?.style.setProperty(
+            '--flipDirection',
+            '-180deg'
+        )
     }
 
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1)
-        // cardContainerRef?.current?.style.setProperty(
-        //     '--flipDirection',
-        //     '180deg'
-        // )
+        cardContainerRef?.current?.style.setProperty(
+            '--flipDirection',
+            '180deg'
+        )
     }
 
     if (!Array.isArray(cards) || cards.length <= 0) {
@@ -54,7 +54,7 @@ const Cards = ({ cards, pdf }: CardProps) => {
 
     return (
         <>
-            <div className={styles.container} ref={cardContainerRef}>
+            <div className={styles.container}>
                 <button
                     onClick={nextSlide}
                     className={classnames(styles.arrow, styles.leftarrow)}
@@ -83,6 +83,7 @@ const Cards = ({ cards, pdf }: CardProps) => {
                     {visibleCards.map((card, index) => {
                         return (
                             <div
+                                ref={index === 2 ? cardContainerRef : null}
                                 key={`Card-${card.id}`}
                                 id={`Card-${card.id}`}
                                 className={classnames(
