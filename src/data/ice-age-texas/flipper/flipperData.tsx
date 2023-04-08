@@ -9,31 +9,35 @@ import flipper8 from '@/data/ice-age-texas/flipper/More Offshore Illustration-04
 
 export const FlipperImages = [
     {
-        id: "flipperOne",
+        id: 'flipperOne',
         closed: flipper1,
         opened: flipper2,
-        closedText: "Carefully Documenting",
-        openedText: "Archeologists and divers use grids to map everything they see on the ocean floor.",
+        closedText: 'Carefully Documenting',
+        openedText:
+            'Archeologists and divers use grids to map everything they see on the ocean floor.',
     },
     {
-        id: "flipperTwo",
+        id: 'flipperTwo',
         closed: flipper3,
         opened: flipper4,
-        closedText: "Sediment Removal",
-        openedText: "A dredge vaccums up sediment and deposits it through a mesh screen to collect artifacts.",
+        closedText: 'Sediment Removal',
+        openedText:
+            'A dredge vacuums up sediment and deposits it through a mesh screen to collect artifacts.',
     },
     {
-        id: "flipperThree",
+        id: 'flipperThree',
         closed: flipper5,
         opened: flipper6,
-        closedText: "Seabed Coring",
-        openedText: "A machine drills into the seabed to collect long, tube-shaped samples, showing layers of ancient landscapes.",
+        closedText: 'Seabed Coring',
+        openedText:
+            'A machine drills into the seabed to collect long, tube-shaped samples, showing layers of ancient landscapes.',
     },
     {
-        id: "flipperFour",
+        id: 'flipperFour',
         closed: flipper7,
         opened: flipper8,
-        closedText: "Geospacial seafloor mapping",
-        openedText: "Sonar devices scan the seafloor to map ancient landscapes or track the location of scattered artifacts.",
+        closedText: 'Geospacial seafloor mapping',
+        openedText:
+            'Sonar devices scan the seafloor to map ancient landscapes or track the location of scattered artifacts.',
     },
-];
+]

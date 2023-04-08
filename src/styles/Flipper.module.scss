@@ -57,11 +57,11 @@ $text_large_breakpoint: 130px;
         font-size: 0.5rem;
         line-height: 0.7rem;
     }
-    @container (min-width: 100px) {
+    @container (min-width: 140px) {
         font-size: 0.75rem;
         line-height: 1rem;
     }
-    @container (min-width: 140px) {
+    @container (min-width: 165px) {
         font-size: 1rem;
         line-height: 1.25rem;
     }
