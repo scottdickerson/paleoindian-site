@@ -8,6 +8,34 @@ $text_large_breakpoint: 130px;
     justify-content: center;
     width: 100%;
 }
+.mobileWarningBackground {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.35;
+    background-color: gray;
+}
+
+.mobileWarning {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-weight: $font_condensed_black;
+}
 
 .imageWrapper {
     position: relative;
@@ -24,7 +52,7 @@ $text_large_breakpoint: 130px;
     min-width: 100%;
     font-weight: 500;
     font-size: 0.25rem;
-    line-height: 0.3rem;
+    line-height: 0.35rem;
     @container (min-width: 80px) {
         font-size: 0.5rem;
         line-height: 0.7rem;

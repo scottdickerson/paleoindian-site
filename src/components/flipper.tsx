@@ -1,6 +1,7 @@
 import styles from '@/styles/Flipper.module.scss'
 import Image, { StaticImageData } from 'next/image'
 import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 type Images = {
     opened: StaticImageData
@@ -17,6 +18,8 @@ export default function Flipper({ images }: Props) {
     const [isOpened, setIsOpened] = useState(
         new Array(images.length).fill(false)
     )
+    const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' })
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     const toggleIsOpened = (index: any) => {
         const newIsOpened = [...isOpened]
@@ -25,6 +28,15 @@ export default function Flipper({ images }: Props) {
     }
     return (
         <div className={styles.flipperWrapper}>
+            {isSmallMobile && isPortrait && (
+                <>
+                    <div className={styles.mobileWarningBackground} />
+                    <div className={styles.mobileWarning}>
+                        Please rotate your device or expand your screen to view
+                        this content.
+                    </div>
+                </>
+            )}
             {images.map((image: any, index: any) => (
                 <div
                     key={index}
