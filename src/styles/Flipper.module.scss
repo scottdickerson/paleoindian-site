@@ -23,6 +23,8 @@ $text_large_breakpoint: 130px;
     padding: 0 10%;
     min-width: 100%;
     font-weight: 500;
+    font-size: 0.25rem;
+    line-height: 0.3rem;
     @container (min-width: 80px) {
         font-size: 0.5rem;
         line-height: 0.7rem;
@@ -52,6 +54,8 @@ $text_large_breakpoint: 130px;
 .textIsClosed {
     font-weight: $font_condensed_black;
     word-spacing: 10rem;
+    font-size: 0.5rem;
+    line-height: 0.65rem;
     @container (min-width: 80px) {
         font-size: 0.75rem;
         line-height: 1.25rem;
