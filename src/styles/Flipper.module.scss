@@ -28,13 +28,13 @@ $text_large_breakpoint: 130px;
     bottom: 0;
     padding: 2rem;
     font-size: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-align: center;
-    font-weight: $font_condensed_black;
+    font-weight: $font_medium;
 }
 
 .imageWrapper {
@@ -45,6 +45,7 @@ $text_large_breakpoint: 130px;
     container-type: size;
 }
 
+//  After it is flipped
 .text {
     position: absolute;
     top: 5%;
@@ -54,24 +55,28 @@ $text_large_breakpoint: 130px;
     font-size: 0.25rem;
     opacity: 0;
     @container (min-width: 80px) {
-        font-size: 0.5rem;
-        line-height: 0.6rem;
+        font-size: 0.6rem;
+        line-height: 0.7rem;
         opacity: 1;
         padding: 0 10%;
     }
-    @container (min-width: 100px) {
+    @container (min-width: 135px) {
         font-size: 0.75rem;
         line-height: 0.85rem;
     }
-    @container (min-width: 145px) {
+    @container (min-width: 155px) {
+        font-size: 0.85rem;
+        line-height: 0.95rem;
+    }
+    @container (min-width: 175px) {
         font-size: 1rem;
         line-height: 1.1rem;
     }
-    @container (min-width: 190px) {
+    @container (min-width: 220px) {
         font-size: 1.25rem;
         line-height: 1.5rem;
     }
-    @container (min-width: 220px) {
+    @container (min-width: 266px) {
         font-size: 1.5rem;
         line-height: 1.75rem;
     }
@@ -81,28 +86,29 @@ $text_large_breakpoint: 130px;
     }
 }
 
+// Before it is flipped
 .textIsClosed {
     font-weight: $font_condensed_black;
     word-spacing: 10rem;
     font-size: 0.5rem;
     line-height: 0.65rem;
-    @container (min-width: 80px) {
-        font-size: 0.75rem;
-        line-height: 1.25rem;
-    }
     @container (min-width: 100px) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+    @container (min-width: 125px) {
         font-size: 1rem;
         line-height: 1.25rem;
     }
-    @container (min-width: 120px) {
+    @container (min-width: 140px) {
         font-size: 1.25rem;
         line-height: 1.5rem;
     }
-    @container (min-width: 140px) {
+    @container (min-width: 170px) {
         font-size: 1.5rem;
         line-height: 2rem;
     }
-    @container (min-width: 200px) {
+    @container (min-width: 250px) {
         font-size: 2rem;
         line-height: 2.65rem;
     }

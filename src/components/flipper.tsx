@@ -32,8 +32,8 @@ export default function Flipper({ images }: Props) {
                 <>
                     <div className={styles.mobileWarningBackground} />
                     <div className={styles.mobileWarning}>
-                        Please rotate your device or expand your screen to view
-                        this content.
+                        To view this content please rotate your device or expand
+                        your browser.
                     </div>
                 </>
             )}
