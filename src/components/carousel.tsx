@@ -1,24 +1,30 @@
 import { Carousel } from 'react-responsive-carousel';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from '../styles/Carousel.module.scss';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export function DailyLifeCarousel({ images }: any) {
+type Images = {
+    id: string;
+    image: StaticImageData;
+}
+
+type Props = {
+    images: Images[]
+}
+
+export function DailyLifeCarousel({ images }: Props) {
     return (
         <Carousel
         className={styles.carousel}
         showThumbs={false}
-        showStatus={false}
-        showIndicators={false}
-        infiniteLoop
         autoPlay
-        interval={4000}
-        transitionTime={500}
         >
-            {images.map((image: any) => (
-                <div key={image.id}>
+            {images.map((image: any, index: any) => (
+                <div key={index}>
                     <Image
                         src={image.image}
                         alt={image.id}
+                        fill
                     />
                 </div>
             ))}
