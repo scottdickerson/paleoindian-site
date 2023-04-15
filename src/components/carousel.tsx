@@ -14,11 +14,14 @@ export function DailyLifeCarousel({ images }: any) {
         interval={4000}
         transitionTime={500}
         >
-        {images.map((image: any, index: any) => (
-            <div key={index} className={styles.imageWrapper}>
-            <Image src={image} className={styles.image} alt={`Daily Life ${index + 1}`} />
-            </div>
-        ))}
+            {images.map((image: any) => (
+                <div key={image.id}>
+                    <Image
+                        src={image.image}
+                        alt={image.id}
+                    />
+                </div>
+            ))}
         </Carousel>
     );
 }
