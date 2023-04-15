@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { DailyLifeCarousel } from '@/components/carousel'
+import { carouselData } from '@/data/daily-life/carouselData'
 
 // next js page showing simple text
 const DailyLife = () => {
@@ -14,7 +16,10 @@ const DailyLife = () => {
                     This is the daily life Texas page. It is a simple page with
                     some text.
                 </p>
-            </div>
+            </div>Carousel
+            <DailyLifeCarousel 
+                images={carouselData}
+            />
         </>
     )
 }

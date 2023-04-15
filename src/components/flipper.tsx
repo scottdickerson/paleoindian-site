@@ -24,7 +24,7 @@ export default function Flipper({ images }: Props) {
     const toggleIsOpened = (index: any) => {
         const newIsOpened = [...isOpened]
         newIsOpened[index] = !newIsOpened[index]
-        setIsOpened(newIsOpened)
+        setIsOpened(newIsOpened);
     }
     return (
         <div className={styles.flipperWrapper}>
