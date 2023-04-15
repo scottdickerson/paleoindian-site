@@ -18,13 +18,14 @@ export function DailyLifeCarousel({ images }: Props) {
         className={styles.carousel}
         showThumbs={false}
         autoPlay
+        showArrows
+        infiniteLoop
         >
             {images.map((image: any, index: any) => (
                 <div key={index}>
                     <Image
                         src={image.image}
                         alt={image.id}
-                        fill
                     />
                 </div>
             ))}
