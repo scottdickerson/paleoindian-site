@@ -20,7 +20,7 @@ export function DailyLifeCarousel({ images }: Props) {
         <Carousel
         className={styles.carousel}
         showThumbs={false}
-        autoPlay
+        autoPlay // remove this later
         showArrows
         infiniteLoop
         >
