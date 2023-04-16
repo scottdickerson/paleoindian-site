@@ -16,7 +16,7 @@ const DailyLife = () => {
                     This is the daily life Texas page. It is a simple page with
                     some text.
                 </p>
-            </div>Carousel
+            </div>
             <DailyLifeCarousel 
                 images={carouselData}
             />

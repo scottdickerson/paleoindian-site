@@ -14,6 +14,9 @@ type Props = {
 
 export function DailyLifeCarousel({ images }: Props) {
     return (
+        <div
+        className={styles.carouselWrapper}
+        >
         <Carousel
         className={styles.carousel}
         showThumbs={false}
@@ -22,14 +25,19 @@ export function DailyLifeCarousel({ images }: Props) {
         infiniteLoop
         >
             {images.map((image: any, index: any) => (
-                <div key={index}>
+                <div
+                    className={styles.imageWrapper} 
+                    key={index}
+                >
                     <Image
                         src={image.image}
                         alt={image.id}
+                        className={styles.image}
                     />
                 </div>
             ))}
         </Carousel>
+        </div>
     );
 }
 
