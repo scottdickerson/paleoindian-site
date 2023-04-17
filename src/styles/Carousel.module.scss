@@ -13,6 +13,7 @@
 
 .image {
     max-width: 600px;
+    max-height: 300px;
     width: auto;
     height: auto;
 }
@@ -22,8 +23,10 @@
     bottom: 0.3%; // To prevent a little gap between image and text box
     background-color: #691256;
     overflow: hidden;
-    padding: 1rem;
+    padding: 1.5rem;
     max-height: 300px;
+    border-bottom-left-radius: 7%;
+    border-bottom-right-radius: 7%;
 }
 
 .imageTextTitle {

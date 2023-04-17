@@ -27,9 +27,9 @@ export function DailyLifeCarousel({ images }: Props) {
                     <div
                         className={styles.imageTextContainer}
                     >
-                        <p className={styles.imageTextTitle}> Title </p>
-                        <p className={styles.imageTextDescription}> 12,000 - 13,000 BP, Gault site knife Bell county TX</p>
-                        <p className={styles.imageText}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus accumsan nulla, vel imperdiet leo venenatis a. Nulla in mi et ipsum molestie hendrerit. Morbi quis porta lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur eu metus dictum, vestibulum tortor non, convallis felis. Quisque pharetra ante mauris, non mollis diam luctus sed. In dictum leo eu ante aliquet, vel facilisis dui semper. Proin magna urna, auctor ut augue sed, maximus pulvinar tellus. Aenean eget purus vel turpis bibendum elementum non non felis. Aenean lobortis nec erat non commodo. Vivamus scelerisque dignissim suscipit. Sed mattis arcu sed felis pharetra egestas. </p>
+                        <p className={styles.imageTextTitle}>{image.title}</p>
+                        <p className={styles.imageTextDescription}>{image.description}</p>
+                        <p className={styles.imageText}>{image.text}</p>
                     </div>
                 </div>
             ))}
