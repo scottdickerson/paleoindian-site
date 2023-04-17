@@ -13,6 +13,8 @@
 
 .image {
     max-width: 50vw;
+    min-width: 2rem;
+    max-height: 30rem;
     width: auto;
     height: auto;
 }
@@ -26,6 +28,7 @@
     max-height: fit-content;
     border-bottom-left-radius: 7%;
     border-bottom-right-radius: 7%;
+    user-select: none;
 }
 
 .imageTextTitle {

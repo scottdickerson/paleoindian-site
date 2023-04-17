@@ -2,7 +2,7 @@ import carousel1 from '@/data/daily-life/1.jpg'
 import carousel2 from '@/data/daily-life/2.jpg'
 import carousel3 from '@/data/daily-life/3.jpg'
 import carousel4 from '@/data/daily-life/4.jpg'
-import carousel5 from '@/data/daily-life/5.jpg'
+// import carousel5 from '@/data/daily-life/5.jpg'
 
 export const carouselData = [
     {
@@ -35,7 +35,7 @@ export const carouselData = [
     },
     {
         id: 'carouselfive',
-        image: carousel5,
+        image: carousel1,
         title: 'Core',
         description: '13,000 - 12,000 BP, Gault Site, Bell County, TX',
         text: "Scientists found microscopic root starches on this stone tool. From the shape of the starch molecules, we learned that a person used this tool to cut and grind a root vegetable.",
