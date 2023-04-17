@@ -34,6 +34,11 @@ export function DailyLifeCarousel({ images }: Props) {
                         alt={image.id}
                         className={styles.image}
                     />
+                    <div
+                        className={styles.imageTextContainer}
+                    >
+                        <p> Hello World! </p>
+                    </div>
                 </div>
             ))}
         </Carousel>

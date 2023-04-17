@@ -2,7 +2,7 @@
     background-color: #f8f2e3;
     top: 20%;
     left: 40%;
-    width: 20%;
+    width: 50%;
 }
 
 .imageWrapper {
@@ -12,9 +12,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // max-height: 50%;
 }
 
 .image {
     width: 100%;
     height: 100%;
+}
+
+.imageTextContainer {
+    position: absolute;
+    background-color: purple;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
