@@ -7,13 +7,12 @@
 }
 
 .imageWrapper {
-    padding: 10px;
-    padding-bottom: 20px;
+    padding: 1rem;
+    padding-bottom: 1rem;
 }
 
 .image {
-    max-width: 600px;
-    max-height: 300px;
+    max-width: 50vw;
     width: auto;
     height: auto;
 }
@@ -24,7 +23,7 @@
     background-color: #691256;
     overflow: hidden;
     padding: 1.5rem;
-    max-height: 300px;
+    max-height: fit-content;
     border-bottom-left-radius: 7%;
     border-bottom-right-radius: 7%;
 }
