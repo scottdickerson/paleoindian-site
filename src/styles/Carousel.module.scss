@@ -1,14 +1,28 @@
 .carouselWrapper {
     display: flex;
     overflow:  auto;
-    width: 90%;
+    width: 80%;
     background-color: #f8f2e3;
+    scroll-snap-type: x mandatory;
+}
+
+.imageWrapper {
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.image {
+    max-width: 500px;
+    width: auto;
+    height: auto;
 }
 
 .imageTextContainer {
+    position: relative;
+    bottom: 0.3%; // To prevent a little gap between image and text box
     background-color: purple;
     overflow: hidden;
-    border-radius: 1%;
+    padding: 1rem;
 }
 
 .imageTextTitle {
@@ -16,22 +30,16 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
-    left: 1rem;
-    top: .5rem;
 }
 
 .imageTextDescription {
     position: relative;
     font-size: 1rem;
     color: white;
-    left: 1rem;
-    top: .5rem;
 }
 
 .imageText {
     position: relative;
     font-size: 1rem;
     color: white;
-    left: 1rem;
-    top: .5rem;
 }
