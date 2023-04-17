@@ -13,9 +13,7 @@ type Props = {
 
 export function DailyLifeCarousel({ images }: Props) {
     return (
-        <div
-        className={styles.carouselWrapper}
-        >
+        <div className={styles.carouselWrapper} >
             {images.map((image: any, index: any) => (
                 <div
                     className={styles.imageWrapper} 
