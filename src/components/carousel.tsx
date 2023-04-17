@@ -15,18 +15,13 @@ export function DailyLifeCarousel({ images }: Props) {
     return (
         <div className={styles.carouselWrapper} >
             {images.map((image: any, index: any) => (
-                <div
-                    className={styles.imageWrapper} 
-                    key={index}
-                >
+                <div className={styles.imageWrapper} key={index}>
                     <Image
                         src={image.image}
                         alt={image.id}
                         className={styles.image}
                     />
-                    <div
-                        className={styles.imageTextContainer}
-                    >
+                    <div className={styles.imageTextContainer}>
                         <p className={styles.imageTextTitle}>{image.title}</p>
                         <p className={styles.imageTextDescription}>{image.description}</p>
                         <p className={styles.imageText}>{image.text}</p>
@@ -36,5 +31,3 @@ export function DailyLifeCarousel({ images }: Props) {
         </div>
     );
 }
-
-// Path: src/components/carousel.tsx

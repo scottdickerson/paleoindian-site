@@ -3,7 +3,7 @@
     overflow:  auto;
     width: 80%;
     background-color: #f8f2e3;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
 }
 
 .imageWrapper {
