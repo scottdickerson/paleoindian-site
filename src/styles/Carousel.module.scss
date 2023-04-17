@@ -12,7 +12,7 @@
 }
 
 .image {
-    max-width: 500px;
+    max-width: 600px;
     width: auto;
     height: auto;
 }
@@ -20,7 +20,7 @@
 .imageTextContainer {
     position: relative;
     bottom: 0.3%; // To prevent a little gap between image and text box
-    background-color: purple;
+    background-color: #691256;
     overflow: hidden;
     padding: 1rem;
 }
