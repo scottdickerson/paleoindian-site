@@ -1,4 +1,3 @@
-import { Carousel } from 'react-responsive-carousel';
 import Image, { StaticImageData } from 'next/image';
 import styles from '../styles/Carousel.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -16,13 +15,6 @@ export function DailyLifeCarousel({ images }: Props) {
     return (
         <div
         className={styles.carouselWrapper}
-        >
-        <Carousel
-        className={styles.carousel}
-        showThumbs={false}
-        autoPlay // remove this later
-        showArrows
-        infiniteLoop
         >
             {images.map((image: any, index: any) => (
                 <div
@@ -43,7 +35,6 @@ export function DailyLifeCarousel({ images }: Props) {
                     </div>
                 </div>
             ))}
-        </Carousel>
         </div>
     );
 }
