@@ -4,8 +4,8 @@ import Image, { StaticImageData } from 'next/image';
 import styles from '../styles/Carousel.module.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useDraggable } from "react-use-draggable-scroll";
-import leftArrow from '@/components/images/cards/LeftArrow.svg'
-import rightArrow from '@/components/images/cards/RightArrow.svg'
+import leftArrow from '@/components/images/cards/LeftArrow.svg';
+import rightArrow from '@/components/images/cards/RightArrow.svg';
 
 type Images = { id: string; image: StaticImageData; }
 
@@ -18,12 +18,46 @@ export function DailyLifeCarousel({ images }: Props) {
     const { events } = useDraggable(ref); // Now we pass the reference to the useDraggable hook:
 
     const nextSlide = () => {
-        console.log(`Hello world!`);
-    }
+        const target = ref.current.scrollLeft - 700;
+        const start = ref.current.scrollLeft;
+        const easing = (t: number) => t * t;
+        const duration = 500; // milliseconds
+        const startTime = performance.now();
+      
+        const updateScroll = (currentTime: number) => {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(1, elapsedTime / duration);
+          const nextScroll = start + easing(progress) * (target - start);
+          ref.current.scrollLeft = nextScroll;
+      
+          if (progress < 1) {
+            requestAnimationFrame(updateScroll);
+          }
+        };
+      
+        requestAnimationFrame(updateScroll);
+      }
 
-    const prevSlide = () => {
-        console.log(`Hello world!`);
-    }
+      const prevSlide = () => {
+        const target = ref.current.scrollLeft + 700;
+        const start = ref.current.scrollLeft;
+        const easing = (t: number) => t * t;
+        const duration = 500; // milliseconds
+        const startTime = performance.now();
+      
+        const updateScroll = (currentTime: number) => {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(1, elapsedTime / duration);
+          const nextScroll = start + easing(progress) * (target - start);
+          ref.current.scrollLeft = nextScroll;
+      
+          if (progress < 1) {
+            requestAnimationFrame(updateScroll);
+          }
+        };
+      
+        requestAnimationFrame(updateScroll);
+      }
 
     return (
         <div className={styles.carouselWrapper} 
