@@ -9,6 +9,7 @@
 .imageWrapper {
     padding: 1rem;
     padding-bottom: 1rem;
+    z-index: 0;
 }
 
 .image {
@@ -31,21 +32,33 @@
     user-select: none;
 }
 
-.imageTextTitle {
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.imageTextDescription {
-    position: relative;
-    font-size: 1rem;
-    color: white;
-}
-
 .imageText {
     position: relative;
     font-size: 1rem;
     color: white;
+}
+
+.imageTextTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.leftArrow {
+    left: 1%;
+}
+
+.rightArrow {
+    right: 4%;
 }
