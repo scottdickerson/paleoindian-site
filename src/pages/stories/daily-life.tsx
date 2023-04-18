@@ -3,12 +3,14 @@ import { carouselData } from '@/data/daily-life/carouselData'
 import { StorySectionProps } from '@/components/story-section'
 import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
-import { cardData } from '@/data/ice-age-texas/cards/data'
+// import { cardData } from '@/data/ice-age-texas/cards/data'
 import { YouTubeVideo } from '@/components/youtube-video'
 import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
 import { TIKTOK_VIDEOS } from '@/data/origin-stories/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
+import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
+import { EssentialInvetoryData } from '@/data/daily-life/essential-inventory-data'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -19,7 +21,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             `<p>16,000 years ago, everybody, everywhere lived as hunter-gatherers. But that doesn’t mean people were simple! They had deep knowledge and skills to thrive in their environments. 
             Flip through the cards below and put yourself in their woven grass sandals! </p>`,
         interactive: (
-            <Cards cards={cardData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
+            <Cards cards={EssentialInvetoryData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
         ),
         details: (
             <>
@@ -67,7 +69,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             `<p>Paleoindians did hunt mammoths and other mega-fauna, but not every day. Would you like to bust your hump hunting a dangerous animal or would you just kick back and catch a fish?
             Check out what was on the menu. </p>`,
         interactive: (
-            <Cards cards={cardData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
+            <Cards cards={WhatWasForDinnerData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
         ),
         details: (
             <>
