@@ -2,7 +2,8 @@
     display: flex;
     overflow:  auto;
     width: 90%;
-    background-color: #f8f2e3;
+    background: rgba(255, 122, 89, 0);
+    border: 10px solid purple;
     scroll-snap-type: x proximity;
 }
 
@@ -51,15 +52,15 @@
     cursor: pointer;
     user-select: none;
     z-index: 10;
-    @container (max-width: 850px) {
-        display: none;
-    }
+    // @container (max-width: 850px) {
+    //     display: none;
+    // }
 }
 
 .rightArrow {
-    right: -2%;
+    right: -1.5%;
 }
 
 .leftArrow {
-    left: -2%;
+    left: -1.5%;
 }
