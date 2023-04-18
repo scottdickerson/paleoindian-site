@@ -4,6 +4,8 @@ import { StorySectionProps } from '@/components/story-section'
 import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
 import { cardData } from '@/data/ice-age-texas/cards/data'
+import { YouTubeVideo } from '@/components/youtube-video'
+import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -36,7 +38,13 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         description:
             "<p>But do their powers of preservation paint an uneven picture of Paleoindian peoples?</p><p>Watch the video to learn more.</p>",
         interactive: (
-            <p>Video to go here</p>
+            <YouTubeVideo
+                src="https://youtu.be/TbrFI5LddaY"
+                thumbnail={{
+                    src: moreThanStoneThumbnail,
+                    alt: 'Two people holding a stone spear',
+                }}
+            />
         ),
         details: (
             <>
