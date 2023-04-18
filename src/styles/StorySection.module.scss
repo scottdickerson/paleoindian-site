@@ -8,6 +8,9 @@
 }
 .section + .section {
     padding-top: 2rem;
+    @media screen and (max-width: $mobile_breakpoint) {
+        padding-top: 1rem;
+    }
 }
 
 .title {
@@ -21,6 +24,12 @@
     background-color: $section_title_background_color;
     color: $section_title_color;
     border-radius: 12px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 8px;
+        line-height: 28px;
+        border-radius: 6px;
+        padding: 0px 8px;
+    }
 }
 
 .summary {
@@ -29,6 +38,11 @@
     font-stretch: condensed;
     font-weight: $font_condensed_black;
     letter-spacing: -1px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 23px;
+        line-height: 28px;
+        font-weight: $font_condensed_black;
+    }
 }
 
 .description {
@@ -36,6 +50,11 @@
     line-height: 35px;
     font-stretch: condensed;
     font-weight: $font_semibold;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: $font_medium;
+    }
 }
 
 .interactive {
@@ -54,4 +73,9 @@
     line-height: 31px;
     font-weight: $font_regular;
     letter-spacing: 0px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: $font_medium;
+    }
 }

@@ -1,3 +1,5 @@
 # TODO
 
-Quiz add animated gifs that start when in view
+-   Replace the What is that images with final ones
+-   Replace the cards with final ones
+-   Fix font

@@ -1,11 +1,11 @@
 /* styles.css */
 .popoverTrigger {
     text-decoration: underline;
-    color:black;
-    font-weight:inherit;
+    color: black;
+    font-weight: inherit;
     padding: 0;
 }
-  
+
 .popoverContent {
     border-radius: 12px;
     padding: 1.25rem;
@@ -15,9 +15,14 @@
     font-size: 16px;
     font-stretch: condensed;
     font-weight: $font_light;
-    line-height: 24px
+    line-height: 24px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+        font-weight: $font_medium;
+    }
 }
-  
+
 .popoverArrow {
     fill: $section_title_color;
 }
