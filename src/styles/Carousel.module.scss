@@ -44,21 +44,22 @@
 }
 
 .arrow {
-    position: absolute;
-    top: 50%;
-    width: 0;
-    height: 0;
+    position: fixed;
+    top: 40%;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
     cursor: pointer;
     user-select: none;
     z-index: 10;
-}
-
-.leftArrow {
-    left: 1%;
+    @container (max-width: 850px) {
+        display: none;
+    }
 }
 
 .rightArrow {
-    right: 4%;
+    right: -2%;
+}
+
+.leftArrow {
+    left: -2%;
 }
