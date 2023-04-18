@@ -8,6 +8,7 @@ import { YouTubeVideo } from '@/components/youtube-video'
 import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
 import { TIKTOK_VIDEOS } from '@/data/origin-stories/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
+import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -103,7 +104,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         description:
             "<p>Over 20,000 years ago, wolves and humans figured out that they could help each other survive. They joined forces, and the world's oldest friendship began.</p><p>Sit, roll over and test your doggy knowledge below!</p>",
         interactive: (
-            <p>True or false thing to go here</p>
+            <PetQuiz />
         ),
         details: (
             <>
