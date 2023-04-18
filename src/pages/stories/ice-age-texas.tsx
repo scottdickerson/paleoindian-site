@@ -17,8 +17,6 @@ import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
-
-// For the flipper data
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [

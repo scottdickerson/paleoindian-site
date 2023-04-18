@@ -6,6 +6,8 @@ import Cards from '@/components/cards'
 import { cardData } from '@/data/ice-age-texas/cards/data'
 import { YouTubeVideo } from '@/components/youtube-video'
 import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
+import { TIKTOK_VIDEOS } from '@/data/origin-stories/data'
+import { TikTokPlayer } from '@/components/tiktok-video-player'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -81,7 +83,10 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         description:
             "<p>Their knowledge was important for surviving and thriving, and it has been passed down through generations. Today, those tradtions are still around, often with a modern twist.</p><p>Hear from Native American people below about their favorite tradtions.</p>",
         interactive: (
-            <p>Tiktok thing to go here</p>
+            <>
+            <p>NEED TO CHANGE VIDEOS</p>
+            <TikTokPlayer videos={TIKTOK_VIDEOS} />
+            </>
         ),
         details: (
             <>
