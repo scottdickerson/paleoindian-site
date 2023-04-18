@@ -11,6 +11,9 @@ import nicholasBentleyThumbnail from './tiktok/Nicholas Bentley.png'
 
 export const TOOLTIP_CONTENT = {
     ancestors: 'A person related to you that lived a long time ago.',
+    huntergatherer: 'People who hunt wild animals and gather wild plants for food and do not practice farming.',
+    domesticated: 'An animal or plant whose characteristics have been changed through human interventions, like breeding.',
+    descended: 'A person or animal’s children, grand-children, great-grandchildren and all their relatives who live after them.',
 }
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {

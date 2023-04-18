@@ -6,11 +6,16 @@ import Cards from '@/components/cards'
 // import { cardData } from '@/data/ice-age-texas/cards/data'
 import { YouTubeVideo } from '@/components/youtube-video'
 import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
-import { TIKTOK_VIDEOS } from '@/data/origin-stories/data'
+import {
+    TIKTOK_VIDEOS,
+    TOOLTIP_CONTENT,
+    // YOUTUBE_VIDEOS,
+} from '@/data/origin-stories/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
 import { EssentialInvetoryData } from '@/data/daily-life/essential-inventory-data'
+import { Tooltip } from '@/components/tooltip'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -29,7 +34,13 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
                 When Paleoindians first walked into Texas, they shared a lifestyle with every other person on the planet. It would be thousands and thousands of years before humanity would get around to inventing agriculture, forging metal, or even making pottery.
             </p>
             <p>
-                Being a hunter-gatherer meant having a deep understanding of the land, the animals, and the seasons. They had knowledge of how to craft the things they needed from natural materials. They knew which plants could fill their bellies and cure aches and pains. They were experts and they needed this knowledge to survive.
+                Being a 
+                <Tooltip
+                        trigger="hunter-gatherer"
+                        content={TOOLTIP_CONTENT.huntergatherer}
+                />
+                People who hunt wild animals and gather wild plants for food and do not practice farming.
+                meant having a deep understanding of the land, the animals, and the seasons. They had knowledge of how to craft the things they needed from natural materials. They knew which plants could fill their bellies and cure aches and pains. They were experts and they needed this knowledge to survive.
             </p>
             <p>
                 Of course, there is more to life than just surviving! It is important to remember that ancient peoples played games, told stories, made music, and lived full lives with their friends and family. 
@@ -98,7 +109,12 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
             <p>
-                Native American ancestors became experts in selecting native plants for food and medicine. They knew the best season and location for harvesting specific plants or hunting their favorite game. They learned where to find the right kind of stone for tool making. And they learned to navigate from place to place, finding the best places to cross a river or a mountain. They passed this knowledge and deep relationship with the landscape down through the generations, where it still flows today. 
+                Native American 
+                <Tooltip
+                    trigger="ancestors"
+                    content={TOOLTIP_CONTENT.ancestors}
+                /> 
+                became experts in selecting native plants for food and medicine. They knew the best season and location for harvesting specific plants or hunting their favorite game. They learned where to find the right kind of stone for tool making. And they learned to navigate from place to place, finding the best places to cross a river or a mountain. They passed this knowledge and deep relationship with the landscape down through the generations, where it still flows today. 
             </p>
             </>
         ),
@@ -116,7 +132,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
             <p>
-                When Paleoindians first came to the Americas, domesticated dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were descended from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
+                When Paleoindians first came to the Americas, <Tooltip trigger="domesticated" content={TOOLTIP_CONTENT.domesticated}/> dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were <Tooltip trigger="descended" content={TOOLTIP_CONTENT.descended} /> from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
             </p>
             </>
         ),
