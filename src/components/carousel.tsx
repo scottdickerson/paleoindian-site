@@ -38,8 +38,8 @@ export function DailyLifeCarousel({ images }: Props) {
                         id="leftArrow"
                         src={leftArrow}
                         alt="Left Arrow"
-                        height={48}
-                        width={48}
+                        height={36}
+                        width={36}
                     />
                 </button>
                 <button
@@ -50,8 +50,8 @@ export function DailyLifeCarousel({ images }: Props) {
                         id="rightArrow"
                         src={rightArrow}
                         alt="Right Arrow"
-                        height={48}
-                        width={48}
+                        height={36}
+                        width={36}
                     />
                 </button>
 
