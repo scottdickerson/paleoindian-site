@@ -37,7 +37,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
                 Being a 
                 <Tooltip
                         trigger="hunter-gatherer"
-                        content={TOOLTIP_CONTENT.huntergatherer}
+                        content={TOOLTIP_CONTENT.hunterGatherer}
                 />
                 People who hunt wild animals and gather wild plants for food and do not practice farming.
                 meant having a deep understanding of the land, the animals, and the seasons. They had knowledge of how to craft the things they needed from natural materials. They knew which plants could fill their bellies and cure aches and pains. They were experts and they needed this knowledge to survive.
