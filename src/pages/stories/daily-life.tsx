@@ -24,13 +24,13 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
             <p>
-               
+                When Paleoindians first walked into Texas, they shared a lifestyle with every other person on the planet. It would be thousands and thousands of years before humanity would get around to inventing agriculture, forging metal, or even making pottery.
             </p>
             <p>
-               
+                Being a hunter-gatherer meant having a deep understanding of the land, the animals, and the seasons. They had knowledge of how to craft the things they needed from natural materials. They knew which plants could fill their bellies and cure aches and pains. They were experts and they needed this knowledge to survive.
             </p>
             <p>
-                
+                Of course, there is more to life than just surviving! It is important to remember that ancient peoples played games, told stories, made music, and lived full lives with their friends and family. 
             </p>
             </>
         ),
@@ -38,9 +38,10 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
         title: '(Not just) stone age',
         id: 'not-just-stone-age',
-        summary: '',
+        summary: 'Stone tools “rock” at surviving the test of time  ;)',
         description:
-            "<p></p>",
+            `<p>But do their powers of preservation paint an uneven picture of Paleoindian peoples?
+            Watch the video to learn more. </p>`,
         interactive: (
             <YouTubeVideo
                 src="https://youtu.be/TbrFI5LddaY"
@@ -53,7 +54,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
             <p>
-               
+            Until recently, illustrations of Paleoindian life almost always featured guys with stone spears…and not much else. We need to remember that the earliest peoples made things that are far rarer than stone in the archeological record. Woven mats and sandals, bone tools, and ceremonial items have all been found in Texas sites, usually in caves where cool, dry air helps preserve these precious clues to the lives of Paleoindians. 
             </p>
             </>
         ),
@@ -129,7 +130,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
                 <p>
-                    
+
                 </p>
             </>
         ),
