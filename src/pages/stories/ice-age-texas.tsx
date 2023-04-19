@@ -1,6 +1,7 @@
 import { StoryPage } from '@/components/story-page'
 import { Slider } from '@/components/slider'
 import { Tooltip } from '@/components/tooltip'
+import { TOOLTIP_CONTENT } from '@/data/origin-stories/data'
 import { YouTubeVideo } from '@/components/youtube-video'
 import { StorySectionProps } from '@/components/story-section'
 import Flipper from '@/components/flipper'
@@ -17,8 +18,6 @@ import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
-
-// For the flipper data
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
@@ -48,12 +47,12 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     The earth has had at least five major
                     <Tooltip
                         trigger="ice ages"
-                        content="Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas."
+                        content={TOOLTIP_CONTENT.iceAges}
                     />
                     or glacial periods. The most recent ice age
                     <Tooltip
                         trigger="ended"
-                        content="Or did it? Some scientists think we are still technically in an ice age, but in a warmer inter-glacial phase. "
+                        content={TOOLTIP_CONTENT.ended}
                     />
                     very slowly over tens of thousands of years. The climate
                     slowly warmed and melting glacial ice flowed into the ocean,
@@ -63,7 +62,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     changed. People, animals, and whole
                     <Tooltip
                         trigger="ecosystems"
-                        content="A geographic area where plants, animals, and other organisms, as well as weather and landscape, work together to form a web of life."
+                        content={TOOLTIP_CONTENT.ecosystems}
                     />
                     were affected by the changing climate.
                 </p>
@@ -84,7 +83,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 Large body size is an
                 <Tooltip
                     trigger="adaptation"
-                    content="Certain physical or behavioral characteristics that help an organism survive in an environment."
+                    content={TOOLTIP_CONTENT.adaptation}
                 />
                 to cold climates and many ice-age animals were bigger than
                 modern types of similar animals. In fact, they are sometimes
@@ -92,22 +91,22 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 huge animals.” These animals
                 <Tooltip
                     trigger="evolved"
-                    content="Emerged as a distinct species or type of animal from earlier ancestor animal populations."
+                    content={TOOLTIP_CONTENT.evolved}
                 />
                 during the last
                 <Tooltip
                     trigger="ice age"
-                    content="Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas."
+                    content={TOOLTIP_CONTENT.iceAges}
                 />
                 and some went
                 <Tooltip
                     trigger="extinct"
-                    content="Died off and did not pass on their genes to new generations."
+                    content={TOOLTIP_CONTENT.extinct}
                 />
                 as the ice age ended. Others still have
                 <Tooltip
                     trigger="descendants"
-                    content="A person or animal's children, grand-children, great-grandchildren and all their relatives who live after them."
+                    content={TOOLTIP_CONTENT.descended}
                 />
                 living today.
             </p>
@@ -133,7 +132,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 Native Americans from across Texas and America tell
                 <Tooltip
                     trigger="origin"
-                    content="The point or place where something begins."
+                    content={TOOLTIP_CONTENT.origin}
                 />
                 stories of dark, chaotic times when people had to deal with some
                 pretty scary monsters. Every culture has its own stories. In
@@ -143,7 +142,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 alongside incredible animals that became
                 <Tooltip
                     trigger="extinct"
-                    content="Died off and did not pass on their genes to new generations."
+                    content={TOOLTIP_CONTENT.extinct}
                 />
                 in a changing climate. It&apos;s possible that their memories
                 became the stuff of legend!
@@ -168,7 +167,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     Paleoindian artifacts and the bones of
                     <Tooltip
                         trigger="extinct"
-                        content="Died off and did not pass on their genes to new generations. "
+                        content={TOOLTIP_CONTENT.extinct}
                     />
                     animals have washed ashore on a beach near the Texas &mdash;
                     Louisiana border.
@@ -197,7 +196,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 Animal species go
                 <Tooltip
                     trigger="extinct"
-                    content="Died off and did not pass on their genes to new generations. "
+                    content={TOOLTIP_CONTENT.extinct}
                 />
                 all the time, it happens for a lot of reasons. But when many
                 species go extinct all at once, scientists look for a BIG reason

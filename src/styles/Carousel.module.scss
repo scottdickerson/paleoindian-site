@@ -1,0 +1,67 @@
+.carouselWrapper {
+    display: flex;
+    overflow:  auto;
+    width: 90%;
+    background: rgba(255, 122, 89, 0);
+    // border: 10px solid purple;
+    scroll-snap-type: proximity;
+}
+
+.imageWrapper {
+    z-index: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.image {
+    max-width: 50vw;
+    min-width: 2rem;
+    max-height: 30rem;
+    width: auto;
+    height: auto;
+}
+
+.imageTextContainer {
+    position: relative;
+    bottom: 0.3%; // To prevent a little gap between image and text box
+    background-color: #691256;
+    overflow: hidden;
+    padding: 1.5rem;
+    max-height: fit-content;
+    border-bottom-left-radius: 7%;
+    border-bottom-right-radius: 7%;
+    user-select: none;
+}
+
+.imageText {
+    position: relative;
+    font-size: 1rem;
+    color: white;
+}
+
+.imageTextTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.arrow {
+    position: fixed;
+    top: 40%;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    // To hide the button when it starts to look weird
+    // @container (max-width: 850px) {
+    //     display: none;
+    // }
+}
+
+.rightArrow {
+    right: -1.5%;
+}
+
+.leftArrow {
+    left: -1.5%;
+}
