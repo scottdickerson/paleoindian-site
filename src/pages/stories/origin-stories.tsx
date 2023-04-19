@@ -66,7 +66,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     generation. They may serve to teach life lessons.
                     <Tooltip
                         trigger="Origin"
-                        content="The point or place where something begins."
+                        content={TOOLTIP_CONTENT.origin}
                     />
                     stories help us make sense of our world and who we are.
                 </p>
@@ -102,7 +102,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     Archeologists try to answer questions by
                     <Tooltip
                         trigger="interpreting"
-                        content="Decide and explain what something means."
+                        content={TOOLTIP_CONTENT.interpreting}
                     />
                     the evidence they find. Around 1940, archeologists found
                     evidence that people who made distinctive
@@ -148,14 +148,14 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     across the
                     <Tooltip
                         trigger="Bering land bridge"
-                        content="A very narrow strip of land that connected Asia to North American long ago.  It connected what is now Russia to Alaska."
+                        content={TOOLTIP_CONTENT.beringLandBridge}
                         width={286}
                     />
                     through an ice-free corridor, and into North America around
                     the end of the last
                     <Tooltip
                         trigger="ice age"
-                        content="Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas."
+                        content={TOOLTIP_CONTENT.iceAges}
                         width={306}
                     />
                     . Some scientists, Native American scholars, and Tribal
@@ -164,7 +164,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     complicated picture is emerging of multiple
                     <Tooltip
                         trigger="migrations"
-                        content="Long journeys taken by animals or humans moving from one home to another."
+                        content={TOOLTIP_CONTENT.migrations}
                         width={244}
                     />
                     of people at different times in the past.
@@ -200,7 +200,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     tools? When archeologists at the
                     <Tooltip
                         trigger="Gault and Friedkin sites"
-                        content="These two archeological sites in Bell County Texas are very close together and probably represent one large area where people lived as long as 16,000 years ago. "
+                        content={TOOLTIP_CONTENT.gaultAndFriedkinSites}
                         width={368}
                     />
                     in Texas discovered
@@ -223,13 +223,13 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     Through both
                     <Tooltip
                         trigger="absolute dating"
-                        content="Methods to determine specific age of an object (within a time range)."
+                        content={TOOLTIP_CONTENT.absoluteDating}
                         width={220}
                     />
                     and
                     <Tooltip
                         trigger="relative dating"
-                        content="Methods to figure out if one artifact is older or younger than another artifact."
+                        content={TOOLTIP_CONTENT.relativeDating}
                         width={242}
                     />
                     techniques, scientists were able to demonstrate that their

@@ -19,8 +19,8 @@
 
 .question {
     text-align: center;
-    font-size: 25px;
-    line-height: 39px;
+    font-size: 150%;
+    line-height: 1.5rem;
     font-weight: $font_extrabold;
     font-stretch: condensed;
     grid-area: header;
@@ -49,12 +49,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1.2rem;
+    line-height: 3rem;
     font-weight: $font_black;
 
     p {
-        font-size: 16px;
+        font-size: 1.2rem;
         line-height: 20px;
         font-weight: $font_medium;
     }

@@ -1,9 +1,9 @@
 import { Quiz } from '@/components/quiz'
-import climateChangeThumbnail from '@/data/ice-age-texas/quiz/Climate-Change@2x.png'
+import WolfThumbnail from '@/data/daily-life/Images/Grey-Wolf-animation.png'
 import climateChangeAnimated from '@/data/ice-age-texas/quiz/Climate-Change-animation.gif'
-import cometThumbnail from '@/data/ice-age-texas/quiz/Comet@2x.png'
+import HuntingThumbnail from '@/data/daily-life/Images/Dog-job-animation.png'
 import cometAnimated from '@/data/ice-age-texas/quiz/Comet-animation.gif'
-import peopleThumbnail from '@/data/ice-age-texas/quiz/People@2x.png'
+import RestingThumbnail from '@/data/daily-life/Images/Dog-friend-animation.png'
 import peopleAnimated from '@/data/ice-age-texas/quiz/People-animation.gif'
 
 export const PetQuiz = () => (
@@ -11,70 +11,66 @@ export const PetQuiz = () => (
         questions={[
             {
                 question: 'True or False? Paleoindians domesticated North American wolves.',
-                thumbnail: climateChangeThumbnail,
+                thumbnail: WolfThumbnail,
                 animation: climateChangeAnimated,
                 alt: 'A cartoon North American wolf.',
                 choices: [
                     {
                         choice: 'TRUE',
                         moreInformation: {
-                            title: 'TRUE',
-                            details: `Climate change can lead to species extinction. 
-    For example, a changing plant community 
-    could impact an animal's food source.`,
+                            title: 'NOPE',
+                            details: `Paleoindian’s dogs were descended from an extinct species of grey wolf from Eurasia. They came to North America with the Paleoindians.`,
                         },
                     },
                     {
                         choice: 'FALSE',
                         moreInformation: {
-                            title: 'FALSE',
-                            details: `Many of the species that died at the end 
-            of the ice age had previously survived 
-            other periods of major climate change.`,
+                            title: 'THAT’S RIGHT!',
+                            details: `Paleoindian’s dogs were related to an extinct species of grey wolf from Eurasia. They came to North America with the Paleoindians.`,
                         },
                     },
                 ],
             },
             {
                 question: 'True or False? Dogs had jobs like helping people hunt and protecting camp.',
-                thumbnail: cometThumbnail,
+                thumbnail: HuntingThumbnail,
                 animation: cometAnimated,
                 alt: 'A Native American and their wolf.',
                 choices: [
                     {
                         choice: 'TRUE',
                         moreInformation: {
-                            title: 'TRUE',
-                            details: `There is some evidence that a comet hit the Earth around 12,900 years ago - near the time these animals went extinct. `,
+                            title: 'GOOD JOB!',
+                            details: `Scientists have even found evidence that the Paleoindians bred their dogs to be able to pull heavy sleds.`,
                         },
                     },
                     {
                         choice: 'FALSE',
                         moreInformation: {
-                            title: 'FALSE',
-                            details: `Mostly large animals died. A comet would affect both large and small animals.`,
+                            title: 'NOPE!',
+                            details: `Some dogs today lay around, but ancient dogs likely had jobs. Scientists think Paleoindians even bred their dogs to pull heavy sleds.`,
                         },
                     },
                 ],
             },
             {
                 question: 'True or False? Ancient dogs spent time with their people.',
-                thumbnail: peopleThumbnail,
+                thumbnail: RestingThumbnail,
                 animation: peopleAnimated,
                 alt: 'A Native American watching the camp while their wolf sleeps.',
                 choices: [
                     {
                         choice: 'TRUE',
                         moreInformation: {
-                            title: 'TRUE',
-                            details: `Archeologists have found the bones of mammoths, giant sloths, and other now-extinct animals in Paleoindian campsites.`,
+                            title: 'YOU NAILED IT!',
+                            details: `Archeologists have found chewed bones around camp sites, which tells us that Fido liked to enjoy a snack near his friends.`,
                         },
                     },
                     {
                         choice: 'FALSE',
                         moreInformation: {
-                            title: 'FALSE',
-                            details: `Paleoindians hunted other mammals that did not go extinct. And some animals that they probably didn't hunt went extinct anyway.`,
+                            title: 'GOOD TRY!',
+                            details: `Archeologists have found chewed bones around camp sites, which tells us that Fido liked to enjoy a snack near his friends.`,
                         },
                     },
                 ],

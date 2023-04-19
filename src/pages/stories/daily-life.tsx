@@ -5,7 +5,7 @@ import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
 // import { cardData } from '@/data/ice-age-texas/cards/data'
 import { YouTubeVideo } from '@/components/youtube-video'
-import moreThanStoneThumbnail from '@/data/daily-life/more-than-stone-thumbnail.png'
+import moreThanStoneThumbnail from '@/data/daily-life/Images/More_Than_Stone.png'
 import {
     TIKTOK_VIDEOS,
     TOOLTIP_CONTENT,
@@ -23,8 +23,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'essential-inventory',
         summary: `People make stuff, we learn stuff – we’ve always been good at it.`,
         description:
-            `<p>16,000 years ago, everybody, everywhere lived as hunter-gatherers. But that doesn’t mean people were simple! They had deep knowledge and skills to thrive in their environments. 
-            Flip through the cards below and put yourself in their woven grass sandals! </p>`,
+            `<p>16,000 years ago, everybody, everywhere lived as hunter-gatherers. But that doesn’t mean people were simple! They had deep knowledge and skills to thrive in their environments. </p>
+            <p>Flip through the cards below and put yourself in their woven grass sandals! </p>`,
         interactive: (
             <Cards cards={EssentialInvetoryData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
         ),
@@ -53,8 +53,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'not-just-stone-age',
         summary: 'Stone tools “rock” at surviving the test of time  ;)',
         description:
-            `<p>But do their powers of preservation paint an uneven picture of Paleoindian peoples?
-            Watch the video to learn more. </p>`,
+            `<p>But do their powers of preservation paint an uneven picture of Paleoindian peoples? </p>
+            <p>Watch the video to learn more. </p>`,
         interactive: (
             <YouTubeVideo
                 src="https://youtu.be/TbrFI5LddaY"
@@ -77,8 +77,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'what-was-for-dinner',
         summary: "Maybe something easy to get?",
         description:
-            `<p>Paleoindians did hunt mammoths and other mega-fauna, but not every day. Would you like to bust your hump hunting a dangerous animal or would you just kick back and catch a fish?
-            Check out what was on the menu. </p>`,
+            `<p>Paleoindians did hunt mammoths and other mega-fauna, but not every day. Would you like to bust your hump hunting a dangerous animal or would you just kick back and catch a fish?</p>
+            <p>Check out what was on the menu. </p>`,
         interactive: (
             <Cards cards={WhatWasForDinnerData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
         ),
@@ -98,8 +98,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'life-lessons',
         summary: "Ancestors of Indigenous people were the first to learn the landscape.",
         description:
-            `<p>Their knowledge was important for surviving and thriving, and it has been passed down through generations. Today, those traditions are still around, often with a modern twist. 
-            Hear from Native American people below about their favorite traditions. </p>`,
+            `<p>Their knowledge was important for surviving and thriving, and it has been passed down through generations. Today, those traditions are still around, often with a modern twist. </p>
+            <p>Hear from Native American people below about their favorite traditions. </p>`,
         interactive: (
             <>
             <p>NEED TO CHANGE VIDEOS</p>
@@ -124,15 +124,19 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'palaeo-pets',
         summary: "Our furry friends have a long history",
         description:
-            `<p>Over 20,000 years ago, wolves and humans figured out that they could help each other survive. They joined forces, and the world’s oldest friendship began. 
-            Sit, roll over and test your doggy knowledge below!</p>`,
+            `<p>Over 20,000 years ago, wolves and humans figured out that they could help each other survive. They joined forces, and the world’s oldest friendship began.</p>
+            <p>Sit, roll over and test your doggy knowledge below!</p>`,
         interactive: (
             <PetQuiz />
         ),
         details: (
             <>
             <p>
-                When Paleoindians first came to the Americas, <Tooltip trigger="domesticated" content={TOOLTIP_CONTENT.domesticated}/> dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were <Tooltip trigger="descended" content={TOOLTIP_CONTENT.descended} /> from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
+                When Paleoindians first came to the Americas, 
+                <Tooltip trigger="domesticated" content={TOOLTIP_CONTENT.domesticated}/> 
+                dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were 
+                <Tooltip trigger="descended" content={TOOLTIP_CONTENT.descended} /> 
+                from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
             </p>
             </>
         ),
@@ -142,8 +146,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'written-in-stone',
         summary: 'Stone tools tell a story – if you ask the right questions',
         description:
-            `<p>When archeologists find stone tools, even broken pieces, they open a window into the past. They carefully document the artifact’s position and context and then study it in the lab. 
-            Scroll through these Paleoindian artifacts. </p>`,
+            `<p>When archeologists find stone tools, even broken pieces, they open a window into the past. They carefully document the artifact’s position and context and then study it in the lab. </p>
+            <p>Scroll through these Paleoindian artifacts. </p>`,
         interactive: (
             <DailyLifeCarousel
                 images={carouselData}
