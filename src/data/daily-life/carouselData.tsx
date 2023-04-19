@@ -1,8 +1,11 @@
-import carousel1 from '@/data/daily-life/1.jpg'
-import carousel2 from '@/data/daily-life/2.jpg'
-import carousel3 from '@/data/daily-life/3.jpg'
-import carousel4 from '@/data/daily-life/4.jpg'
-// import carousel5 from '@/data/daily-life/5.jpg'
+import carousel1 from '@/data/daily-life/Images/1.png'
+import carousel2 from '@/data/daily-life/Images/2.png'
+import carousel3 from '@/data/daily-life/Images/3.png'
+import carousel4 from '@/data/daily-life/Images/4.png'
+import carousel5 from '@/data/daily-life/Images/5.png'
+import carousel6 from '@/data/daily-life/Images/6.png'
+import carousel7 from '@/data/daily-life/Images/7.png'
+import carousel8 from '@/data/daily-life/Images/8.png'
 
 export const carouselData = [
     {
@@ -35,28 +38,28 @@ export const carouselData = [
     },
     {
         id: 'carouselfive',
-        image: carousel1,
+        image: carousel5,
         title:'Core',
         description: '13,000 – 12,000 BP, Gault Site, Bell County, TX',
         text: 'Scientist found microscopic root starches on this stone tool. From the shape of the starch molecules, we learned that a person used this tool to cut and grind a root vegetable.',
     },
     {
         id: 'carouselsix',
-        image: carousel4,
+        image: carousel6,
         title:'Modified Flake',
         description: '~13,000 BP, Gault Site, Bell County, TX',
         text: 'Under a microscope, scientists can see distinct areas wear along the edges of this modified flake. The specific pattern of wear tells us that a person used this tool to scrape hide, probably to prepare it to be used as clothing.',
     },
     {
         id: 'carouselseven',
-        image: carousel3,
+        image: carousel7,
         title:'Blade',
         description: '~13,000 BP, Gault Site, Bell County, TX',
         text: 'Scientists studied areas of microscopic wear patterns along this blade’s edge. A person used this tool for cutting grass—maybe to use in making woven baskets or mats.',
     },
     {
         id: 'carouseleight',
-        image: carousel2,
+        image: carousel8,
         title:'Adze (chopping tool)',
         description: '~13,000 BP, Gault Site, Bell County, TX',
         text: 'Scientist determined that this tool was used to chop or work wood. Using a microscope, the scientists could see the distinctive wear patterns along the tool’s edge.',
