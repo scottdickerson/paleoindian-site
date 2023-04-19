@@ -132,7 +132,11 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
             <p>
-                When Paleoindians first came to the Americas, <Tooltip trigger="domesticated" content={TOOLTIP_CONTENT.domesticated}/> dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were <Tooltip trigger="descended" content={TOOLTIP_CONTENT.descended} /> from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
+                When Paleoindians first came to the Americas, 
+                <Tooltip trigger="domesticated" content={TOOLTIP_CONTENT.domesticated}/> 
+                dogs were trotting along beside them. Bones and other artifacts discovered around ancient camp sites tell us a lot about man’s best friend. By studying DNA, we know that dogs and people were together long before they came to North America. In fact, Native Americans’ dogs were 
+                <Tooltip trigger="descended" content={TOOLTIP_CONTENT.descended} /> 
+                from a line of grey wolves in Eurasia. Scientists can trace their DNA back through generations to learn more about how dogs – and their friendships with people – changed over time. 
             </p>
             </>
         ),
