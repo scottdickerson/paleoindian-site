@@ -2,7 +2,6 @@ import React from 'react';
 import { useRef } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import styles from '../styles/Carousel.module.scss';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useDraggable } from "react-use-draggable-scroll";
 import leftArrow from '@/components/images/cards/LeftArrow.svg';
 import rightArrow from '@/components/images/cards/RightArrow.svg';
