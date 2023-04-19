@@ -1,11 +1,11 @@
 /** CSS Grid 2x2 */
 .thumbnailGallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 1rem;
-  flex-grow: 1;
-}   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    flex-grow: 1;
+}
 
 .imageContainer {
     background-color: black;
@@ -17,14 +17,14 @@
 }
 
 .tiktokPlayer {
-  display:flex;
-  width:100%;
-  gap: 3rem;
+    display: flex;
+    width: 100%;
+    gap: 3rem;
 }
 
 .selectVideoTile {
     width: 100%;
-    height:100%;
+    height: 100%;
     background-size: contain;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23707070' stroke-width='1' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     color: #d9d9d9;
@@ -34,28 +34,27 @@
     padding: 2rem;
     font-weight: $font-regular;
     font-stretch: condensed;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 15px rgba(0,0,0,0.16);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.16);
 }
 
 .videoTile {
-  width: calc(50% - 1.5rem); // adjust for grid gap
-  aspect-ratio: 320/568;
+    width: calc(50% - 1.5rem); // adjust for grid gap
+    aspect-ratio: 320/568;
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
-  .tiktokPlayer {
-    gap: 1rem; // shrink gap on narrow screens
-  }
-  .videoTile {
-    width: calc(50% - .5rem); // adjust for grid gap
-  }
+    .tiktokPlayer {
+        gap: 1rem; // shrink gap on narrow screens
+    }
+    .videoTile {
+        width: calc(50% - 0.5rem); // adjust for grid gap
+    }
 }
 
-
 .video {
-  width:100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }

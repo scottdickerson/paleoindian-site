@@ -155,9 +155,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         summary: 'Science is better, down where it&apos;s wetter',
         description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
         <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
-        interactive: <Flipper
-                        images={FlipperImages}
-        />,
+        interactive: <Flipper images={FlipperImages} />,
         details: (
             <>
                 <p>

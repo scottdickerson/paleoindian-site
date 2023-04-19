@@ -14,12 +14,11 @@
     }
 }
 
-
 .footerNav {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 100%
+    height: 100%;
 }
 
 .footerLinks {
@@ -34,17 +33,17 @@
     font-weight: $font_extrabold;
     color: $section_title_background_color;
     line-height: 20px;
-    
+
     transition: color 0.2s ease-in-out;
     letter-spacing: 1px;
     z-index: 2;
     li {
         height: 100%;
-        display:flex;
+        display: flex;
     }
     a {
         padding: 0rem 1rem;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding-bottom: 4px;
@@ -52,7 +51,6 @@
     &:hover {
         color: $section_title_background_color;
     }
-    
 }
 
 @media screen and (min-width: $tablet-breakpoint) {

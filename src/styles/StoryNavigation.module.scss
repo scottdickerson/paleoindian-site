@@ -46,9 +46,9 @@
     flex-grow: 1;
     height: 100%;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: stretch;
-    text-align:center;
+    text-align: center;
     justify-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -58,12 +58,12 @@
 
 @media screen and (min-width: $tablet-breakpoint) {
     .navbar .navitem {
-         font-size: 20px;
-         &.selected {
-             font-size: 50px;
-         }
-     }
- }
+        font-size: 20px;
+        &.selected {
+            font-size: 50px;
+        }
+    }
+}
 
 .home {
     background-color: #425d29;
