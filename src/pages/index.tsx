@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '@/styles/Home.module.scss'
 import { StoryNavigation } from '@/components/story-navigation'
+import { Footer } from '@/components/footer'
 
 export default function Home() {
     return (
@@ -34,6 +35,7 @@ export default function Home() {
                     </li>
                 </ul>
             </section>
+            <Footer />
         </>
     )
 }
