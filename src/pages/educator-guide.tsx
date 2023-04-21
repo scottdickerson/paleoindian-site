@@ -1,19 +1,35 @@
 import Head from 'next/head'
+import styles from '@/styles/EducatorGuide.module.scss'
+import Link from 'next/link'
+import { Footer } from '@/components/footer'
 
-// next js page showing simple text
 const EducatorGuide = () => {
     return (
         <>
             <Head>
                 <title>Texas Paleoindian - Educator Guide</title>
             </Head>
-            <div>
-                <h1>Educator Guide</h1>
-                <p>
-                    This is the Educator Guide page. It is a simple page with
-                    some text.
-                </p>
+            <div
+                className={styles.contentWrapper}
+            >
+                <Link 
+                    href="/" 
+                    className={`
+                        ${styles.button} 
+                        ${styles.guideButton}
+                    `}>
+                    Download Guide
+                </Link>
+                <Link 
+                    href="/" 
+                    className={`
+                        ${styles.button} 
+                        ${styles.gameButton}
+                    `}>
+                    Download Game
+                </Link>
             </div>
+            <Footer />
         </>
     )
 }

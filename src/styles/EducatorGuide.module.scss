@@ -1,0 +1,23 @@
+.contentWrapper {
+    max-width: 90%;
+    height: 35rem;
+    margin-top: 100px;
+    margin-left: 5rem;
+    align-items: left;
+    background-color: #671e1e;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    left: 15%;
+    background-color: yellow;
+    color: purple;
+    font-weight: 800;
+    border-radius: 20%;
+}
