@@ -1,13 +1,14 @@
-// import headerimage from '@/data/educator-guide/header.png'
+import headerimage from '@/data/educator-guide/header.png'
 // import styles from '@/styles/Educator'
 // import Image from 'next/image'
 
 export const Header = () => {
+    headerimage
     return
-//         <Image 
-//             src={headerimage}
-//             alt='header'
-//             className={styles.header}
-//         >
-//         </Image>
+        // <Image 
+        //     src={headerimage}
+        //     alt='header'
+        //     className={styles.header}
+        // >
+        // </Image>
 }
