@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import styles from '@/styles/EducatorGuide.module.scss'
 import Link from 'next/link'
-import Image from 'next/image'
+// import { Header } from '@/components/header.tsx'
 import { Footer } from '@/components/footer'
-import headerimage from '@/data/educator-guide/header.png'
 
 const EducatorGuide = () => {
     return (
@@ -11,12 +10,7 @@ const EducatorGuide = () => {
             <Head>
                 <title>Texas Paleoindian - Educator Guide</title>
             </Head>
-            <Image 
-                src={headerimage}
-                alt='header'
-                className={styles.header}
-            >
-            </Image>
+            {/* <Header /> */}
             <div
                 className={styles.contentWrapper}
             >
