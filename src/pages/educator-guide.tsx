@@ -14,6 +14,7 @@ const EducatorGuide = () => {
             <div
                 className={styles.contentWrapper}
             >
+                <h1 className={styles.title}>Educator Guide</h1>
                 <Link 
                     href="/" 
                     className={`

@@ -1,10 +1,19 @@
 .contentWrapper {
-    max-width: 90%;
-    height: 35rem;
-    margin-top: 100px;
-    margin-left: 5rem;
-    align-items: left;
+    width: 90%;
+    min-height: 40rem;
+    margin-left: 5%;
+    margin-top: 5%;
     background-color: #671e1e;
+}
+
+.title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-left: 5%;
+    top: 2rem;
+    padding: 0;
 }
 
 .button {
@@ -16,6 +25,7 @@
     padding: 10px;
     margin: 10px;
     left: 15%;
+    top: 2rem;
     background-color: yellow;
     color: purple;
     font-weight: 800;
