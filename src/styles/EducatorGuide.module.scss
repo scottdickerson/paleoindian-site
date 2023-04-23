@@ -1,12 +1,12 @@
 .contentWrapper {
   display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 5%;
   margin-top: 3rem;
 }
 
 .leftColumn {
   flex: 1;
+  margin-right: 2%;
 }
 
 .rightColumn {
