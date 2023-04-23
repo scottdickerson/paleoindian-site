@@ -3,7 +3,7 @@
     width: 90%;
     margin-left: 5%;
     margin-top: 3%;
-    height: auto;
+    min-height: 45rem;
     background-color: #671e1e;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,7 +11,7 @@
 
 .imageWrapper {
     grid-column: 2;
-    height: 130%;
+    height: 140%;
     background-color: grey;
     right: 0%;
     top: 0%;
@@ -47,19 +47,14 @@
     position: relative;
     top: 3rem;
     background-color: #fff;
-    padding: 2rem;
-    margin: 10px;
-    border-radius: 1rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .firstParagraph {
-    margin: 10px;
-    padding: 10px;
-}
-
-.secondParagraph {
-    margin: 10px;
-    padding: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .buttonWrapper {
@@ -67,8 +62,9 @@
     position: relative;
     background-color: aquamarine;
     width: 30%;
-    margin: 10px;
+    margin-top: 3rem;
     padding: 10px;
+    object-fit: cover;
 }
 
 .button {
@@ -78,7 +74,7 @@
     align-items: center;
     max-width: fit-content;
     margin: 10px;
-    padding: 15px;
+    padding: 10px;
     background-color: yellow;
     color: purple;
     font-weight: 800;
