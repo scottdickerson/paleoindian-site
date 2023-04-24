@@ -1,18 +1,6 @@
 .contentWrapper {
-  display: flex;
   margin: 5%;
   margin-top: 5rem;
-}
-
-.leftColumn {
-  flex: 1;
-  margin-right: 2%;
-  margin-left: 5%;
-}
-
-.rightColumn {
-  flex: 1;
-  margin-right: 5%;
 }
 
 .title {
@@ -26,29 +14,22 @@
 }
 
 .firstParagraph {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 5%;
 }
 
 .secondParagraph {
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .image {
-  display: flex;
-  background-color: grey;
-  width: 100%;
-  min-height: 90%;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .caption {
   margin-top: 10px;
 }
-
-// .buttonWrapper {
-//     margin-top: 50%;
-// }
 
 .button {
     position: relative;
@@ -63,4 +44,8 @@
     color: purple;
     font-weight: 800;
     border-radius: 15%;
+}
+
+.footer {
+  position: relative;
 }
