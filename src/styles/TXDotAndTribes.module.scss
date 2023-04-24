@@ -1,0 +1,30 @@
+.contentWrapper {
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    --text-column: 1;
+    --image-column: 2;
+}
+
+.textBlock {
+    grid-column: var(--text-column);
+}
+
+.imageBlock {
+    grid-column: var(--image-column);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 950px) {
+    .contentWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .imageBlock {
+        grid-column: 1;
+    }
+}
