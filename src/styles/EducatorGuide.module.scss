@@ -3,6 +3,7 @@
   margin: 3%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   background-color: green;
 }
 
@@ -17,6 +18,18 @@
 
 .thirdColumn {
   background-color: purple;
+}
+
+.firstParagraph {
+  --font-size: calc(1.5rem + 1vw);
+  font-size: var(--font-size);
+  margin-top: 10%;
+}
+
+.secondParagraph {
+  font-size: calc(80% * var(--font-size));
+  font-size: calc(.8rem + 1vw);
+  margin-top: 10%;
 }
 
 .button {
@@ -35,14 +48,14 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 0%;
+  position: relative;
 }
 
 /* Media query for mobile devices */
 @media (max-width: 950px) {
   .contentWrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .firstColumn,
