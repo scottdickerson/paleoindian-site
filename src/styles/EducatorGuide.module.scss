@@ -1,7 +1,8 @@
 /* Default styles for desktop */
 .contentWrapper {
+  position: relative;
   display: grid;
-  margin-top: 2%;
+  margin: 2%;
   margin-left: 5%;
   margin-right: 5%;
   grid-template-columns: 1fr 1fr;
@@ -9,8 +10,12 @@
 }
 
 .secondColumn {
-  position: relative;
   grid-row: span 2;
+}
+
+.thirdColumn {
+  position: relative;
+  margin-top: 5%;
 }
 
 .firstParagraph {
@@ -27,17 +32,6 @@
   margin-top: 10%;
 }
 
-.image {
-  width: 90%;
-  max-height: 100%;
-  height: auto;
-}
-
-.buttonWrapper {
-  position: relative;
-  bottom: -5%;
-}
-
 .button {
   position: relative;
   display: flex;
@@ -45,12 +39,25 @@
   align-items: center;
   max-width: fit-content;
   font-size: 1.5rem;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   background-color: yellow;
   color: purple;
   font-weight: 800;
   border-radius: 15%;
+}
+
+.image {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption {
+  position: relative;
+  margin-top: 2%;
+  bottom: 0%;
 }
 
 /* Media query for mobile devices */
@@ -62,11 +69,22 @@
   .firstColumn,
   .thirdColumn {
     width: 100%;
-    margin: 0;
+    margin: 2%;
   }
 
   .secondColumn {
     width: 100%;
-    margin: 0;
+    margin: 2%;
+  }
+
+  .buttonWrapper {
+    position: relative;
+    top: -15%;
+  }
+  .secondColumn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

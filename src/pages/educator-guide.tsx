@@ -27,7 +27,7 @@ const EducatorGuide = () => {
                         alt="temp photo"
                         className={styles.image}
                     />
-                    <p className={styles.caption}>Caption goes here</p>
+                    <p className={styles.caption}>Caption level content will describe the photo in this space.</p>
                     </div>
                 </div>
                 <div className={styles.thirdColumn}>
