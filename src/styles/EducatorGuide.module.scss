@@ -1,23 +1,16 @@
 /* Default styles for desktop */
 .contentWrapper {
-  margin: 3%;
   display: grid;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  background-color: green;
-}
-
-.firstColumn {
-  background-color: red;
 }
 
 .secondColumn {
-  background-color: blue;
+  position: relative;
   grid-row: span 2;
-}
-
-.thirdColumn {
-  background-color: purple;
 }
 
 .firstParagraph {
@@ -27,9 +20,22 @@
 }
 
 .secondParagraph {
+  position: relative;
+  top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
   margin-top: 10%;
+}
+
+.image {
+  width: 90%;
+  max-height: 100%;
+  height: auto;
+}
+
+.buttonWrapper {
+  position: relative;
+  bottom: -5%;
 }
 
 .button {
@@ -39,7 +45,7 @@
   align-items: center;
   max-width: fit-content;
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin: 0.5rem;
   padding: 1rem;
   background-color: yellow;
   color: purple;
@@ -47,15 +53,10 @@
   border-radius: 15%;
 }
 
-.footer {
-  position: relative;
-}
-
 /* Media query for mobile devices */
 @media (max-width: 950px) {
   .contentWrapper {
     grid-template-columns: 1fr;
-    gap: 0;
   }
 
   .firstColumn,
