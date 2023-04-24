@@ -24,6 +24,7 @@ const TXDotAndTribes = () => {
                         <Image 
                             src={groupImage}
                             alt='group'
+                            className={styles.image}
                         />
                         <p>
                             The Alabama Coushatta are one of the many federally recognized sovereign Tribes with formal relationships with the State of Texas.
@@ -36,6 +37,7 @@ const TXDotAndTribes = () => {
                         <Image
                             src={groupImageTwo}
                             alt='group'
+                            className={styles.image}
                         />
                         <p>
                             TxDOT works with 25 federally recognized Native American nations with an interest in preserving Texas history.
@@ -59,6 +61,7 @@ const TXDotAndTribes = () => {
                         <Image
                             src={archeologists}
                             alt='archeologists'
+                            className={styles.image}
                         />
                         <p>
                             TxDOT and partner archeologists work to carefully document sites like this ancient campsite in Denton County.
@@ -79,6 +82,7 @@ const TXDotAndTribes = () => {
                         <Image 
                             src={presentation}
                             alt='presentation'
+                            className={styles.image}
                         />
                         <p>
                             The TxDOT Tribal Consultation process allows TxDOT to work with tribes to identify and determine any potential effect the project will have on places of cultural significance to the tribes, including prehistoric archeological sites and cemeteries.
@@ -105,6 +109,7 @@ const TXDotAndTribes = () => {
                         <Image 
                             src={endingImage}
                             alt='endingImage'
+                            className={styles.image}
                         />
                         <p>
                             Working together TxDOT and Tribal representatives created this educational booklet. You can download a copy here or in the Educator’s Guide. 
