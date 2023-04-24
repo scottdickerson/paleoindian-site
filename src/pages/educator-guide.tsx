@@ -15,10 +15,10 @@ const EducatorGuide = () => {
                 <div className={styles.leftColumn}>
                     <h1 className={styles.title}>Educator Guide</h1>
                     <div className={styles.textWrapper}>
-                    <p className={styles.firstParagraph}>
+                    <p className={`${styles.text} ${styles.firstParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo.
                     </p>
-                    <p className={styles.secondParagraph}>
+                    <p className={`${styles.text} ${styles.secondParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo. Purus ut faucibus pulvinar elementum integer enim. 
                     </p>
                     </div>
