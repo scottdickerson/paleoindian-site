@@ -14,12 +14,13 @@ const EducatorGuide = () => {
             </Head>
             <Header />
             <div className={styles.contentWrapper}>
+                <div className={styles.firstColumn}>
                     <h1 className={styles.title}>Educator Guide</h1>
-                    <div className={styles.textWrapper}>
                     <p className={`${styles.text} ${styles.firstParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo.
                     </p>
                     </div>
+                    <div className={styles.secondColumn}>
                     <div className={styles.imageWrapper}>
                     <Image 
                         src={tempPhoto}
@@ -28,6 +29,8 @@ const EducatorGuide = () => {
                     />
                     <p className={styles.caption}>Caption goes here</p>
                     </div>
+                    </div>
+                    <div className={styles.thirdColumn}>
                     <p className={`${styles.text} ${styles.secondParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo. Purus ut faucibus pulvinar elementum integer enim. 
                     </p>
@@ -50,6 +53,7 @@ const EducatorGuide = () => {
                     >
                         Download Game
                     </Link>
+                    </div>
                     </div>
                 </div>
             <Footer className={styles.footer}/>
