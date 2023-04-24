@@ -21,7 +21,7 @@
 .firstParagraph {
   --font-size: calc(1.5rem + 1vw);
   font-size: var(--font-size);
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 .secondParagraph {
@@ -29,7 +29,11 @@
   top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
-  margin-top: 10%;
+}
+
+.buttonWrapper {
+  position: relative;
+  bottom: 0%;
 }
 
 .button {
