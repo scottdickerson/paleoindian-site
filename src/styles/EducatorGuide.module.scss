@@ -1,35 +1,21 @@
 /* Default styles for desktop */
 .contentWrapper {
-  margin: 5%;
-  margin-top: 5rem;
-  display: flex;
+  margin: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: green;
 }
 
 .firstColumn {
-  flex: 1;
   background-color: red;
 }
 
 .secondColumn {
-  flex: 1;
   background-color: blue;
 }
 
 .thirdColumn {
-  flex: 1;
   background-color: purple;
-}
-
-.title {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.image {
-  width: 100%;
-  height: auto;
 }
 
 .button {
@@ -53,7 +39,7 @@
 }
 
 /* Media query for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 950px) {
   .contentWrapper {
     flex-direction: column;
   }
