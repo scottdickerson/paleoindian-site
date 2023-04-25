@@ -22,6 +22,7 @@
   --font-size: calc(1.5rem + 1vw);
   font-size: var(--font-size);
   margin-top: 3%;
+  line-height: 3.5rem;
 }
 
 .secondParagraph {
@@ -29,6 +30,7 @@
   top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
+  line-height: 2.5rem;
 }
 
 .buttonWrapper {
@@ -46,10 +48,10 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
-  background-color: yellow;
-  color: purple;
+  background-color: #fabb3c;
+  color: #6e2047;
   font-weight: 800;
-  border-radius: 15%;
+  border-radius: 16px;
 }
 
 .image {
@@ -83,12 +85,25 @@
 
   .buttonWrapper {
     position: relative;
-    top: -15%;
+    top: -20%;
   }
   .secondColumn {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .firstParagraph {
+    line-height: 2rem;
+  }
+
+  .secondParagraph {
+    line-height: 1.5rem;
+    margin-bottom: 10%;
+  }
+
+  .caption {
+    margin-bottom: 15%;
   }
 }
