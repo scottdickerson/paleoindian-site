@@ -22,7 +22,7 @@
   --font-size: calc(1.5rem + 1vw);
   font-size: var(--font-size);
   margin-top: 3%;
-  line-height: 2rem;
+  line-height: 3.5rem;
 }
 
 .secondParagraph {
@@ -30,8 +30,7 @@
   top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
-  margin-bottom: 10%;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .buttonWrapper {
@@ -64,7 +63,6 @@
 .caption {
   position: relative;
   margin-top: 2%;
-  margin-bottom: 15%;
   bottom: 0%;
 }
 
@@ -94,5 +92,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .firstParagraph {
+    line-height: 2rem;
+  }
+
+  .secondParagraph {
+    line-height: 1.5rem;
+    margin-bottom: 10%;
+  }
+
+  .caption {
+    margin-bottom: 15%;
   }
 }
