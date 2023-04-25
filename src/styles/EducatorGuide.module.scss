@@ -22,6 +22,7 @@
   --font-size: calc(1.5rem + 1vw);
   font-size: var(--font-size);
   margin-top: 3%;
+  line-height: 2rem;
 }
 
 .secondParagraph {
@@ -29,6 +30,8 @@
   top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
+  margin-bottom: 10%;
+  line-height: 1.5rem;
 }
 
 .buttonWrapper {
@@ -46,10 +49,10 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
-  background-color: yellow;
-  color: purple;
+  background-color: #fabb3c;
+  color: #6e2047;
   font-weight: 800;
-  border-radius: 15%;
+  border-radius: 16px;
 }
 
 .image {
@@ -61,6 +64,7 @@
 .caption {
   position: relative;
   margin-top: 2%;
+  margin-bottom: 15%;
   bottom: 0%;
 }
 
@@ -83,7 +87,7 @@
 
   .buttonWrapper {
     position: relative;
-    top: -15%;
+    top: -20%;
   }
   .secondColumn {
     position: relative;
