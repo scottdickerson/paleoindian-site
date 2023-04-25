@@ -21,14 +21,15 @@
     background-color: red;
 }
 
-.imageBlock > p {
-    max-width: 29%;
-}
-
 .image {
+    min-width: 75%;
     width: auto;
     height: auto;
     object-fit: cover;
+}
+
+.sendOff {
+    grid-column: 1;
 }
 
 @media screen and (max-width: 950px) {
