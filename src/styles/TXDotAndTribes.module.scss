@@ -41,3 +41,29 @@
         grid-column: 1;
     }
 }
+
+@media screen and (min-width: 951px) {
+    .openingParagraph {
+        grid-row: 1;
+    }
+
+    .textBlock1 {
+        grid-row: 2;
+    }
+
+    .textBlock2 {
+        grid-row: 3;
+    }
+
+    .textBlock3 {
+        grid-row: 4;
+    }
+
+    .textBlock4 {
+        grid-row: 5;
+    }
+
+    .sendOff {
+        grid-row: 5;
+    }
+}
