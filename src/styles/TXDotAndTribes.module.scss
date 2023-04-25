@@ -10,6 +10,10 @@
 .textBlock {
     grid-column: var(--text-column);
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .imageBlock {
@@ -60,10 +64,6 @@
     }
 
     .textBlock4 {
-        grid-row: 5;
-    }
-
-    .sendOff {
         grid-row: 5;
     }
 }

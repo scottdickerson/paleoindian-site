@@ -101,10 +101,10 @@ const TXDotAndTribes = () => {
                         <p>
                             Paleoindians are the ancestors of today’s Native Peoples. This exhibit incorporates both archeological perspectives and traditional stories from Texas Tribes to explore this very early history. 
                         </p>
+                        <p className={styles.sendOff}>
+                            We hope you enjoy learning about A Time Before Texas.
+                        </p>
                     </div>
-                    <p className={styles.sendOff}>
-                    We hope you enjoy learning about A Time Before Texas.
-                    </p>
                     <div className={`${styles.imageBlock} ${styles.endingImageBlock}`}>
                         <Image 
                             src={endingImage}
