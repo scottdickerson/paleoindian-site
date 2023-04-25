@@ -18,6 +18,7 @@ const TXDotAndTribes = () => {
             <Header />
             <div className={styles.contentWrapper}>
                     <p className={`${styles.textBlock} ${styles.openingParagraph}`}>
+                        <h1>TXDot and Tribes</h1>
                         From time immemorial, the land we think of as Texas was the homeland of diverse groups of Native Peoples, including the ancestors of the many named Tribes that are still active communities today. Through conquest, deceit, and theft, this land was colonized by Europeans and ultimately became the State of Texas. 
                     </p>
                     <div className={`${styles.imageBlock} ${styles.imageBlock1}`}>
