@@ -48,9 +48,6 @@
         justify-content: flex-end;
         padding-bottom: 4px;
     }
-    &:hover {
-        color: $section_title_background_color;
-    }
 }
 
 @media screen and (min-width: $tablet-breakpoint) {

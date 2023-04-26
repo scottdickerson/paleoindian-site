@@ -66,12 +66,17 @@ $cards_visible3_width: 900px;
     transform: translateX(-60%);
 }
 
-.rightarrow:hover {
-    transform: scale(1.1) translateX(50%);
-}
+@media (hover) {
+    .rightarrow:hover {
+        transform: scale(1.1) translateX(50%);
+    }
 
-.leftarrow:hover {
-    transform: scale(1.1) translateX(-50%);
+    .leftarrow:hover {
+        transform: scale(1.1) translateX(-50%);
+    }
+    .downloadButton:hover {
+        scale: 1.05;
+    }
 }
 
 /* 
@@ -197,9 +202,6 @@ $cards_visible3_width: 900px;
     left: 5%;
     transform: translateY(50%);
     transition: 0s;
-    &:hover {
-        scale: 1.05;
-    }
     @media screen and (max-width: $mobile-breakpoint) {
         font-size: 10px;
         line-height: 13px;
