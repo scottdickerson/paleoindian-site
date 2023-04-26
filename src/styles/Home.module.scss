@@ -1,9 +1,35 @@
-.main h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    padding: 1rem;
+.main {
+    position: relative;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+.title {
+    position: absolute;
+    font-size: calc(9rem + 1vw);
+    font-weight: 500;
     text-transform: uppercase;
+    color: #304e19;
+    top: 0%;
+    width: 50%;
+    line-height: 10rem;
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .videoSection {

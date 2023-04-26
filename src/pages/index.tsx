@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { StoryNavigation } from '@/components/story-navigation'
 import { Footer } from '@/components/footer'
+import homeImage from '@/data/home/Paleoindian-Home.png'
 
 export default function Home() {
     return (
@@ -11,7 +13,12 @@ export default function Home() {
                 <title>Texas Paleoindian</title>
             </Head>
             <section className={styles.main}>
-                <h1 className={styles.title}>Time Before Texas</h1>
+                <h1 className={styles.title}>A Time Before Texas</h1>
+                <Image 
+                        src={homeImage}
+                        alt="Paleoindian Home Image"
+                        className={styles.homeImage}
+                    />
                 <div className={styles.videoSection}>
                     <div className={styles.videoWrapper}>
                         <video controls src="videos/austin-tx.mp4"></video>
