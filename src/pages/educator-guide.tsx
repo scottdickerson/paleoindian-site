@@ -14,13 +14,13 @@ const EducatorGuide = () => {
             </Head>
             <Header />
             <div className={styles.contentWrapper}>
-                <div className={styles.firstColumn}>
+                <div className={styles.textAndButtonColumn}>
                     <h1 className={styles.title}>Educator Guide</h1>
                     <p className={`${styles.text} ${styles.firstParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo.
                     </p>
                     </div>
-                <div className={styles.secondColumn}>
+                <div className={styles.imageColumn}>
                     <div className={styles.imageWrapper}>
                     <Image 
                         src={tempPhoto}

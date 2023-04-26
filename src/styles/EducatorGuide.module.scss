@@ -9,7 +9,7 @@
   gap: 1rem;
 }
 
-.secondColumn {
+.imageColumn {
   grid-row: span 2;
 }
 
@@ -27,7 +27,7 @@
 
 .secondParagraph {
   position: relative;
-  top: -20%;
+  // top: -20%;
   font-size: calc(80% * var(--font-size));
   font-size: calc(.8rem + 1vw);
   line-height: 2.5rem;
@@ -72,13 +72,13 @@
     grid-template-columns: 1fr;
   }
 
-  .firstColumn,
+  .textAndButtonColumn,
   .thirdColumn {
     width: 100%;
     margin: 2%;
   }
 
-  .secondColumn {
+  .imageColumn {
     width: 100%;
     margin: 2%;
   }
@@ -87,7 +87,7 @@
     position: relative;
     top: -20%;
   }
-  .secondColumn {
+  .imageColumn {
     position: relative;
     display: flex;
     justify-content: center;
