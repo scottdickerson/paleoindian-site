@@ -30,7 +30,7 @@ const EducatorGuide = () => {
                     <p className={styles.caption}>Caption level content will describe the photo in this space.</p>
                     </div>
                 </div>
-                <div className={styles.thirdColumn}>
+                <div className={styles.secondTextandButtonColumn}>
                     <p className={`${styles.text} ${styles.secondParagraph}`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo integer malesuada nunc vel risus commodo. Purus ut faucibus pulvinar elementum integer enim. 
                     </p>
