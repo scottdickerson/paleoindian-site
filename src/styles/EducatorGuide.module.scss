@@ -1,50 +1,26 @@
-/* Default styles for desktop */
 .contentWrapper {
     display: grid;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-bottom: $footer_height;
     max-width: 1500px;
 }
 
-.secondColumn {
-    grid-row: span 2;
-}
-
-.thirdColumn {
-    margin-top: 5%;
-}
-
-.firstParagraph {
-    margin-top: 1rem;
-}
-
-.secondParagraph {
-    margin-bottom: 1.5rem;
+.title {
+    padding-bottom: 10px;
 }
 
 .buttonWrapper {
     bottom: 0%;
     display: flex;
+
+    padding-top: 2rem;
     gap: 1rem;
 }
 
-.button {
+.imageWrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    max-width: fit-content;
-    font-size: 1.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 1rem;
-    background-color: #fabb3c;
-    color: #6e2047;
-    font-weight: 800;
-    border-radius: 16px;
 }
 
 .image {
@@ -59,26 +35,11 @@
 }
 
 /* Media query for mobile devices */
-@media (max-width: 950px) {
+@media (max-width: $tablet_breakpoint) {
     .contentWrapper {
         grid-template-columns: 1fr;
     }
-
-    .firstColumn,
-    .thirdColumn {
-        width: 100%;
-        margin: 2%;
-    }
-
-    .secondColumn {
-        width: 100%;
-        margin: 2%;
-        grid-row: span 1;
-    }
-
-    .secondColumn {
-        display: flex;
+    .buttonWrapper {
         justify-content: center;
-        align-items: center;
     }
 }

@@ -1,5 +1,4 @@
 .section {
-    padding: 0 2rem 2rem;
     h2,
     h3,
     p {
@@ -25,7 +24,7 @@
     color: $section_title_color;
     border-radius: 12px;
     @media screen and (max-width: $mobile_breakpoint) {
-        font-size: 8px;
+        font-size: 12px;
         line-height: 28px;
         border-radius: 6px;
         padding: 0px 8px;

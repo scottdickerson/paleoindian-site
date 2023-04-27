@@ -13,7 +13,5 @@
         margin-right: $toc_width; // only save space if the toc is visible
     }
     overflow-x: hidden;
-    padding-top: 32px; // smaller than the XD because it looks better on mobile
-    padding-bottom: 56px;
     max-width: 1200px;
 }
