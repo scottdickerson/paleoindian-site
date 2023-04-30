@@ -8,9 +8,11 @@ import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
+import pageStyles from '@/styles/Page.module.scss'
 import { Encode_Sans, Rubik_Dirt } from '@next/font/google'
 import { Footer } from '@/components/footer'
 import { TooltipProvider } from '@radix-ui/react-tooltip'
+import { Header } from '@/components/header'
 
 const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
 export const rubikDirt = Rubik_Dirt({
@@ -33,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 }
             `}</style>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                {isPageAStory(pathname) && (
+                {isPageAStory(pathname) ? (
                     <header>
                         <StoryNavigation
                             selectedPage={
@@ -41,15 +43,17 @@ export default function App({ Component, pageProps }: AppProps) {
                             }
                         />
                     </header>
+                ) : (
+                    pathname !== '/' && <Header />
                 )}
                 <main
-                    className={classNames({
+                    className={classNames(pageStyles.pageWrapper, {
                         [styles.storyPageContainer]: isPageAStory(pathname),
                     })}
                 >
                     <Component {...pageProps} />
                 </main>
-                {isPageAStory(pathname) && <Footer></Footer>}
+                <Footer />
             </div>
         </TooltipProvider>
     )
