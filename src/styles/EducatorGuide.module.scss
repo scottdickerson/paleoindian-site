@@ -1,109 +1,47 @@
-/* Default styles for desktop */
 .contentWrapper {
-  position: relative;
-  display: grid;
-  margin: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    gap: 1rem;
+    max-width: 1500px;
 }
 
-.secondColumn {
-  grid-row: span 2;
-}
-
-.thirdColumn {
-  position: relative;
-  margin-top: 5%;
-}
-
-.firstParagraph {
-  --font-size: calc(1.5rem + 1vw);
-  font-size: var(--font-size);
-  margin-top: 3%;
-  line-height: 3.5rem;
-}
-
-.secondParagraph {
-  position: relative;
-  top: -20%;
-  font-size: calc(80% * var(--font-size));
-  font-size: calc(.8rem + 1vw);
-  line-height: 2.5rem;
+.title {
+    padding-bottom: 10px;
 }
 
 .buttonWrapper {
-  position: relative;
-  bottom: 0%;
+    bottom: 0%;
+    display: flex;
+
+    padding-top: 2rem;
+    gap: 1rem;
 }
 
-.button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: fit-content;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-  background-color: #fabb3c;
-  color: #6e2047;
-  font-weight: 800;
-  border-radius: 16px;
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: span 3;
 }
 
 .image {
-  width: 90%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .caption {
-  position: relative;
-  margin-top: 2%;
-  bottom: 0%;
+    margin-top: 2%;
+    bottom: 0%;
 }
 
 /* Media query for mobile devices */
-@media (max-width: 950px) {
-  .contentWrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .firstColumn,
-  .thirdColumn {
-    width: 100%;
-    margin: 2%;
-  }
-
-  .secondColumn {
-    width: 100%;
-    margin: 2%;
-  }
-
-  .buttonWrapper {
-    position: relative;
-    top: -20%;
-  }
-  .secondColumn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .firstParagraph {
-    line-height: 2rem;
-  }
-
-  .secondParagraph {
-    line-height: 1.5rem;
-    margin-bottom: 10%;
-  }
-
-  .caption {
-    margin-bottom: 15%;
-  }
+@media (max-width: $desktop_breakpoint) {
+    .contentWrapper {
+        grid-template-columns: 1fr;
+    }
+    .buttonWrapper {
+        justify-content: center;
+    }
 }
