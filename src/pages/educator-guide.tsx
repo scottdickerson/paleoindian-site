@@ -5,7 +5,6 @@ import Link from 'next/link'
 import classNames from 'classnames'
 import Image from 'next/image'
 import tempPhoto from '@/data/educator-guide/temp_photo_box.png'
-import { useMediaQuery } from 'react-responsive'
 
 const DetailsSection = () => (
     <div className={classNames(sectionStyles.details)}>
@@ -35,7 +34,6 @@ const DetailsSection = () => (
 )
 
 const EducatorGuide = () => {
-    const isTwoPane = useMediaQuery({ query: '(min-width: 768px)' })
     return (
         <>
             <Head>
@@ -58,7 +56,6 @@ const EducatorGuide = () => {
                         magna aliqua. Leo integer malesuada nunc vel risus
                         commodo.
                     </p>
-                    {isTwoPane && <DetailsSection />}
                 </div>
                 <div className={styles.imageWrapper}>
                     <Image
@@ -71,7 +68,7 @@ const EducatorGuide = () => {
                         space.
                     </p>
                 </div>
-                {!isTwoPane && <DetailsSection />}
+                <DetailsSection />
             </div>
         </>
     )

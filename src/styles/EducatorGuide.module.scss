@@ -1,6 +1,7 @@
 .contentWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
     gap: 1rem;
     max-width: 1500px;
 }
@@ -21,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-row: span 3;
 }
 
 .image {
@@ -35,7 +37,7 @@
 }
 
 /* Media query for mobile devices */
-@media (max-width: $tablet_breakpoint) {
+@media (max-width: $desktop_breakpoint) {
     .contentWrapper {
         grid-template-columns: 1fr;
     }
