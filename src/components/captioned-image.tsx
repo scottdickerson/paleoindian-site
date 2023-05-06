@@ -23,8 +23,7 @@ export const CaptionedImage = ({
         <figure className={classNames(styles.imageBlock, className)}>
             <Image src={src} alt={alt} className={styles.image} />
             <figcaption className={styles.caption}>
-                {caption}
-                <br />
+                <span>{caption}</span>
                 <span className={styles.photoCredit}>{photoCredit}</span>
             </figcaption>
         </figure>

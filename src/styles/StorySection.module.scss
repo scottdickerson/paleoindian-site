@@ -70,11 +70,14 @@
 .details {
     font-size: 21px;
     line-height: 31px;
-    font-weight: $font_regular;
+    font-weight: $font_light;
     letter-spacing: 0px;
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 14px;
         line-height: 19px;
-        font-weight: $font_medium;
+    }
+    @media screen and (max-width: $desktop_breakpoint) {
+        font-size: 18px;
+        line-height: 26px;
     }
 }

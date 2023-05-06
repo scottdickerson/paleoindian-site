@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: left;
 }
 .image {
@@ -15,15 +14,31 @@
 
 .caption {
     font-size: 18px;
-    font-weight: $font_medium;
     line-height: 24px;
     font-stretch: condensed;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    @media screen and (max-width: $desktop_breakpoint) {
+        font-size: 15px;
+        line-height: 21px;
+    }
 }
 
 .photoCredit {
-    padding-top: 10px;
     font-size: 15px;
     line-height: 22px;
     font-stretch: condensed;
-    font-weight: $font_regular;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    @media screen and (max-width: $desktop_breakpoint) {
+        font-size: 12px;
+        line-height: 17px;
+    }
 }
