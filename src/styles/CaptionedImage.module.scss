@@ -1,0 +1,44 @@
+.imageBlock {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.image {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+.caption {
+    font-size: 18px;
+    line-height: 24px;
+    font-stretch: condensed;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+.photoCredit {
+    font-size: 15px;
+    line-height: 22px;
+    font-stretch: condensed;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

@@ -1,48 +1,37 @@
 .contentWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 5%;
-    --font-size: calc(1rem + 1vw);
+    align-items: flex-start;
+    gap: 30px;
+    @media (max-width: $tablet_breakpoint) {
+        gap: 1rem;
+        font-weight: $font_light;
+    }
+
+    section {
+        display: flex;
+        flex-flow: column;
+        gap: 1rem;
+    }
 }
 
-.textBlock {
-    font-size: var(--font-size);
-    padding-bottom: 5%;
+.sideBySide {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
 }
 
-.textBlock > p {
-    margin-bottom: 5%;
-    margin-top: 5%;
+section.nonFlex {
+    display: block;
+    p {
+        padding-bottom: 1rem;
+    }
 }
 
-.openingParagraph > h1 {
-    padding-bottom: 3%;
-}
-
-.imageBlock {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-}
-
-.imageBlock > p {
-    font-size: calc(var(--font-size) - 20%);
-    color: #464646;
-}
-
-.image {
-    width: 100%;
-    height: auto;
-    padding-bottom: 3%;
-}
-
-.endingImageBlock {
-    background-color: yellow;
-    margin-bottom: 20%;
+.workbookOnSide {
+    float: right;
+    display: block;
+    width: 70%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
