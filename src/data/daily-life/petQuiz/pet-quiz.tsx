@@ -1,18 +1,17 @@
 import { Quiz } from '@/components/quiz'
-import WolfThumbnail from '@/data/daily-life/Images/Grey-Wolf-animation.png'
-import climateChangeAnimated from '@/data/ice-age-texas/quiz/Climate-Change-animation.gif'
-import HuntingThumbnail from '@/data/daily-life/Images/Dog-job-animation.png'
-import cometAnimated from '@/data/ice-age-texas/quiz/Comet-animation.gif'
-import RestingThumbnail from '@/data/daily-life/Images/Dog-friend-animation.png'
-import peopleAnimated from '@/data/ice-age-texas/quiz/People-animation.gif'
+import WolfThumbnail from '@/data/daily-life/petQuiz/Grey-Wolf-animation.gif'
+import HuntingThumbnail from '@/data/daily-life/petQuiz/Dog-job-animation.gif'
+import RestingThumbnail from '@/data/daily-life/petQuiz/Dog-friend-animation.gif'
+import QuestionMarkThumbnail from '@/data/daily-life/petQuiz/Question-Mark-animation.gif'
 
 export const PetQuiz = () => (
     <Quiz
         questions={[
             {
-                question: 'True or False? Paleoindians domesticated North American wolves.',
-                thumbnail: WolfThumbnail,
-                animation: climateChangeAnimated,
+                question:
+                    'True or False? Paleoindians domesticated North American wolves.',
+                animation: WolfThumbnail,
+                thumbnail: QuestionMarkThumbnail,
                 alt: 'A cartoon North American wolf.',
                 choices: [
                     {
@@ -24,6 +23,7 @@ export const PetQuiz = () => (
                     },
                     {
                         choice: 'FALSE',
+                        isCorrect: true,
                         moreInformation: {
                             title: 'THAT’S RIGHT!',
                             details: `Paleoindian’s dogs were related to an extinct species of grey wolf from Eurasia. They came to North America with the Paleoindians.`,
@@ -32,13 +32,15 @@ export const PetQuiz = () => (
                 ],
             },
             {
-                question: 'True or False? Dogs had jobs like helping people hunt and protecting camp.',
-                thumbnail: HuntingThumbnail,
-                animation: cometAnimated,
+                question:
+                    'True or False? Dogs had jobs like helping people hunt and protecting camp.',
+                animation: HuntingThumbnail,
+                thumbnail: QuestionMarkThumbnail,
                 alt: 'A Native American and their wolf.',
                 choices: [
                     {
                         choice: 'TRUE',
+                        isCorrect: true,
                         moreInformation: {
                             title: 'GOOD JOB!',
                             details: `Scientists have even found evidence that the Paleoindians bred their dogs to be able to pull heavy sleds.`,
@@ -54,13 +56,15 @@ export const PetQuiz = () => (
                 ],
             },
             {
-                question: 'True or False? Ancient dogs spent time with their people.',
-                thumbnail: RestingThumbnail,
-                animation: peopleAnimated,
+                question:
+                    'True or False? Ancient dogs spent time with their people.',
+                animation: RestingThumbnail,
+                thumbnail: QuestionMarkThumbnail,
                 alt: 'A Native American watching the camp while their wolf sleeps.',
                 choices: [
                     {
                         choice: 'TRUE',
+                        isCorrect: true,
                         moreInformation: {
                             title: 'YOU NAILED IT!',
                             details: `Archeologists have found chewed bones around camp sites, which tells us that Fido liked to enjoy a snack near his friends.`,
