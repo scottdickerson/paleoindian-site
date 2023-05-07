@@ -8,17 +8,28 @@
     }
 }
 .leftSide {
-    flex-basis: 33%;
+    flex-basis: 66%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 0rem 2rem 2rem;
+
+    // Left and right become column on mobile
+    @media screen and (max-width: $tablet_breakpoint) {
+        padding: 0rem;
+        img {
+            transform: translateY(-8%);
+        }
+    }
+
+    // Left contains text on tablet
     @media screen and (min-width: $tablet_breakpoint) and (max-width: $desktop_breakpoint) {
         justify-content: center;
+        padding: 2rem 0rem 2rem 2rem;
+        flex-basis: 33%;
     }
-    @media screen and (max-width: $tablet_breakpoint) {
-        padding-bottom: 0rem;
+    // Left contains image on desktop
+    @media screen and (min-width: $desktop_breakpoint) {
         img {
-            transform: translateY(-16%);
+            transform: translateX(-8%);
         }
     }
 }
@@ -28,18 +39,35 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    flex-basis: 66%;
+    flex-basis: 33%;
 
+    @media screen and (max-width: 500px) {
+        transform: translateY(-25%);
+    }
     @media screen and (max-width: $tablet_breakpoint) {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
         padding: 0 2rem;
         align-items: flex-start;
     }
+    // contains image on tablet
     @media screen and (min-width: $tablet_breakpoint) and (max-width: $desktop_breakpoint) {
         padding-right: 0rem;
+        flex-basis: 66%;
         transform: translateY(-8%);
         img {
             transform: translateX(8%) rotateZ(15deg);
+        }
+    }
+    // contains text on desktop
+    @media screen and (min-width: $desktop_breakpoint) {
+        padding: 2rem 1rem 2rem 0rem;
+    }
+
+    // Needs smaller text to fix certain desktop widths
+    @media screen and (min-width: $desktop_breakpoint) and (max-width: 1300px) {
+        span {
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 }

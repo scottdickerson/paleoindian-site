@@ -8,6 +8,8 @@ import presentation from '@/data/txdot-and-tribes/Tribal Consultation@2x.png'
 import { CaptionedImage } from '@/components/captioned-image'
 import { useMediaQuery } from 'react-responsive'
 import { TexasAndTribesSharedTraditionsWorkbook } from '@/components/tribes-workbook'
+import classNames from 'classnames'
+import { PropsWithChildren } from 'react'
 
 const IntroSection = () => (
     <section className={sectionStyles.details}>
@@ -64,8 +66,12 @@ const TXDotsJobSection = () => (
     </section>
 )
 
-const WorkingTogetherSection = () => (
-    <section className={sectionStyles.details}>
+const WorkingTogetherSection = ({
+    className,
+    children,
+}: PropsWithChildren<{ className?: string }>) => (
+    <section className={classNames(sectionStyles.details, className)}>
+        {children}
         <p>
             TxDOT and Tribal representatives work together to share what they’ve
             learned with people from all across the state. They do this through
@@ -166,31 +172,70 @@ const TXDotAndTribesTablet = () => (
             <ArcheologistImage className={styles.floatRight} />
         </div>
         <ConsultationImage />
-        <div className={styles.sideBySideFavorRight}>
-            <WorkingTogetherSection />
-            <TexasAndTribesSharedTraditionsWorkbook />
+        <div>
+            <WorkingTogetherSection className={styles.nonFlex}>
+                <TexasAndTribesSharedTraditionsWorkbook
+                    className={styles.workbookOnSide}
+                />
+            </WorkingTogetherSection>
         </div>
         <OutroSection />
     </>
 )
 
-const TXDotAndTribes = () => {
+const TXDotAndTribesDesktop = () => {
+    return (
+        <>
+            <div className={styles.sideBySide}>
+                <div className={styles.contentWrapper}>
+                    <h1 className={sectionStyles.summary}>TxDOT & Tribes</h1>
+                    <IntroSection />
+                    <LearningAboutThePastSection />
+                    <TXDotsJobSection />
+                    <WorkingTogetherSection />
+                    <OutroSection />
+                </div>
+                <div className={styles.contentWrapper}>
+                    <AlabamaCoushattaImage />
+                    <NativeAmericanNationsImage />
+                    <ArcheologistImage />
+                    <ConsultationImage />
+                    <TexasAndTribesSharedTraditionsWorkbook />
+                </div>
+            </div>
+        </>
+    )
+}
+
+const TXDotAndTribesNonDesktop = () => {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
     const isTablet = useMediaQuery({
         query: '(max-width: 1024px) and (min-width: 769px)',
     })
     return (
+        <div className={styles.contentWrapper}>
+            <h1 className={sectionStyles.summary}>TxDOT & Tribes</h1>
+            <IntroSection />
+            <AlabamaCoushattaImage />
+            {isMobile && <TXDotAndTribesMobile />}
+            {isTablet && <TXDotAndTribesTablet />}
+        </div>
+    )
+}
+
+const TXDotAndTribes = () => {
+    // responsive to check desktop or not
+    const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' })
+    return (
         <>
             <Head>
                 <title>Texas Paleoindian - TxDOT and Tribes</title>
             </Head>
-            <div className={styles.contentWrapper}>
-                <h1 className={sectionStyles.summary}>TxDOT & Tribes</h1>
-                <IntroSection />
-                <AlabamaCoushattaImage />
-                {isMobile && <TXDotAndTribesMobile />}
-                {isTablet && <TXDotAndTribesTablet />}
-            </div>
+            {isDesktop ? (
+                <TXDotAndTribesDesktop />
+            ) : (
+                <TXDotAndTribesNonDesktop />
+            )}
         </>
     )
 }

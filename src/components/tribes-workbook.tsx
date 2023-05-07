@@ -25,13 +25,17 @@ const WorkbookExplanation = () => (
     </span>
 )
 
-export const TexasAndTribesSharedTraditionsWorkbook = () => {
+export const TexasAndTribesSharedTraditionsWorkbook = ({
+    className,
+}: {
+    className?: string
+}) => {
     const isTablet = useMediaQuery({
         query: '(max-width: 1024px) and (min-width: 769px)',
     })
 
     return (
-        <a href="/pdfs/Ice Age Texas Cards.pdf" download>
+        <a href="/pdfs/Ice Age Texas Cards.pdf" download className={className}>
             <div className={styles.container}>
                 <div className={styles.leftSide}>
                     {isTablet ? <WorkbookExplanation /> : <WorkbookPhoto />}
