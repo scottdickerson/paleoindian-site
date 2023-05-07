@@ -76,7 +76,7 @@
         font-size: 14px;
         line-height: 19px;
     }
-    @media screen and (max-width: $desktop_breakpoint) {
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
         font-size: 18px;
         line-height: 26px;
     }
