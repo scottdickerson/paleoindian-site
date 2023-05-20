@@ -1,6 +1,6 @@
 .carouselWrapper {
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     background: rgba(255, 122, 89, 0);
     scroll-snap-type: proximity;
