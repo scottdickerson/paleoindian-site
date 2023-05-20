@@ -24,6 +24,7 @@ export interface QuestionProps {
     choices: {
         choice: string
         moreInformation: ChoiceDetailsProps
+        isCorrect?: boolean // some questions have correct answers
     }[]
     /* This quiz may not have a correct choice, in which case it allows both clicks */
     correctChoice?: string
@@ -43,13 +44,21 @@ export const Question = ({
         amount: 1,
         once: true,
     })
+    const choiceHasCorrectAnswer = choices.some(
+        (choice) => choice.isCorrect !== undefined && choice.isCorrect
+    )
+    const choiceWasClicked = choice1Clicked || choice2Clicked
+
+    const shouldTriggerAnimation =
+        (choiceHasCorrectAnswer && choiceWasClicked) ||
+        (!choiceHasCorrectAnswer && isInView)
 
     return (
         <div className={styles.parent}>
             <div className={styles.question}>{question}</div>
             <div className={styles.image}>
                 <Image
-                    src={!isInView ? thumbnail : animation}
+                    src={!shouldTriggerAnimation ? thumbnail : animation}
                     alt={alt}
                     fill
                     ref={questionRef}
@@ -61,9 +70,17 @@ export const Question = ({
                     styles.choice1,
                     choice1Clicked
                         ? styles.choiceClicked
-                        : styles.choiceNotClicked
+                        : styles.choiceNotClicked,
+                    {
+                        [styles.choiceDisabled]:
+                            choiceWasClicked && choiceHasCorrectAnswer,
+                    }
                 )}
-                onClick={() => setChoice1Clicked(true)}
+                onClick={
+                    choiceWasClicked && choiceHasCorrectAnswer
+                        ? undefined
+                        : () => setChoice1Clicked(true)
+                }
             >
                 {choice1Clicked ? (
                     <ChoiceDetails {...choices[0].moreInformation} />
@@ -77,9 +94,17 @@ export const Question = ({
                     styles.choice2,
                     choice2Clicked
                         ? styles.choiceClicked
-                        : styles.choiceNotClicked
+                        : styles.choiceNotClicked,
+                    {
+                        [styles.choiceDisabled]:
+                            choiceWasClicked && choiceHasCorrectAnswer,
+                    }
                 )}
-                onClick={() => setChoice2Clicked(true)}
+                onClick={
+                    choiceWasClicked && choiceHasCorrectAnswer
+                        ? undefined
+                        : () => setChoice2Clicked(true)
+                }
             >
                 {choice2Clicked ? (
                     <ChoiceDetails {...choices[1].moreInformation} />

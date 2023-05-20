@@ -25,7 +25,11 @@
     font-stretch: condensed;
     grid-area: header;
     background-color: rgba(95, 88, 66, 0.1);
-    padding: 10px 0px;
+    padding: 10px 1rem;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 
 .image {
@@ -41,6 +45,9 @@
     cursor: pointer;
     padding: 1rem;
     min-height: 125px;
+    @media screen and (max-width: 768px) {
+        min-height: 83px;
+    }
 }
 
 .choiceDetails {
@@ -52,12 +59,23 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: $font_black;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 
     p {
         font-size: 16px;
         line-height: 20px;
         font-weight: $font_medium;
+        @media screen and (max-width: 768px) {
+            font-size: 11px;
+            line-height: 15px;
+        }
     }
+}
+.choiceDisabled {
+    cursor: default;
 }
 
 .choiceNotClicked {
@@ -67,6 +85,11 @@
     font-weight: $font_black;
     letter-spacing: 1px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 22px;
+        line-height: 21px;
+    }
 }
 .choiceClicked {
     background-color: #8dd2ef;
