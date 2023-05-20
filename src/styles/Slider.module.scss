@@ -11,10 +11,6 @@
 .sliderHandle {
     height: 100%;
     cursor: pointer;
-    aspect-ratio: 49/462;
-    @media screen and (max-width: 500px) {
-        aspect-ratio: 27.534/152.32;
-    }
 }
 
 .captionContainer {
@@ -30,9 +26,9 @@
     color: white;
     position: absolute;
     top: 34%;
-    @media screen and (max-width: 500px) {
-        top: 25%;
-    }
+    // @media screen and (max-width: 500px) {
+    //     top: 25%;
+    // }
     line-height: 2vw;
     font-size: 1.5vw;
     opacity: 0;

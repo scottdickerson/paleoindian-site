@@ -27,7 +27,15 @@ export const Slider: FC<SliderProps> = ({
     percentageToChangeCaption = 5,
 }) => {
     const [caption, setCaption] = useState(img1Caption)
-    const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+
+    const determineCorrectImage = () => {
+        if (isMobile) {
+            return sliderHandleMobile
+        } else {
+            return sliderHandle
+        }
+    }
 
     return (
         <div className={styles.sliderContainer}>
@@ -62,7 +70,7 @@ export const Slider: FC<SliderProps> = ({
                 handle={
                     <Image
                         alt="slider"
-                        src={isMobile ? sliderHandleMobile : sliderHandle}
+                        src={determineCorrectImage()}
                         className={styles.sliderHandle}
                         style={{
                             ...styleFitContainer({
