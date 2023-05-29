@@ -54,18 +54,18 @@
     h3 {
         font-size: 26px;
         line-height: 20px;
+        font-family: var(--encode-sans-condensed-extra-bold);
     }
     h4 {
         font-size: 18px;
-        font-weight: $font_bold;
+        font-family: var(--encode-sans-condensed-bold);
         line-height: 20px;
         padding-bottom: 0.5rem;
     }
     p {
         font-size: 18px;
         line-height: 24px;
-        font-stretch: condensed;
-        font-weight: $font_medium;
+        font-family: var(--encode-sans-condensed);
     }
     @media screen and (max-width: $tablet-breakpoint) {
         h3 {

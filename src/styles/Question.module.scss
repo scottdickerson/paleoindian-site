@@ -22,11 +22,11 @@
     font-size: 25px;
     line-height: 39px;
     font-weight: $font_extrabold;
-    font-stretch: condensed;
+    font-family: var(--encode-sans-condensed-extra-bold);
     grid-area: header;
     background-color: rgba(95, 88, 66, 0.1);
     padding: 10px 1rem;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile-breakpoint) {
         font-size: 14px;
         line-height: 18px;
     }
@@ -59,16 +59,27 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: $font_black;
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: $tablet-breakpoint) {
         font-size: 14px;
         line-height: 20px;
     }
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 12px;
+        line-height: 15px;
+    }
 
     p {
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: $font_medium;
-        @media screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: var(--encode-sans-condensed);
+        margin-bottom: 0;
+
+        @media screen and (max-width: $tablet-breakpoint) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @media screen and (max-width: $mobile-breakpoint) {
             font-size: 11px;
             line-height: 15px;
         }

@@ -15,7 +15,7 @@
 .caption {
     font-size: 18px;
     line-height: 24px;
-    font-stretch: condensed;
+    font-family: var(--encode-sans-condensed);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -32,7 +32,6 @@
 .photoCredit {
     font-size: 15px;
     line-height: 22px;
-    font-stretch: condensed;
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 10px;
         line-height: 13px;

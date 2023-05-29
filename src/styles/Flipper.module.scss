@@ -35,7 +35,7 @@ $text_large_breakpoint: 130px;
     justify-content: center;
     color: white;
     text-align: center;
-    font-weight: $font_medium;
+    font-family: var(--encode-sans-condensed);
 }
 
 .imageWrapper {
@@ -52,44 +52,43 @@ $text_large_breakpoint: 130px;
     top: 5%;
     padding: 0 0.25rem;
     min-width: 100%;
-    font-weight: 500;
-    font-size: 0.25rem;
+    font-family: var(--encode-sans-condensed);
     opacity: 0;
     @container (min-width: 80px) {
-        font-size: 0.6rem;
-        line-height: 0.7rem;
+        font-size: 0.5rem;
+        line-height: 0.6rem;
         opacity: 1;
         padding: 0 10%;
     }
     @container (min-width: 135px) {
-        font-size: 0.75rem;
-        line-height: 0.85rem;
+        font-size: 0.7rem;
+        line-height: 0.95rem;
     }
     @container (min-width: 155px) {
         font-size: 0.85rem;
-        line-height: 0.95rem;
+        line-height: 1.3rem;
     }
-    @container (min-width: 175px) {
+    @container (min-width: 190px) {
         font-size: 1rem;
-        line-height: 1.1rem;
-    }
-    @container (min-width: 220px) {
-        font-size: 1.25rem;
         line-height: 1.5rem;
     }
+    @container (min-width: 220px) {
+        font-size: 1.15rem;
+        line-height: 1.6rem;
+    }
     @container (min-width: 266px) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.75rem;
     }
     @container (min-width: 290px) {
-        font-size: 1.75rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
 }
 
 // Before it is flipped
 .textIsClosed {
-    font-weight: $font_condensed_black;
+    font-family: var(--encode-sans-condensed-bold);
     word-spacing: 10rem;
     font-size: 0.5rem;
     line-height: 0.65rem;

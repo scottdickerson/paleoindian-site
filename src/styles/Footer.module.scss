@@ -32,21 +32,23 @@
     text-align: center;
     font-weight: $font_extrabold;
     color: $section_title_background_color;
-    line-height: 20px;
+    line-height: 11px;
 
     transition: color 0.2s ease-in-out;
     letter-spacing: 1px;
     z-index: 2;
     li {
-        height: 100%;
+        height: 90%;
         display: flex;
+        flex-flow: column;
+        justify-content: center;
     }
     a {
         padding: 0rem 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 4px;
+        justify-content: center;
+        height: 100%;
     }
 }
 
@@ -54,9 +56,6 @@
     .footerLinks {
         font-size: 17px;
         padding: 0 3rem;
-        a {
-            padding-bottom: 14px;
-        }
     }
 }
 

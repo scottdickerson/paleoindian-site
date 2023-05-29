@@ -18,13 +18,13 @@ export default function Flipper({ images }: Props) {
     const [isOpened, setIsOpened] = useState(
         new Array(images.length).fill(false)
     )
-    const isSmallMobile = useMediaQuery({ query: '(max-width: 500px)' })
+    const isSmallMobile = useMediaQuery({ query: '(max-width: 400px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     const toggleIsOpened = (index: any) => {
         const newIsOpened = [...isOpened]
         newIsOpened[index] = !newIsOpened[index]
-        setIsOpened(newIsOpened);
+        setIsOpened(newIsOpened)
     }
     return (
         <div className={styles.flipperWrapper}>

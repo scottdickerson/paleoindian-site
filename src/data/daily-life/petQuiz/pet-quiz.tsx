@@ -17,7 +17,7 @@ export const PetQuiz = () => (
                     {
                         choice: 'TRUE',
                         moreInformation: {
-                            title: 'NOPE',
+                            title: 'NOPE!',
                             details: `Paleoindian’s dogs were descended from an extinct species of grey wolf from Eurasia. They came to North America with the Paleoindians.`,
                         },
                     },

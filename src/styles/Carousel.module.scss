@@ -18,6 +18,10 @@
     max-height: 30rem;
     width: auto;
     height: auto;
+    @media (max-width: $mobile-breakpoint) {
+        max-width: 75vw;
+        max-height: 20rem;
+    }
 }
 
 .imageTextContainer {
@@ -27,20 +31,21 @@
     overflow: hidden;
     padding: 1.5rem;
     max-height: fit-content;
-    border-bottom-left-radius: 7%;
-    border-bottom-right-radius: 7%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     user-select: none;
 }
 
 .imageText {
     position: relative;
-    font-size: 1rem;
+    font-size: 13px;
     color: white;
+    font-family: --var(--encode-sans-condensed-extra-bold);
 }
 
 .imageTextTitle {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: --var(--encode-sans-condensed-bold);
 }
 
 .arrow {

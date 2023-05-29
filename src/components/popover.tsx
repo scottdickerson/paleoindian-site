@@ -2,6 +2,8 @@ import React, { ReactNode, PropsWithChildren } from 'react'
 import * as PopoverPrimitive from '@radix-ui/react-popover'
 import styles from '@/styles/Popover.module.scss'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
+import classNames from 'classnames'
+import { encodeSansCondensed } from '@/pages/_app'
 
 export const PopoverTrigger = (props: PopoverPrimitive.PopoverTriggerProps) => (
     <PopoverPrimitive.Trigger {...props} className={styles.popoverTrigger} />
@@ -13,7 +15,10 @@ export const PopoverContent = React.forwardRef<
 >(({ children, ...props }, forwardedRef) => (
     <PopoverPrimitive.Portal>
         <PopoverPrimitive.Content
-            className={styles.popoverContent}
+            className={classNames(
+                styles.popoverContent,
+                encodeSansCondensed.className
+            )}
             side="top"
             {...props}
             ref={forwardedRef}

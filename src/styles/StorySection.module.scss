@@ -4,9 +4,10 @@
     p {
         margin-bottom: 1rem;
     }
+    padding-top: 1rem;
 }
 .section + .section {
-    padding-top: 2rem;
+    padding-top: 3rem;
     @media screen and (max-width: $mobile_breakpoint) {
         padding-top: 1rem;
     }
@@ -15,6 +16,7 @@
 .title {
     font-size: 15px;
     font-weight: $font_black;
+
     text-transform: uppercase;
     text-align: center;
     display: inline-flex;
@@ -23,36 +25,32 @@
     background-color: $section_title_background_color;
     color: $section_title_color;
     border-radius: 12px;
+
     @media screen and (max-width: $mobile_breakpoint) {
-        font-size: 12px;
+        font-size: 8px;
         line-height: 28px;
         border-radius: 6px;
-        padding: 0px 8px;
     }
 }
 
 .summary {
     font-size: 36px;
     line-height: 43px;
-    font-stretch: condensed;
-    font-weight: $font_condensed_black;
-    letter-spacing: -1px;
+    font-family: var(--encode-sans-condensed-black);
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 23px;
         line-height: 28px;
-        font-weight: $font_condensed_black;
     }
 }
 
 .description {
     font-size: 26px;
     line-height: 35px;
-    font-stretch: condensed;
-    font-weight: $font_semibold;
+    font-family: var(--encode-sans-condensed-semi-bold);
+    padding-bottom: 0.5rem;
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 16px;
         line-height: 22px;
-        font-weight: $font_medium;
     }
 }
 

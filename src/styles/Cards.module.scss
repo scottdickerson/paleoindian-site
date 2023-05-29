@@ -74,9 +74,6 @@ $cards_visible3_width: 900px;
     .leftarrow:hover {
         transform: scale(1.1) translateX(-50%);
     }
-    .downloadButton:hover {
-        scale: 1.05;
-    }
 }
 
 /* 
@@ -171,7 +168,7 @@ $cards_visible3_width: 900px;
 .text {
     padding: 1rem 20%;
     text-align: center;
-    font-stretch: condensed;
+    font-family: var(--encode-sans-condensed);
     padding-bottom: 3rem;
     // @media screen and (min-width: 1024px) and (max-width: 1500px) {
     //     padding-bottom: 0%;
@@ -185,10 +182,11 @@ $cards_visible3_width: 900px;
     }
 }
 .playAlong {
-    font-weight: $font-bold;
+    font-family: var(--encode-sans-condensed-bold);
 }
 .downloadButton {
     background-color: $section_title_background_color;
+    font-family: var(--encode-sans-condensed);
     display: block;
     border-radius: 12px;
     text-align: center;

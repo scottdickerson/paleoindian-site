@@ -82,34 +82,34 @@ export function DailyLifeCarousel({ images }: Props) {
         requestAnimationFrame(updateScroll)
     }
 
-    const calculateImageHeight = () => {
-        if (ref.current) {
-            const images = ref.current.children
-            let maxHeight = 400
-            for (let i = 0; i < images.length; i++) {
-                const image = images[i]
-                console.log('image height', image.clientHeight)
-                if (image.clientHeight > maxHeight) {
-                    maxHeight = image.clientHeight
-                }
-            }
-            // forEach((image) => {
-            //     console.log(image.)
-            // })
-            // images.reduce((prev, current) => {
-            //     const currentImageHeight =
-            //         document?.getElementById(current.id)?.clientHeight || 0
+    // const calculateImageHeight = () => {
+    //     if (ref.current) {
+    //         const images = ref.current.children
+    //         let maxHeight = 400
+    //         for (let i = 0; i < images.length; i++) {
+    //             const image = images[i]
+    //             console.log('image height', image.clientHeight)
+    //             if (image.clientHeight > maxHeight) {
+    //                 maxHeight = image.clientHeight
+    //             }
+    //         }
+    //         // forEach((image) => {
+    //         //     console.log(image.)
+    //         // })
+    //         // images.reduce((prev, current) => {
+    //         //     const currentImageHeight =
+    //         //         document?.getElementById(current.id)?.clientHeight || 0
 
-            //     return currentImageHeight > prev ? currentImageHeight : prev
-            // }, 400)
-            return maxHeight
-        }
-    }
+    //         //     return currentImageHeight > prev ? currentImageHeight : prev
+    //         // }, 400)
+    //         return maxHeight
+    //     }
+    // }
 
     return (
         <div
             className={styles.carouselWrapper}
-            style={{ minHeight: calculateImageHeight() }}
+            // style={{ minHeight: calculateImageHeight() }}
             // {...events}
             ref={ref} // add reference and events to the wrapping div
         >
