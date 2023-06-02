@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import cardBack from '@/components/images/cards/Card Back - Digital.png'
 import leftArrow from '@/components/images/cards/LeftArrow.svg'
 import rightArrow from '@/components/images/cards/RightArrow.svg'
+import { useMediaQuery } from 'react-responsive'
 
 export const calculateVisibleCardArray = (
     cardData: any[],
@@ -26,6 +27,7 @@ interface CardProps {
 }
 
 const Cards = ({ cards, pdf }: CardProps) => {
+    const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
     const [current, setCurrent] = useState(2)
     const length = cards.length
     const cardContainerRef = useRef<HTMLDivElement>(null)
@@ -63,8 +65,8 @@ const Cards = ({ cards, pdf }: CardProps) => {
                         id="leftArrow"
                         src={leftArrow}
                         alt="Left Arrow"
-                        height={48}
-                        width={48}
+                        height={isMobile ? 36 : 48}
+                        width={isMobile ? 36 : 48}
                     />
                 </button>
                 <button
@@ -75,8 +77,8 @@ const Cards = ({ cards, pdf }: CardProps) => {
                         id="rightArrow"
                         src={rightArrow}
                         alt="Right Arrow"
-                        height={48}
-                        width={48}
+                        height={isMobile ? 36 : 48}
+                        width={isMobile ? 36 : 48}
                     />
                 </button>
                 <div className={styles.cardsContainer}>

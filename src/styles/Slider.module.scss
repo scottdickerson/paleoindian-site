@@ -37,10 +37,16 @@
     transition: opacity 0.5s, visibility 0.5s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile-breakpoint) {
     .sliderCaption {
         font-size: 12px;
         line-height: 15px;
+    }
+}
+@media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+    .sliderCaption {
+        font-size: 18px;
+        line-height: 21px;
     }
 }
 

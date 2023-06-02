@@ -1,5 +1,5 @@
 .storyPageContainer {
-    @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+    @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         background: linear-gradient(
             to right,
             rgba(245, 233, 209, 0.36) 75%,
@@ -9,7 +9,7 @@
 }
 
 .storyPage {
-    @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+    @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         margin-right: $toc_width; // only save space if the toc is visible
     }
     max-width: 1200px;

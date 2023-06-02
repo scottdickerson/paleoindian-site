@@ -31,6 +31,11 @@
         line-height: 28px;
         border-radius: 6px;
     }
+
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 13px;
+        line-height: 40px;
+    }
 }
 
 .summary {
@@ -40,6 +45,10 @@
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 23px;
         line-height: 28px;
+    }
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 30px;
+        line-height: 41px;
     }
 }
 
@@ -51,6 +60,10 @@
     @media screen and (max-width: $mobile_breakpoint) {
         font-size: 16px;
         line-height: 22px;
+    }
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 23px;
+        line-height: 31px;
     }
 }
 

@@ -97,7 +97,7 @@
     letter-spacing: 1px;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile-breakpoint) {
         font-size: 22px;
         line-height: 21px;
     }

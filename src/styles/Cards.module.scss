@@ -1,6 +1,3 @@
-$cards_visible5_width: 1278px;
-$cards_visible3_width: 900px;
-
 .container {
     width: 70vw; // responsive
     perspective: 1000px;
@@ -47,6 +44,12 @@ $cards_visible3_width: 900px;
     cursor: pointer;
     user-select: none;
     top: 40%;
+    @media screen and (max-width: $three_cards_visible_width) {
+        top: 30%;
+    }
+    @media screen and (max-width: $mobile-breakpoint) {
+        top: 20%;
+    }
 }
 
 .rightarrow {
@@ -78,6 +81,9 @@ $cards_visible3_width: 900px;
 .card {
     /* Make the card images card shaped */
     --width: 15em;
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        --width: 13em;
+    }
     --height: calc(var(--width) * 1.4);
     width: var(--width);
     height: var(--height);
@@ -116,8 +122,11 @@ $cards_visible3_width: 900px;
 
 .card2 {
     --width: 18em;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: $mobile-breakpoint) {
         --width: 50vw;
+    }
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        --width: 15em;
     }
     z-index: 4;
 }
@@ -165,9 +174,20 @@ $cards_visible3_width: 900px;
     @media screen and (max-width: $mobile-breakpoint) {
         font-size: 10px;
         line-height: 13px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
-    @media (min-width: $cards_visible5_width) {
+    @media screen and (max-width: $desktop-breakpoint) {
+        font-size: 15px;
+        line-height: 21px;
+    }
+    @media (min-width: $desktop-breakpoint) {
         padding-top: 3rem;
+    }
+    @media (max-width: $three_cards_visible_width) {
+        // doesn't need the extra padding
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 .playAlong {
@@ -186,15 +206,20 @@ $cards_visible3_width: 900px;
     bottom: 0;
     right: 5%;
     left: 5%;
-    transform: translateY(50%);
+    margin-top: 2rem;
+    width: 100%;
     transition: 0s;
     @media screen and (max-width: $mobile-breakpoint) {
         font-size: 10px;
         line-height: 13px;
     }
+    @media screen and (max-width: $desktop-breakpoint) {
+        font-size: 15px;
+        line-height: 21px;
+    }
 }
 
-@media only screen and (max-width: $cards_visible5_width) {
+@media only screen and (max-width: $three_cards_visible_width) {
     .card0 {
         display: none;
         transition: 0s;
@@ -205,7 +230,7 @@ $cards_visible3_width: 900px;
     }
 }
 
-@media screen and (max-width: $cards_visible3_width) {
+@media screen and (max-width: $mobile-breakpoint) {
     .card {
         transition: 0s;
     }

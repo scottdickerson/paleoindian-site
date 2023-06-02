@@ -3,8 +3,8 @@ import classNames from 'classnames'
 import Image, { StaticImageData } from 'next/image'
 import styles from '../styles/Carousel.module.scss'
 // import { useDraggable } from 'react-use-draggable-scroll'
-import leftArrow from '@/components/images/cards/LeftArrow.svg'
-import rightArrow from '@/components/images/cards/RightArrow.svg'
+import leftArrow from '@/components/images/carousel/LeftArrow.svg'
+import rightArrow from '@/components/images/carousel/RightArrow.svg'
 
 type Images = {
     id: string

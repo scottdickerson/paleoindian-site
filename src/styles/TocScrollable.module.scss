@@ -14,7 +14,7 @@ $toc_background_overlap: 30px;
 
     width: 273px; // this includes the background overlap
     transform: translateX($toc_background_overlap);
-    @media screen and (min-width: $tablet-breakpoint) and (min-height: $toc_height) {
+    @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         // TODO: extract this to it's own variable
         display: flex;
     }
