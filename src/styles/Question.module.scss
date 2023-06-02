@@ -7,7 +7,7 @@
     grid-row-gap: 15px;
 }
 
-@container (min-width: 768px) {
+@container (min-width: 648px) {
     // if we have room then we can use grid
     .parent {
         display: grid;
@@ -18,7 +18,9 @@
 }
 
 .question {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 25px;
     line-height: 39px;
     font-weight: $font_extrabold;
@@ -45,7 +47,7 @@
     cursor: pointer;
     padding: 1rem;
     min-height: 125px;
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: $mobile-breakpoint) {
         min-height: 83px;
     }
 }
@@ -100,6 +102,10 @@
     @media screen and (max-width: $mobile-breakpoint) {
         font-size: 22px;
         line-height: 21px;
+    }
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 30px;
+        line-height: 38px;
     }
 }
 .choiceClicked {

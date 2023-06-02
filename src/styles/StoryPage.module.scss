@@ -12,5 +12,5 @@
     @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         margin-right: $toc_width; // only save space if the toc is visible
     }
-    max-width: 1200px;
+    max-width: $page_max_width;
 }
