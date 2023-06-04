@@ -45,9 +45,9 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
-    padding: 1rem;
-    min-height: 125px;
-    @media screen and (min-width: $mobile-breakpoint) {
+    padding: 0rem 1rem;
+    min-height: 100px;
+    @media screen and (max-width: $mobile-breakpoint) {
         min-height: 83px;
     }
 }
@@ -58,30 +58,41 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: $font_black;
+    height: 100%;
 
-    @media screen and (max-width: $tablet-breakpoint) {
-        font-size: 14px;
-        line-height: 20px;
-    }
-    @media screen and (max-width: $mobile-breakpoint) {
-        font-size: 12px;
-        line-height: 15px;
+    .yesOrNo {
+        padding-bottom: 0.5rem;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: $font_black;
+
+        @container (max-width: 800px) {
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 0rem;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+            line-height: 15px;
+            padding-bottom: 0rem;
+        }
     }
 
-    p {
+    .details {
         font-size: 18px;
         line-height: 24px;
         font-family: var(--encode-sans-condensed);
         margin-bottom: 0;
-
-        @media screen and (max-width: $tablet-breakpoint) {
-            font-size: 16px;
-            line-height: 20px;
+        @container (max-width: 1200px) {
+            font-size: 18px;
+            line-height: 24px;
         }
-        @media screen and (max-width: $mobile-breakpoint) {
+
+        @container (max-width: 800px) {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        @media screen and (max-width: 400px) {
             font-size: 11px;
             line-height: 15px;
         }
@@ -111,7 +122,7 @@
 .choiceClicked {
     background-color: #8dd2ef;
     color: black;
-    align-items: flex-start;
+    align-items: center;
     cursor: default;
 }
 .choice1 {

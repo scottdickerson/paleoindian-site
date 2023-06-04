@@ -11,8 +11,8 @@ interface ChoiceDetailsProps {
 
 const ChoiceDetails = ({ title, details }: ChoiceDetailsProps) => (
     <div className={styles.choiceDetails}>
-        {title}
-        <p>{details}</p>
+        <span className={styles.yesOrNo}>{title}</span>
+        <p className={styles.details}>{details}</p>
     </div>
 )
 
