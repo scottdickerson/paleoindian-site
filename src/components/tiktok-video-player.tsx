@@ -78,6 +78,7 @@ export interface TikTokPlayerProps {
 
 export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
     const [selectedVideo, setSelectedVideo] = useState<string>()
+    const videoRef = useRef<HTMLVideoElement>(null)
 
     useEffect(() => {
         const handleResize = () => {
@@ -103,8 +104,13 @@ export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
                         <video
                             src={videos[selectedVideo].video}
                             autoPlay
-                            controls
                             className={styles.video}
+                            ref={videoRef}
+                            onClick={() =>
+                                videoRef?.current?.paused
+                                    ? videoRef.current?.play()
+                                    : videoRef.current?.pause()
+                            }
                         ></video>
                     )}
                 </div>
