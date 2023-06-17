@@ -5,6 +5,7 @@
     grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
     flex-grow: 1;
+    aspect-ratio: 320/568;
 }
 
 .imageContainer {
@@ -45,12 +46,13 @@
     aspect-ratio: 320/568;
 }
 
-@media screen and (max-width: $mobile-breakpoint) {
+// get rid of gap and hide left pane
+@media screen and (max-width: $tablet-breakpoint) {
     .tiktokPlayer {
-        gap: 1rem; // shrink gap on narrow screens
+        gap: 0rem;
     }
     .videoTile {
-        width: calc(50% - 0.5rem); // adjust for grid gap
+        display: none;
     }
 }
 

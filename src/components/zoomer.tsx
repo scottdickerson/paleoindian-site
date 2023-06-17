@@ -26,7 +26,10 @@ export const Zoomer = ({
     return (
         <div className={styles.zoomerContainer}>
             {isZoomed && (
-                <span className={styles.zoomerQuestion}>What is that?</span>
+                <span className={styles.zoomerQuestion}>
+                    What
+                    <br /> is that?
+                </span>
             )}
             <ResponsiveImage
                 src={src}

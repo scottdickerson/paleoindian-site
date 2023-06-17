@@ -131,7 +131,6 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <p>Hear from Native American people below about their favorite traditions. </p>`,
         interactive: (
             <>
-                <p>NEED TO CHANGE VIDEOS</p>
                 <TikTokPlayer videos={TIKTOK_VIDEOS} />
             </>
         ),

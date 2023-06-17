@@ -19,17 +19,22 @@
     z-index: 10;
     font-size: 70px;
     line-height: 70px;
-    font-weight: $font_black;
-    padding: 18px 20px;
+    font-family: var(--encode-sans-condensed-black);
+    padding: 18px 0;
     text-align: center;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    @media screen and (max-width: $tablet-breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
         font-size: 40px;
         line-height: 45px;
+    }
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 45px;
+        line-height: 46px;
+        letter-spacing: 2px;
     }
 }
 
