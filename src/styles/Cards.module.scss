@@ -116,6 +116,7 @@
 
 .flipCard {
     --flipDirection: 180deg;
+    // on ipad pro this makes the card scale up large and overlay parent content but not on other devices
     transform: rotateY(var(--flipDirection)) translateZ(-250px);
     transition: transform 0.7s;
 }
