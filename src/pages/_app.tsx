@@ -13,16 +13,38 @@ import {
     Encode_Sans,
     Rubik_Dirt,
     Encode_Sans_Condensed,
+    Glass_Antiqua,
 } from '@next/font/google'
 import { Footer } from '@/components/footer'
 import { TooltipProvider } from '@radix-ui/react-tooltip'
 import { Header } from '@/components/header'
 
 const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
+const glassAntiqua = Glass_Antiqua({
+    subsets: ['latin'],
+    display: 'swap',
+    weight: '400',
+    variable: '--glass-antiqua',
+})
 export const rubikDirt = Rubik_Dirt({
     subsets: ['latin'],
     weight: '400',
     display: 'swap',
+    variable: '--rubik-dirt',
+})
+
+export const encodeSansBold = Encode_Sans({
+    subsets: ['latin'],
+    weight: '600',
+    display: 'swap',
+    variable: '--encode-sans-bold',
+})
+
+export const encodeSansExtraBold = Encode_Sans({
+    subsets: ['latin'],
+    weight: '700',
+    display: 'swap',
+    variable: '--encode-sans-extra-bold',
 })
 
 export const encodeSansCondensedBold = Encode_Sans_Condensed({
@@ -77,7 +99,11 @@ export default function App({ Component, pageProps }: AppProps) {
                 style={{ display: 'flex', flexDirection: 'column' }}
                 className={classNames(
                     encodeSansCondensed.variable,
+                    glassAntiqua.variable,
+                    rubikDirt.variable,
                     encodeSansCondensedBold.variable,
+                    encodeSansBold.variable,
+                    encodeSansExtraBold.variable,
                     encodeSansCondensedSemibold.variable,
                     encodeSansCondensedExtrabold.variable,
                     encodeSansCondensedBlack.variable
@@ -95,9 +121,12 @@ export default function App({ Component, pageProps }: AppProps) {
                     pathname !== '/' && <Header />
                 )}
                 <main
-                    className={classNames(pageStyles.pageWrapper, {
-                        [styles.storyPageContainer]: isPageAStory(pathname),
-                    })}
+                    className={classNames(
+                        { [pageStyles.pageWrapper]: pathname !== '/' },
+                        {
+                            [styles.storyPageContainer]: isPageAStory(pathname),
+                        }
+                    )}
                 >
                     <Component {...pageProps} />
                 </main>

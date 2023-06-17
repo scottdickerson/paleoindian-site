@@ -26,3 +26,18 @@ $footer_height: 60px;
 $page_max_width: 1200px;
 
 $three_cards_visible_width: calc($tablet-breakpoint - 1px);
+
+@mixin origin-stories {
+    background-color: #bdcd86;
+    color: #33541d;
+}
+
+@mixin ice-age-texas {
+    background-color: #8dd2ef;
+    color: #172b66;
+}
+
+@mixin daily-life {
+    background-color: #172b66;
+    color: #8dd2ef;
+}

@@ -24,13 +24,11 @@ export const STORY_PAGES = {
 
 export interface StoryNavigationProps {
     selectedPage?: keyof typeof STORY_PAGES
-    isOnHomePage?: boolean
     className?: string
 }
 
 export const StoryNavigation = ({
     selectedPage,
-    isOnHomePage,
     className,
 }: StoryNavigationProps) => {
     return (
@@ -39,20 +37,12 @@ export const StoryNavigation = ({
             className={classNames(
                 rubikDirt.className,
                 styles.navbar,
-                {
-                    [styles.isOnHomePage]: isOnHomePage,
-                },
                 className
             )}
         >
-            {!isOnHomePage && (
-                <Link
-                    href="/"
-                    className={classNames(styles.navitem, styles.home)}
-                >
-                    Home
-                </Link>
-            )}
+            <Link href="/" className={classNames(styles.navitem, styles.home)}>
+                Home
+            </Link>
             <ul>
                 {Object.entries(STORY_PAGES).map(([key, value]) => {
                     const isSelected = selectedPage === key

@@ -1,41 +1,77 @@
-.main h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    padding: 1rem;
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    color: #33541d;
+    padding-bottom: calc($footer-height + 2rem);
+    overflow-x: hidden;
+}
+
+.description {
+    font-family: var(--encode-sans-bold);
+    font-size: 39px;
+    padding: 1rem 2rem;
     text-align: center;
-    text-transform: uppercase;
+    line-height: 48px;
+}
+
+.details {
+    font-size: 34px;
+    line-height: 42px;
+    padding: 1rem 8rem;
+    text-align: center;
 }
 
 .videoSection {
     display: flex;
-    gap: 1rem;
-    padding: 0rem 2rem;
+    justify-content: center;
 
-    video {
+    min-height: 381px;
+    gap: 1rem;
+    padding: 0rem 3rem;
+    div:first-child {
+        max-width: 800px;
+        aspect-ratio: 687/381;
+    }
+}
+.storyNavigation {
+    width: 30%;
+    max-width: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    nav {
         height: 100%;
         width: 100%;
     }
-}
-
-.videoSection {
-    flex-wrap: wrap;
-}
-.videoWrapper {
-    flex-basis: 100%;
-}
-.storyNavigation {
-    flex-basis: 100%;
-    max-width: unset;
-}
-
-@media screen and (min-width: $desktop-breakpoint) {
-    .videoSection {
-        flex-direction: row;
-        flex-wrap: nowrap;
+    ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--encode-sans-extra-bold);
+        font-size: 30px;
+        line-height: 91px;
+        text-transform: uppercase;
     }
-
-    .storyNavigation {
-        max-width: 300px;
-        flex-basis: 20%;
+    li:nth-child(1) {
+        @include origin-stories;
+    }
+    li:nth-child(2) {
+        @include ice-age-texas;
+    }
+    li:nth-child(3) {
+        @include daily-life;
+    }
+    li {
+        border-radius: 15px;
+        min-width: 311px;
+        text-align: center;
+        a {
+            display: block;
+        }
     }
 }

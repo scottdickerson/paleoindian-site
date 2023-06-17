@@ -72,18 +72,15 @@
 }
 
 .originstories {
-    background-color: #bdcd86;
-    color: #33541d;
+    @include origin-stories;
 }
 
 .iceagetexas {
-    background-color: #8dd2ef;
-    color: #172b66;
+    @include ice-age-texas;
 }
 
 .dailylife {
-    background-color: #172b66;
-    color: #8dd2ef;
+    @include daily-life;
 }
 
 @media screen and (max-width: $tablet-breakpoint) {
@@ -99,51 +96,3 @@
         flex-basis: 100%;
     }
 }
-
-// Version that will show on the Home Page
-
-// .isOnHomePage {
-//     ul {
-//         gap: 1rem;
-//         .navitem a {
-//             font-size: 1.5rem;
-//             white-space: normal;
-//         }
-//     }
-//     align-items: stretch;
-
-//     @media screen and (max-width: $tablet-breakpoint) {
-//         ul {
-//             flex-wrap: wrap;
-//             .navitem {
-//                 flex-basis: 100%;
-//             }
-//         }
-//     }
-
-//     @media screen and (min-width: $tablet-breakpoint) {
-//         ul {
-//             flex-direction: row;
-//             align-items: stretch;
-//         }
-//         .navitem {
-//             height: 100px;
-//         }
-//     }
-
-//     @media screen and (max-width: $desktop-breakpoint) {
-//         ul .navitem {
-//             height: 150px;
-//         }
-//     }
-
-//     @media screen and (min-width: $desktop-breakpoint) {
-//         ul {
-//             flex-direction: column;
-//             align-items: stretch;
-//         }
-//         .navitem a {
-//             white-space: nowrap;
-//         }
-//     }
-// }
