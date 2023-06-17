@@ -1,6 +1,6 @@
 /** NextJS Thumbnail gallery with a 4x4 grid handles click events and gives a callback */
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { StaticImageData } from 'next/image'
 import styles from '@/styles/TikTokPlayer.module.scss'
 import { ResponsiveImage } from './responsive-image'
@@ -31,6 +31,7 @@ const ThumbnailGallery = ({
     const handleClick = (id: string) => {
         onClick(id)
     }
+    const videoRef = useRef<HTMLVideoElement>(null)
 
     return (
         <div className={classNames(styles.thumbnailGallery, className)}>
@@ -39,8 +40,13 @@ const ThumbnailGallery = ({
                     <video
                         src={videoSrc}
                         autoPlay
-                        controls
-                        className={styles.video}
+                        style={{ width: '100%' }}
+                        ref={videoRef}
+                        onClick={() =>
+                            videoRef?.current?.paused
+                                ? videoRef.current?.play()
+                                : videoRef.current?.pause()
+                        }
                     ></video>
                 ) : (
                     <ResponsiveImage
