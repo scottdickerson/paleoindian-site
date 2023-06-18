@@ -1,0 +1,20 @@
+.arrowHead {
+    position: fixed;
+    margin: auto;
+    bottom: calc($footer-height + 1rem);
+    left: 50%;
+    z-index: 10;
+    // pulsing animation
+    animation: pulse 2s infinite;
+    @keyframes pulse {
+        0% {
+            transform: scale(1) translate(-50%, -50%);
+        }
+        50% {
+            transform: scale(1.2) translate(-45%, -45%);
+        }
+        100% {
+            transform: scale(1) translate(-50%, -50%);
+        }
+    }
+}

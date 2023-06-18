@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
 import heroStyles from '@/styles/Hero.module.scss'
-import { Footer } from '@/components/footer'
 import { ResponsiveImage } from '@/components/responsive-image'
 import Link from 'next/link'
 import { STORY_PAGES } from '@/components/story-navigation'
+import { ArrowheadScroller } from '@/components/arrowhead-scroller'
+import { useRef } from 'react'
 
 export default function Home() {
     const STORY_PAGES_URLS = Object.keys(STORY_PAGES)
+    const firstLinkRef = useRef<HTMLAnchorElement>(null)
     return (
         <>
             <Head>
@@ -19,7 +21,7 @@ export default function Home() {
                     <span className={heroStyles.before}>Before</span>
                     <span> Texas</span>
                 </div>
-                <section>
+                <section className={styles.intro}>
                     <p className={styles.description}>
                         When mammoths, saber-toothed cats, and giant sloths
                         roamed Texas, people were there too.
@@ -40,7 +42,10 @@ export default function Home() {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link href={STORY_PAGES_URLS[0]}>
+                                    <Link
+                                        ref={firstLinkRef}
+                                        href={STORY_PAGES_URLS[0]}
+                                    >
                                         Origin Stories
                                     </Link>
                                 </li>
@@ -59,7 +64,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <ArrowheadScroller scrollTarget={firstLinkRef} />
         </>
     )
 }

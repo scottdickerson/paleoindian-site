@@ -9,6 +9,7 @@
     text-align: center;
     color: #33541d;
     font-size: 171px;
+    line-height: 140px;
     text-transform: uppercase;
     font-family: var(--glass-antiqua);
     background-image: url('../components/images/hero/hero@2x.png');
@@ -17,13 +18,26 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media screen and (max-width: $desktop-breakpoint) {
+        font-size: 156px;
+        line-height: 125px;
+    }
     @media screen and (max-width: calc($tablet-breakpoint)) {
         background-image: url('../components/images/hero/hero@2x.png');
+        font-size: 120px;
+        line-height: 100px;
     }
-    @media screen and (max-width: calc($mobile-breakpoint + 40px)) {
+    @media screen and (max-width: calc(($tablet-breakpoint + $mobile-breakpoint)/2)) {
+        min-height: 40px;
+        font-size: 80px;
+        line-height: 90px;
+    }
+    @media screen and (max-width: calc($mobile-breakpoint + 20px)) {
         background-image: url('../components/images/hero/hero.png');
         aspect-ratio: 320/41;
         min-height: 40px;
+        font-size: 68px;
+        line-height: 81px;
     }
 }
 
