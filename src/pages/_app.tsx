@@ -18,6 +18,8 @@ import {
 import { Footer } from '@/components/footer'
 import { TooltipProvider } from '@radix-ui/react-tooltip'
 import { Header } from '@/components/header'
+import { ArrowheadContext } from '@/components/arrowhead-scroller'
+import { useState } from 'react'
 
 const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
 const glassAntiqua = Glass_Antiqua({
@@ -88,6 +90,7 @@ const isPageAStory = (pathname: string) => {
 
 export default function App({ Component, pageProps }: AppProps) {
     const { pathname } = useRouter()
+    const [isVisible, setIsVisible] = useState(true)
     return (
         <TooltipProvider delayDuration={200}>
             <style jsx global>{`
@@ -95,43 +98,46 @@ export default function App({ Component, pageProps }: AppProps) {
                     font-family: ${encodeSans.style.fontFamily};
                 }
             `}</style>
-            <div
-                style={{ display: 'flex', flexDirection: 'column' }}
-                className={classNames(
-                    encodeSansCondensed.variable,
-                    glassAntiqua.variable,
-                    rubikDirt.variable,
-                    encodeSansCondensedBold.variable,
-                    encodeSansBold.variable,
-                    encodeSansExtraBold.variable,
-                    encodeSansCondensedSemibold.variable,
-                    encodeSansCondensedExtrabold.variable,
-                    encodeSansCondensedBlack.variable
-                )}
-            >
-                {isPageAStory(pathname) ? (
-                    <header>
-                        <StoryNavigation
-                            selectedPage={
-                                pathname as StoryNavigationProps['selectedPage']
-                            }
-                        />
-                    </header>
-                ) : (
-                    pathname !== '/' && <Header />
-                )}
-                <main
+            <ArrowheadContext.Provider value={{ isVisible, setIsVisible }}>
+                <div
+                    style={{ display: 'flex', flexDirection: 'column' }}
                     className={classNames(
-                        { [pageStyles.pageWrapper]: pathname !== '/' },
-                        {
-                            [styles.storyPageContainer]: isPageAStory(pathname),
-                        }
+                        encodeSansCondensed.variable,
+                        glassAntiqua.variable,
+                        rubikDirt.variable,
+                        encodeSansCondensedBold.variable,
+                        encodeSansBold.variable,
+                        encodeSansExtraBold.variable,
+                        encodeSansCondensedSemibold.variable,
+                        encodeSansCondensedExtrabold.variable,
+                        encodeSansCondensedBlack.variable
                     )}
                 >
-                    <Component {...pageProps} />
-                </main>
-                <Footer />
-            </div>
+                    {isPageAStory(pathname) ? (
+                        <header>
+                            <StoryNavigation
+                                selectedPage={
+                                    pathname as StoryNavigationProps['selectedPage']
+                                }
+                            />
+                        </header>
+                    ) : (
+                        pathname !== '/' && <Header />
+                    )}
+                    <main
+                        className={classNames(
+                            { [pageStyles.pageWrapper]: pathname !== '/' },
+                            {
+                                [styles.storyPageContainer]:
+                                    isPageAStory(pathname),
+                            }
+                        )}
+                    >
+                        <Component {...pageProps} />
+                    </main>
+                    <Footer />
+                </div>
+            </ArrowheadContext.Provider>
         </TooltipProvider>
     )
 }
