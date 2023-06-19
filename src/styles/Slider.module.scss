@@ -6,11 +6,13 @@
 .slider {
     overflow: visible !important;
     width: 100%;
+    div[data-rcs^='handle-container'] {
+        cursor: pointer !important;
+    }
 }
 
 .sliderHandle {
     height: 100%;
-    cursor: pointer;
 }
 
 .captionContainer {

@@ -1,27 +1,27 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
-import heroStyles from '@/styles/Hero.module.scss'
-import Link from 'next/link'
-import { STORY_PAGES } from '@/components/story-navigation'
 import { ArrowheadScroller } from '@/components/arrowhead-scroller'
 import { useRef } from 'react'
 import { YouTubeVideo } from '@/components/youtube-video'
 import fromTheTopThumbnail from '@/data/home/images/FromTheTopThumbnail.png'
+import { Hero } from '@/components/hero'
+import { NavigationButtons } from '@/components/navigation-buttons'
 
 export default function Home() {
-    const STORY_PAGES_URLS = Object.keys(STORY_PAGES)
     const firstLinkRef = useRef<HTMLAnchorElement>(null)
     return (
         <>
             <Head>
                 <title>Texas Paleoindian</title>
+                <link
+                    rel="preload"
+                    href="/images/hero/hero@2x.png"
+                    as="image"
+                />
+                <link rel="preload" href="/images/hero/hero.png" as="image" />
             </Head>
             <section className={styles.main}>
-                <div className={heroStyles.hero}>
-                    <span>A Time </span>
-                    <span className={heroStyles.before}>Before</span>
-                    <span> Texas</span>
-                </div>
+                <Hero />
                 <section className={styles.intro}>
                     <p className={styles.description}>
                         When mammoths, saber-toothed cats, and giant sloths
@@ -42,31 +42,7 @@ export default function Home() {
                         }}
                         className={styles.video}
                     />
-
-                    <div className={styles.storyNavigation}>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <Link
-                                        ref={firstLinkRef}
-                                        href={STORY_PAGES_URLS[0]}
-                                    >
-                                        Origin Stories
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={STORY_PAGES_URLS[1]}>
-                                        Ice-Age Texas
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href={STORY_PAGES_URLS[2]}>
-                                        Daily Life
-                                    </Link>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                    <NavigationButtons firstLinkRef={firstLinkRef} />
                 </div>
             </section>
             <ArrowheadScroller scrollTarget={firstLinkRef} />

@@ -27,7 +27,7 @@ export const Slider: FC<SliderProps> = ({
     percentageToChangeCaption = 5,
 }) => {
     const [caption, setCaption] = useState(img1Caption)
-    const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' })
 
     const determineCorrectImage = () => {
         if (isMobile) {

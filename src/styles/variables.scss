@@ -41,3 +41,5 @@ $three_cards_visible_width: calc($tablet-breakpoint - 1px);
     background-color: #172b66;
     color: #8dd2ef;
 }
+
+$navigation-under-video-breakpoint: calc($desktop-breakpoint);
