@@ -1,21 +1,37 @@
 import dynamic from 'next/dynamic'
 import Image, { StaticImageData } from 'next/image'
-import { useState } from 'react'
+import { DetailedHTMLProps, ImgHTMLAttributes, useState } from 'react'
 import { PlayButton } from './video'
-import styles from '@/styles/ResponsiveImage.module.scss'
+import responsiveStyles from '@/styles/ResponsiveImage.module.scss'
+import styles from '@/styles/YouTubeVideo.module.scss'
+import classNames from 'classnames'
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
 export interface YouTubeVideoProps {
     src: string
-    thumbnail: { src: StaticImageData; alt: string }
+    className?: string
+    thumbnail: Omit<
+        DetailedHTMLProps<
+            ImgHTMLAttributes<HTMLImageElement>,
+            HTMLImageElement
+        >,
+        'src' | 'alt' | 'width' | 'height' | 'placeholder' | 'ref'
+    > & {
+        src: StaticImageData
+        alt: string
+    }
 }
 
-const VideoThumbnail = ({ src, alt }: YouTubeVideoProps['thumbnail']) => (
-    <Image src={src} alt={alt} className={styles.responsiveImage}></Image>
+const VideoThumbnail = ({ ...props }: YouTubeVideoProps['thumbnail']) => (
+    <Image {...props} className={responsiveStyles.responsiveImage}></Image>
 )
 
-export const YouTubeVideo = ({ src, thumbnail }: YouTubeVideoProps) => {
+export const YouTubeVideo = ({
+    src,
+    className,
+    thumbnail,
+}: YouTubeVideoProps) => {
     const [isStarted, setIsStarted] = useState(false)
 
     const handleClick = () => {
@@ -23,19 +39,12 @@ export const YouTubeVideo = ({ src, thumbnail }: YouTubeVideoProps) => {
     }
     return (
         <div
-            style={{
-                aspectRatio: 'auto 16 / 9',
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                backgroundColor: 'black',
-            }}
+            className={classNames(styles.youTubeVideo, className)}
+            onClick={handleClick}
         >
             {!isStarted && (
                 <>
-                    <PlayButton onClick={handleClick}></PlayButton>
+                    <PlayButton></PlayButton>
                     <VideoThumbnail {...thumbnail} />
                 </>
             )}

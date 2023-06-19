@@ -1,16 +1,12 @@
 // responsive video component with src prop
 import styles from '@/styles/Video.module.scss'
-import { MouseEventHandler, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Image from 'next/image'
 import playButton from './images/video/playButton.svg'
 
-export const PlayButton = ({
-    onClick,
-}: {
-    onClick: MouseEventHandler<HTMLDivElement>
-}) => {
+export const PlayButton = () => {
     return (
-        <div className={styles.playButton} onClick={onClick}>
+        <div className={styles.playButton}>
             <Image src={playButton} alt="Play video" fill />
         </div>
     )
@@ -31,7 +27,7 @@ export const Video = ({ src }: { src: string }) => {
 
     return (
         <>
-            {!isStarted && <PlayButton onClick={handleClick} />}
+            {!isStarted && <PlayButton />}
             <video
                 src={`${src}#t=0.001`} // workaround for preview not working on iOS
                 className={styles.video}

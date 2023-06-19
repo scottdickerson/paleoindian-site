@@ -62,14 +62,15 @@ $navigation-under-video-breakpoint: calc($desktop-breakpoint + 100px);
     min-height: 381px;
     gap: 1rem;
     padding: 0rem 3rem;
-    div:first-child {
-        max-width: 800px;
-        aspect-ratio: 687/381;
-    }
 
     @media screen and (max-width: $navigation-under-video-breakpoint) {
         flex-flow: row wrap;
     }
+}
+
+div.video {
+    position: relative;
+    max-width: 800px;
 }
 .storyNavigation {
     width: 30%;

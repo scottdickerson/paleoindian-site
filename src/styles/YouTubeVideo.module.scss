@@ -1,0 +1,10 @@
+.youTubeVideo {
+    aspect-ratio: auto 16 / 9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: black;
+    cursor: pointer;
+}

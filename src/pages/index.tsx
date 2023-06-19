@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.scss'
 import heroStyles from '@/styles/Hero.module.scss'
-import { ResponsiveImage } from '@/components/responsive-image'
 import Link from 'next/link'
 import { STORY_PAGES } from '@/components/story-navigation'
 import { ArrowheadScroller } from '@/components/arrowhead-scroller'
 import { useRef } from 'react'
+import { YouTubeVideo } from '@/components/youtube-video'
+import fromTheTopThumbnail from '@/data/home/images/FromTheTopThumbnail.png'
 
 export default function Home() {
     const STORY_PAGES_URLS = Object.keys(STORY_PAGES)
@@ -33,11 +34,15 @@ export default function Home() {
                     </p>
                 </section>
                 <div className={styles.videoSection}>
-                    <ResponsiveImage
-                        fill
-                        src="/videos/home/FromTheTopThumbnail.png"
-                        alt="From the top"
-                    ></ResponsiveImage>
+                    <YouTubeVideo
+                        src="https://youtu.be/TbrFI5LddaY"
+                        thumbnail={{
+                            src: fromTheTopThumbnail,
+                            alt: 'Video introduction to the exhibit',
+                        }}
+                        className={styles.video}
+                    />
+
                     <div className={styles.storyNavigation}>
                         <nav>
                             <ul>

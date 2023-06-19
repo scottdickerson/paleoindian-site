@@ -4,14 +4,12 @@
     text-transform: uppercase;
 }
 
-@media screen and (min-height: $full_chrome_height) {
-    .footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 20;
-    }
+.fixedFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
 }
 
 .footerNav {

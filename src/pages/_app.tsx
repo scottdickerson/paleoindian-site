@@ -135,7 +135,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     >
                         <Component {...pageProps} />
                     </main>
-                    <Footer />
+                    <Footer pagePath={pathname} />
                 </div>
             </ArrowheadContext.Provider>
         </TooltipProvider>
