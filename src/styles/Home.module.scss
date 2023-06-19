@@ -60,7 +60,7 @@ $navigation-under-video-breakpoint: calc($desktop-breakpoint + 100px);
     justify-content: center;
     width: 100%;
     min-height: 381px;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0rem 3rem;
 
     @media screen and (max-width: $navigation-under-video-breakpoint) {
@@ -71,6 +71,7 @@ $navigation-under-video-breakpoint: calc($desktop-breakpoint + 100px);
 div.video {
     position: relative;
     max-width: 800px;
+    flex-shrink: 1;
 }
 .storyNavigation {
     width: 30%;
@@ -124,6 +125,10 @@ div.video {
         border-radius: 15px;
         min-width: 311px;
         text-align: center;
+        &:hover {
+            scale: 1.1;
+        }
+
         a {
             display: block;
             padding: 30px 1rem;

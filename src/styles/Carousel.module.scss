@@ -58,6 +58,9 @@
     // @container (max-width: 850px) {
     //     display: none;
     // }
+    &:hover {
+        scale: 1.1;
+    }
 }
 
 .rightArrow {
