@@ -1,11 +1,12 @@
 /** NextJS Thumbnail gallery with a 4x4 grid handles click events and gives a callback */
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { StaticImageData } from 'next/image'
 import styles from '@/styles/TikTokPlayer.module.scss'
 import { ResponsiveImage } from './responsive-image'
 import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
+import { TikTokVideo } from './tiktok-video'
 
 interface ThumbnailGalleryProps {
     images: {
@@ -31,23 +32,11 @@ const ThumbnailGallery = ({
     const handleClick = (id: string) => {
         onClick(id)
     }
-    const videoRef = useRef<HTMLVideoElement>(null)
-
     return (
         <div className={classNames(styles.thumbnailGallery, className)}>
             {images.map(({ src, alt, id, videoSrc }) => {
                 return shouldPlayInline && selectedImage === id ? (
-                    <video
-                        src={videoSrc}
-                        autoPlay
-                        style={{ width: '100%' }}
-                        ref={videoRef}
-                        onClick={() =>
-                            videoRef?.current?.paused
-                                ? videoRef.current?.play()
-                                : videoRef.current?.pause()
-                        }
-                    ></video>
+                    <TikTokVideo src={videoSrc} isStarted></TikTokVideo>
                 ) : (
                     <ResponsiveImage
                         key={id}
@@ -78,7 +67,6 @@ export interface TikTokPlayerProps {
 
 export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
     const [selectedVideo, setSelectedVideo] = useState<string>()
-    const videoRef = useRef<HTMLVideoElement>(null)
 
     useEffect(() => {
         const handleResize = () => {
@@ -101,17 +89,10 @@ export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
                         </div>
                     )}
                     {selectedVideo && (
-                        <video
+                        <TikTokVideo
                             src={videos[selectedVideo].video}
-                            autoPlay
-                            className={styles.video}
-                            ref={videoRef}
-                            onClick={() =>
-                                videoRef?.current?.paused
-                                    ? videoRef.current?.play()
-                                    : videoRef.current?.pause()
-                            }
-                        ></video>
+                            isStarted={!!selectedVideo}
+                        ></TikTokVideo>
                     )}
                 </div>
             )}
