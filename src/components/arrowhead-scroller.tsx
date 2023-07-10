@@ -20,6 +20,7 @@ export const ArrowheadScroller = ({
 }: {
     scrollTarget: RefObject<HTMLElement>
 }) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { isVisible, setIsVisible } = useContext(ArrowheadContext) ?? {
         isVisible: true,
         setIsVisible: () => {},
@@ -41,7 +42,7 @@ export const ArrowheadScroller = ({
             setIsVisible(false)
         }, 200)
     }
-    return isVisible ? (
+    return (
         <button
             className={styles.arrowHead}
             onClick={() => {
@@ -56,6 +57,7 @@ export const ArrowheadScroller = ({
                 width={isMobile ? 16 : 25}
                 height={isMobile ? 52 : 82}
             />
+            Scroll Down
         </button>
-    ) : null
+    )
 }
