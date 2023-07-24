@@ -9,10 +9,14 @@ import Flipper from '@/components/flipper'
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
 import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card@2x.png'
-import boneFragments from '@/data/ice-age-texas/zoomer/TARL blog example Jurgens-Fig1-e1513702362955@2x.png'
-import lithicDebitage from '@/data/ice-age-texas/zoomer/ARCH-Debitage1-1024x908@2x.png'
-import charredOak from '@/data/ice-age-texas/zoomer/TARL example charred oak@2x.png'
-import humanCoprolites from '@/data/ice-age-texas/zoomer/Hindes Cave-cop1@2x.png'
+import boneFragments from '@/data/ice-age-texas/zoomer/2-6-1_BisonSkull_1000px.webp'
+import lithicDebitage from '@/data/ice-age-texas/zoomer/2-6-2_LithicDebitage_1000px.webp'
+import charredOak from '@/data/ice-age-texas/zoomer/2-6-3_CharredWood_1000px.webp'
+import humanCoprolites from '@/data/ice-age-texas/zoomer/2-6-4_Coprolite_1000px.webp'
+import boneFragmentsZoomedIn from '@/data/ice-age-texas/zoomer/2-6-1_BisonSkull_macro_1000px.webp'
+import lithicDebitageZoomedIn from '@/data/ice-age-texas/zoomer/2-6-2_LithicDebitage_macro_1000px.webp'
+import charredOakZoomedIn from '@/data/ice-age-texas/zoomer/2-6-3_CharredWood_macro_1000px.webp'
+import humanCoprolitesZoomedIn from '@/data/ice-age-texas/zoomer/2-6-4_Coprolite_macro_1000px.webp'
 import { cardData } from '@/data/ice-age-texas/cards/data'
 import { ExtinctionQuiz } from '@/data/ice-age-texas/quiz/extinction-quiz'
 import { Zoomer } from '@/components/zoomer'
@@ -50,10 +54,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                         content={TOOLTIP_CONTENT.iceAges}
                     />
                     or glacial periods. The most recent ice age
-                    <Tooltip
-                        trigger="ended"
-                        content={TOOLTIP_CONTENT.ended}
-                    />
+                    <Tooltip trigger="ended" content={TOOLTIP_CONTENT.ended} />
                     very slowly over tens of thousands of years. The climate
                     slowly warmed and melting glacial ice flowed into the ocean,
                     causing sea levels to rise all over the world. By about
@@ -89,20 +90,11 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 modern types of similar animals. In fact, they are sometimes
                 called mega-fauna which is just scientists speak for “really
                 huge animals.” These animals
-                <Tooltip
-                    trigger="evolved"
-                    content={TOOLTIP_CONTENT.evolved}
-                />
+                <Tooltip trigger="evolved" content={TOOLTIP_CONTENT.evolved} />
                 during the last
-                <Tooltip
-                    trigger="ice age"
-                    content={TOOLTIP_CONTENT.iceAges}
-                />
+                <Tooltip trigger="ice age" content={TOOLTIP_CONTENT.iceAges} />
                 and some went
-                <Tooltip
-                    trigger="extinct"
-                    content={TOOLTIP_CONTENT.extinct}
-                />
+                <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
                 as the ice age ended. Others still have
                 <Tooltip
                     trigger="descendants"
@@ -130,20 +122,14 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <p>
                 Native Americans from across Texas and America tell
-                <Tooltip
-                    trigger="origin"
-                    content={TOOLTIP_CONTENT.origin}
-                />
+                <Tooltip trigger="origin" content={TOOLTIP_CONTENT.origin} />
                 stories of dark, chaotic times when people had to deal with some
                 pretty scary monsters. Every culture has its own stories. In
                 some, the monsters are wiped out by a sudden change like a flood
                 or fire. In other stories, the first people must flee to
                 survive. Archeological sites show us that Paleoindians lived
                 alongside incredible animals that became
-                <Tooltip
-                    trigger="extinct"
-                    content={TOOLTIP_CONTENT.extinct}
-                />
+                <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
                 in a changing climate. It&apos;s possible that their memories
                 became the stuff of legend!
             </p>
@@ -192,10 +178,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <p>
                 Animal species go
-                <Tooltip
-                    trigger="extinct"
-                    content={TOOLTIP_CONTENT.extinct}
-                />
+                <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
                 all the time, it happens for a lot of reasons. But when many
                 species go extinct all at once, scientists look for a BIG reason
                 and they call it an extinction event. The Earth has had several
@@ -215,6 +198,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
             <ZoomerSection>
                 <Zoomer
                     src={boneFragments}
+                    zoomedInSrc={boneFragmentsZoomedIn}
                     transformOrigin="35% 50%"
                     scale={8}
                     alt="Bone fragments"
@@ -227,7 +211,8 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 />
                 <Zoomer
                     src={lithicDebitage}
-                    transformOrigin="50% 0%"
+                    zoomedInSrc={lithicDebitageZoomedIn}
+                    transformOrigin="48.47% 60.169%"
                     scale={12}
                     alt="Lithic debitage"
                     details={{
@@ -239,6 +224,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 />
                 <Zoomer
                     src={charredOak}
+                    zoomedInSrc={charredOakZoomedIn}
                     transformOrigin="35% 50%"
                     scale={8}
                     alt="Charred wood"
@@ -251,6 +237,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 />
                 <Zoomer
                     src={humanCoprolites}
+                    zoomedInSrc={humanCoprolitesZoomedIn}
                     transformOrigin="35% 50%"
                     scale={8}
                     alt="Human coprolites"

@@ -7,6 +7,7 @@ interface ZoomerProps {
     transformOrigin: CSSProperties['transformOrigin']
     scale: number
     src: StaticImageData
+    zoomedInSrc: StaticImageData
     alt: string
     details: {
         title: string
@@ -18,6 +19,7 @@ interface ZoomerProps {
 export const Zoomer = ({
     transformOrigin,
     src,
+    zoomedInSrc,
     alt,
     scale = 5,
     details: { title, subtitle, details },
@@ -31,14 +33,27 @@ export const Zoomer = ({
                     <br /> is that?
                 </span>
             )}
+            {isZoomed && (
+                <ResponsiveImage
+                    src={zoomedInSrc}
+                    alt={alt}
+                    containerProps={{
+                        className: styles.zoomer,
+                        onClick: () => setIsZoomed((isZoomed) => !isZoomed),
+                    }}
+                />
+            )}
             <ResponsiveImage
                 src={src}
                 alt={alt}
                 containerProps={{
                     className: styles.zoomer,
-                    onClick: () => setIsZoomed((isZoomed) => !isZoomed),
+                    // onClick: () => setIsZoomed((isZoomed) => !isZoomed),
                 }}
                 style={{
+                    opacity: isZoomed ? 0 : 1,
+                    visibility: isZoomed ? 'hidden' : 'visible',
+                    height: isZoomed ? '0' : '100%',
                     transformOrigin,
                     transform: `scale(${isZoomed ? scale : '1.0'})`,
                 }}

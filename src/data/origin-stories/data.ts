@@ -47,10 +47,10 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
-        src: 'https://youtu.be/mZ8CcuEzMas',
+        src: 'https://youtu.be/UJ-G5AwdL1Y',
         thumbnail: {
             src: howDidPeopleGetHereThumbnail,
-            alt: 'All the questions',
+            alt: 'Archaeologist holding a sign that says "All the questions"',
         },
     },
     'texas-sized-discovery': {
