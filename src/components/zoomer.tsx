@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image'
 import { CSSProperties, useState } from 'react'
 import { ResponsiveImage } from './responsive-image'
 import styles from '@/styles/Zoomer.module.scss'
+import classNames from 'classnames'
 
 interface ZoomerProps {
     transformOrigin: CSSProperties['transformOrigin']
@@ -47,8 +48,7 @@ export const Zoomer = ({
                 src={src}
                 alt={alt}
                 containerProps={{
-                    className: styles.zoomer,
-                    // onClick: () => setIsZoomed((isZoomed) => !isZoomed),
+                    className: classNames(styles.zoomer, styles.zoomedOut),
                 }}
                 style={{
                     opacity: isZoomed ? 0 : 1,

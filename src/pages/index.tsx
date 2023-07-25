@@ -3,7 +3,7 @@ import styles from '@/styles/Home.module.scss'
 import { ArrowheadScroller } from '@/components/arrowhead-scroller'
 import { useRef } from 'react'
 import { YouTubeVideo } from '@/components/youtube-video'
-import fromTheTopThumbnail from '@/data/home/images/FromTheTopThumbnail.png'
+import fromTheTopThumbnail from '@/data/home/images/00_TitleCard@2x.webp'
 import { Hero } from '@/components/hero'
 import { NavigationButtons } from '@/components/navigation-buttons'
 
