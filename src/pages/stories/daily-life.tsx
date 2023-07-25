@@ -4,13 +4,14 @@ import { StorySectionProps } from '@/components/story-section'
 import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
 import { YouTubeVideo } from '@/components/youtube-video'
-import moreThanStoneThumbnail from '@/data/daily-life/Images/More_Than_Stone.png'
+import moreThanStoneThumbnail from '@/data/daily-life/videos/3-2_TitleCard@2x.webp'
 import { TIKTOK_VIDEOS, TOOLTIP_CONTENT } from '@/data/origin-stories/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
 import { EssentialInvetoryData } from '@/data/daily-life/essential-inventory-data'
 import { Tooltip } from '@/components/tooltip'
+import cardBack from '@/data/daily-life/cards/Paleo - 3.1 Essential Inventory Cards.webp'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -23,6 +24,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <Cards
                 cards={EssentialInvetoryData}
                 pdf="/pdfs/Ice Age Texas Cards.pdf"
+                cardBack={cardBack}
             />
         ),
         details: (
@@ -95,6 +97,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <Cards
                 cards={WhatWasForDinnerData}
                 pdf="/pdfs/Ice Age Texas Cards.pdf"
+                cardBack={cardBack}
             />
         ),
         details: (

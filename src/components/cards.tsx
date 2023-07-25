@@ -3,7 +3,6 @@ import Image, { StaticImageData } from 'next/image'
 import styles from '@/styles/Cards.module.scss'
 import classnames from 'classnames'
 import { motion } from 'framer-motion'
-import cardBack from '@/components/images/cards/Card Back - Digital.png'
 import leftArrow from '@/components/images/cards/LeftArrow.svg'
 import rightArrow from '@/components/images/cards/RightArrow.svg'
 import { useMediaQuery } from 'react-responsive'
@@ -24,9 +23,10 @@ export const calculateVisibleCardArray = (
 interface CardProps {
     cards: { id: string; image: StaticImageData; caption: string }[]
     pdf: string
+    cardBack: StaticImageData
 }
 
-const Cards = ({ cards, pdf }: CardProps) => {
+const Cards = ({ cards, pdf, cardBack }: CardProps) => {
     const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
     const [current, setCurrent] = useState(2)
     const length = cards.length

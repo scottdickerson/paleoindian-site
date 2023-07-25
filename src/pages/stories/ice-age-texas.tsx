@@ -8,7 +8,7 @@ import Flipper from '@/components/flipper'
 
 import iceAge1 from '@/data/ice-age-texas/slider/Ice Age Map - Today@2x.png'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Map - Before@2x.png'
-import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2.3 Monsters and Mayhem - Title Card@2x.png'
+import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2-3_TitleCard@2x.webp'
 import boneFragments from '@/data/ice-age-texas/zoomer/2-6-1_BisonSkull_1000px.webp'
 import lithicDebitage from '@/data/ice-age-texas/zoomer/2-6-2_LithicDebitage_1000px.webp'
 import charredOak from '@/data/ice-age-texas/zoomer/2-6-3_CharredWood_1000px.webp'
@@ -23,6 +23,7 @@ import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
+import cardBack from '@/data/daily-life/cards/Paleo - 3.1 Essential Inventory Cards.webp'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -77,7 +78,11 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         description:
             '<p>Ice-age Texas was home to amazing animals that are now gone. Early ancestors of Native Americans lived alongside and even hunted these animals.</p><p>Flip through the cards for fun facts about fantastic fauna!',
         interactive: (
-            <Cards cards={cardData} pdf="/pdfs/Ice Age Texas Cards.pdf" />
+            <Cards
+                cards={cardData}
+                pdf="/pdfs/Ice Age Texas Cards.pdf"
+                cardBack={cardBack}
+            />
         ),
         details: (
             <p>
