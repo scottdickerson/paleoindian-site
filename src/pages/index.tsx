@@ -19,6 +19,11 @@ export default function Home() {
                     as="image"
                 />
                 <link rel="preload" href="/images/hero/hero.png" as="image" />
+                <link
+                    rel="preload"
+                    href="/images/hero/hero@4x.png"
+                    as="image"
+                />
             </Head>
             <section className={styles.main}>
                 <Hero />
