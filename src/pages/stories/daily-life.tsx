@@ -11,7 +11,7 @@ import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
 import { EssentialInvetoryData } from '@/data/daily-life/essential-inventory-data'
 import { Tooltip } from '@/components/tooltip'
-import cardBack from '@/data/daily-life/cards/Paleo - 3.1 Essential Inventory Cards.webp'
+import cardBack from '@/data/daily-life/cards/essential-inventory/Paleo - 3.1 Essential Inventory Cards.webp'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {

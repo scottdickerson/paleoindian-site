@@ -23,7 +23,7 @@ import { Zoomer } from '@/components/zoomer'
 import { ZoomerSection } from '@/components/zoomer-section'
 import Cards from '@/components/cards'
 import { FlipperImages } from '@/data/ice-age-texas/flipper/flipperData'
-import cardBack from '@/data/daily-life/cards/Paleo - 3.1 Essential Inventory Cards.webp'
+import cardBack from '@/data/daily-life/cards/essential-inventory/Paleo - 3.1 Essential Inventory Cards.webp'
 
 const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
     {

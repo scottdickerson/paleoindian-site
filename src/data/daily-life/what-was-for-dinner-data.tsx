@@ -1,45 +1,109 @@
 import { v4 as uuidv4 } from 'uuid'
-import mammoth1 from '@/data/ice-age-texas/cards/Card_Animal_Mammoth (serious).png'
-import mammoth2 from '@/data/ice-age-texas/cards/card_roughDraft_01.png'
-import turtle from '@/data/ice-age-texas/cards/Card_Animal_Turtle.png'
-import atlatl from '@/data/ice-age-texas/cards/Card_Tool_Atlatl.png'
-import axe from '@/data/ice-age-texas/cards/Card_Tool_Chopping Tool.png'
+import turtle from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.1 Turtle.webp'
+import rabbit from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.2 Rabbit.webp'
+import duck from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.3 Duck.webp'
+import deer from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.4 Deer.webp'
+import pronghorn from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.5 Pronghorn.webp'
+import fish from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.6 Fish.webp'
+import dewberry from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.7 Dewberry.webp'
+import wineCup from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.8 Wine Cup.webp'
+import wildGreens from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.9 Wild Greens.webp'
+import persimmon from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.10 Persimmon.webp'
+import acorns from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.11 Acorns.webp'
+import blackWalnuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.12 BlackWalnuts.webp'
+import wildRye from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.13 WildRye.webp'
+// import beechNuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.14 BeechNuts.webp'
+// import tuberRoots from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.15 TuberRoots.webp'
 
 export const WhatWasForDinnerData = [
     {
         id: uuidv4(),
-        image: mammoth1,
-        caption:
-            '1Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
-    },
-    {
-        id: uuidv4(),
-        image: mammoth2,
-        caption:
-            '2Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
-    },
-    {
-        id: uuidv4(),
         image: turtle,
         caption:
-            '3Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
+            'Turtles and tortoises were slow moving and easy to catch. Even a little kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or even drums.  ',
     },
     {
         id: uuidv4(),
-        image: atlatl,
+        image: rabbit,
         caption:
-            '4Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
+            'Rabbits and other rodents could be caught with simple traps, snares, or with throwing sticks. Their furs would also be useful for clothing.',
     },
     {
         id: uuidv4(),
-        image: axe,
+        image: duck,
         caption:
-            '5Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
+            'Ducks and other waterfowl migrated through Texas at certain times of years. Paleoindians would have learned their movement patterns and known when to expect these delicious, feathered friends.',
     },
     {
         id: uuidv4(),
-        image: axe,
+        image: deer,
         caption:
-            '6Turtles and tortoises were slow moving and easy to catch. Even a kid could help her family eat by bringing one home for dinner. Their shells were also useful as bowls or drums.',
+            'The white-tailed deer was pretty common in ice-age Texas, just like it is today.',
     },
+    {
+        id: uuidv4(),
+        image: pronghorn,
+        caption:
+            'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.',
+    },
+    {
+        id: uuidv4(),
+        image: fish,
+        caption:
+            'Fish bones are delicate and do not often survive in the archeological record. But scientists have found fishhooks and other evidence that Paleoindians enjoyed fish dinners.',
+    },
+    {
+        id: uuidv4(),
+        image: dewberry,
+        caption:
+            'Dewberries are a wild relative of the blackberry. Their vines have spines so Paleoindians knew to pick these sweet treats with care.',
+    },
+    {
+        id: uuidv4(),
+        image: wineCup,
+        caption:
+            'Both the leaves and roots of this lovely flower are edible. The leaves can be used to thicken stews and the roots taste a little like sweet potatoes.',
+    },
+    {
+        id: uuidv4(),
+        image: wildGreens,
+        caption:
+            'A wild variety of edible wild greens would have grown in Texas during the last ice-age. These nutritious leaves would have been an important source of vitamins, minerals.',
+    },
+    {
+        id: uuidv4(),
+        image: persimmon,
+        caption:
+            'Under its bitter skin, the persimmon is a sweet fruit that could be eaten raw, cooked with acorn flour as a pudding, or dried and saved for winter. The persimmon tree’s sap and bark also had traditional medicinal uses. And, the fruit juice was used as a natural dye.',
+    },
+    {
+        id: uuidv4(),
+        image: acorns,
+        caption:
+            'The acorns of many kinds of oak trees were used for food. Acorns are nutritious and contain lots of fat but they must be cooked before they are safe for people to eat.',
+    },
+    {
+        id: uuidv4(),
+        image: blackWalnuts,
+        caption:
+            'Black walnuts can be eaten, and they also had medicinal uses. Juice made from green walnut husks can fight fungus, parasites, and bacteria.',
+    },
+    {
+        id: uuidv4(),
+        image: wildRye,
+        caption:
+            'Wild rye is a common name for lots of different edible native grasses. Their seed can be dried and ground to make a flour.',
+    },
+    // {
+    //     id: uuidv4(),
+    //     image: beechNuts,
+    //     caption:
+    //         'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.  ',
+    // },
+    // {
+    //     id: uuidv4(),
+    //     image: tuberRoots,
+    //     caption:
+    //         'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.  ',
+    // },
 ]

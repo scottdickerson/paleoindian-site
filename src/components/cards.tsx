@@ -115,9 +115,7 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                     })}
                 </div>
                 <div id="text" className={styles.background}></div>
-                <span className={styles.text}>
-                    {visibleCards.at(current % 5).caption}
-                </span>
+                <span className={styles.text}>{cards[current].caption}</span>
                 <a className={styles.downloadButton} href={pdf} download>
                     <span className={styles.playAlong}>Play along!</span> Click
                     here to download printable cards and play the
