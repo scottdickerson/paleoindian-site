@@ -1,11 +1,11 @@
-import flipper1 from '@/data/ice-age-texas/flipper/More Offshore Illustration-05@2x.png'
-import flipper2 from '@/data/ice-age-texas/flipper/More Offshore Illustration-01@2x.png'
-import flipper3 from '@/data/ice-age-texas/flipper/More Offshore Illustration-06@2x.png'
-import flipper4 from '@/data/ice-age-texas/flipper/More Offshore Illustration-02@2x.png'
-import flipper5 from '@/data/ice-age-texas/flipper/More Offshore Illustration-07@2x.png'
-import flipper6 from '@/data/ice-age-texas/flipper/More Offshore Illustration-03@2x.png'
-import flipper7 from '@/data/ice-age-texas/flipper/More Offshore Illustration-08@2x.png'
-import flipper8 from '@/data/ice-age-texas/flipper/More Offshore Illustration-04@2x.png'
+import flipper1 from '@/data/ice-age-texas/flipper/Side 1-1@0.5x.webp'
+import flipper2 from '@/data/ice-age-texas/flipper/Side 2-1@0.5x.webp'
+import flipper3 from '@/data/ice-age-texas/flipper/Side 1-2@0.5x.webp'
+import flipper4 from '@/data/ice-age-texas/flipper/Side 2-2@0.5x.webp'
+import flipper5 from '@/data/ice-age-texas/flipper/Side 1-3@0.5x.webp'
+import flipper6 from '@/data/ice-age-texas/flipper/Side 2-3@0.5x.webp'
+import flipper7 from '@/data/ice-age-texas/flipper/Side 1-4@0.5x.webp'
+import flipper8 from '@/data/ice-age-texas/flipper/Side 2-4@0.5x.webp'
 
 export const FlipperImages = [
     {

@@ -1,5 +1,5 @@
 .header {
-    background-image: url('../components/images/header/header@4x.png');
+    background-image: url('../components/images/header/header@4x.webp');
     min-height: 60px;
     aspect-ratio: 1200/84;
     position: relative;
@@ -8,10 +8,10 @@
     background-position: center;
     background-repeat: no-repeat;
     @media screen and (max-width: calc($tablet-breakpoint)) {
-        background-image: url('../components/images/header/header@2x.png');
+        background-image: url('../components/images/header/header@2x.webp');
     }
     @media screen and (max-width: calc($mobile-breakpoint + 40px)) {
-        background-image: url('../components/images/header/header-mobile@2x.png');
+        background-image: url('../components/images/header/header-mobile@2x.webp');
         aspect-ratio: 320/41;
         min-height: 40px;
     }
