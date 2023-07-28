@@ -1,45 +1,67 @@
 import { v4 as uuidv4 } from 'uuid'
-import mammoth1 from './Card_Animal_Mammoth (serious).png'
-import mammoth2 from './card_roughDraft_01.png'
-import turtle from './Card_Animal_Turtle.png'
-import atlatl from './Card_Tool_Atlatl.png'
-import axe from './Card_Tool_Chopping Tool.png'
+import mammoth from './Paleo - 2.2.1 Mammoth.webp'
+import camel from './Paleo - 2.2.2 Camel.webp'
+import direWolf from './Paleo - 2.2.3 Dire WOlf.webp'
+import sabertoothCat from './Paleo - 2.2.4 Sabertooth Cat.webp'
+import ancientHorse from './Paleo - 2.2.5 Ancient Horse.webp'
+import giantSloth from './Paleo - 2.2.6 Giant Sloth.webp'
+import armadillo from './Paleo - 2.2.7 Armadillo.webp'
+import shortFacedBear from './Paleo - 2.2.8 Short-faced Bear.webp'
+import giantBison from './Paleo - 2.2.9 Giant Bison.webp'
 
 export const cardData = [
     {
         id: uuidv4(),
-        image: mammoth1,
+        image: mammoth,
         caption:
-            '1An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'An adult, male mammoth would feed a group of 30 people for two weeks! But it was probably a uncommon meal. It’s possible that bringing home this big boi was all about the bragging rights!',
     },
     {
         id: uuidv4(),
-        image: mammoth2,
+        image: camel,
         caption:
-            '2An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'Even though we think of them as animals from the middle east, all modern camels evolved from ancestors which originated in North America approximately 44 million years ago.',
     },
     {
         id: uuidv4(),
-        image: turtle,
+        image: direWolf,
         caption:
-            '3An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'Dire Wolves show up in fantasy fiction, but they were real animals—larger and stronger than modern wolves.',
     },
     {
         id: uuidv4(),
-        image: atlatl,
+        image: sabertoothCat,
         caption:
-            '4An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'Sabertooth cats were heavy and muscular, unlike modern big cats. They did not chase down prey, but instead would pounce and ambush their dinner.',
     },
     {
         id: uuidv4(),
-        image: axe,
+        image: ancientHorse,
         caption:
-            '5An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'Horses first evolved in North America. They spread to the rest of the world and continued to evolve and live there even after the Ancient Horse went extinct. Much later, Spaniards brought the descendants of ancient horses back to North America.',
     },
     {
         id: uuidv4(),
-        image: axe,
+        image: giantSloth,
         caption:
-            '6An adult, male mammoth could feed 30 people for two weeks! Mammoth meat probably wasn’t an everyday meal. But, bringing home this big boi must have come with bragging rights!',
+            'Unlike the slow-moving modern sloths, Giant Sloths were no slackers. Their giant claws and enormous size would have made them dangerous animals.',
+    },
+    {
+        id: uuidv4(),
+        image: armadillo,
+        caption:
+            'Some species of Giant Armadillo grew to the size of a Volkswagen Beetle! If a person could get through that tough “shell,” they (and all their friends) could feast on armadillo for a month.',
+    },
+    {
+        id: uuidv4(),
+        image: shortFacedBear,
+        caption:
+            'A full-grown, male Giant Short-faced Bear was about the biggest meat-eating mammal to ever munch their way across North America.',
+    },
+    {
+        id: uuidv4(),
+        image: giantBison,
+        caption:
+            'This big bison is the direct ancestor of bison living in North America today. So, they didn’t exactly go extinct – instead they “shrunk.”',
     },
 ]
