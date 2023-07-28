@@ -5,13 +5,14 @@ import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
 import { YouTubeVideo } from '@/components/youtube-video'
 import moreThanStoneThumbnail from '@/data/daily-life/videos/3-2_TitleCard@2x.webp'
-import { TIKTOK_VIDEOS, TOOLTIP_CONTENT } from '@/data/origin-stories/data'
+import { TOOLTIP_CONTENT } from '@/data/origin-stories/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
 import { EssentialInvetoryData } from '@/data/daily-life/essential-inventory-data'
 import { Tooltip } from '@/components/tooltip'
 import cardBack from '@/data/daily-life/cards/essential-inventory/Paleo - 3.1 Essential Inventory Cards.webp'
+import { DAILY_LIFE_TIKTOK_VIDEOS } from '@/data/daily-life/tiktokData'
 
 const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
@@ -134,7 +135,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <p>Hear from Native American people below about their favorite traditions. </p>`,
         interactive: (
             <>
-                <TikTokPlayer videos={TIKTOK_VIDEOS} />
+                <TikTokPlayer videos={DAILY_LIFE_TIKTOK_VIDEOS} />
             </>
         ),
         details: (

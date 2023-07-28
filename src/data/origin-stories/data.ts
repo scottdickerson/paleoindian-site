@@ -1,13 +1,7 @@
-import { TikTokPlayerProps } from '../../components/tiktok-video-player'
 import { YouTubeVideosType } from '../../components/types'
 import sacredStoriesThumbnail from './videos/1-2_TitleCard@2x.webp'
 import howDidPeopleGetHereThumbnail from './videos/1-4_TitleCard@2x.webp'
 import texasSizedDiscoveryThumbnail from './videos/1-5_TitleCard@2x.webp'
-
-import abbyReinhardtThumbnail from './tiktok/Abby Reinhardt.png'
-import abigayleFriehaufThumbnail from './tiktok/Abigayle Friehauf.png'
-import angusDunnThumbnail from './tiktok/Angus Dunn.png'
-import nicholasBentleyThumbnail from './tiktok/Nicholas Bentley.png'
 
 export const TOOLTIP_CONTENT = {
     ancestors: 'A person related to you that lived a long time ago.',
@@ -59,24 +53,5 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
             src: texasSizedDiscoveryThumbnail,
             alt: 'Science, Logic!',
         },
-    },
-}
-
-export const TIKTOK_VIDEOS: TikTokPlayerProps['videos'] = {
-    abbyReinhardt: {
-        thumbnail: abbyReinhardtThumbnail,
-        video: 'https://youtube.com/shorts/f5nGaya3g-0?feature=share',
-    },
-    abigayleFriehauf: {
-        thumbnail: abigayleFriehaufThumbnail,
-        video: 'https://youtube.com/shorts/68jEo-oTiBY?feature=share',
-    },
-    angusDunn: {
-        thumbnail: angusDunnThumbnail,
-        video: 'https://youtube.com/shorts/m1OXEgg-Tm4?feature=share',
-    },
-    nicholasBentley: {
-        thumbnail: nicholasBentleyThumbnail,
-        video: 'https://youtube.com/shorts/9tZw7LNB-Ek?feature=share',
     },
 }

@@ -1,6 +1,6 @@
 /** NextJS Thumbnail gallery with a 4x4 grid handles click events and gives a callback */
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { StaticImageData } from 'next/image'
 import styles from '@/styles/TikTokPlayer.module.scss'
 import { ResponsiveImage } from './responsive-image'
@@ -68,15 +68,15 @@ export interface TikTokPlayerProps {
 export const TikTokPlayer = ({ videos }: TikTokPlayerProps) => {
     const [selectedVideo, setSelectedVideo] = useState<string>()
 
-    useEffect(() => {
-        const handleResize = () => {
-            setSelectedVideo(undefined)
-        }
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setSelectedVideo(undefined)
+    //     }
+    //     window.addEventListener('resize', handleResize)
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize)
+    //     }
+    // }, [])
 
     const isMobile = useMediaQuery({ query: '(max-width: 767px)' })
     return (

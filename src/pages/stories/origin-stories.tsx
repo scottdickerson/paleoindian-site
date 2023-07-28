@@ -12,11 +12,8 @@ import sharedBeginnings from '@/data/origin-stories/images/sharedBeginnings.svg'
 import clovisMap1 from '@/data/origin-stories/slider/Clovis Map 1.webp'
 import clovisMap2 from '@/data/origin-stories/slider/Clovis Map 2.webp'
 import stemmedSpearFPO from '@/data/origin-stories/tooltips/Stemmed Spear FPO.png'
-import {
-    TIKTOK_VIDEOS,
-    TOOLTIP_CONTENT,
-    YOUTUBE_VIDEOS,
-} from '@/data/origin-stories/data'
+import { TOOLTIP_CONTENT, YOUTUBE_VIDEOS } from '@/data/origin-stories/data'
+import { TIKTOK_VIDEOS } from '@/data/origin-stories/tiktokData'
 
 const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
     {
