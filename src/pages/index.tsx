@@ -15,13 +15,13 @@ export default function Home() {
                 <title>Texas Paleoindian</title>
                 <link
                     rel="preload"
-                    href="/images/hero/hero@2x.png"
+                    href="/images/hero/hero@2x.webp"
                     as="image"
                 />
-                <link rel="preload" href="/images/hero/hero.png" as="image" />
+                <link rel="preload" href="/images/hero/hero.webp" as="image" />
                 <link
                     rel="preload"
-                    href="/images/hero/hero@4x.png"
+                    href="/images/hero/hero@4x.webp"
                     as="image"
                 />
             </Head>

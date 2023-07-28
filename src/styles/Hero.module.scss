@@ -12,7 +12,7 @@
     line-height: 140px;
     text-transform: uppercase;
     font-family: var(--glass-antiqua);
-    background-image: url('/images/hero/hero@4x.png');
+    background-image: url('/images/hero/hero@4x.webp');
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     background-size: cover;
@@ -23,7 +23,7 @@
         line-height: 125px;
     }
     @media screen and (max-width: calc($tablet-breakpoint)) {
-        background-image: url('/images/hero/hero@2x.png');
+        background-image: url('/images/hero/hero@2x.webp');
         font-size: 120px;
         line-height: 100px;
     }
@@ -33,7 +33,7 @@
         line-height: 90px;
     }
     @media screen and (max-width: calc($mobile-breakpoint + 20px)) {
-        background-image: url('/images/hero/hero.png');
+        background-image: url('/images/hero/hero.webp');
         aspect-ratio: 320/41;
         min-height: 40px;
         font-size: 68px;
