@@ -3,10 +3,7 @@ import styles from '@/styles/EducatorGuide.module.scss'
 import aboutStyles from '@/styles/About.module.scss'
 import sectionStyles from '@/styles/StorySection.module.scss'
 import classNames from 'classnames'
-import Image from 'next/image'
-import tempPhoto from '@/data/educator-guide/temp_photo_box.png'
 import { useMediaQuery } from 'react-responsive'
-import { PartnerLogos } from '@/components/partner-logos'
 
 const Heading = () => (
     <h1 className={sectionStyles.summary}>About the Exhibit</h1>
@@ -14,53 +11,80 @@ const Heading = () => (
 
 const Description = () => (
     <p className={sectionStyles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Leo integer
-        malesuada nunc vel risus commodo.
+        A Time Before Texas is sponsored by the Texas Department of
+        Transportation as part of its responsibilities under the National
+        Historic Preservation Act of 1966.
     </p>
 )
 
-const AboutImage = () => (
-    <div className={styles.imageWrapper}>
-        <Image src={tempPhoto} alt="temp photo" className={styles.image} />
-        <p className={styles.caption}>
-            Caption level content will describe the photo in this space.
+const DetailsSection = () => (
+    <div className={classNames(sectionStyles.details, aboutStyles.partners)}>
+        <p>
+            This exhibit would not be possible without TxDOT’s many partners,
+            including:
+            <ul>
+                <li>Humanities Texas</li>
+                <li>Texas Memorial Museum</li>
+                <li> Mescalero Apache Tribe</li>
+                <li>
+                    Center for Archeological Studies, Texas State University
+                </li>
+                <li>AmaTerra </li>
+                <li>ICF</li> <li>MuseWork Exhibits</li>
+            </ul>
         </p>
     </div>
 )
 
-const DetailsSection = () => (
-    <div className={classNames(sectionStyles.details)}>
+const CopyrightSection = () => (
+    <section className={aboutStyles.copyright}>
+        <span className={aboutStyles.copyrightTitle}>Copyright & Fair Use</span>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo
-            integer malesuada nunc vel risus commodo. Purus ut faucibus pulvinar
-            elementum integer enim.
+            This online exhibit contains, references and interprets both
+            copyrighted materials and materials in the public domain. Those
+            materials may include text, images, graphics, audio and video clips,
+            and other content (collectively, the “Content”). In some cases, the
+            copyright is owned by third parties, and this exhibit is utilizing
+            the third‐party Content by express permission or under the fair use
+            doctrine.
         </p>
-    </div>
+        <p>
+            The Content is made available only for your personal, noncommercial
+            educational and scholarly use. You may not use the Content for any
+            other purpose, or distribute or make the Content available to
+            others, unless you obtain any required permission from the copyright
+            holder. Some Content may be provided via streaming or other means
+            that restrict copying; you may not circumvent those restrictions.
+            You may not alter or remove any copyright or other proprietary
+            notices included in the Content.
+        </p>
+    </section>
 )
 
 const AboutTablet = () => (
     <div className={styles.tabletWrapper}>
         <Heading />
         <Description />
-        <AboutImage />
         <DetailsSection />
-        <PartnerLogos />
+        <CopyrightSection />
     </div>
 )
 
 const AboutDesktop = () => {
     return (
         <>
-            <div className={styles.contentWrapper}>
-                <div className={styles.headingAndDescription}>
+            <div className={aboutStyles.contentWrapper}>
+                <div
+                    className={classNames(
+                        styles.headingAndDescription,
+                        aboutStyles.topRow
+                    )}
+                >
                     <Heading />
                     <Description />
                 </div>
-                <AboutImage />
                 <DetailsSection />
-                <PartnerLogos className={aboutStyles.partnerLogo} />
+                <CopyrightSection />
             </div>
         </>
     )

@@ -1,4 +1,41 @@
-.partnerLogo {
-    padding-top: 1rem;
-    grid-area: 4 / 1 / 6 / 3;
+.contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    gap: 1rem;
+    max-width: 1500px;
+}
+.topRow {
+    grid-column: 1 / span 2;
+}
+
+.partners {
+    ul {
+        padding-top: 4px;
+    }
+    li {
+        padding: 12px 0;
+    }
+}
+
+.copyrightTitle {
+    font-family: var(--encode-sans-condensed-semi-bold);
+    font-size: 17px;
+    line-height: 36px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}
+.copyright {
+    font-size: 14px;
+    line-height: 21px;
+    p {
+        padding-top: 12px;
+
+        @media screen and (max-width: $mobile_breakpoint) {
+            font-size: 10px;
+            line-height: 16px;
+        }
+    }
 }
