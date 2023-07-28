@@ -41,7 +41,7 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
-        src: 'https://youtu.be/UJ-G5AwdL1Y',
+        src: 'https://youtu.be/LS4M8FeHlW0',
         thumbnail: {
             src: howDidPeopleGetHereThumbnail,
             alt: 'Archaeologist holding a sign that says "All the questions"',

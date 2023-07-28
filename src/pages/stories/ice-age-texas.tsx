@@ -117,7 +117,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
             '<p>Some Tribal communities have stories of a time when Earth was new and filled with monsters! Maybe they were telling campfire stories, or maybe they were describing their changing world.</p><p>Watch the video below to hear some amazing stories.</p>',
         interactive: (
             <YouTubeVideo
-                src="https://youtu.be/G65hcqn3ghM"
+                src="https://youtu.be/Zdvtz04V660"
                 thumbnail={{
                     src: monstersAndMayhemThumbnail,
                     alt: 'Monsters screaming!',
