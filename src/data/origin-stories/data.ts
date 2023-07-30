@@ -37,7 +37,7 @@ export const TOOLTIP_CONTENT = {
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {
     'sacred-stories': {
-        src: 'https://youtu.be/G65hcqn3ghM',
+        src: 'https://youtu.be/X7rJBSgVR98',
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {

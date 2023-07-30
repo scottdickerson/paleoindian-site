@@ -7,18 +7,18 @@ import greerTesta from './tiktok/1.6.4_Greer Testa@300px.webp'
 export const TIKTOK_VIDEOS: TikTokPlayerProps['videos'] = {
     abbyReinhardt: {
         thumbnail: greerTesta,
-        video: 'https://youtube.com/shorts/f5nGaya3g-0?feature=share',
+        video: 'https://youtube.com/shorts/l3LHjQXGpr0?feature=share',
     },
     abigayleFriehauf: {
         thumbnail: abigayleFriehaufThumbnail,
-        video: 'https://youtube.com/shorts/68jEo-oTiBY?feature=share',
+        video: 'https://youtube.com/shorts/QeWu1tRwkck?feature=share',
     },
     angusDunn: {
         thumbnail: angusDunnThumbnail,
-        video: 'https://youtu.be/jVJ9y1J4i_Q',
+        video: 'https://youtube.com/shorts/I32vdCgsqK8?feature=share',
     },
     nicholasBentley: {
         thumbnail: nicholasBentleyThumbnail,
-        video: 'https://youtube.com/shorts/9tZw7LNB-Ek?feature=share',
+        video: 'https://youtube.com/shorts/HWjQed7lFVQ?feature=share',
     },
 }

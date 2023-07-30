@@ -66,7 +66,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <p>Watch the video to learn more. </p>`,
         interactive: (
             <YouTubeVideo
-                src="https://youtu.be/TbrFI5LddaY"
+                src="https://youtu.be/-X4IOs0XZ3U"
                 thumbnail={{
                     src: moreThanStoneThumbnail,
                     alt: 'Two people holding a stone spear',
