@@ -10,6 +10,9 @@
     z-index: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
 }
 
 .image {
@@ -34,18 +37,41 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     user-select: none;
+    flex-grow: 1;
 }
 
 .imageText {
     position: relative;
-    font-size: 13px;
+    font-size: 18px;
+    line-height: 22px;
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
     color: white;
-    font-family: --var(--encode-sans-condensed-extra-bold);
+    font-family: var(--encode-sans-condensed);
+}
+
+.imageTextDescription {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: var(--encode-sans-condensed-bold);
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 13px;
+        line-height: 13px;
+    }
 }
 
 .imageTextTitle {
-    font-size: 1.5rem;
-    font-family: --var(--encode-sans-condensed-bold);
+    font-size: 26px;
+    line-height: 25px;
+    font-family: var(--encode-sans-extra-bold);
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 20px;
+        line-height: 20px;
+    }
 }
 
 .arrow {

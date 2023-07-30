@@ -20,7 +20,7 @@ export const cardData = [
         id: uuidv4(),
         image: camel,
         caption:
-            'Even though we think of them as animals from the middle east, all modern camels evolved from ancestors which originated in North America approximately 44 million years ago.',
+            'Even though we think of them as animals from the Middle East, all modern camels evolved from ancestors which originated in North America approximately 44 million years ago.',
     },
     {
         id: uuidv4(),

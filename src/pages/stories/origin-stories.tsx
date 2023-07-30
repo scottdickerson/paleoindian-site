@@ -151,7 +151,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
                     through an ice-free corridor, and into North America around
                     the end of the last
                     <Tooltip
-                        trigger="ice age"
+                        trigger="Ice Age"
                         content={TOOLTIP_CONTENT.iceAges}
                         width={306}
                     />

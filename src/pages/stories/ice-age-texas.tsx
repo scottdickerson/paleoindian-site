@@ -31,7 +31,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'a-different-world',
         summary: 'Texas used to be chill and even bigger!',
         description:
-            '<p>During the last ice age, the Texas coastline extended farther out and the climate was cooler and wetter than it is today.</p> <p>Compare the maps below.</p>',
+            '<p>During the last Ice Age, the Texas coastline extended farther out and the climate was cooler and wetter than it is today.</p> <p>Compare the maps below.</p>',
         interactive: (
             <Slider
                 img1={{
@@ -42,7 +42,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 img2={{
                     src: iceAge2,
                     alt: 'Ice covering the top half of the country with much less of the Texas coast above water.',
-                    caption: '...and during the ice age',
+                    caption: '...and during the Ice Age',
                 }}
             />
         ),
@@ -51,10 +51,10 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 <p>
                     The earth has had at least five major
                     <Tooltip
-                        trigger="ice ages"
+                        trigger="Ice Ages"
                         content={TOOLTIP_CONTENT.iceAges}
                     />
-                    or glacial periods. The most recent ice age
+                    or glacial periods. The most recent Ice Age
                     <Tooltip trigger="ended" content={TOOLTIP_CONTENT.ended} />
                     very slowly over tens of thousands of years. The climate
                     slowly warmed and melting glacial ice flowed into the ocean,
@@ -97,10 +97,10 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 huge animals.” These animals
                 <Tooltip trigger="evolved" content={TOOLTIP_CONTENT.evolved} />
                 during the last
-                <Tooltip trigger="ice age" content={TOOLTIP_CONTENT.iceAges} />
+                <Tooltip trigger="Ice Age" content={TOOLTIP_CONTENT.iceAges} />
                 and some went
                 <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
-                as the ice age ended. Others still have
+                as the Ice Age ended. Others still have
                 <Tooltip
                     trigger="descendants"
                     content={TOOLTIP_CONTENT.descended}
@@ -177,7 +177,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         title: 'Extinction',
         id: 'extinction',
         summary: `What happened to the mammoths, sabertooth cats, and giant sloths?`,
-        description: `<p>Near the end of the last ice age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
+        description: `<p>Near the end of the last Ice Age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
        <p> What do you think happened?</p>`,
         interactive: <ExtinctionQuiz />,
         details: (
@@ -206,10 +206,11 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     zoomedInSrc={boneFragmentsZoomedIn}
                     transformOrigin="35% 50%"
                     scale={8}
-                    alt="Bone fragments"
+                    alt="Bison bones"
                     details={{
-                        title: 'Bone fragments',
-                        subtitle: 'Estimated age, Site location',
+                        title: 'Bison bones',
+                        subtitle:
+                            '10,000 BP, Bonfire Shelter, Val Verde County, TX',
                         details:
                             'Tiny bone leftovers can tell us what people ate for dinner, what kind of hunting strategies they used, and even if a certain camp was a seasonal hunting location.',
                     }}
@@ -222,7 +223,8 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     alt="Lithic debitage"
                     details={{
                         title: 'Lithic debitage',
-                        subtitle: 'Estimated age, Site location',
+                        subtitle:
+                            '12,000 BP, Wilson Leonard Site, Williamson County, TX',
                         details:
                             'When people chip away at stone to make tools, tiny flakes like these break off. Archeologists study them to identify where the stone came from and even what kind thing the stone-tool artist was making.  ',
                     }}
@@ -235,7 +237,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     alt="Charred wood"
                     details={{
                         title: 'Charred wood',
-                        subtitle: 'Estimated age, Site location',
+                        subtitle: 'Date Unknown, Val Verde County, TX',
                         details:
                             'Charred wood samples from ancient campfires can tell us when a campfire burned and what species of trees were in the area. Seeds from ancient campfires can help us understand what people ate and the local ecosystem.',
                     }}
@@ -248,7 +250,8 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     alt="Human coprolites"
                     details={{
                         title: 'Human coprolites',
-                        subtitle: 'Estimated age, Site location',
+                        subtitle:
+                            'Date Unknown, Spirit Eye Cave, Presidio County, TX',
                         details:
                             "These terrific turds provide information about a person's diet, health, and even genetics. To date, no Paleoindian coprolites have been found in Texas, but finding a #2 is a #1 priority!",
                     }}

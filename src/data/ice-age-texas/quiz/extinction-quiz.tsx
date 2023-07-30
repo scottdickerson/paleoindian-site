@@ -29,7 +29,7 @@ export const ExtinctionQuiz = () => (
                         moreInformation: {
                             title: 'NO',
                             details: `Many of the species that died at the end 
-            of the ice age had previously survived 
+            of the Ice Age had previously survived 
             other periods of major climate change.`,
                         },
                     },

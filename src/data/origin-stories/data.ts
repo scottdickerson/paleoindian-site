@@ -15,7 +15,7 @@ export const TOOLTIP_CONTENT = {
         'A geographic area where plants, animals, and other organisms, as well as weather and landscape, work together to form a web of life.',
     iceAges:
         'Long periods lasting millions of years when the Earth has cold temperatures that lead to ice sheets and glaciers covering large areas.',
-    ended: 'Or did it? Some scientists think we are still technically in an ice age, but in a warmer inter-glacial phase.',
+    ended: 'Or did it? Some scientists think we are still technically in an Ice Age, but in a warmer inter-glacial phase.',
     adaptation:
         'Certain physical or behavioral characteristics that help an organism survive in an environment.',
     evolved:
@@ -24,7 +24,7 @@ export const TOOLTIP_CONTENT = {
     origin: 'The point or place where something begins.',
     interpreting: 'Decide and explain what something means.',
     beringLandBridge:
-        'A very narrow strip of land that connected Asia to North American long ago.  It connected what is now Russia to Alaska.',
+        'An area of land that connected Asia to North American long ago.  It connected what is now Russia to Alaska.',
     migrations:
         'Long journeys taken by animals or humans moving from one home to another.',
     gaultAndFriedkinSites:

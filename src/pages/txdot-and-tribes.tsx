@@ -81,7 +81,7 @@ const WorkingTogetherSection = ({
         <p>
             A Time Before Texas explores a specific time in the past – from the
             earliest evidence of human habitation in Texas (at least 16,000
-            years ago) to the end of the last ice age (about 10,000 years ago).
+            years ago) to the end of the last Ice Age (about 10,000 years ago).
             Archeologists refer to peoples who lived during this time as
             Paleoindians.
         </p>

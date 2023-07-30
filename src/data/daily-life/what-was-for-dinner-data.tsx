@@ -12,8 +12,8 @@ import persimmon from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.1
 import acorns from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.11 Acorns.webp'
 import blackWalnuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.12 BlackWalnuts.webp'
 import wildRye from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.13 WildRye.webp'
-// import beechNuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.14 BeechNuts.webp'
-// import tuberRoots from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.15 TuberRoots.webp'
+import beechNuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.14 BeechNuts.webp'
+import tuberRoots from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.15 TuberRoots.webp'
 
 export const WhatWasForDinnerData = [
     {
@@ -38,13 +38,13 @@ export const WhatWasForDinnerData = [
         id: uuidv4(),
         image: deer,
         caption:
-            'The white-tailed deer was pretty common in ice-age Texas, just like it is today.',
+            'The White-tailed Deer was pretty common in ice-age Texas, just like it is today.',
     },
     {
         id: uuidv4(),
         image: pronghorn,
         caption:
-            'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.',
+            'Although the pronghorn is sometimes called the American antelope, it’s closest relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.',
     },
     {
         id: uuidv4(),
@@ -94,16 +94,16 @@ export const WhatWasForDinnerData = [
         caption:
             'Wild rye is a common name for lots of different edible native grasses. Their seed can be dried and ground to make a flour.',
     },
-    // {
-    //     id: uuidv4(),
-    //     image: beechNuts,
-    //     caption:
-    //         'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.  ',
-    // },
-    // {
-    //     id: uuidv4(),
-    //     image: tuberRoots,
-    //     caption:
-    //         'Although the pronghorn is sometimes called the American antelope, it’s closely relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.  ',
-    // },
+    {
+        id: uuidv4(),
+        image: beechNuts,
+        caption:
+            'Beechnuts are almost 50% fat and very filling, but they are mildly toxic when raw. Paleoindians knew to toast these nuts before enjoying them as a snack.',
+    },
+    {
+        id: uuidv4(),
+        image: tuberRoots,
+        caption:
+            'People have always relied upon root vegetables for reliable nutrition. Tasty tubers can be stockpiled and eaten when other food is scarce.',
+    },
 ]
