@@ -40,10 +40,10 @@ export default function Home() {
                 </section>
                 <div className={styles.videoSection}>
                     <YouTubeVideo
-                        src="https://youtu.be/TbrFI5LddaY"
+                        src="https://youtu.be/UlrrNFO4jCs"
                         thumbnail={{
                             src: fromTheTopThumbnail,
-                            alt: 'Video introduction to the exhibit',
+                            alt: 'Stone Letters that spell From the Top',
                         }}
                         className={styles.video}
                     />

@@ -48,7 +48,7 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         },
     },
     'texas-sized-discovery': {
-        src: 'https://youtu.be/0Gb77xpxWvY',
+        src: 'https://youtu.be/39msdHUfL1A',
         thumbnail: {
             src: texasSizedDiscoveryThumbnail,
             alt: 'Science, Logic!',
