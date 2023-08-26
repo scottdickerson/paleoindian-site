@@ -196,7 +196,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'written-in-stone',
         summary: 'Stone tools tell a story – if you ask the right questions',
         description: `<p>When archeologists find stone tools, even broken pieces, they open a window into the past. They carefully document the artifact’s position and context and then study it in the lab. </p>
-            <p>Scroll through these Paleoindian artifacts. </p>`,
+            <p>Flip through these Paleoindian artifacts. </p>`,
         interactive: <DailyLifeCarousel images={carouselData} />,
         details: (
             <>

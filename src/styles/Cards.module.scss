@@ -129,7 +129,6 @@
     transition: transform 0.7s;
     @supports (-webkit-touch-callout: none) {
         transition: all 0s;
-        transform: rotateY(var(--flipDirection));
     }
 }
 

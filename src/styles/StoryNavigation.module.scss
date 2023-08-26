@@ -43,7 +43,7 @@
 
     &.selected {
         flex-basis: 35%;
-        font-size: 20px;
+        font-size: 16px;
         font-weight: $font_semibold;
         // @media screen and (max-width: $tablet-breakpoint) {
         //   font-size: 1rem;
@@ -55,14 +55,14 @@
     @media screen and (min-width: $tablet-breakpoint) {
         font-size: 18px;
         &.selected {
-            font-size: 38px;
+            font-size: 25px;
         }
     }
 
     @media screen and (min-width: $desktop-breakpoint) {
         font-size: 20px;
         &.selected {
-            font-size: 50px;
+            font-size: 35px;
         }
     }
 }
