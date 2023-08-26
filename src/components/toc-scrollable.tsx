@@ -17,11 +17,9 @@ export const TocScrollable = ({
     const handleSectionClick = (sectionId: string) => {
         const section = document.getElementById(sectionId)
         if (section) {
-            window.location.hash = sectionId
-            if (section.id === storySections[0].id) {
-                //  top story should scroll to top of page so we show the header too
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-            }
+            window.history.replaceState(null, '', '#' + sectionId)
+            // smooth scroll so that the section element is at the top of the page
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
     }
 
@@ -46,7 +44,6 @@ export const TocScrollable = ({
                                     },
                                     styles.tocitem
                                 )}
-                                href={`#${section.id}`} // this is for accessibility
                                 onClick={() => handleSectionClick(section.id)}
                             >
                                 <span>{section.title}</span>

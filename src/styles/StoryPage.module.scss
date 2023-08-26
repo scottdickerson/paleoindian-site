@@ -9,6 +9,8 @@
 }
 
 .storyPage {
+    // Fixed header height
+    margin-top: calc($header_height / 2);
     @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         margin-right: $toc_width; // only save space if the toc is visible
     }

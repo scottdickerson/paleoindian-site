@@ -1,14 +1,23 @@
 .section {
+    // Needed to offset the fixed header size for scrolling
+    scroll-margin-top: calc($header_height / 2);
     h2,
     h3,
     p {
         margin-bottom: 1rem;
     }
 }
+.section {
+    padding-top: 2rem;
+}
 .section + .section {
-    padding-top: 3rem;
-    @media screen and (max-width: $mobile_breakpoint) {
-        padding-top: 1rem;
+    padding-top: 1rem;
+    @media screen and (min-width: $tablet_breakpoint) {
+        padding-top: 2rem;
+    }
+
+    @media screen and (min-width: $desktop_breakpoint) {
+        padding-top: 3rem;
     }
 }
 

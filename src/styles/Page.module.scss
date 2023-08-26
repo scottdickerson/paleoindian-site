@@ -3,6 +3,7 @@
     @media screen and (max-width: calc($tablet_breakpoint + 60px)) {
         padding-left: 60px;
         padding-right: 60px;
+        padding-top: 20px;
     }
     @media screen and (max-width: $mobile_breakpoint) {
         padding-left: 24px;

@@ -2,6 +2,10 @@
     display: flex;
     align-items: stretch;
     width: 100%;
+    position: fixed;
+    z-index: 200;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+        rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .navbar ul {
@@ -17,10 +21,7 @@
 
 .navbar .navitem {
     text-transform: uppercase;
-    font-size: 15px;
-    // @media screen and (max-width: $tablet-breakpoint) {
-    //   font-size: 0.9375rem;
-    // }
+    font-size: 12px;
 
     flex-grow: 1;
     flex-basis: 15%;
@@ -32,13 +33,27 @@
 
     &.selected {
         flex-basis: 55%;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: $font_semibold;
         // @media screen and (max-width: $tablet-breakpoint) {
         //   font-size: 1rem;
         // }
         cursor: not-allowed;
         pointer-events: none;
+    }
+
+    @media screen and (min-width: $tablet-breakpoint) {
+        font-size: 18px;
+        &.selected {
+            font-size: 38px;
+        }
+    }
+
+    @media screen and (min-width: $desktop-breakpoint) {
+        font-size: 20px;
+        &.selected {
+            font-size: 50px;
+        }
     }
 }
 
@@ -50,19 +65,7 @@
     align-items: stretch;
     text-align: center;
     justify-content: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-@media screen and (min-width: $tablet-breakpoint) {
-    .navbar .navitem {
-        font-size: 20px;
-        &.selected {
-            font-size: 50px;
-        }
-    }
+    padding: 0.5rem;
 }
 
 .home {
