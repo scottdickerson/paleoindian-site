@@ -27,7 +27,10 @@ export const Zoomer = ({
 }: ZoomerProps) => {
     const [isZoomed, setIsZoomed] = useState(true)
     return (
-        <div className={styles.zoomerContainer}>
+        <div
+            className={styles.zoomerContainer}
+            style={{ cursor: isZoomed ? 'zoom-out' : 'zoom-in' }}
+        >
             {isZoomed && (
                 <span className={styles.zoomerQuestion}>
                     What
@@ -42,19 +45,26 @@ export const Zoomer = ({
                         className: styles.zoomer,
                         onClick: () => setIsZoomed((isZoomed) => !isZoomed),
                     }}
+                    style={{
+                        opacity: !isZoomed ? 0 : 1,
+                        visibility: !isZoomed ? 'hidden' : 'visible',
+                    }}
                 />
             )}
+
             <ResponsiveImage
                 src={src}
                 alt={alt}
                 containerProps={{
                     className: classNames(styles.zoomer, styles.zoomedOut),
+                    onClick: () => setIsZoomed((isZoomed) => !isZoomed),
                 }}
                 style={{
                     opacity: isZoomed ? 0 : 1,
                     visibility: isZoomed ? 'hidden' : 'visible',
                     height: isZoomed ? '0' : '100%',
                     transformOrigin,
+                    transition: isZoomed ? 'inherit' : 'all 0.5s ease-in-out',
                     transform: `scale(${isZoomed ? scale : '1.0'})`,
                 }}
             />
