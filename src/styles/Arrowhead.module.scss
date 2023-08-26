@@ -7,10 +7,9 @@
     gap: 1rem;
     bottom: calc($footer-height + 3rem);
     color: white;
-    left: 50%;
+    width: 100%;
     cursor: pointer;
     z-index: 10;
-    transform: translate(-25%);
     @media screen and (max-width: calc($mobile-breakpoint + 20px)) {
         font-size: 12px;
         bottom: calc($footer-height + 1rem);

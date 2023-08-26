@@ -20,6 +20,9 @@
     width: 100vw;
     overflow-x: auto;
     overflow-y: hidden;
+    @media screen and (max-width: $tablet-breakpoint) {
+        height: 55px;
+    }
 }
 
 .navbar .navitem {

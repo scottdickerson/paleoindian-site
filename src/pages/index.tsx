@@ -26,7 +26,13 @@ export default function Home() {
                 />
             </Head>
             <section className={styles.main}>
-                <Hero />
+                <Hero
+                    onClick={() =>
+                        firstLinkRef.current?.scrollIntoView({
+                            behavior: 'smooth',
+                        })
+                    }
+                />
                 <section className={styles.intro}>
                     <p className={styles.description}>
                         When mammoths, saber-toothed cats, and giant sloths
