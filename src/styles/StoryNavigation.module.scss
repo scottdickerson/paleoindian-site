@@ -6,6 +6,9 @@
     z-index: 200;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
         rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    @media screen and (min-width: $tablet-breakpoint) {
+        height: 80px;
+    }
 }
 
 .navbar ul {
@@ -36,7 +39,7 @@
     //transition: flex-basis ease-in-out 0.2s, font-size ease-in-out 0.2s;
 
     &.selected {
-        flex-basis: 55%;
+        flex-basis: 35%;
         font-size: 20px;
         font-weight: $font_semibold;
         // @media screen and (max-width: $tablet-breakpoint) {
