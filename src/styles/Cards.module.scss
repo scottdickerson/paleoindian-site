@@ -54,11 +54,17 @@
 .rightarrow {
     right: 1vw;
     transform: translateX(60%);
+    @media screen and (max-width: $three_cards_visible_width) {
+        right: 4vw;
+    }
 }
 
 .leftarrow {
     left: 1vw;
     transform: translateX(-60%);
+    @media screen and (max-width: $three_cards_visible_width) {
+        left: 4vw;
+    }
 }
 
 @media (hover) {
