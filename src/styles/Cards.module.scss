@@ -91,6 +91,9 @@
     transform-origin: 50% 200%;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform-style: preserve-3d;
+    @supports (-webkit-touch-callout: none) {
+        transition: all 0s;
+    }
 }
 
 .cardFront,
@@ -118,6 +121,10 @@
     // on ipad pro this makes the card scale up large and overlay parent content but not on other devices
     transform: rotateY(var(--flipDirection)) translateZ(-250px);
     transition: transform 0.7s;
+    @supports (-webkit-touch-callout: none) {
+        transition: all 0s;
+        transform: rotateY(var(--flipDirection));
+    }
 }
 
 .card2 {

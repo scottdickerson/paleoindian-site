@@ -129,12 +129,15 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                     dragConstraints={{ left: 0, right: 0 }}
                     dragElastic={0}
                     onDragEnd={(event, info) => {
-                        if (info.offset.x > 0) {
-                            prevSlide()
-                        } else {
-                            nextSlide()
+                        if (Math.abs(info.offset.x) > 100) {
+                            if (info.offset.x > 0) {
+                                prevSlide()
+                            } else {
+                                nextSlide()
+                            }
                         }
                     }}
+                    onClick={() => nextSlide()}
                 ></motion.div>
             </div>
         </>
