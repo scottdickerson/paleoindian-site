@@ -11,6 +11,11 @@
 .imageContainer {
     background-color: black;
     cursor: pointer;
+    &:hover {
+        img {
+            opacity: 1;
+        }
+    }
 }
 
 .unselectedImage {
