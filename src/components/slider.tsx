@@ -69,7 +69,7 @@ export const Slider: FC<SliderProps> = ({
                 position={0}
                 handle={
                     <Image
-                        alt="slider"
+                        alt="Slider handle"
                         src={determineCorrectImage()}
                         className={styles.sliderHandle}
                         style={{

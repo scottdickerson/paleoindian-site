@@ -46,7 +46,11 @@ export default function Flipper({ images }: Props) {
                     <Image
                         src={isOpened[index] ? image.opened : image.closed}
                         className={styles.flipper}
-                        alt={`Flipper ${index + 1}`}
+                        alt={
+                            isOpened[index]
+                                ? image.alt
+                                : 'A cross section of the ocean with the ocean floor at the bottom.'
+                        }
                         fill
                     />
                     <div

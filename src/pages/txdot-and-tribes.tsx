@@ -96,7 +96,7 @@ const WorkingTogetherSection = ({
 const NativeAmericanNationsImage = () => (
     <CaptionedImage
         src={groupImageTwo}
-        alt="group"
+        alt="Group of Native Americans alongside TxDOT employees"
         caption="TxDOT works with 25 federally recognized Native American
         nations with an interest in preserving Texas history."
         photoCredit="Courtesy of Texas Department of Transportation"
@@ -110,7 +110,7 @@ interface ImageProps {
 const ArcheologistImage = ({ className }: ImageProps) => (
     <CaptionedImage
         src={archeologists}
-        alt="archeologists"
+        alt="Archeologist brushing off an artifact at a campsite"
         className={className}
         caption="TxDOT and partner archeologists work to carefully
             document sites like this ancient campsite in Denton
@@ -122,7 +122,7 @@ const ArcheologistImage = ({ className }: ImageProps) => (
 const ConsultationImage = ({ className }: ImageProps) => (
     <CaptionedImage
         src={presentation}
-        alt="presentation"
+        alt="Native American presenting at a TxDOT meeting"
         className={className}
         caption="The TxDOT Tribal Consultation process allows TxDOT to
             work with tribes to identify and determine any potential
@@ -142,7 +142,7 @@ const OutroSection = () => (
 const AlabamaCoushattaImage = () => (
     <CaptionedImage
         src={groupImage}
-        alt="group"
+        alt="Group of Coushatta Native Americans in front of the Capitol Building"
         caption="The Alabama Coushatta are one of the many federally
                         recognized sovereign Tribes with formal relationships
                         with the State of Texas."

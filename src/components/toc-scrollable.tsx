@@ -27,15 +27,16 @@ export const TocScrollable = ({
         <div className={styles.toccontainer}>
             <Image
                 src={tocBackground}
-                alt=""
+                alt="Table of Contents Background"
+                aria-hidden
                 fill
                 className={styles.tocBackgroundImage}
                 priority
             ></Image>
             <nav className={styles.tocwrapper} aria-label="Table of Contents">
-                <ul className={styles.toc}>
+                <ol className={styles.toc}>
                     {storySections.map((section) => (
-                        <ol key={section.id}>
+                        <li key={section.id}>
                             <a
                                 className={classNames(
                                     {
@@ -48,14 +49,17 @@ export const TocScrollable = ({
                             >
                                 <span>{section.title}</span>
                             </a>
-                        </ol>
+                        </li>
                     ))}
-                </ul>
+                </ol>
                 <a
                     className={styles.arrowToTop}
                     onClick={() => handleSectionClick(storySections[0].id)}
                 >
-                    <Image src={arrowPicture} alt="Back to top" />
+                    <Image
+                        src={arrowPicture}
+                        alt="Arrowhead pointing upwards"
+                    />
                 </a>
             </nav>
         </div>

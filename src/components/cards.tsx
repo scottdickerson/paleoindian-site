@@ -62,7 +62,6 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                     className={classnames(styles.arrow, styles.leftarrow)}
                 >
                     <Image
-                        id="leftArrow"
                         src={leftArrow}
                         alt="Left Arrow"
                         height={isMobile ? 36 : 48}
@@ -74,7 +73,6 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                     onClick={prevSlide}
                 >
                     <Image
-                        id="rightArrow"
                         src={rightArrow}
                         alt="Right Arrow"
                         height={isMobile ? 36 : 48}
@@ -98,14 +96,15 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                             >
                                 <Image
                                     src={cardBack}
-                                    alt={`Card ${index}`}
+                                    alt="The back of a playing card"
+                                    aria-hidden
                                     width="352"
                                     height="493"
                                     className={styles.cardBack}
                                 />
                                 <Image
                                     src={card.image}
-                                    alt={`Card ${index}`}
+                                    alt={`Playing card with cartoon illustration of a ${card.alt}.`}
                                     width="352"
                                     height="493"
                                     className={styles.cardFront}

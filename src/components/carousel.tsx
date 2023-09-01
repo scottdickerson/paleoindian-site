@@ -120,7 +120,6 @@ export function DailyLifeCarousel({ images }: Props) {
                 })}
             >
                 <Image
-                    id="leftArrow"
                     src={leftArrow}
                     alt="Left Arrow"
                     height={36}
@@ -134,7 +133,6 @@ export function DailyLifeCarousel({ images }: Props) {
                 onClick={nextSlide}
             >
                 <Image
-                    id="rightArrow"
                     src={rightArrow}
                     alt="Right Arrow"
                     height={36}

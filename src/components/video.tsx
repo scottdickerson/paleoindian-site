@@ -7,7 +7,7 @@ import playButton from './images/video/playButton.svg'
 export const PlayButton = () => {
     return (
         <div className={styles.playButton}>
-            <Image src={playButton} alt="Play video" fill />
+            <Image src={playButton} alt="Play button" fill />
         </div>
     )
 }

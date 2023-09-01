@@ -15,6 +15,7 @@ export const FlipperImages = [
         closedText: 'Carefully Documenting',
         openedText:
             'Archeologists and divers use grids to map everything they see on the ocean floor.',
+        alt: 'Scuba diver mapping the ocean floor',
     },
     {
         id: 'flipperTwo',
@@ -23,6 +24,8 @@ export const FlipperImages = [
         closedText: 'Sediment Removal',
         openedText:
             'A dredge vacuums up sediment and deposits it through a mesh screen to collect artifacts.',
+
+        alt: 'Scuba diver uses vacuum hose connected to boat on the ocean floor.',
     },
     {
         id: 'flipperThree',
@@ -31,6 +34,7 @@ export const FlipperImages = [
         closedText: 'Seabed Coring',
         openedText:
             'A machine drills into the seabed to collect long, tube-shaped samples, showing layers of ancient landscapes.',
+        alt: 'A drill is being lowered to the ocean floor from the boat',
     },
     {
         id: 'flipperFour',
@@ -39,5 +43,6 @@ export const FlipperImages = [
         closedText: 'Geospacial seafloor mapping',
         openedText:
             'Sonar devices scan the seafloor to map ancient landscapes or track the location of scattered artifacts.',
+        alt: 'A boat using a scanner on the ocean floor and a satelite scanning from the air with a city behind it.',
     },
 ]
