@@ -1,5 +1,5 @@
 .hero {
-    height: 100vh;
+    height: 120vh;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,13 @@
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    @media screen and (max-width: $desktop-breakpoint) {
-        font-size: 156px;
-        line-height: 125px;
+    @media screen and (max-width: calc($desktop-breakpoint + 400px)) {
+        font-size: 130px;
+        line-height: 105px;
     }
-    @media screen and (max-width: calc($tablet-breakpoint)) {
+    @media screen and (max-width: calc($tablet-breakpoint + 200px)) {
         background-image: url('/images/hero/hero@2x.webp');
         font-size: 120px;
         line-height: 100px;
