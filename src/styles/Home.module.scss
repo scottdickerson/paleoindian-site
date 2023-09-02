@@ -7,13 +7,14 @@
         gap: 28px;
     }
     color: #33541d;
-    padding-bottom: calc($footer-height + 1rem);
+    padding-bottom: calc($footer-height * 2);
     overflow-x: hidden;
 }
 
 .intro {
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 50px;
     align-items: center;
     justify-content: center;
     gap: 1rem;

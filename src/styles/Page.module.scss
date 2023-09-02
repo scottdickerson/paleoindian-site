@@ -1,5 +1,5 @@
 .pageWrapper {
-    padding: 40px 90px $footer_height;
+    padding: 40px 90px calc($footer_height * 2);
     @media screen and (max-width: calc($tablet_breakpoint + 60px)) {
         padding-left: 60px;
         padding-right: 60px;

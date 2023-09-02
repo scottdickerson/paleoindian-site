@@ -100,7 +100,11 @@ export default function App({ Component, pageProps }: AppProps) {
             `}</style>
             <ArrowheadContext.Provider value={{ isVisible, setIsVisible }}>
                 <div
-                    style={{ display: 'flex', flexDirection: 'column' }}
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        position: 'relative',
+                    }}
                     className={classNames(
                         encodeSansCondensed.variable,
                         glassAntiqua.variable,

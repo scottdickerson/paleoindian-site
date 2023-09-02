@@ -1,6 +1,8 @@
 .footer {
-    position: relative;
-    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: $footer_height;
     text-transform: uppercase;
 }
 

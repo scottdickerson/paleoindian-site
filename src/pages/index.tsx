@@ -8,7 +8,7 @@ import { Hero } from '@/components/hero'
 import { NavigationButtons } from '@/components/navigation-buttons'
 
 export default function Home() {
-    const firstLinkRef = useRef<HTMLAnchorElement>(null)
+    const firstLinkRef = useRef<HTMLElement>(null)
     return (
         <>
             <Head>
@@ -33,7 +33,7 @@ export default function Home() {
                         })
                     }
                 />
-                <section className={styles.intro}>
+                <section className={styles.intro} ref={firstLinkRef}>
                     <p className={styles.description}>
                         When mammoths, saber-toothed cats, and giant sloths
                         roamed Texas, people were there too.
@@ -53,7 +53,7 @@ export default function Home() {
                         }}
                         className={styles.video}
                     />
-                    <NavigationButtons firstLinkRef={firstLinkRef} />
+                    <NavigationButtons />
                 </div>
             </section>
             <ArrowheadScroller scrollTarget={firstLinkRef} />

@@ -8,6 +8,8 @@ $text_large_breakpoint: 130px;
     justify-content: center;
     width: 100%;
     cursor: pointer;
+    gap: 2px;
+    background-color: white;
 }
 
 .mobileWarningBackground {
@@ -45,7 +47,6 @@ $text_large_breakpoint: 130px;
     width: 100%;
     aspect-ratio: 137/305;
     container-type: size;
-    border-right: 1px solid white;
 }
 
 //  After it is flipped
