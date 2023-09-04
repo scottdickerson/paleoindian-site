@@ -31,7 +31,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'a-different-world',
         summary: 'Texas used to be chill and even bigger!',
         description:
-            '<p>During the last Ice Age, the Texas coastline extended farther out and the climate was cooler and wetter than it is today.</p> <p>Compare the maps below.</p>',
+            '<p>During the last Ice Age, the Texas coastline extended farther out and the climate was cooler and wetter than it is today.</p> <p>Drag the slider to the right to compare the maps.</p>',
         interactive: (
             <Slider
                 img1={{

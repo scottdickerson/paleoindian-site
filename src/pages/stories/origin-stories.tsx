@@ -76,7 +76,7 @@ const ORIGIN_STORY_SECTIONS: StorySectionProps[] = [
         summary:
             'We&apos;re not 100% sure, but a lot longer ago than scientists once thought!',
         description:
-            '<p>Archeologists have found many places with ancient campfires, tools, and evidence from people who lived about 13,000 years ago. They thought these were campsites of the first people in the Americas. Then new discoveries of even older places challenged this idea.</p><p> Compare the maps below.</p> ',
+            '<p>Archeologists have found many places with ancient campfires, tools, and evidence from people who lived about 13,000 years ago. They thought these were campsites of the first people in the Americas. Then new discoveries of even older places challenged this idea.</p><p> Drag the slider to the right to compare the maps.</p> ',
         interactive: (
             <Slider
                 img1={{
