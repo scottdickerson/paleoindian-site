@@ -58,7 +58,7 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
         <>
             <div className={styles.container}>
                 <button
-                    onClick={nextSlide}
+                    onClick={prevSlide}
                     className={classnames(styles.arrow, styles.leftarrow)}
                 >
                     <Image
@@ -70,7 +70,7 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                 </button>
                 <button
                     className={classnames(styles.arrow, styles.rightarrow)}
-                    onClick={prevSlide}
+                    onClick={nextSlide}
                 >
                     <Image
                         src={rightArrow}
