@@ -21,7 +21,7 @@ export const ExtinctionQuiz = () => (
                             title: 'YES',
                             details: `Climate change can lead to species extinction. 
     For example, a changing plant community 
-    could impact an animal's food source.`,
+    could impact an animal’s food source.`,
                         },
                     },
                     {
@@ -45,7 +45,7 @@ export const ExtinctionQuiz = () => (
                         choice: 'YES',
                         moreInformation: {
                             title: 'YES',
-                            details: `There is some evidence that a comet hit the Earth around 12,900 years ago - near the time these animals went extinct. `,
+                            details: `There is some evidence that a comet hit the Earth around 12,900 years ago — near the time these animals went extinct. `,
                         },
                     },
                     {

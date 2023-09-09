@@ -18,9 +18,9 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
     {
         title: 'Essential Inventory',
         id: 'essential-inventory',
-        summary: `People make stuff, we learn stuff – we’ve always been good at it.`,
+        summary: `People make stuff, we learn stuff – we’ve always been good at it`,
         description: `<p>16,000 years ago, everybody, everywhere lived as hunter-gatherers. But that doesn’t mean people were simple! They had deep knowledge and skills to thrive in their environments. </p>
-            <p>Flip through the cards below and put yourself in their woven grass sandals! </p>`,
+            <p>Flip through the cards below, and put yourself in their woven grass sandals! </p>`,
         interactive: (
             <Cards
                 cards={EssentialInvetoryData}
@@ -47,7 +47,8 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
                     and the seasons. They had knowledge of how to craft the
                     things they needed from natural materials. They knew which
                     plants could fill their bellies and cure aches and pains.
-                    They were experts and they needed this knowledge to survive.
+                    They were experts, and they needed this knowledge to
+                    survive.
                 </p>
                 <p>
                     Of course, there is more to life than just surviving! It is
@@ -77,13 +78,13 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
             <>
                 <p>
                     Until recently, illustrations of Paleoindian life almost
-                    always featured guys with stone spears…and not much else. We
-                    need to remember that the earliest peoples made things that
-                    are far rarer than stone in the archeological record. Woven
-                    mats and sandals, bone tools, and ceremonial items have all
-                    been found in Texas sites, usually in caves where cool, dry
-                    air helps preserve these precious clues to the lives of
-                    Paleoindians.
+                    always featured guys with stone spears… and not much else.
+                    We need to remember that the earliest peoples made things
+                    that are far rarer than stone in the archeological record.
+                    Woven mats and sandals, bone tools, and ceremonial items
+                    have all been found in Texas sites, usually in caves where
+                    cool, dry air helps preserve these precious clues to the
+                    lives of Paleoindians.
                 </p>
             </>
         ),
@@ -92,7 +93,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         title: 'What was for dinner?',
         id: 'what-was-for-dinner',
         summary: 'Maybe something easy to get?',
-        description: `<p>Paleoindians did hunt mammoths and other mega-fauna, but not every day. Would you like to bust your hump hunting a dangerous animal or would you just kick back and catch a fish?</p>
+        description: `<p>Paleoindians did hunt mammoths and other megafauna but not every day. Would you like to bust your hump hunting a dangerous animal, or would you just kick back and catch a fish?</p>
             <p>Check out what was on the menu. </p>`,
         interactive: (
             <Cards
@@ -130,7 +131,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         title: 'Life Lessons',
         id: 'life-lessons',
         summary:
-            'Ancestors of Indigenous people were the first to learn the landscape.',
+            'Ancestors of Indigenous people were the first to learn the landscape',
         description: `<p>Their knowledge was important for surviving and thriving, and it has been passed down through generations. Today, those traditions are still around, often with a modern twist. </p>
             <p>Hear from Native American people below about their favorite traditions. </p>`,
         interactive: (
@@ -153,7 +154,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
                     making. And they learned to navigate from place to place,
                     finding the best places to cross a river or a mountain. They
                     passed this knowledge and deep relationship with the
-                    landscape down through the generations, where it still flows
+                    landscape down through the generations where it still flows
                     today.
                 </p>
             </>
@@ -164,7 +165,7 @@ const DAILY_LIFE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'paleo-pets',
         summary: 'Our furry friends have a long history',
         description: `<p>Over 20,000 years ago, wolves and humans figured out that they could help each other survive. They joined forces, and the world’s oldest friendship began.</p>
-            <p>Sit, roll over and test your doggy knowledge below!</p>`,
+            <p>Sit, roll over, and test your doggy knowledge below!</p>`,
         interactive: <PetQuiz />,
         details: (
             <>

@@ -20,20 +20,20 @@ export const EssentialInvetoryData = [
         alt: 'Sharp Stick called a digging stick',
         caption: `A lot of good food is underground, but some plants with yummy roots go dormant in the winter
             and don’t look like much above the surface. Paleoindians needed knowledge of the land to know
-            where to dig`,
+            where to dig.`,
     },
     {
         id: uuidv4(),
         image: adze,
         alt: 'Adze',
-        caption: `A hand-held chopping tool was found at a Paleoindian site in Texas. Analysis showed it had starchy grains on it and had probably been used to chop away at a root vegetable.`,
+        caption: `A handheld chopping tool was found at a Paleoindian site in Texas. Analysis showed it had starchy grains on it and had probably been used to chop away at a root vegetable.`,
     },
     {
         id: uuidv4(),
         image: modifiedFlake,
         alt: 'Modified Flake',
         caption:
-            'Flakes from chert and other silicia-rich stones can be very, very sharp. Flake edges can be quickly modified –which makes the useful tools for harvesting plants, slicing meat, scraping hide  and doing many other tasks.',
+            'Flakes from chert and other silica-rich stones can be very, very sharp. Flake edges can be quickly modified – which makes them useful tools for harvesting plants, slicing meat, scraping hide, and doing many other tasks.',
     },
     {
         id: uuidv4(),
@@ -47,7 +47,7 @@ export const EssentialInvetoryData = [
         image: spear,
         alt: 'Spear with sharp stone point',
         caption:
-            'Clovis points may have been attached to a fore shaft – so that they could be attached to a longer spear or detached and used as a knife – handy! ',
+            'Clovis points may have been attached to a foreshaft so that they could be attached to a longer spear or detached and used as a knife – handy! ',
     },
     {
         id: uuidv4(),
@@ -82,7 +82,7 @@ export const EssentialInvetoryData = [
         image: basket,
         alt: 'Basket',
         caption:
-            'Baskets are among mankind’s earliest crafts are predate pottery by at least 10,000 years.  ',
+            'Baskets are among mankind’s earliest crafts and predate pottery by at least 10,000 years.  ',
     },
     {
         id: uuidv4(),
@@ -96,7 +96,7 @@ export const EssentialInvetoryData = [
         image: sandals,
         alt: 'Sandal footwear',
         caption:
-            'Paleoindians made sandals from woven grass. In addition to being super stylish, shoes would help a person walk further and faster, by providing cushioning, comfort, and protection.',
+            'Paleoindians made sandals from woven grass. In addition to being super stylish, shoes would help a person walk further and faster by providing cushioning, comfort, and protection.',
     },
     {
         id: uuidv4(),

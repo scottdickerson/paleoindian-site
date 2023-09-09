@@ -24,10 +24,10 @@ const DetailsSection = () => (
             including:
             <ul>
                 <li>Humanities Texas</li>
-                <li>Texas Memorial Museum</li>
+                <li>Texas Science & Natural History Museum</li>
                 <li> Mescalero Apache Tribe</li>
                 <li>
-                    Center for Archeological Studies, Texas State University
+                    Center for Archaeological Studies, Texas State University
                 </li>
                 <li>AmaTerra </li>
                 <li>ICF</li> <li>MuseWork Exhibits</li>

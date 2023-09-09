@@ -7,10 +7,18 @@
         flex-direction: column;
     }
 }
+
+div.photo {
+    aspect-ratio: 519/424;
+    height: unset;
+}
+
 .leftSide {
     flex-basis: 66%;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
 
     // Left and right become column on mobile
     @media screen and (max-width: $tablet_breakpoint) {
@@ -38,6 +46,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     flex-basis: 33%;
 
@@ -61,13 +70,5 @@
     // contains text on desktop
     @media screen and (min-width: $desktop_breakpoint) {
         padding: 2rem 1rem 2rem 0rem;
-    }
-
-    // Needs smaller text to fix certain desktop widths
-    @media screen and (min-width: $desktop_breakpoint) and (max-width: 1300px) {
-        span {
-            font-size: 14px;
-            line-height: 18px;
-        }
     }
 }

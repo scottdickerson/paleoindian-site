@@ -125,9 +125,9 @@ const ConsultationImage = ({ className }: ImageProps) => (
         alt="Native American presenting at a TxDOT meeting"
         className={className}
         caption="The TxDOT Tribal Consultation process allows TxDOT to
-            work with tribes to identify and determine any potential
+            work with Tribes to identify and determine any potential
             effect the project will have on places of cultural
-            significance to the tribes, including prehistoric
+            significance to the Tribes, including prehistoric
             archeological sites and cemeteries."
         photoCredit="Courtesy of Texas Department of Transportation"
     />
@@ -143,7 +143,7 @@ const AlabamaCoushattaImage = () => (
     <CaptionedImage
         src={groupImage}
         alt="Group of Coushatta Native Americans in front of the Capitol Building"
-        caption="The Alabama Coushatta are one of the many federally
+        caption="The Alabama-Coushatta are one of the many federally
                         recognized sovereign Tribes with formal relationships
                         with the State of Texas."
         photoCredit="Courtesy: Vanesa Brashier, The Courier of Montgomery County"

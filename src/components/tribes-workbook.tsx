@@ -3,9 +3,15 @@ import sharedTraditions from '@/data/txdot-and-tribes/Shared Traditions@2x.png'
 import styles from '@/styles/TribesWorkbook.module.scss'
 import captionedImageStyles from '@/styles/CaptionedImage.module.scss'
 import { ResponsiveImage } from './responsive-image'
+import classNames from 'classnames'
 
 const WorkbookCredit = () => (
-    <span className={captionedImageStyles.photoCredit}>
+    <span
+        className={classNames(
+            captionedImageStyles.caption,
+            captionedImageStyles.photoCredit
+        )}
+    >
         Courtesy of Texas Department of Transportation
     </span>
 )
@@ -14,6 +20,7 @@ const WorkbookPhoto = () => (
     <ResponsiveImage
         src={sharedTraditions}
         alt="Texas and Tribes text over mountains"
+        containerProps={{ className: styles.photo }}
     />
 )
 

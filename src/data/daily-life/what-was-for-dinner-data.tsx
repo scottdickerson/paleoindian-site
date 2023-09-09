@@ -12,7 +12,7 @@ import persimmon from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.1
 import acorns from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.11 Acorns.webp'
 import blackWalnuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.12 BlackWalnuts.webp'
 import wildRye from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.13 WildRye.webp'
-import beechNuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.14 BeechNuts.webp'
+import beechNuts from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.14 Beechnut.webp'
 import tuberRoots from '@/data/daily-life/cards/what-was-for-dinner/Paleo - 3.3.15 TuberRoots.webp'
 
 export const WhatWasForDinnerData = [
@@ -28,7 +28,7 @@ export const WhatWasForDinnerData = [
         image: rabbit,
         alt: 'rabbit',
         caption:
-            'Rabbits and other rodents could be caught with simple traps, snares, or with throwing sticks. Their furs would also be useful for clothing.',
+            'Rabbits and other rodents could be caught with simple traps, snares, or throwing sticks. Their furs would also be useful for clothing.',
     },
     {
         id: uuidv4(),
@@ -42,14 +42,14 @@ export const WhatWasForDinnerData = [
         image: deer,
         alt: 'deer',
         caption:
-            'The White-tailed Deer was pretty common in ice-age Texas, just like it is today.',
+            'The white-tailed deer was pretty common in ice-age Texas, just like it is today.',
     },
     {
         id: uuidv4(),
         image: pronghorn,
         alt: 'pronghorn',
         caption:
-            'Although the pronghorn is sometimes called the American antelope, it’s closest relative is the giraffe! The pronghorn is super-fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.',
+            'Although the pronghorn is sometimes called the American antelope, it’s closest relative is the giraffe! The pronghorn is super fast and can run up to 55 mph. Imagine the skill necessary to hunt this speedy supper.',
     },
     {
         id: uuidv4(),
@@ -70,28 +70,28 @@ export const WhatWasForDinnerData = [
         image: wineCup,
         alt: 'Flower with label Wine Cup plant',
         caption:
-            'Both the leaves and roots of this lovely flower are edible. The leaves can be used to thicken stews and the roots taste a little like sweet potatoes.',
+            'Both the leaves and roots of this lovely flower are edible. The leaves can be used to thicken stews, and the roots taste a little like sweet potatoes.',
     },
     {
         id: uuidv4(),
         image: wildGreens,
         alt: 'Wild greens',
         caption:
-            'A wild variety of edible wild greens would have grown in Texas during the last ice-age. These nutritious leaves would have been an important source of vitamins, minerals.',
+            'A wild variety of edible wild greens would have grown in Texas during the last Ice Age. These nutritious leaves would have been an important source of vitamins and minerals.',
     },
     {
         id: uuidv4(),
         image: persimmon,
         alt: 'Persimmon',
         caption:
-            'Under its bitter skin, the persimmon is a sweet fruit that could be eaten raw, cooked with acorn flour as a pudding, or dried and saved for winter. The persimmon tree’s sap and bark also had traditional medicinal uses. And, the fruit juice was used as a natural dye.',
+            'Under its bitter skin, the persimmon is a sweet fruit that could be eaten raw, cooked with acorn flour as a pudding, or dried and saved for winter. The persimmon tree’s sap and bark also had traditional medicinal uses. And the fruit juice was used as a natural dye.',
     },
     {
         id: uuidv4(),
         image: acorns,
         alt: 'Acorns',
         caption:
-            'The acorns of many kinds of oak trees were used for food. Acorns are nutritious and contain lots of fat but they must be cooked before they are safe for people to eat.',
+            'The acorns of many kinds of oak trees were used for food. Acorns are nutritious and contain lots of fat, but they must be cooked before they are safe for people to eat.',
     },
     {
         id: uuidv4(),

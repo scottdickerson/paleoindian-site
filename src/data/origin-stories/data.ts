@@ -24,11 +24,11 @@ export const TOOLTIP_CONTENT = {
     origin: 'The point or place where something begins.',
     interpreting: 'Decide and explain what something means.',
     beringLandBridge:
-        'An area of land that connected Asia to North American long ago.  It connected what is now Russia to Alaska.',
+        'An area of land that connected Asia to North America long ago.  It connected what is now Russia to Alaska.',
     migrations:
         'Long journeys taken by animals or humans moving from one home to another.',
     gaultAndFriedkinSites:
-        'These two archeological sites in Bell County Texas are very close together and probably represent one large area where people lived as long as 16,000 years ago.',
+        'These two archeological sites in Bell County, Texas are very close together and probably represent one large area where people lived as long as 16,000 years ago.',
     absoluteDating:
         'Methods to determine specific age of an object (within a time range).',
     relativeDating:

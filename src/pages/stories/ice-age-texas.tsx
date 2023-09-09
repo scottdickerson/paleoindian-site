@@ -31,7 +31,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         id: 'a-different-world',
         summary: 'Texas used to be chill and even bigger!',
         description:
-            '<p>During the last Ice Age, the Texas coastline extended farther out and the climate was cooler and wetter than it is today.</p> <p>Drag the slider to the right to compare the maps.</p>',
+            '<p>During the last Ice Age, the Texas coastline extended farther out, and the climate was cooler and wetter than it is today.</p> <p>Drag the slider to the right to compare the maps.</p>',
         interactive: (
             <Slider
                 img1={{
@@ -49,7 +49,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         details: (
             <>
                 <p>
-                    The earth has had at least five major
+                    The Earth has had at least five major
                     <Tooltip
                         trigger="Ice Ages"
                         content={TOOLTIP_CONTENT.iceAges}
@@ -59,9 +59,9 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                     very slowly over tens of thousands of years. The climate
                     slowly warmed and melting glacial ice flowed into the ocean,
                     causing sea levels to rise all over the world. By about
-                    11,000 years ago the Texas coast looked about like it does
-                    today. But the coastline isn&apos;t the only thing that
-                    changed. People, animals, and whole
+                    11,000 years ago, the Texas coast looked about like it does
+                    today. But the coastline isn’t the only thing that changed.
+                    People, animals, and whole
                     <Tooltip
                         trigger="ecosystems"
                         content={TOOLTIP_CONTENT.ecosystems}
@@ -135,31 +135,31 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 survive. Archeological sites show us that Paleoindians lived
                 alongside incredible animals that became
                 <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
-                in a changing climate. It&apos;s possible that their memories
-                became the stuff of legend!
+                in a changing climate. It’s possible that their memories became
+                the stuff of legend!
             </p>
         ),
     },
     {
         title: 'More Offshore?',
         id: 'more-offshore',
-        summary: 'Science is better, down where it&apos;s wetter',
-        description: `<p>Archeological sites aren&apos;t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
+        summary: 'Science is better, down where it’s wetter',
+        description: `<p>Archeological sites aren’t always on dry land… some of them are hidden beneath the waves! Due to rising sea levels over time, the shores people knew long ago are now deep underwater. </p>
         <p>Flip pieces of the photo below to explore techniques used in underwater archeology. </p>`,
         interactive: <Flipper images={FlipperImages} />,
         details: (
             <>
                 <p>
                     One of the most fascinating Paleoindian archeological sites
-                    in Texas isn&apos;t really an archeological site at all
-                    &mdash; it&apos;s a beach. Over the years, thousands of
-                    Paleoindian artifacts and the bones of
+                    in Texas isn’t really an archeological site at all — it’s a
+                    beach. Over the years, thousands of Paleoindian artifacts
+                    and the bones of
                     <Tooltip
                         trigger="extinct"
                         content={TOOLTIP_CONTENT.extinct}
                     />
-                    animals have washed ashore on a beach near the Texas &mdash;
-                    Louisiana border.
+                    animals have washed ashore on a beach near the
+                    Texas-Louisiana border.
                 </p>
                 <p>
                     Archeologists agree that the artifacts and bones are from an
@@ -177,19 +177,19 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         title: 'Extinction',
         id: 'extinction',
         summary: `What happened to the mammoths, sabertooth cats, and giant sloths?`,
-        description: `<p>Near the end of the last Ice Age, around 60 North American species died out. Scientists still aren&apos;t exactly sure what happened, but they have a few ideas.  What do you think happened all those years ago? </p>
-       <p> What do you think happened?</p>`,
+        description: `<p>Near the end of the last Ice Age, around 60 North American species died out. Scientists still aren’t exactly sure what happened, but they have a few ideas.</p>
+       <p> What do you think happened all those years ago? </p>`,
         interactive: <ExtinctionQuiz />,
         details: (
             <p>
                 Animal species go
                 <Tooltip trigger="extinct" content={TOOLTIP_CONTENT.extinct} />
-                all the time, it happens for a lot of reasons. But when many
-                species go extinct all at once, scientists look for a BIG reason
-                and they call it an extinction event. The Earth has had several
-                extinction events. Scientists want to understand why some
-                animals (looking at you crocodiles) lived through several while
-                other animals (RIP saber-toothed cats) didn&apos;t.
+                all the time. It happens for a lot of reasons. But when many
+                species go extinct all at once, scientists look for a BIG
+                reason, and they call it an extinction event. The Earth has had
+                several extinction events. Scientists want to understand why
+                some animals (looking at you, crocodiles) lived through several
+                while other animals (RIP sabertooth cats) didn’t.
             </p>
         ),
     },
@@ -197,7 +197,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
         title: "That's Important?",
         id: 'thats-important',
         summary: `It looks like a piece of boring rock to me…`,
-        description: `<p>Archeologists excavate sites very slowly and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
+        description: `<p>Archeologists excavate sites very slowly, and every tiny piece they find could be important! This carefully collected evidence helps us understand Paleoindians and their environments. </p>
         <p>Can you identify the evidence below?</p>`,
         interactive: (
             <ZoomerSection>
@@ -226,7 +226,7 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                         subtitle:
                             '12,000 BP, Wilson Leonard Site, Williamson County, TX',
                         details:
-                            'When people chip away at stone to make tools, tiny flakes like these break off. Archeologists study them to identify where the stone came from and even what kind thing the stone-tool artist was making.  ',
+                            'When people chip away at stone to make tools, tiny flakes like these break off. Archeologists study them to identify where the stone came from and even what kind of thing the stone tool artist was making.  ',
                     }}
                 />
                 <Zoomer
@@ -269,8 +269,8 @@ const ICE_AGE_TEXAS_SECTIONS: StorySectionProps[] = [
                 </p>
                 <p>
                     It may not look important at first glance, but this evidence
-                    helps us understand what Texas&apos; environment was like
-                    and how Paleoindian peoples interacted with their world.
+                    helps us understand what Texas’ environment was like and how
+                    Paleoindian peoples interacted with their world.
                 </p>
                 <p>
                     Beware: some collectors dig into archeological sites to find

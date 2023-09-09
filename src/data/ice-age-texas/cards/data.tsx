@@ -29,7 +29,7 @@ export const cardData = [
         image: direWolf,
         alt: 'large wolf',
         caption:
-            'Dire Wolves show up in fantasy fiction, but they were real animals—larger and stronger than modern wolves.',
+            'Dire wolves show up in fantasy fiction, but they were real animals that were larger and stronger than modern wolves.',
     },
     {
         id: uuidv4(),
@@ -43,28 +43,28 @@ export const cardData = [
         image: ancientHorse,
         alt: 'ancient horse',
         caption:
-            'Horses first evolved in North America. They spread to the rest of the world and continued to evolve and live there even after the Ancient Horse went extinct. Much later, Spaniards brought the descendants of ancient horses back to North America.',
+            'Horses first evolved in North America. They spread to the rest of the world and continued to evolve and live there even after the ancient horse went extinct. Much later, Spaniards brought the descendants of ancient horses back to North America.',
     },
     {
         id: uuidv4(),
         image: giantSloth,
         alt: 'giant sloth',
         caption:
-            'Unlike the slow-moving modern sloths, Giant Sloths were no slackers. Their giant claws and enormous size would have made them dangerous animals.',
+            'Unlike the slow-moving modern sloths, giant sloths were no slackers. Their giant claws and enormous size would have made them dangerous animals.',
     },
     {
         id: uuidv4(),
         image: armadillo,
         alt: 'armadillo',
         caption:
-            'Some species of Giant Armadillo grew to the size of a Volkswagen Beetle! If a person could get through that tough “shell,” they (and all their friends) could feast on armadillo for a month.',
+            'Some species of giant armadillo grew to the size of a Volkswagen Beetle! If a person could get through that tough “shell,” they (and all their friends) could feast on armadillo for a month.',
     },
     {
         id: uuidv4(),
         image: shortFacedBear,
         alt: 'bear',
         caption:
-            'A full-grown, male Giant Short-faced Bear was about the biggest meat-eating mammal to ever munch their way across North America.',
+            'A full-grown, male giant short-faced bear was about the biggest meat-eating mammal to ever munch their way across North America.',
     },
     {
         id: uuidv4(),
