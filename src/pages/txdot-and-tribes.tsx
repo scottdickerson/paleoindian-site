@@ -17,8 +17,9 @@ const IntroSection = () => (
             From time immemorial, the land we think of as Texas was the homeland
             of diverse groups of Native Peoples, including the ancestors of the
             many named Tribes that are still active communities today. Through
-            conquest, deceit, and theft, this land was colonized by Europeans
-            and ultimately became the State of Texas.
+            settlement, war, and broken treaties, the land was colonized by
+            Spain, then Mexico, and ultimately became the State of Texas within
+            the United States of America.
         </p>
     </section>
 )

@@ -27,8 +27,7 @@ const WorkbookPhoto = () => (
 const WorkbookExplanation = () => (
     <span className={captionedImageStyles.caption}>
         Working together TxDOT and Tribal representatives created this
-        educational booklet. You can download a copy here or in the Educator’s
-        Guide.
+        educational booklet. You can download a copy here.
     </span>
 )
 
@@ -42,7 +41,11 @@ export const TexasAndTribesSharedTraditionsWorkbook = ({
     })
 
     return (
-        <a href="/pdfs/Ice Age Texas Cards.pdf" download className={className}>
+        <a
+            href="/pdfs/Texas And Tribes Workbook.pdf"
+            download
+            className={className}
+        >
             <div className={styles.container}>
                 <div className={styles.leftSide}>
                     {isTablet ? <WorkbookExplanation /> : <WorkbookPhoto />}
