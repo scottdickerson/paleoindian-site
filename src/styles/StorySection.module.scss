@@ -1,6 +1,4 @@
 .section {
-    // Needed to offset the fixed header size for scrolling
-    scroll-margin-top: calc($header_height / 2);
     p {
         margin-bottom: 1rem;
     }
@@ -38,6 +36,8 @@
 }
 
 .title {
+    // Needed to offset the fixed header size for scrolling
+    scroll-margin-top: calc($header_height);
     font-size: 15px;
     font-weight: $font_black;
     margin-bottom: 22px;
@@ -140,4 +140,16 @@
 
 .activityLink {
     padding-top: 15px;
+    text-transform: uppercase;
+    font-family: var(--encode-sans-black);
+
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 13px;
+        line-height: 19px;
+    }
 }

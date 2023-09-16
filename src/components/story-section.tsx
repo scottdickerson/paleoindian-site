@@ -1,11 +1,21 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react'
+import {
+    ReactNode,
+    forwardRef,
+    useContext,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
 import styles from '../styles/StorySection.module.scss'
-// import * as DOMPurify from "dompurify";
 import { StoryPageContext } from './story-page'
 import classNames from 'classnames'
 import { useOnScreen } from '@/utils/customHooks'
 import { ResponsiveImage } from './responsive-image'
 import { PageLink } from './page-link'
+
+/**
+ * Utility function helps determine when to switch the highlighted section in the TOC
+ **/
 
 export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
     if (element) {
@@ -26,6 +36,31 @@ export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
     }
     return false
 }
+
+interface StorySectionTitleProps {
+    id: string
+    title?: string
+}
+
+export const StorySectionTitle = forwardRef<
+    HTMLHeadingElement,
+    StorySectionTitleProps
+>(({ id, title }, ref) => (
+    // even if no title is passed, we must render the h2 so that the id is set for ToC and anchor links
+    <h2
+        id={id}
+        className={classNames(styles.title, {
+            [styles.titleHidden]: !title,
+        })}
+        ref={ref}
+    >
+        {title ? title : ''}
+    </h2>
+))
+
+export const StorySectionSummary = ({ summary }: { summary: ReactNode }) => (
+    <h3 className={classNames(styles.summary)}>{summary} </h3>
+)
 
 export interface StorySectionProps {
     /* unique id used to link from the TOC */
@@ -74,7 +109,9 @@ export const StorySection = ({
         if (
             setHighlightedSection &&
             isHeadingInView &&
-            takesUpMostOfTheViewport(sectionRef.current)
+            takesUpMostOfTheViewport(sectionRef.current) &&
+            // only scroll ToC when we haven't directly clicked
+            !window.location.hash
         ) {
             setHighlightedSection(id)
         }
@@ -82,15 +119,7 @@ export const StorySection = ({
 
     return (
         <div className={classNames(styles.section, className)}>
-            <h2
-                id={id}
-                className={classNames(styles.title, {
-                    [styles.titleHidden]: !title,
-                })}
-                ref={headingRef}
-            >
-                {title ? title : ''}
-            </h2>
+            <StorySectionTitle ref={headingRef} title={title} id={id} />
             <div className={styles.articleRow}>
                 <article
                     className={classNames(
@@ -100,7 +129,7 @@ export const StorySection = ({
                     )}
                     ref={sectionRef}
                 >
-                    <h3 className={classNames(styles.summary)}>{summary} </h3>
+                    <StorySectionSummary summary={summary} />
                     <div className={styles.description}>{description}</div>
                     {interactive && (
                         <div className={styles.interactive}>{interactive}</div>

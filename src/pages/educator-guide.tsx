@@ -14,6 +14,8 @@ import cardsImage from '@/data/educator-guide/Cards@2x.png'
 import careersImage from '@/data/educator-guide/Careers@2x.png'
 import { ResponsiveImage } from '@/components/responsive-image'
 import classNames from 'classnames'
+import { PageLink } from '@/components/page-link'
+import { ROUTES } from '@/utils/routes'
 
 const EDUCATOR_GUIDE_SECTIONS: TocScrollableProps['storySections'] = [
     {
@@ -73,12 +75,24 @@ const OriginStoriesOverview = () => (
                     className: styles.originStoriesOverviewImage,
                 }}
             />
-            <span className={styles.storyTitle}>Origin Stories</span> considers
-            how people arrived in Texas by exploring the sacred stories of
-            Native Americans alongside the discoveries and interpretations of
-            archeologists. This section includes a video overview of three
-            Native American creation stories. You and your students can learn
-            more about these stories here.
+            <PageLink
+                className={styles.storyTitle}
+                href={ROUTES.ORIGIN_STORIES}
+            >
+                Origin Stories
+            </PageLink>{' '}
+            considers how people arrived in Texas by exploring the sacred
+            stories of Native Americans alongside the discoveries and
+            interpretations of archeologists. This section includes a video
+            overview of three Native American creation stories. You and your
+            students can learn more about these stories{' '}
+            <PageLink
+                className={styles.storyTitle}
+                href={ROUTES.SACRED_STORIES}
+            >
+                here
+            </PageLink>
+            .
         </p>
     </div>
 )
@@ -93,9 +107,12 @@ const IceAgeTexasOverview = () => (
                     className: styles.iceAgeTexasOverviewImage,
                 }}
             />
-            The <span className={styles.storyTitle}>Ice-age Texas</span> section
-            helps students understand the ways in which the “Texas” discovered
-            by Paleoindians was different from the one we know today.
+            The{' '}
+            <PageLink className={styles.storyTitle} href={ROUTES.ICE_AGE_TEXAS}>
+                Ice-age Texas
+            </PageLink>{' '}
+            section helps students understand the ways in which the “Texas”
+            discovered by Paleoindians was different from the one we know today.
             Interactive maps explain changing coastlines, and fun illustrations
             present students with an opportunity to learn about the animals and
             plants that Paleoindian people relied upon.
@@ -103,7 +120,14 @@ const IceAgeTexasOverview = () => (
             <br />
             This section includes a video overview of three Native American
             stories featuring chaotic monsters and change. You and your students
-            can learn more about these stories here.
+            can learn more about these stories{' '}
+            <PageLink
+                className={styles.storyTitle}
+                href={ROUTES.MONSTERS_AND_MAYHEM}
+            >
+                here
+            </PageLink>
+            .
         </p>
     </div>
 )
@@ -118,10 +142,12 @@ const DailyLifeOverview = () => (
                     className: styles.dailyLifeOverviewImage,
                 }}
             />
-            <span className={styles.storyTitle}>Daily Life</span> explains what
-            it was like to be hunter-gatherers and investigates the tools they
-            used. This section highlights artifacts and discoveries from Texas
-            and beyond.
+            <PageLink className={styles.storyTitle} href={ROUTES.DAILY_LIFE}>
+                Daily Life
+            </PageLink>{' '}
+            explains what it was like to be hunter-gatherers and investigates
+            the tools they used. This section highlights artifacts and
+            discoveries from Texas and beyond.
         </p>
     </div>
 )

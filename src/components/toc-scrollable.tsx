@@ -12,7 +12,8 @@ export interface TocScrollableProps {
 }
 
 export const TocScrollable = ({ storySections }: TocScrollableProps) => {
-    const { highlightedSection } = useContext(StoryPageContext) || {}
+    const { highlightedSection, setHighlightedSection } =
+        useContext(StoryPageContext) || {}
 
     const handleSectionClick = (sectionId: string) => {
         const section = document.getElementById(sectionId)
@@ -20,6 +21,7 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
             window.history.replaceState(null, '', '#' + sectionId)
             // smooth scroll so that the section element is at the top of the page
             section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            setHighlightedSection?.(sectionId)
         }
     }
 
@@ -54,7 +56,9 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
                 </ol>
                 <a
                     className={styles.arrowToTop}
-                    onClick={() => handleSectionClick(storySections[0].id)}
+                    onClick={() =>
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }
                 >
                     <Image
                         src={arrowPicture}

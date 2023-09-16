@@ -49,6 +49,8 @@ export default function App({ Component, pageProps }: AppProps) {
                         display: 'flex',
                         flexDirection: 'column',
                         position: 'relative',
+                        minHeight: '100vh',
+                        backgroundColor: '#F6F3EB',
                     }}
                     className={classNames(
                         glassAntiqua.variable,

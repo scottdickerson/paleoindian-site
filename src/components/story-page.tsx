@@ -16,14 +16,17 @@ export const StoryPageContext = createContext<StoryPageContextValues | null>(
 const StoryPageProvider = ({
     children,
     className,
-}: PropsWithChildren<{ className?: string }>) => {
+    firstSectionId,
+}: PropsWithChildren<{ className?: string; firstSectionId: string }>) => {
     const [highlightedSection, setHighlightedSection] = useState<string | null>(
         null
     )
     useEffect(() => {
         // This useEffect seems meaningless, however it causes all of the child components to re-render which makes them have their refs set
         console.log('parent useEffect triggered')
-        setHighlightedSection('')
+        setHighlightedSection(
+            window.location.hash.replace('#', '') || firstSectionId
+        )
     }, [])
 
     return (
@@ -53,7 +56,10 @@ export const StoryPage = ({
                 <title>{title}</title>
             </Head>
 
-            <StoryPageProvider className={className}>
+            <StoryPageProvider
+                className={className}
+                firstSectionId={storySections[0].id}
+            >
                 {children}
                 <TocScrollable storySections={storySections}></TocScrollable>
             </StoryPageProvider>

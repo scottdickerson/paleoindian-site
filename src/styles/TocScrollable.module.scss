@@ -25,6 +25,7 @@ $toc_background_overlap: 30px;
     z-index: 3;
     margin-right: $toc_background_overlap;
     position: relative;
+    height: 398px;
 }
 
 .toc {
@@ -32,8 +33,8 @@ $toc_background_overlap: 30px;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    gap: 10px;
     position: relative;
+    height: 100%;
 }
 
 .toc .tocitem {

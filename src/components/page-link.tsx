@@ -6,8 +6,8 @@ import classNames from 'classnames'
 export interface PageLinkProps
     extends LinkProps,
         HTMLAttributes<HTMLAnchorElement> {
-    // is the link going forward or backward
-    isForward: boolean
+    // is the link going forward or backward, leave undefined for no arrow
+    isForward?: boolean
 }
 export const PageLink = ({
     isForward,
@@ -16,8 +16,16 @@ export const PageLink = ({
     ...props
 }: PropsWithChildren<PageLinkProps>) => (
     <Link className={classNames(styles.pageLink, className)} {...props}>
-        {!isForward ? <span className={styles.direction}>&lt;&lt;</span> : ''}
+        {isForward === false ? (
+            <span className={styles.direction}>&lt;&lt;&nbsp;</span>
+        ) : (
+            ''
+        )}
         {children}
-        {isForward ? <span className={styles.direction}>&gt;&gt;</span> : ''}
+        {isForward === true ? (
+            <span className={styles.direction}>&nbsp;&gt;&gt;</span>
+        ) : (
+            ''
+        )}
     </Link>
 )
