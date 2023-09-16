@@ -29,11 +29,11 @@ export interface StorySectionProps {
     /* unique id used to link from the TOC */
     id: string
     /* all of these properties support HTML being passed within the string */
-    title: string
-    summary: string
-    description: string
+    title?: string
+    summary: ReactNode
+    description: ReactNode
     details: ReactNode
-    interactive: ReactNode
+    interactive?: ReactNode
 }
 
 export const StorySection = ({
@@ -70,19 +70,11 @@ export const StorySection = ({
 
     return (
         <article className={styles.section} id={id} ref={sectionRef}>
-            <h2
-                className={styles.title}
-                dangerouslySetInnerHTML={{ __html: title }}
-                ref={headingRef}
-            />
-            <h3
-                className={classNames(styles.summary)}
-                dangerouslySetInnerHTML={{ __html: summary }}
-            />
-            <div
-                className={styles.description}
-                dangerouslySetInnerHTML={{ __html: description }}
-            />
+            <h2 className={styles.title} ref={headingRef}>
+                {title}
+            </h2>
+            <h3 className={classNames(styles.summary)}>{summary} </h3>
+            <div className={styles.description}>{description}</div>
             <div className={styles.interactive}>{interactive}</div>
             <div className={styles.details}>{details}</div>
         </article>
