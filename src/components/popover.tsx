@@ -3,7 +3,7 @@ import * as PopoverPrimitive from '@radix-ui/react-popover'
 import styles from '@/styles/Popover.module.scss'
 import { useMotionValueEvent, useScroll } from 'framer-motion'
 import classNames from 'classnames'
-import { encodeSansCondensed } from '@/pages/_app'
+import { encodeSansCondensed } from '@/utils/fonts'
 
 export const PopoverTrigger = (props: PopoverPrimitive.PopoverTriggerProps) => (
     <PopoverPrimitive.Trigger {...props} className={styles.popoverTrigger} />

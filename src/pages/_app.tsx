@@ -9,80 +9,24 @@ import { useRouter } from 'next/router'
 import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
 import pageStyles from '@/styles/Page.module.scss'
-import {
-    Encode_Sans,
-    Rubik_Dirt,
-    Encode_Sans_Condensed,
-    Glass_Antiqua,
-} from '@next/font/google'
+
 import { Footer } from '@/components/footer'
 import { TooltipProvider } from '@radix-ui/react-tooltip'
 import { Header } from '@/components/header'
 import { ArrowheadContext } from '@/components/arrowhead-scroller'
 import { useState } from 'react'
-
-const encodeSans = Encode_Sans({ subsets: ['latin'], display: 'swap' })
-const glassAntiqua = Glass_Antiqua({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: '400',
-    variable: '--glass-antiqua',
-})
-export const rubikDirt = Rubik_Dirt({
-    subsets: ['latin'],
-    weight: '400',
-    display: 'swap',
-    variable: '--rubik-dirt',
-})
-
-export const encodeSansBold = Encode_Sans({
-    subsets: ['latin'],
-    weight: '600',
-    display: 'swap',
-    variable: '--encode-sans-bold',
-})
-
-export const encodeSansExtraBold = Encode_Sans({
-    subsets: ['latin'],
-    weight: '700',
-    display: 'swap',
-    variable: '--encode-sans-extra-bold',
-})
-
-export const encodeSansCondensedBold = Encode_Sans_Condensed({
-    subsets: ['latin'],
-    weight: '600',
-    display: 'swap',
-    variable: '--encode-sans-condensed-bold',
-})
-
-export const encodeSansCondensedSemibold = Encode_Sans_Condensed({
-    subsets: ['latin'],
-    weight: '500',
-    display: 'swap',
-    variable: '--encode-sans-condensed-semi-bold',
-})
-
-export const encodeSansCondensedExtrabold = Encode_Sans_Condensed({
-    subsets: ['latin'],
-    weight: '700',
-    display: 'swap',
-    variable: '--encode-sans-condensed-extra-bold',
-})
-
-export const encodeSansCondensedBlack = Encode_Sans_Condensed({
-    subsets: ['latin'],
-    weight: '900',
-    display: 'swap',
-    variable: '--encode-sans-condensed-black',
-})
-
-export const encodeSansCondensed = Encode_Sans_Condensed({
-    subsets: ['latin'],
-    weight: '400',
-    display: 'swap',
-    variable: '--encode-sans-condensed',
-})
+import {
+    encodeSans,
+    encodeSansBold,
+    encodeSansCondensed,
+    encodeSansCondensedBlack,
+    encodeSansCondensedBold,
+    encodeSansCondensedExtrabold,
+    encodeSansCondensedSemibold,
+    encodeSansExtraBold,
+    glassAntiqua,
+    rubikDirt,
+} from '@/utils/fonts'
 
 const isPageAStory = (pathname: string) => {
     return pathname.includes(STORIES_PATH)
@@ -133,7 +77,9 @@ export default function App({ Component, pageProps }: AppProps) {
                             { [pageStyles.pageWrapper]: pathname !== '/' },
                             {
                                 [styles.storyPageContainer]:
-                                    isPageAStory(pathname),
+                                    isPageAStory(pathname) ||
+                                    // Educator guide looks like a story page
+                                    pathname === '/educator-guide',
                             }
                         )}
                     >

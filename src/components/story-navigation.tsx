@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/StoryNavigation.module.scss'
 import classNames from 'classnames'
-import { rubikDirt } from '@/pages/_app'
+import { rubikDirt } from '@/utils/fonts'
 
 export const STORIES_PATH = '/stories'
 
