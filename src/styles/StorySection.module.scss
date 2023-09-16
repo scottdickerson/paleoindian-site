@@ -1,8 +1,6 @@
 .section {
     // Needed to offset the fixed header size for scrolling
     scroll-margin-top: calc($header_height / 2);
-    h2,
-    h3,
     p {
         margin-bottom: 1rem;
     }
@@ -20,10 +18,29 @@
         padding-top: 3rem;
     }
 }
+.articleRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.articleWithTitle {
+    padding-left: 18px;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.articleNarrow {
+    width: 75%;
+}
 
 .title {
     font-size: 15px;
     font-weight: $font_black;
+    margin-bottom: 22px;
 
     text-transform: uppercase;
     text-align: center;
@@ -44,6 +61,10 @@
         font-size: 13px;
         line-height: 40px;
     }
+}
+
+.titleHidden {
+    margin-bottom: 0;
 }
 
 .summary {
@@ -99,4 +120,24 @@
         font-size: 18px;
         line-height: 26px;
     }
+}
+
+.pacing {
+    font-family: --var(encode-sans-condensed-semi-bold);
+    font-size: 26px;
+    line-height: 35px;
+
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+.activityLink {
+    padding-top: 15px;
 }

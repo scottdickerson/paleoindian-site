@@ -1,67 +1,92 @@
-.contentWrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content min-content;
-    gap: 1rem;
-    max-width: 1500px;
+div.educatorGuide,
+section.educatorGuide {
+    padding-top: 0;
+    margin-top: 0;
 }
 
-.headingAndDescription {
+.educatorGuideRow {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.tabletWrapper {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    gap: 1rem;
-    .imageWrapper {
-        width: 100%;
-
-        .caption {
-            align-self: flex-start;
-        }
-    }
-    .buttonWrapper {
-        justify-content: flex-start;
-    }
-}
-
-.buttonWrapper {
-    bottom: 0%;
-    display: flex;
-
-    padding-top: 2rem;
-    gap: 1rem;
-}
-
-.imageWrapper {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    grid-row: span 3;
+    justify-content: center;
+    gap: 32px;
 }
 
-.image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.storyTitle {
+    color: $section_title_color;
+    font-family: var(--encode-sans-bold);
 }
 
-.caption {
-    margin-top: 2%;
-    bottom: 0%;
+.tooltipRow {
+    align-items: center;
 }
 
-/* Media query for mobile devices */
-@media (max-width: $desktop_breakpoint) {
-    .contentWrapper {
-        grid-template-columns: 1fr;
+.tooltipExampleText {
+    max-width: 300px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: var(--encode-sans-condensed);
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
     }
-    .buttonWrapper {
-        justify-content: center;
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+.tooltipExampleImage {
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+}
+
+.welcomeMoreInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+div.originStoriesOverviewImage {
+    width: 25%;
+    max-width: 200px;
+    min-width: 100px;
+    float: left;
+}
+
+div.iceAgeTexasOverviewImage {
+    width: 60%;
+    min-width: 100px;
+    float: right;
+}
+
+div.dailyLifeOverviewImage {
+    width: 30%;
+    min-width: 100px;
+    float: left;
+}
+
+.rightImage {
+    padding-top: 43px;
+}
+
+div.interpretImage {
+    width: 25%;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+div.workbookImage {
+    width: 45%;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+.educatorGuideSection {
+    gap: 0px;
+
+    > {
+        width: 75%;
     }
 }

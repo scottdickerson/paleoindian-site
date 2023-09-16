@@ -4,6 +4,8 @@ import styles from '../styles/StorySection.module.scss'
 import { StoryPageContext } from './story-page'
 import classNames from 'classnames'
 import { useOnScreen } from '@/utils/customHooks'
+import { ResponsiveImage } from './responsive-image'
+import { PageLink } from './page-link'
 
 export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
     if (element) {
@@ -34,6 +36,12 @@ export interface StorySectionProps {
     description: ReactNode
     details: ReactNode
     interactive?: ReactNode
+    className?: string
+    image?: ReturnType<typeof ResponsiveImage>
+    /** amount of time required */
+    pacing?: string
+    /** link to more details */
+    activityLink?: string
 }
 
 export const StorySection = ({
@@ -43,6 +51,10 @@ export const StorySection = ({
     description,
     details,
     interactive,
+    className,
+    image,
+    pacing,
+    activityLink,
 }: StorySectionProps) => {
     const { setHighlightedSection } = useContext(StoryPageContext) || {}
     const sectionRef = useRef<HTMLElement>(null)
@@ -69,14 +81,46 @@ export const StorySection = ({
     }, [scrollProgress, isHeadingInView, setHighlightedSection])
 
     return (
-        <article className={styles.section} id={id} ref={sectionRef}>
-            <h2 className={styles.title} ref={headingRef}>
-                {title}
+        <div className={classNames(styles.section, className)}>
+            <h2
+                id={id}
+                className={classNames(styles.title, {
+                    [styles.titleHidden]: !title,
+                })}
+                ref={headingRef}
+            >
+                {title ? title : ''}
             </h2>
-            <h3 className={classNames(styles.summary)}>{summary} </h3>
-            <div className={styles.description}>{description}</div>
-            <div className={styles.interactive}>{interactive}</div>
-            <div className={styles.details}>{details}</div>
-        </article>
+            <div className={styles.articleRow}>
+                <article
+                    className={classNames(
+                        image ? styles.articleRowNarrow : undefined,
+                        styles.article,
+                        title ? styles.articleWithTitle : undefined
+                    )}
+                    ref={sectionRef}
+                >
+                    <h3 className={classNames(styles.summary)}>{summary} </h3>
+                    <div className={styles.description}>{description}</div>
+                    {interactive && (
+                        <div className={styles.interactive}>{interactive}</div>
+                    )}
+                    <div className={styles.details}>{details}</div>
+                    {pacing && (
+                        <div className={styles.pacing}>Pacing: {pacing}</div>
+                    )}
+                    {activityLink && (
+                        <PageLink
+                            isForward
+                            href={activityLink}
+                            className={styles.activityLink}
+                        >
+                            Activity Information
+                        </PageLink>
+                    )}
+                </article>
+                {image && image}
+            </div>
+        </div>
     )
 }

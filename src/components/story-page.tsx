@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { PropsWithChildren, useState, createContext, useEffect } from 'react'
 import styles from '../styles/StoryPage.module.scss'
 import { TocScrollable, TocScrollableProps } from './toc-scrollable'
+import classNames from 'classnames'
 
 interface StoryPageContextValues {
     highlightedSection: string | null
@@ -12,7 +13,10 @@ export const StoryPageContext = createContext<StoryPageContextValues | null>(
     null
 )
 
-const StoryPageProvider = ({ children }: PropsWithChildren) => {
+const StoryPageProvider = ({
+    children,
+    className,
+}: PropsWithChildren<{ className?: string }>) => {
     const [highlightedSection, setHighlightedSection] = useState<string | null>(
         null
     )
@@ -26,7 +30,9 @@ const StoryPageProvider = ({ children }: PropsWithChildren) => {
         <StoryPageContext.Provider
             value={{ highlightedSection, setHighlightedSection }}
         >
-            <section className={styles.storyPage}>{children}</section>
+            <section className={classNames(styles.storyPage, className)}>
+                {children}
+            </section>
         </StoryPageContext.Provider>
     )
 }
@@ -34,10 +40,12 @@ const StoryPageProvider = ({ children }: PropsWithChildren) => {
 export const StoryPage = ({
     title,
     children,
+    className,
     storySections = [],
 }: PropsWithChildren<{
     title: string
     storySections: TocScrollableProps['storySections']
+    className?: string
 }>) => {
     return (
         <>
@@ -45,7 +53,7 @@ export const StoryPage = ({
                 <title>{title}</title>
             </Head>
 
-            <StoryPageProvider>
+            <StoryPageProvider className={className}>
                 {children}
                 <TocScrollable storySections={storySections}></TocScrollable>
             </StoryPageProvider>

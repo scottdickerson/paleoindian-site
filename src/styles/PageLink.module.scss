@@ -1,0 +1,18 @@
+.pageLink {
+    color: $section_title_color;
+    text-transform: uppercase;
+    font-family: var(--encode-sans-black);
+
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 13px;
+        line-height: 19px;
+    }
+}
+.direction {
+    color: $section_title_background_color;
+}

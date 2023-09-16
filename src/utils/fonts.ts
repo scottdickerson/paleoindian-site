@@ -33,6 +33,13 @@ export const encodeSansExtraBold = Encode_Sans({
     variable: '--encode-sans-extra-bold',
 })
 
+export const encodeSansBlack = Encode_Sans({
+    subsets: ['latin'],
+    weight: '900',
+    display: 'swap',
+    variable: '--encode-sans-black',
+})
+
 export const encodeSansCondensedBold = Encode_Sans_Condensed({
     subsets: ['latin'],
     weight: '600',

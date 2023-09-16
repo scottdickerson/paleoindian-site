@@ -17,6 +17,7 @@ import { ArrowheadContext } from '@/components/arrowhead-scroller'
 import { useState } from 'react'
 import {
     encodeSans,
+    encodeSansBlack,
     encodeSansBold,
     encodeSansCondensed,
     encodeSansCondensedBlack,
@@ -50,13 +51,14 @@ export default function App({ Component, pageProps }: AppProps) {
                         position: 'relative',
                     }}
                     className={classNames(
-                        encodeSansCondensed.variable,
                         glassAntiqua.variable,
                         rubikDirt.variable,
-                        encodeSansCondensedBold.variable,
                         encodeSansBold.variable,
                         encodeSansExtraBold.variable,
+                        encodeSansBlack.variable,
+                        encodeSansCondensed.variable,
                         encodeSansCondensedSemibold.variable,
+                        encodeSansCondensedBold.variable,
                         encodeSansCondensedExtrabold.variable,
                         encodeSansCondensedBlack.variable
                     )}
