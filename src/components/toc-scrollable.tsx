@@ -7,11 +7,11 @@ import tocBackground from './images/toc/tocBackground.svg'
 import Image from 'next/image'
 import arrowPicture from './images/toc/tocArrow.svg'
 
-export const TocScrollable = ({
-    storySections,
-}: {
-    storySections: StorySectionProps[]
-}) => {
+export interface TocScrollableProps {
+    storySections: Pick<StorySectionProps, 'id' | 'title'>[]
+}
+
+export const TocScrollable = ({ storySections }: TocScrollableProps) => {
     const { highlightedSection } = useContext(StoryPageContext) || {}
 
     const handleSectionClick = (sectionId: string) => {
