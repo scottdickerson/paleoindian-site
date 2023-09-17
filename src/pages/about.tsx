@@ -6,7 +6,9 @@ import { useMediaQuery } from 'react-responsive'
 import { PhotoCredits } from '@/components/photo-credits'
 
 const Heading = () => (
-    <h1 className={sectionStyles.summary}>About the Exhibit</h1>
+    <h1 className={classNames(sectionStyles.summary, styles.heading)}>
+        About the Exhibit
+    </h1>
 )
 
 const Description = () => (

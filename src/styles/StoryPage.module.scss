@@ -9,10 +9,26 @@
 }
 
 .storyPage {
+    padding-top: 20px;
     // Fixed header height
     margin-top: calc($header_height / 2);
     @media screen and (min-width: $desktop-breakpoint) and (min-height: $toc_height) {
         margin-right: $toc_width; // only save space if the toc is visible
     }
     max-width: $page_max_width;
+
+    article + article {
+        padding-top: 1rem;
+        @media screen and (min-width: $tablet_breakpoint) {
+            padding-top: 2rem;
+        }
+
+        @media screen and (min-width: $desktop_breakpoint) {
+            padding-top: 3rem;
+        }
+    }
+}
+.storyPageInlineHeader {
+    padding-top: 0;
+    margin-top: 0;
 }

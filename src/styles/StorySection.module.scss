@@ -3,19 +3,6 @@
         margin-bottom: 1rem;
     }
 }
-.section {
-    padding-top: 3rem;
-}
-.section + .section {
-    padding-top: 1rem;
-    @media screen and (min-width: $tablet_breakpoint) {
-        padding-top: 2rem;
-    }
-
-    @media screen and (min-width: $desktop_breakpoint) {
-        padding-top: 3rem;
-    }
-}
 .articleRow {
     display: flex;
     flex-direction: row;

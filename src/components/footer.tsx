@@ -15,7 +15,7 @@ interface FooterProps {
 export const Footer = ({ className, pagePath }: FooterProps) => {
     const isFixed =
         useMediaQuery({
-            query: '(min-height: 800px)',
+            query: '(min-height: 768px)',
         }) && pagePath !== '/'
 
     return (

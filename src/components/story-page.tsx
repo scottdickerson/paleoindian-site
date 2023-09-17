@@ -44,10 +44,12 @@ export const StoryPage = ({
     title,
     children,
     className,
+    isHeaderInline,
     storySections = [],
 }: PropsWithChildren<{
     title: string
     storySections: TocScrollableProps['storySections']
+    isHeaderInline?: boolean
     className?: string
 }>) => {
     return (
@@ -57,7 +59,10 @@ export const StoryPage = ({
             </Head>
 
             <StoryPageProvider
-                className={className}
+                className={classNames(
+                    className,
+                    isHeaderInline && styles.storyPageInlineHeader
+                )}
                 firstSectionId={storySections[0].id}
             >
                 {children}

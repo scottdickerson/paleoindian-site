@@ -92,7 +92,7 @@ export const StorySection = ({
     activityLink,
 }: StorySectionProps) => {
     const { setHighlightedSection } = useContext(StoryPageContext) || {}
-    const sectionRef = useRef<HTMLElement>(null)
+    const sectionRef = useRef<HTMLDivElement>(null)
     const headingRef = useRef<HTMLHeadingElement>(null)
     const [scrollProgress, setScrollProgress] = useState(0)
 
@@ -118,12 +118,12 @@ export const StorySection = ({
     }, [scrollProgress, isHeadingInView, setHighlightedSection])
 
     return (
-        <div className={classNames(styles.section, className)}>
+        <article className={classNames(styles.section, className)}>
             <StorySectionTitle ref={headingRef} title={title} id={id} />
             <div className={styles.articleRow}>
-                <article
+                <div
                     className={classNames(
-                        image ? styles.articleRowNarrow : undefined,
+                        image ? styles.divRowNarrow : undefined,
                         styles.article,
                         title ? styles.articleWithTitle : undefined
                     )}
@@ -149,9 +149,9 @@ export const StorySection = ({
                             Activity Information
                         </PageLink>
                     )}
-                </article>
+                </div>
                 {image && image}
             </div>
-        </div>
+        </article>
     )
 }

@@ -36,6 +36,7 @@ export const ActivityCardGame = () => {
         <StoryPage
             title="Texas Paleoindian - Card Game"
             storySections={ACTIVITIES_CARD_GAME_SECTIONS}
+            isHeaderInline
         >
             <StorySection
                 {...ACTIVITIES_CARD_GAME_SECTIONS[0]}

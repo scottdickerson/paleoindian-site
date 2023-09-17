@@ -157,7 +157,7 @@ const EducatorGuide = () => {
         <StoryPage
             title="Texas Paleoindian - Educator Guide"
             storySections={EDUCATOR_GUIDE_SECTIONS}
-            className={styles.educatorGuide}
+            isHeaderInline
         >
             <StorySection
                 id={EDUCATOR_GUIDE_SECTIONS[0]?.id}

@@ -5,11 +5,19 @@
     gap: 1rem;
     max-width: 1500px;
 }
+.tabletWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .topRow {
     grid-column: 1 / span 2;
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+.heading {
+    padding-top: 21px;
 }
 
 .partners {
