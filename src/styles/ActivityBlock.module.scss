@@ -1,0 +1,16 @@
+.activityBlock {
+    width: 100%;
+    background-color: rgba($color: #5f5842, $alpha: 0.1);
+    // undo padding of section
+    transform: translateX(-18px);
+    border-radius: 22px;
+    padding: 40px;
+    h4 {
+        padding-bottom: 1rem;
+        font-family: var(--encode-sans-medium);
+    }
+}
+
+.activityBlockSmall {
+    padding: 24px 34px;
+}

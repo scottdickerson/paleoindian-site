@@ -1,0 +1,33 @@
+.dictionaryList {
+    div {
+        padding-bottom: 1rem;
+    }
+    dt::after {
+        content: ' - ';
+    }
+    dt {
+        font-family: var(--encode-sans-medium);
+        display: inline;
+    }
+    dd {
+        display: inline;
+    }
+}
+
+.activityBlocks {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.materials {
+    padding-bottom: 1rem;
+    li {
+        padding-bottom: 1rem;
+    }
+}
+
+.teksSection {
+    font-size: 16px;
+    line-height: 25px;
+}

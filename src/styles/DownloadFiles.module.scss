@@ -1,0 +1,21 @@
+.downloadFiles {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.link {
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0.25rem 0rem;
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}

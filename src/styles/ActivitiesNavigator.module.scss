@@ -1,0 +1,61 @@
+.activitiesNavigator {
+    background-color: $color_purple;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.activitiesNavigatorList {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+}
+
+.activitiesNavigatorListItem {
+    color: white;
+    font-family: var(--encode-sans-black);
+    font-size: 15px;
+    line-height: 22px;
+    @media screen and (max-width: $mobile_breakpoint) {
+        font-size: 10px;
+        line-height: 13px;
+    }
+    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    text-transform: uppercase;
+}
+
+.activitiesNavigatorLink {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seeActivities {
+    font-family: var(--encode-sans-condensed-semi-bold);
+    font-size: 26px;
+    line-height: 35px;
+    white-space: nowrap;
+    color: $color_yellow;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
+        font-size: 23px;
+        line-height: 31px;
+    }
+}

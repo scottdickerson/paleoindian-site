@@ -44,7 +44,7 @@ export default function Home() {
                         first people to call Texas home.
                     </p>
                 </section>
-                <div className={styles.videoSection}>
+                <div className={styles.videoSection} id="from-the-top">
                     <YouTubeVideo
                         src="https://youtu.be/UlrrNFO4jCs"
                         thumbnail={{

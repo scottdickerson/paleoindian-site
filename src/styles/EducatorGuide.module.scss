@@ -25,11 +25,11 @@ section.educatorGuide {
     font-size: 20px;
     line-height: 24px;
     font-family: var(--encode-sans-condensed);
-    @media screen and (max-width: $mobile_breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
         font-size: 10px;
         line-height: 13px;
     }
-    @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
+    @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop_breakpoint) {
         font-size: 15px;
         line-height: 21px;
     }
