@@ -54,8 +54,6 @@
 
 .linkSelected {
     color: rgb(246, 243, 235);
-    pointer-events: none;
-    cursor: default;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {

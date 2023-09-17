@@ -33,7 +33,9 @@ export const Footer = ({ className, pagePath }: FooterProps) => {
                         <Link
                             href={ROUTES.EDUCATOR_GUIDE}
                             className={
-                                pagePath === ROUTES.EDUCATOR_GUIDE
+                                pagePath === ROUTES.EDUCATOR_GUIDE ||
+                                pagePath.includes('activities') ||
+                                pagePath.includes('bibliography')
                                     ? styles.linkSelected
                                     : undefined
                             }
