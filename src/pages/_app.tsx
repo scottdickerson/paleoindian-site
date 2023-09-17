@@ -92,6 +92,10 @@ export default function App({ Component, pageProps }: AppProps) {
                             {
                                 [styles.storyPageContainer]:
                                     shouldPageHaveToC(pathname),
+                            },
+                            {
+                                [pageStyles.pageWithHomeHeader]:
+                                    !isPageAStory(pathname) && pathname !== '/',
                             }
                         )}
                     >

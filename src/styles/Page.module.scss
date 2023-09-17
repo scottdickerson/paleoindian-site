@@ -11,3 +11,16 @@
         padding-top: 24px;
     }
 }
+
+main.pageWithHomeHeader {
+    padding-top: calc($simple_header_height_widescreen + 2rem);
+    @media screen and (max-width: calc($widescreen-breakpoint)) {
+        padding-top: calc($simple_header_height_desktop + 2rem);
+    }
+    @media screen and (max-width: calc($desktop-breakpoint)) {
+        padding-top: calc($simple_header_height_tablet + 2rem);
+    }
+    @media screen and (max-width: calc($mobile-breakpoint + 100px)) {
+        padding-top: calc($simple_header_height_mobile + 2rem);
+    }
+}

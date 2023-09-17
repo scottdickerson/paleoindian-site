@@ -39,7 +39,7 @@ export const ActivityClassroom = () => {
         <StoryPage
             title="Texas Paleoindian - Classroom Activities"
             storySections={ACTIVITIES_CLASSROOM_SECTIONS}
-            isHeaderInline
+            isHomeHeader
         >
             <StorySection
                 {...ACTIVITIES_CLASSROOM_SECTIONS[0]}

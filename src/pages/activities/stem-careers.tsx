@@ -36,7 +36,7 @@ export const ActivityStemCareers = () => {
         <StoryPage
             title="Texas Paleoindian - Stem Careers"
             storySections={ACTIVITIES_STEM_CAREERS_SECTIONS}
-            isHeaderInline
+            isHomeHeader
         >
             <StorySection
                 {...ACTIVITIES_STEM_CAREERS_SECTIONS[0]}

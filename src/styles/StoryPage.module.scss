@@ -33,10 +33,20 @@
         scroll-margin-top: calc($header_height);
     }
 }
-.storyPageInlineHeader {
-    padding-top: 0;
-    margin-top: 0;
+.storyPageWithHomeHeader {
+    padding-top: 0rem;
+    margin-top: 0rem;
+
     h2 {
-        scroll-margin-top: 1rem;
+        scroll-margin-top: calc($simple_header_height_widescreen + 1rem);
+        @media screen and (max-width: calc($widescreen-breakpoint)) {
+            scroll-margin-top: calc($simple_header_height_desktop + 1rem);
+        }
+        @media screen and (max-width: calc($desktop-breakpoint)) {
+            scroll-margin-top: calc($simple_header_height_tablet + 1rem);
+        }
+        @media screen and (max-width: calc($mobile-breakpoint + 100px)) {
+            scroll-margin-top: calc($simple_header_height_mobile + 1rem);
+        }
     }
 }

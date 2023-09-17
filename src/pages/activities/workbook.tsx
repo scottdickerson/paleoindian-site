@@ -35,7 +35,7 @@ export const ActivitiesWorkbook = () => {
         <StoryPage
             title="Texas Paleoindian - Workbooks"
             storySections={ACTIVITIES_WORKBOOK_SECTIONS}
-            isHeaderInline
+            isHomeHeader
         >
             <StorySection
                 {...ACTIVITIES_WORKBOOK_SECTIONS[0]}

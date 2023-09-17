@@ -1,6 +1,7 @@
 $mobile-breakpoint: 480px;
 $tablet-breakpoint: 767px;
 $desktop-breakpoint: 1024px;
+$widescreen-breakpoint: 1600px;
 
 $full_chrome_height: 800px;
 
@@ -24,6 +25,11 @@ $color_purple: #691256;
 $header_height: 84px;
 $footer_height: 60px;
 $page_max_width: 1200px;
+
+$simple_header_height_widescreen: 120px;
+$simple_header_height_desktop: 84px;
+$simple_header_height_tablet: 80px;
+$simple_header_height_mobile: 60px;
 
 $three_cards_visible_width: calc($tablet-breakpoint - 1px);
 
