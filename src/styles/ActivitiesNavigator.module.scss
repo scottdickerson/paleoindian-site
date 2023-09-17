@@ -6,6 +6,10 @@
     align-items: center;
     padding: 1.5rem;
     margin-top: 3rem;
+    @media screen and (max-width: $mobile_breakpoint) {
+        margin-top: 1.5rem;
+        padding: 1rem 1rem;
+    }
 }
 
 .activitiesNavigatorList {
@@ -15,6 +19,10 @@
     width: 100%;
     justify-content: space-between;
     padding: 0rem 3rem;
+    @media screen and (max-width: $mobile_breakpoint) {
+        padding: 0rem 1rem;
+        gap: 0.5rem;
+    }
 }
 
 .activitiesNavigatorListItem {
@@ -23,7 +31,7 @@
     font-size: 15px;
     line-height: 22px;
     @media screen and (max-width: $mobile_breakpoint) {
-        font-size: 10px;
+        font-size: 8px;
         line-height: 13px;
     }
     @media screen and (min-width: $mobile_breakpoint) and (max-width: $desktop_breakpoint) {
@@ -51,8 +59,8 @@
     color: $color_yellow;
 
     @media screen and (max-width: $mobile-breakpoint) {
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 13px;
+        line-height: 18px;
     }
     @media screen and (min-width: $mobile-breakpoint) and (max-width: $desktop-breakpoint) {
         font-size: 23px;
