@@ -67,8 +67,8 @@ export interface StorySectionProps {
     id: string
     /* all of these properties support HTML being passed within the string */
     title?: string
-    summary: ReactNode
-    description: ReactNode
+    summary?: ReactNode
+    description?: ReactNode
     details: ReactNode
     interactive?: ReactNode
     className?: string
@@ -129,8 +129,10 @@ export const StorySection = ({
                     )}
                     ref={sectionRef}
                 >
-                    <StorySectionSummary summary={summary} />
-                    <div className={styles.description}>{description}</div>
+                    {summary && <StorySectionSummary summary={summary} />}
+                    {description && (
+                        <div className={styles.description}>{description}</div>
+                    )}
                     {interactive && (
                         <div className={styles.interactive}>{interactive}</div>
                     )}

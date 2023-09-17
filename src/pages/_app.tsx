@@ -25,12 +25,21 @@ import {
     encodeSansCondensedExtrabold,
     encodeSansCondensedSemibold,
     encodeSansExtraBold,
+    encodeSansMedium,
     glassAntiqua,
     rubikDirt,
 } from '@/utils/fonts'
 
 const isPageAStory = (pathname: string) => {
     return pathname.includes(STORIES_PATH)
+}
+
+const shouldPageHaveToC = (pathname: string) => {
+    return (
+        isPageAStory(pathname) ||
+        pathname === '/educator-guide' ||
+        pathname.includes('/activities')
+    )
 }
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -55,6 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
                     className={classNames(
                         glassAntiqua.variable,
                         rubikDirt.variable,
+                        encodeSansMedium.variable,
                         encodeSansBold.variable,
                         encodeSansExtraBold.variable,
                         encodeSansBlack.variable,
@@ -81,9 +91,7 @@ export default function App({ Component, pageProps }: AppProps) {
                             { [pageStyles.pageWrapper]: pathname !== '/' },
                             {
                                 [styles.storyPageContainer]:
-                                    isPageAStory(pathname) ||
-                                    // Educator guide looks like a story page
-                                    pathname === '/educator-guide',
+                                    shouldPageHaveToC(pathname),
                             }
                         )}
                     >

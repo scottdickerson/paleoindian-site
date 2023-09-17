@@ -18,7 +18,7 @@
     }
     li {
         padding: 12px 0;
-        @media screen and (max-width: $mobile_breakpoint) {
+        @media screen and (max-width: $mobile-breakpoint) {
             padding: 6px 0;
         }
     }
@@ -28,7 +28,7 @@
     font-family: var(--encode-sans-condensed-semi-bold);
     font-size: 17px;
     line-height: 36px;
-    @media screen and (max-width: $mobile_breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
         font-size: 12px;
         line-height: 17px;
     }
@@ -39,7 +39,7 @@
     p {
         padding-top: 12px;
 
-        @media screen and (max-width: $mobile_breakpoint) {
+        @media screen and (max-width: $mobile-breakpoint) {
             font-size: 10px;
             line-height: 16px;
         }

@@ -19,6 +19,13 @@ export const rubikDirt = Rubik_Dirt({
     variable: '--rubik-dirt',
 })
 
+export const encodeSansMedium = Encode_Sans({
+    subsets: ['latin'],
+    weight: '500',
+    display: 'swap',
+    variable: '--encode-sans-medium',
+})
+
 export const encodeSansBold = Encode_Sans({
     subsets: ['latin'],
     weight: '600',

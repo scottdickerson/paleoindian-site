@@ -231,7 +231,7 @@ const EducatorGuide = () => {
                     />
                 }
                 pacing="30 minutes"
-                activityLink="/classroom"
+                activityLink={ROUTES.ACTIVITIES_CLASSROOM}
             />
 
             <StorySection
@@ -262,7 +262,7 @@ const EducatorGuide = () => {
                     />
                 }
                 pacing="30 minutes"
-                activityLink="/card-game"
+                activityLink={ROUTES.ACTIVITIES_CARD_GAME}
             />
             <StorySection
                 {...EDUCATOR_GUIDE_SECTIONS[4]}
@@ -277,7 +277,7 @@ const EducatorGuide = () => {
                     />
                 }
                 pacing="varies depending on the depth of research"
-                activityLink="/research"
+                activityLink={ROUTES.ACTIVITIES_STEM_CAREERS}
             />
         </StoryPage>
     )
