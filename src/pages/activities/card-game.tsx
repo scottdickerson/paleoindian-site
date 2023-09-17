@@ -65,6 +65,10 @@ export const ActivityCardGame = () => {
                                         title: ' Click here to download printing instructions',
                                         href: '/pdfs/A Time Before Texas - Print Instructions.pdf',
                                     },
+                                    {
+                                        title: 'Click here to download Game Instructions',
+                                        href: '/pdfs/A Time Before Texas - Game Guide.pdf',
+                                    },
                                 ]}
                             />
                         </ActivityBlock>

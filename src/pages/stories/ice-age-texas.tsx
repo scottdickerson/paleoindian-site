@@ -128,13 +128,7 @@ const OriginStories = () => {
                         </p>
                     </>
                 }
-                interactive={
-                    <Cards
-                        cards={cardData}
-                        pdf="/pdfs/Ice Age Texas Cards.pdf"
-                        cardBack={cardBack}
-                    />
-                }
+                interactive={<Cards cards={cardData} cardBack={cardBack} />}
                 details={
                     <p>
                         Large body size is an

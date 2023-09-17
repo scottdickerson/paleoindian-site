@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import leftArrow from '@/components/images/cards/LeftArrow.svg'
 import rightArrow from '@/components/images/cards/RightArrow.svg'
 import { useMediaQuery } from 'react-responsive'
+import Link from 'next/link'
+import { ROUTES } from '@/utils/routes'
 
 export const calculateVisibleCardArray = (
     cardData: any[],
@@ -22,11 +24,10 @@ export const calculateVisibleCardArray = (
 
 interface CardProps {
     cards: { id: string; image: StaticImageData; caption: string }[]
-    pdf: string
     cardBack: StaticImageData
 }
 
-const Cards = ({ cards, pdf, cardBack }: CardProps) => {
+const Cards = ({ cards, cardBack }: CardProps) => {
     const isMobile = useMediaQuery({ query: '(max-width: 500px)' })
     const [current, setCurrent] = useState(2)
     const length = cards.length
@@ -115,11 +116,14 @@ const Cards = ({ cards, pdf, cardBack }: CardProps) => {
                 </div>
                 <div className={styles.background}></div>
                 <span className={styles.text}>{cards[current].caption}</span>
-                <a className={styles.downloadButton} href={pdf} download>
+                <Link
+                    className={styles.downloadButton}
+                    href={ROUTES.ACTIVITIES_CARD_GAME}
+                >
                     <span className={styles.playAlong}>Play along!</span> Click
                     here to download printable cards and play the
                     hunter-gatherer game.
-                </a>
+                </Link>
                 {/* This div is to handle the swipe animation */}
                 <motion.div
                     className={styles.swipeContainer}

@@ -66,11 +66,7 @@ const DailyLife = () => {
                     </>
                 }
                 interactive={
-                    <Cards
-                        cards={EssentialInvetoryData}
-                        pdf="/pdfs/Ice Age Texas Cards.pdf"
-                        cardBack={cardBack}
-                    />
+                    <Cards cards={EssentialInvetoryData} cardBack={cardBack} />
                 }
                 details={
                     <>
@@ -153,11 +149,7 @@ const DailyLife = () => {
                     </>
                 }
                 interactive={
-                    <Cards
-                        cards={WhatWasForDinnerData}
-                        pdf="/pdfs/Ice Age Texas Cards.pdf"
-                        cardBack={cardBack}
-                    />
+                    <Cards cards={WhatWasForDinnerData} cardBack={cardBack} />
                 }
                 details={
                     <>
