@@ -21,7 +21,6 @@ $toc_background_overlap: 30px;
 }
 
 .tocwrapper {
-    padding-left: 1rem;
     z-index: 3;
     margin-right: $toc_background_overlap;
     position: relative;
@@ -50,12 +49,27 @@ $toc_background_overlap: 30px;
     cursor: pointer;
     line-height: 18px;
     font-weight: $font_black;
-    border-radius: 12px 0 0 12px;
 
     &.highlighted {
-        background-color: $color_yellow;
         cursor: default;
+        position: relative;
     }
+}
+
+.tocListItem {
+    min-width: 240px;
+}
+
+.tocText {
+    max-width: 170px;
+}
+.highlightedBackground {
+    background-color: $color_yellow;
+    position: absolute;
+    border-radius: 12px 0 0 12px;
+    inset: 0;
+    left: 1rem;
+    z-index: -1;
 }
 
 .tocBackgroundImage {

@@ -27,8 +27,16 @@
             padding-top: 3rem;
         }
     }
+
+    h2 {
+        // Needed to offset the fixed header size for scrolling
+        scroll-margin-top: calc($header_height);
+    }
 }
 .storyPageInlineHeader {
     padding-top: 0;
     margin-top: 0;
+    h2 {
+        scroll-margin-top: 1rem;
+    }
 }

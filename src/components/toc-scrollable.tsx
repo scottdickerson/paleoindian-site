@@ -38,7 +38,7 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
             <nav className={styles.tocwrapper} aria-label="Table of Contents">
                 <ol className={styles.toc}>
                     {storySections.map((section) => (
-                        <li key={section.id} className={styles.listItem}>
+                        <li key={section.id} className={styles.tocListItem}>
                             <a
                                 className={classNames(
                                     {
@@ -49,7 +49,16 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
                                 )}
                                 onClick={() => handleSectionClick(section.id)}
                             >
-                                <span>{section.title}</span>
+                                <div className={styles.tocText}>
+                                    {section.title}
+                                </div>
+                                <div
+                                    className={
+                                        highlightedSection === section.id
+                                            ? styles.highlightedBackground
+                                            : undefined
+                                    }
+                                ></div>
                             </a>
                         </li>
                     ))}

@@ -22,8 +22,6 @@
 }
 
 .title {
-    // Needed to offset the fixed header size for scrolling
-    scroll-margin-top: calc($header_height);
     font-size: 15px;
     font-weight: $font_black;
     margin-bottom: 22px;
