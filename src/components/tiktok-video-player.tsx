@@ -36,7 +36,11 @@ const ThumbnailGallery = ({
         <div className={classNames(styles.thumbnailGallery, className)}>
             {images.map(({ src, alt, id, videoSrc }) => {
                 return shouldPlayInline && selectedImage === id ? (
-                    <TikTokVideo src={videoSrc} isStarted></TikTokVideo>
+                    <TikTokVideo
+                        key={id}
+                        src={videoSrc}
+                        isStarted
+                    ></TikTokVideo>
                 ) : (
                     <ResponsiveImage
                         key={id}
