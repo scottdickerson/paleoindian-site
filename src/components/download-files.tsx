@@ -14,7 +14,7 @@ export const DownloadFiles = ({ files }: DownloadFilesProps) => (
         <Image src={workbookIcon} alt="Workbook icon" />
         <ul>
             {files.map(({ title, href }) => (
-                <li>
+                <li key={href}>
                     <a
                         className={classNames(
                             pageLinkStyles.pageLink,

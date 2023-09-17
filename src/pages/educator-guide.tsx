@@ -247,7 +247,7 @@ const EducatorGuide = () => {
                     />
                 }
                 pacing="60 minutes (Short on time? It also can be completed in 30 minutes.)"
-                activityLink="/workbook"
+                activityLink={ROUTES.ACTIVITIES_WORKBOOK}
             />
             <StorySection
                 {...EDUCATOR_GUIDE_SECTIONS[3]}

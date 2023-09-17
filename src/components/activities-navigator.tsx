@@ -13,7 +13,10 @@ export const ActivitiesNavigator = ({
             <span className={styles.seeActivities}>See other activities:</span>
             <ul className={styles.activitiesNavigatorList}>
                 {activitiesLinks.map(({ href, title }) => (
-                    <li className={styles.activitiesNavigatorListItem}>
+                    <li
+                        className={styles.activitiesNavigatorListItem}
+                        key={href}
+                    >
                         <Link
                             className={styles.activitiesNavigatorLink}
                             href={href}

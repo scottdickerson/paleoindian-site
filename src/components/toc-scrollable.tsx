@@ -38,7 +38,7 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
             <nav className={styles.tocwrapper} aria-label="Table of Contents">
                 <ol className={styles.toc}>
                     {storySections.map((section) => (
-                        <li key={section.id}>
+                        <li key={section.id} className={styles.listItem}>
                             <a
                                 className={classNames(
                                     {

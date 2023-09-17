@@ -111,7 +111,8 @@ export const StorySection = ({
             isHeadingInView &&
             takesUpMostOfTheViewport(sectionRef.current) &&
             // only scroll ToC when we haven't directly clicked
-            !window.location.hash
+            !window.location.hash &&
+            scrollProgress > 0
         ) {
             setHighlightedSection(id)
         }
