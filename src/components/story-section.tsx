@@ -1,9 +1,21 @@
-import { ReactNode, useContext, useEffect, useRef, useState } from 'react'
+import {
+    ReactNode,
+    forwardRef,
+    useContext,
+    useEffect,
+    useRef,
+    useState,
+} from 'react'
 import styles from '../styles/StorySection.module.scss'
-// import * as DOMPurify from "dompurify";
 import { StoryPageContext } from './story-page'
 import classNames from 'classnames'
 import { useOnScreen } from '@/utils/customHooks'
+import { ResponsiveImage } from './responsive-image'
+import { PageLink } from './page-link'
+
+/**
+ * Utility function helps determine when to switch the highlighted section in the TOC
+ **/
 
 export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
     if (element) {
@@ -25,6 +37,31 @@ export const takesUpMostOfTheViewport = (element: HTMLElement | null) => {
     return false
 }
 
+interface StorySectionTitleProps {
+    id: string
+    title?: string
+}
+
+export const StorySectionTitle = forwardRef<
+    HTMLHeadingElement,
+    StorySectionTitleProps
+>(({ id, title }, ref) => (
+    // even if no title is passed, we must render the h2 so that the id is set for ToC and anchor links
+    <h2
+        id={id}
+        className={classNames(styles.title, {
+            [styles.titleHidden]: !title,
+        })}
+        ref={ref}
+    >
+        {title ? title : ''}
+    </h2>
+))
+
+export const StorySectionSummary = ({ summary }: { summary: ReactNode }) => (
+    <h3 className={classNames(styles.summary)}>{summary} </h3>
+)
+
 export interface StorySectionProps {
     /* unique id used to link from the TOC */
     id: string
@@ -34,6 +71,12 @@ export interface StorySectionProps {
     description: ReactNode
     details: ReactNode
     interactive?: ReactNode
+    className?: string
+    image?: ReturnType<typeof ResponsiveImage>
+    /** amount of time required */
+    pacing?: string
+    /** link to more details */
+    activityLink?: string
 }
 
 export const StorySection = ({
@@ -43,6 +86,10 @@ export const StorySection = ({
     description,
     details,
     interactive,
+    className,
+    image,
+    pacing,
+    activityLink,
 }: StorySectionProps) => {
     const { setHighlightedSection } = useContext(StoryPageContext) || {}
     const sectionRef = useRef<HTMLElement>(null)
@@ -62,21 +109,47 @@ export const StorySection = ({
         if (
             setHighlightedSection &&
             isHeadingInView &&
-            takesUpMostOfTheViewport(sectionRef.current)
+            takesUpMostOfTheViewport(sectionRef.current) &&
+            // only scroll ToC when we haven't directly clicked
+            !window.location.hash
         ) {
             setHighlightedSection(id)
         }
     }, [scrollProgress, isHeadingInView, setHighlightedSection])
 
     return (
-        <article className={styles.section} id={id} ref={sectionRef}>
-            <h2 className={styles.title} ref={headingRef}>
-                {title}
-            </h2>
-            <h3 className={classNames(styles.summary)}>{summary} </h3>
-            <div className={styles.description}>{description}</div>
-            <div className={styles.interactive}>{interactive}</div>
-            <div className={styles.details}>{details}</div>
-        </article>
+        <div className={classNames(styles.section, className)}>
+            <StorySectionTitle ref={headingRef} title={title} id={id} />
+            <div className={styles.articleRow}>
+                <article
+                    className={classNames(
+                        image ? styles.articleRowNarrow : undefined,
+                        styles.article,
+                        title ? styles.articleWithTitle : undefined
+                    )}
+                    ref={sectionRef}
+                >
+                    <StorySectionSummary summary={summary} />
+                    <div className={styles.description}>{description}</div>
+                    {interactive && (
+                        <div className={styles.interactive}>{interactive}</div>
+                    )}
+                    <div className={styles.details}>{details}</div>
+                    {pacing && (
+                        <div className={styles.pacing}>Pacing: {pacing}</div>
+                    )}
+                    {activityLink && (
+                        <PageLink
+                            isForward
+                            href={activityLink}
+                            className={styles.activityLink}
+                        >
+                            Activity Information
+                        </PageLink>
+                    )}
+                </article>
+                {image && image}
+            </div>
+        </div>
     )
 }

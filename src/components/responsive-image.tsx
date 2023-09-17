@@ -17,8 +17,8 @@ export const ResponsiveImage = ({
         <div
             {...containerProps}
             className={classNames(
-                styles.responsiveImageContainer,
-                containerProps?.className
+                containerProps?.className,
+                styles.responsiveImageContainer
             )}
         >
             <Image

@@ -7,6 +7,9 @@
 }
 .topRow {
     grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .partners {
@@ -15,6 +18,9 @@
     }
     li {
         padding: 12px 0;
+        @media screen and (max-width: $mobile_breakpoint) {
+            padding: 6px 0;
+        }
     }
 }
 

@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import styles from '@/styles/EducatorGuide.module.scss'
-import aboutStyles from '@/styles/About.module.scss'
+import styles from '@/styles/About.module.scss'
 import sectionStyles from '@/styles/StorySection.module.scss'
 import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
@@ -19,7 +18,7 @@ const Description = () => (
 )
 
 const DetailsSection = () => (
-    <div className={classNames(sectionStyles.details, aboutStyles.partners)}>
+    <div className={classNames(sectionStyles.details, styles.partners)}>
         <p>
             This exhibit would not be possible without TxDOT’s many partners,
             including:
@@ -40,10 +39,8 @@ const DetailsSection = () => (
 
 const CopyrightSection = () => (
     <div>
-        <section className={aboutStyles.copyright}>
-            <span className={aboutStyles.copyrightTitle}>
-                Copyright & Fair Use
-            </span>
+        <section className={styles.copyright}>
+            <span className={styles.copyrightTitle}>Copyright & Fair Use</span>
             <p>
                 This online exhibit contains, references and interprets both
                 copyrighted materials and materials in the public domain. Those
@@ -64,9 +61,9 @@ const CopyrightSection = () => (
                 copyright or other proprietary notices included in the Content.
             </p>
         </section>
-        <section className={aboutStyles.copyright}>
+        <section className={styles.copyright}>
             <br />
-            <span className={aboutStyles.copyrightTitle}>
+            <span className={styles.copyrightTitle}>
                 <em>That’s Important</em> Artifact Images:
             </span>
             <PhotoCredits
@@ -102,8 +99,8 @@ const CopyrightSection = () => (
             />
             <br />
         </section>
-        <section className={aboutStyles.copyright}>
-            <span className={aboutStyles.copyrightTitle}>
+        <section className={styles.copyright}>
+            <span className={styles.copyrightTitle}>
                 <em>Written in Stone</em> Artifact Images:
             </span>
             <PhotoCredits
@@ -136,11 +133,11 @@ const AboutTablet = () => (
 const AboutDesktop = () => {
     return (
         <>
-            <div className={aboutStyles.contentWrapper}>
+            <div className={styles.contentWrapper}>
                 <div
                     className={classNames(
                         styles.headingAndDescription,
-                        aboutStyles.topRow
+                        styles.topRow
                     )}
                 >
                     <Heading />
