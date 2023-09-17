@@ -7,6 +7,7 @@ import Link from 'next/link'
 import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
 import { ROUTES } from '@/utils/routes'
+import dynamic from 'next/dynamic'
 
 interface FooterProps {
     className?: string
@@ -80,3 +81,5 @@ export const Footer = ({ className, pagePath }: FooterProps) => {
         </footer>
     )
 }
+
+export default dynamic(() => Promise.resolve(Footer), { ssr: false })

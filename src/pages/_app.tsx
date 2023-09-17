@@ -10,7 +10,7 @@ import classNames from 'classnames'
 import styles from '@/styles/StoryPage.module.scss'
 import pageStyles from '@/styles/Page.module.scss'
 
-import { Footer } from '@/components/footer'
+import Footer from '@/components/footer'
 import { TooltipProvider } from '@radix-ui/react-tooltip'
 import { Header } from '@/components/header'
 import { ArrowheadContext } from '@/components/arrowhead-scroller'
