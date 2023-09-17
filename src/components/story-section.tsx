@@ -128,6 +128,7 @@ export const StorySection = ({
                         styles.article,
                         title ? styles.articleWithTitle : undefined
                     )}
+                    id={`section-${id}`}
                     ref={sectionRef}
                 >
                     {summary && <StorySectionSummary summary={summary} />}

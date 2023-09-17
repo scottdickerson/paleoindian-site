@@ -18,9 +18,9 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
     const handleSectionClick = (sectionId: string) => {
         const section = document.getElementById(sectionId)
         if (section) {
-            window.history.replaceState(null, '', '#' + sectionId)
+            window.location.hash = sectionId
             // smooth scroll so that the section element is at the top of the page
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            // section.scrollIntoView({ behavior: 'smooth', block: 'start' })
             setHighlightedSection?.(sectionId)
         }
     }
@@ -65,9 +65,12 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
                 </ol>
                 <a
                     className={styles.arrowToTop}
-                    onClick={() =>
-                        window.scrollTo({ top: 0, behavior: 'smooth' })
-                    }
+                    onClick={() => {
+                        // reset hash to retrigger scrolling tracking
+                        window.location.hash = ''
+                        window.scrollTo({ top: 0, behavior: 'auto' })
+                        setHighlightedSection?.(storySections[0].id)
+                    }}
                 >
                     <Image
                         src={arrowPicture}
