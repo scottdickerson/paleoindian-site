@@ -6,6 +6,7 @@ import footerBackground from './images/footer/footerBackground.svg'
 import Link from 'next/link'
 import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
+import { ROUTES } from '@/utils/routes'
 
 interface FooterProps {
     className?: string
@@ -29,20 +30,47 @@ export const Footer = ({ className, pagePath }: FooterProps) => {
             <nav className={styles.footerNav}>
                 <ul className={styles.footerLinks}>
                     <li>
-                        <Link href="/educator-guide">Educator Guide</Link>
+                        <Link
+                            href={ROUTES.EDUCATOR_GUIDE}
+                            className={
+                                pagePath === ROUTES.EDUCATOR_GUIDE
+                                    ? styles.linkSelected
+                                    : undefined
+                            }
+                        >
+                            Educator Guide
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/txdot-and-tribes">TxDOT and Tribes</Link>
+                        <Link
+                            href={ROUTES.TXDOT_AND_TRIBES}
+                            className={
+                                pagePath === ROUTES.TXDOT_AND_TRIBES
+                                    ? styles.linkSelected
+                                    : undefined
+                            }
+                        >
+                            TxDOT and Tribes
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/about">About the exhibit</Link>
+                        <Link
+                            href={ROUTES.ABOUT}
+                            className={
+                                pagePath === ROUTES.ABOUT
+                                    ? styles.linkSelected
+                                    : undefined
+                            }
+                        >
+                            About the exhibit
+                        </Link>
                     </li>
                 </ul>
             </nav>
 
             <Image
                 src={footerBackground}
-                alt="Crosssection of ground"
+                alt="Cross-section of underground"
                 className={styles.footerImage}
                 fill
                 priority

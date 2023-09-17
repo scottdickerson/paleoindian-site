@@ -1,15 +1,20 @@
 export const ROUTES = {
-    DAILY_LIFE: '/stories/daily-life',
     HOME: '/',
     ORIGIN_STORIES: '/stories/origin-stories',
+    DAILY_LIFE: '/stories/daily-life',
     ICE_AGE_TEXAS: '/stories/ice-age-texas',
-    SACRED_STORIES: '/bibliography/sacred-stories',
-    MONSTERS_AND_MAYHEM: '/bibliography/monsters-and-mayhem',
+
     EDUCATOR_GUIDE: '/educator-guide',
+    TXDOT_AND_TRIBES: '/txdot-and-tribes',
+    ABOUT: '/about',
+
     ACTIVITIES_CLASSROOM: '/activities/classroom',
     ACTIVITIES_WORKBOOK: '/activities/workbook',
     ACTIVITIES_CARD_GAME: '/activities/card-game',
     ACTIVITIES_STEM_CAREERS: '/activities/stem-careers',
+
+    SACRED_STORIES: '/bibliography/sacred-stories',
+    MONSTERS_AND_MAYHEM: '/bibliography/monsters-and-mayhem',
     FROM_THE_TOP_VIDEO: '/#from-the-top',
     MORE_THAN_STONE_VIDEO: '/stories/daily-life#not-just-stone-age',
     AMAZING_ANIMALS: '/stories/ice-age-texas#amazing-animals',
