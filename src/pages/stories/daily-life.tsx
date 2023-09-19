@@ -4,8 +4,7 @@ import { StorySection } from '@/components/story-section'
 import { StoryPage } from '@/components/story-page'
 import Cards from '@/components/cards'
 import { YouTubeVideo } from '@/components/youtube-video'
-import moreThanStoneThumbnail from '@/data/daily-life/videos/3-2_TitleCard@2x.webp'
-import { TOOLTIP_CONTENT } from '@/data/origin-stories/data'
+import { TOOLTIP_CONTENT, YOUTUBE_VIDEOS } from '@/data/data'
 import { TikTokPlayer } from '@/components/tiktok-video-player'
 import { PetQuiz } from '@/data/daily-life/petQuiz/pet-quiz'
 import { WhatWasForDinnerData } from '@/data/daily-life/what-was-for-dinner-data'
@@ -113,11 +112,7 @@ const DailyLife = () => {
                 }
                 interactive={
                     <YouTubeVideo
-                        src="https://youtu.be/-X4IOs0XZ3U"
-                        thumbnail={{
-                            src: moreThanStoneThumbnail,
-                            alt: 'Two people holding a stone spear',
-                        }}
+                        {...YOUTUBE_VIDEOS[DAILY_LIFE_TEXAS_SECTIONS[1].id]}
                     />
                 }
                 details={

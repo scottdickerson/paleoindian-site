@@ -1,7 +1,10 @@
-import { YouTubeVideosType } from '../../components/types'
-import sacredStoriesThumbnail from './videos/1-2_TitleCard@2x.webp'
-import howDidPeopleGetHereThumbnail from './videos/1-4_TitleCard@2x.webp'
-import texasSizedDiscoveryThumbnail from './videos/1-5_TitleCard@2x.webp'
+import { YouTubeVideosType } from '../components/types'
+import sacredStoriesThumbnail from './origin-stories/videos/1-2_TitleCard@2x.webp'
+import howDidPeopleGetHereThumbnail from './origin-stories/videos/1-4_TitleCard@2x.webp'
+import texasSizedDiscoveryThumbnail from './origin-stories/videos/1-5_TitleCard@2x.webp'
+import moreThanStoneThumbnail from './daily-life/videos/3-2_TitleCard@2x.webp'
+import fromTheTopThumbnail from './home/videos/00_TitleCard@2x.webp'
+import monstersAndMayhemThumbnail from './ice-age-texas/videos/2-3_TitleCard@2x.webp'
 
 export const TOOLTIP_CONTENT = {
     ancestors: 'A person related to you that lived a long time ago.',
@@ -36,6 +39,13 @@ export const TOOLTIP_CONTENT = {
 }
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {
+    'not-just-stone-age': {
+        src: 'https://youtu.be/-X4IOs0XZ3U',
+        thumbnail: {
+            src: moreThanStoneThumbnail,
+            alt: 'Two people holding a stone spear',
+        },
+    },
     'sacred-stories': {
         src: 'https://youtu.be/X7rJBSgVR98',
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
@@ -52,6 +62,20 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         thumbnail: {
             src: texasSizedDiscoveryThumbnail,
             alt: 'Science, Logic!',
+        },
+    },
+    'from-the-top': {
+        src: 'https://youtu.be/UlrrNFO4jCs',
+        thumbnail: {
+            src: fromTheTopThumbnail,
+            alt: 'Stone Letters that spell From the Top',
+        },
+    },
+    'monsters-and-mayhem': {
+        src: 'https://youtu.be/Zdvtz04V660',
+        thumbnail: {
+            src: monstersAndMayhemThumbnail,
+            alt: 'Monsters screaming!',
         },
     },
 }

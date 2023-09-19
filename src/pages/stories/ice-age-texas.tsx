@@ -1,13 +1,12 @@
 import { StoryPage } from '@/components/story-page'
 import { Slider } from '@/components/slider'
 import { Tooltip } from '@/components/tooltip'
-import { TOOLTIP_CONTENT } from '@/data/origin-stories/data'
+import { TOOLTIP_CONTENT, YOUTUBE_VIDEOS } from '@/data/data'
 import { YouTubeVideo } from '@/components/youtube-video'
 import Flipper from '@/components/flipper'
 
 import iceAge1 from '@/data/ice-age-texas/slider/Present Texas@1x.webp'
 import iceAge2 from '@/data/ice-age-texas/slider/Ice Age Texas@1x.webp'
-import monstersAndMayhemThumbnail from '@/data/ice-age-texas/videos/2-3_TitleCard@2x.webp'
 import boneFragments from '@/data/ice-age-texas/zoomer/2-6-1_BisonSkull.webp'
 import lithicDebitage from '@/data/ice-age-texas/zoomer/2-6-2_LithicDebitage.webp'
 import charredOak from '@/data/ice-age-texas/zoomer/2-6-3_CharredWood.webp'
@@ -26,7 +25,7 @@ import cardBack from '@/data/daily-life/cards/essential-inventory/Paleo - 3.1 Es
 import { TocScrollableProps } from '@/components/toc-scrollable'
 import { StorySection } from '@/components/story-section'
 
-const ICE_AGE_TEXAS_SECTIONS: TocScrollableProps['storySections'] = [
+export const ICE_AGE_TEXAS_SECTIONS: TocScrollableProps['storySections'] = [
     {
         title: 'A Different World',
         id: 'a-different-world',
@@ -181,11 +180,7 @@ const OriginStories = () => {
                 }
                 interactive={
                     <YouTubeVideo
-                        src="https://youtu.be/Zdvtz04V660"
-                        thumbnail={{
-                            src: monstersAndMayhemThumbnail,
-                            alt: 'Monsters screaming!',
-                        }}
+                        {...YOUTUBE_VIDEOS[ICE_AGE_TEXAS_SECTIONS[2].id]}
                     />
                 }
                 details={

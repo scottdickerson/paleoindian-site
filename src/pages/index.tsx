@@ -3,9 +3,9 @@ import styles from '@/styles/Home.module.scss'
 import { ArrowheadScroller } from '@/components/arrowhead-scroller'
 import { useRef } from 'react'
 import { YouTubeVideo } from '@/components/youtube-video'
-import fromTheTopThumbnail from '@/data/home/images/00_TitleCard@2x.webp'
 import { Hero } from '@/components/hero'
 import { NavigationButtons } from '@/components/navigation-buttons'
+import { YOUTUBE_VIDEOS } from '@/data/data'
 
 export default function Home() {
     const firstLinkRef = useRef<HTMLElement>(null)
@@ -46,12 +46,8 @@ export default function Home() {
                 </section>
                 <div className={styles.videoSection} id="from-the-top">
                     <YouTubeVideo
-                        src="https://youtu.be/UlrrNFO4jCs"
-                        thumbnail={{
-                            src: fromTheTopThumbnail,
-                            alt: 'Stone Letters that spell From the Top',
-                        }}
                         className={styles.video}
+                        {...YOUTUBE_VIDEOS['from-the-top']}
                     />
                     <NavigationButtons />
                 </div>
