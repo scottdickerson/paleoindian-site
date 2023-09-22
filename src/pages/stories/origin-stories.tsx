@@ -327,9 +327,7 @@ const OriginStories = () => {
                             more detailed picture of the first people who called
                             this area home.{' '}
                         </p>
-                        <p>
-                            Hear from young researchers who study Paleoindians.
-                        </p>
+                        <p>Hear from researchers who study Paleoindians.</p>
                     </>
                 }
                 interactive={<TikTokPlayer videos={TIKTOK_VIDEOS} />}

@@ -7,18 +7,18 @@ import kimberlyCushingThumbnail from './tiktok/3.4.4_Kimberly Cushing@300px.webp
 export const DAILY_LIFE_TIKTOK_VIDEOS: TikTokPlayerProps['videos'] = {
     catherineBaty: {
         thumbnail: catherineBatyThumbnail,
-        video: 'https://youtube.com/shorts/NFVSTYUdbtc',
+        video: 'https://youtube.com/shorts/70Xp_wywfgQ',
     },
     jackieBullard: {
         thumbnail: jackieBullardThumbnail,
-        video: 'https://youtu.be/3CIZ3lI7hag',
+        video: 'https://youtu.be/DdwIaXrvwv0',
     },
     kennedyCortez: {
         thumbnail: kennedyCortezThumbnail,
-        video: 'https://youtu.be/rhO-Kin0bSw',
+        video: 'https://youtu.be/FWPBSpiKr8k',
     },
     kimberlyCushing: {
         thumbnail: kimberlyCushingThumbnail,
-        video: 'https://youtu.be/sUDI8C0QEt0',
+        video: 'https://youtube.com/shorts/kKQIWnDw-ew',
     },
 }
