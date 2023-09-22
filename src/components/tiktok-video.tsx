@@ -17,8 +17,7 @@ export const TikTokVideo = ({ src, isStarted }: TikTokVideoProps) => {
             config={{
                 youtube: {
                     playerVars: {
-                        modestbranding: 1,
-                        controls: 1,
+                        controls: 0,
                     },
                 },
             }}
