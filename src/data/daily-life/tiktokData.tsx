@@ -19,6 +19,6 @@ export const DAILY_LIFE_TIKTOK_VIDEOS: TikTokPlayerProps['videos'] = {
     },
     kimberlyCushing: {
         thumbnail: kimberlyCushingThumbnail,
-        video: 'https://youtube.com/shorts/kKQIWnDw-ew',
+        video: 'https://youtube.com/shorts/vuft2NcU0hA',
     },
 }

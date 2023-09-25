@@ -40,7 +40,7 @@ const DetailsSection = () => (
 )
 
 const CopyrightSection = () => (
-    <div>
+    <div className={styles.copyrightSection}>
         <section className={styles.copyright}>
             <span className={styles.copyrightTitle}>Copyright & Fair Use</span>
             <p>
@@ -64,8 +64,8 @@ const CopyrightSection = () => (
             </p>
         </section>
         <section className={styles.copyright}>
-            <br />
-            <span className={styles.copyrightTitle}>
+            <h4 className={styles.copyrightTitle}>Credits</h4>
+            <span className={styles.copyrightSubtitle}>
                 <em>That’s Important</em> Artifact Images:
             </span>
             <PhotoCredits
@@ -99,10 +99,9 @@ const CopyrightSection = () => (
                 courtesy="Courtesy
                 of the Center for Big Bend Studies at Sul Ross State University"
             />
-            <br />
         </section>
         <section className={styles.copyright}>
-            <span className={styles.copyrightTitle}>
+            <span className={styles.copyrightSubtitle}>
                 <em>Written in Stone</em> Artifact Images:
             </span>
             <PhotoCredits
@@ -119,6 +118,21 @@ const CopyrightSection = () => (
                 courtesy="Courtesy of
                 the Gault School of Archaeological Research Laboratory"
             />
+        </section>
+        <section className={styles.copyright}>
+            <span className={styles.copyrightSubtitle}>
+                Short-Format Videos
+            </span>
+            <br />
+            <br />
+            <em>Special Thanks To:</em>
+            <br />
+            Nicholas Bentley <br />
+            Ashley Lemke <br /> Angus Dunn <br /> Greer Testa <br />
+            @maxochitlbeading <br />
+            Catherine Baty <br />
+            Jacqueline Bullard <br />
+            Kimberly Cushing
         </section>
     </div>
 )

@@ -51,21 +51,21 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
-        src: 'https://youtu.be/LS4M8FeHlW0',
+        src: 'https://youtu.be/Ze2eUAzUV9w',
         thumbnail: {
             src: howDidPeopleGetHereThumbnail,
             alt: 'Archaeologist holding a sign that says "All the questions"',
         },
     },
     'texas-sized-discovery': {
-        src: 'https://youtu.be/39msdHUfL1A',
+        src: 'https://youtu.be/xYdTmDt2JB8',
         thumbnail: {
             src: texasSizedDiscoveryThumbnail,
             alt: 'Science, Logic!',
         },
     },
     'from-the-top': {
-        src: 'https://youtu.be/UlrrNFO4jCs',
+        src: 'https://youtu.be/-mFamJB5JI4',
         thumbnail: {
             src: fromTheTopThumbnail,
             alt: 'Stone Letters that spell From the Top',

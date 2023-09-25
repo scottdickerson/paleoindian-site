@@ -65,6 +65,7 @@ export const TocScrollable = ({ storySections }: TocScrollableProps) => {
                 </ol>
                 <a
                     className={styles.arrowToTop}
+                    title="Scroll to top"
                     onClick={() => {
                         // reset hash to retrigger scrolling tracking
                         window.location.hash = ''
