@@ -47,7 +47,7 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         },
     },
     'sacred-stories': {
-        src: 'https://youtu.be/X7rJBSgVR98',
+        src: 'https://youtu.be/Q9hBdcO8Ecw',
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
@@ -72,7 +72,7 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         },
     },
     'monsters-and-mayhem': {
-        src: 'https://youtu.be/Zdvtz04V660',
+        src: 'https://youtu.be/bsz7nh1pv1M',
         thumbnail: {
             src: monstersAndMayhemThumbnail,
             alt: 'Monsters screaming!',
