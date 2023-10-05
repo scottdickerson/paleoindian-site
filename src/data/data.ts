@@ -40,7 +40,7 @@ export const TOOLTIP_CONTENT = {
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {
     'not-just-stone-age': {
-        src: 'https://youtu.be/-X4IOs0XZ3U',
+        src: 'https://youtu.be/eCHUaXzztWk',
         thumbnail: {
             src: moreThanStoneThumbnail,
             alt: 'Two people holding a stone spear',
