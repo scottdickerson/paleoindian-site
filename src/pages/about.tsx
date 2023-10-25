@@ -4,6 +4,8 @@ import sectionStyles from '@/styles/StorySection.module.scss'
 import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
 import { PhotoCredits } from '@/components/photo-credits'
+import humanitiesTexasLogo from '@/data/about/HTx_logo_color_trans_HiRes.png'
+import Image from 'next/image'
 
 const Heading = () => (
     <h1 className={classNames(sectionStyles.summary, styles.heading)}>
@@ -25,11 +27,13 @@ const DetailsSection = () => (
             This exhibit would not be possible without TxDOT’s many partners,
             including:
             <ul>
+                <li>
+                    <Image src={humanitiesTexasLogo} alt="Humanities Texas" />
+                </li>
                 <li>AmaTerra </li>
                 <li>
                     Center for Archaeological Studies, Texas State University
                 </li>
-                <li>Humanities Texas</li>
                 <li>ICF</li>
                 <li>Mescalero Apache Tribe</li>
                 <li>MuseWork Exhibits</li>
