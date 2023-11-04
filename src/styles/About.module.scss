@@ -70,3 +70,11 @@
         line-height: 17px;
     }
 }
+
+li.humanitiesTexasImage {
+    max-width: 180px;
+    padding-top: 2rem;
+    @media screen and (max-width: $desktop-breakpoint) {
+        max-width: 125px;
+    }
+}

@@ -5,7 +5,8 @@ import classNames from 'classnames'
 import { useMediaQuery } from 'react-responsive'
 import { PhotoCredits } from '@/components/photo-credits'
 import humanitiesTexasLogo from '@/data/about/HTx_logo_color_trans_HiRes.png'
-import Image from 'next/image'
+import smallHumanitiesTexasLogo from '@/data/about/HTx_logo_color_trans_small.png'
+import { ResponsiveImage } from '@/components/responsive-image'
 
 const Heading = () => (
     <h1 className={classNames(sectionStyles.summary, styles.heading)}>
@@ -21,27 +22,40 @@ const Description = () => (
     </p>
 )
 
-const DetailsSection = () => (
-    <div className={classNames(sectionStyles.details, styles.partners)}>
-        <p>
-            This exhibit would not be possible without TxDOT’s many partners,
-            including:
-            <ul>
-                <li>
-                    <Image src={humanitiesTexasLogo} alt="Humanities Texas" />
-                </li>
-                <li>AmaTerra </li>
-                <li>
-                    Center for Archaeological Studies, Texas State University
-                </li>
-                <li>ICF</li>
-                <li>Mescalero Apache Tribe</li>
-                <li>MuseWork Exhibits</li>
-                <li>Texas Science & Natural History Museum</li>
-            </ul>
-        </p>
-    </div>
-)
+const DetailsSection = () => {
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 1024px)',
+    })
+    return (
+        <div className={classNames(sectionStyles.details, styles.partners)}>
+            <p>
+                This exhibit would not be possible without TxDOT’s many
+                partners, including:
+                <ul>
+                    <li className={styles.humanitiesTexasImage}>
+                        <ResponsiveImage
+                            src={
+                                isDesktop
+                                    ? humanitiesTexasLogo
+                                    : smallHumanitiesTexasLogo
+                            }
+                            alt="Humanities Texas"
+                        />
+                    </li>
+                    <li>AmaTerra </li>
+                    <li>
+                        Center for Archaeological Studies, Texas State
+                        University
+                    </li>
+                    <li>ICF</li>
+                    <li>Mescalero Apache Tribe</li>
+                    <li>MuseWork Exhibits</li>
+                    <li>Texas Science & Natural History Museum</li>
+                </ul>
+            </p>
+        </div>
+    )
+}
 
 const CopyrightSection = () => (
     <div className={styles.copyrightSection}>
