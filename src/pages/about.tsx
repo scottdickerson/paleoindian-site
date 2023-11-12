@@ -15,11 +15,24 @@ const Heading = () => (
 )
 
 const Description = () => (
-    <p className={sectionStyles.description}>
-        A Time Before Texas is sponsored by the Texas Department of
-        Transportation as part of its responsibilities under the National
-        Historic Preservation Act of 1966.
-    </p>
+    <>
+        <p className={sectionStyles.description}>
+            A Time Before Texas is sponsored by the Texas Department of
+            Transportation as part of its responsibilities under the National
+            Historic Preservation Act of 1966.
+        </p>
+        <p className={sectionStyles.description}>
+            TxDOT wants to acknowledge and thank{' '}
+            <a
+                href="https://www.humanitiestexas.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Humanities Texas
+            </a>{' '}
+            as a key supporting partner in this project.
+        </p>
+    </>
 )
 
 const DetailsSection = () => {
@@ -29,8 +42,6 @@ const DetailsSection = () => {
     return (
         <div className={classNames(sectionStyles.details, styles.partners)}>
             <p>
-                This exhibit would not be possible without TxDOT’s many
-                partners, including:
                 <ul>
                     <li className={styles.humanitiesTexasImage}>
                         <ResponsiveImage
@@ -42,7 +53,8 @@ const DetailsSection = () => {
                             alt="Humanities Texas"
                         />
                     </li>
-                    <li>AmaTerra </li>
+                    <em>Additional partners include:</em>
+                    <li>AmaTerra Environmental, an ERG company </li>
                     <li>
                         Center for Archaeological Studies, Texas State
                         University
@@ -167,7 +179,7 @@ const AboutTablet = () => (
 const AboutDesktop = () => {
     return (
         <>
-            <div className={styles.contentWrapper}>
+            <div className={styles.tabletWrapper}>
                 <div
                     className={classNames(
                         styles.headingAndDescription,

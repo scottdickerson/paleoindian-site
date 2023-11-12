@@ -40,39 +40,39 @@ export const TOOLTIP_CONTENT = {
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {
     'not-just-stone-age': {
-        src: 'https://youtu.be/eCHUaXzztWk',
+        src: 'https://youtu.be/YG3yx7fE1R8',
         thumbnail: {
             src: moreThanStoneThumbnail,
             alt: 'Two people holding a stone spear',
         },
     },
     'sacred-stories': {
-        src: 'https://youtu.be/Q9hBdcO8Ecw',
+        src: 'https://youtu.be/B1W4sKyyHIA',
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
-        src: 'https://youtu.be/Ze2eUAzUV9w',
+        src: 'https://youtu.be/8BjpLqBJQaM',
         thumbnail: {
             src: howDidPeopleGetHereThumbnail,
             alt: 'Archaeologist holding a sign that says "All the questions"',
         },
     },
     'texas-sized-discovery': {
-        src: 'https://youtu.be/xYdTmDt2JB8',
+        src: 'https://youtu.be/H9FAW_gWvgo',
         thumbnail: {
             src: texasSizedDiscoveryThumbnail,
             alt: 'Science, Logic!',
         },
     },
     'from-the-top': {
-        src: 'https://youtu.be/-mFamJB5JI4',
+        src: 'https://youtu.be/b26xz9imjRc',
         thumbnail: {
             src: fromTheTopThumbnail,
             alt: 'Stone Letters that spell From the Top',
         },
     },
     'monsters-and-mayhem': {
-        src: 'https://youtu.be/bsz7nh1pv1M',
+        src: 'https://youtu.be/L54HqtEaFUQ',
         thumbnail: {
             src: monstersAndMayhemThumbnail,
             alt: 'Monsters screaming!',
