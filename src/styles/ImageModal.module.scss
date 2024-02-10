@@ -28,7 +28,8 @@ $footer-height: 156px;
     padding: 0rem;
     background-color: white;
 }
-.button:hover {
+.button:hover,
+.selected {
     border: 2px solid $color_light_green;
 }
 

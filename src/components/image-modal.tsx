@@ -16,11 +16,13 @@ export interface ImageDetailsProps {
 
 interface ImageSelectorProps extends HTMLAttributes<HTMLDivElement> {
     images: ImageDetailsProps[]
+    selectedImage?: string
     onSelectImage: Dispatch<SetStateAction<string | undefined>>
 }
 
 export const ImageSelector = ({
     images,
+    selectedImage,
     onSelectImage,
     className,
     ...rest
@@ -32,7 +34,10 @@ export const ImageSelector = ({
         >
             {images.map((image) => (
                 <button
-                    className={imageModal.button}
+                    className={classNames(
+                        imageModal.button,
+                        selectedImage === image.title && imageModal.selected
+                    )}
                     onClick={() => onSelectImage(image.title)}
                 >
                     <ResponsiveImage
@@ -83,9 +88,8 @@ export const ImageModal = ({
             />
             <footer className={imageModal.footer}>
                 <ImageSelector
-                    images={stoneImages.filter(
-                        (image) => image.title !== selectedImage
-                    )}
+                    images={stoneImages}
+                    selectedImage={selectedImage}
                     onSelectImage={onSelectImage}
                 ></ImageSelector>
             </footer>
