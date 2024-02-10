@@ -263,22 +263,7 @@ export const ActivityClassroom = () => {
                     </div>
                 }
             />
-            <ActivitiesNavigator
-                activitiesLinks={[
-                    {
-                        title: 'Hunting and gathering',
-                        href: ROUTES.ACTIVITIES_WORKBOOK,
-                    },
-                    {
-                        title: 'A time before texas card game',
-                        href: ROUTES.ACTIVITIES_CARD_GAME,
-                    },
-                    {
-                        title: 'Stem careers',
-                        href: ROUTES.ACTIVITIES_STEM_CAREERS,
-                    },
-                ]}
-            />
+            <ActivitiesNavigator />
         </StoryPage>
     )
 }

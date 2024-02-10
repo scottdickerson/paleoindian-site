@@ -12,10 +12,13 @@ import interpretImage from '@/data/educator-guide/Magnifying Glass/MagnifyingGas
 import workbookImage from '@/data/educator-guide/Workbook@2x.png'
 import cardsImage from '@/data/educator-guide/Cards@2x.webp'
 import careersImage from '@/data/educator-guide/STEM Careers/StemCareers_2x.webp'
+import incisedStone from '@/data/educator-guide/Incised Stones/Incised Stone_2x.png'
+
 import { ResponsiveImage } from '@/components/responsive-image'
 import classNames from 'classnames'
 import { PageLink } from '@/components/page-link'
 import { ROUTES } from '@/utils/routes'
+import { HandsOnHistory } from '@/components/hands-on-history'
 
 const EDUCATOR_GUIDE_SECTIONS: TocScrollableProps['storySections'] = [
     {
@@ -38,6 +41,7 @@ const EDUCATOR_GUIDE_SECTIONS: TocScrollableProps['storySections'] = [
         title: 'STEM careers',
         id: 'stem-careers',
     },
+    { title: 'Creating incised stones', id: 'creating-incised-stones' },
 ]
 
 const TooltipExample = () => (
@@ -67,7 +71,7 @@ const TOCExample = () => (
 
 const OriginStoriesOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={originStoriesImage}
                 alt="Paleoindian"
@@ -99,7 +103,7 @@ const OriginStoriesOverview = () => (
 
 const IceAgeTexasOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={iceTexasImage}
                 alt="Armadillo"
@@ -134,7 +138,7 @@ const IceAgeTexasOverview = () => (
 
 const DailyLifeOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={dailyLifeImage}
                 alt="Bag used by paleoindians made from deer hide."
@@ -216,6 +220,7 @@ const EducatorGuide = () => {
                     <br />
                     The Time Before Texas Team
                 </p>
+                <HandsOnHistory />
             </div>
 
             <StorySection
@@ -278,6 +283,21 @@ const EducatorGuide = () => {
                 }
                 pacing="varies depending on the depth of research"
                 activityLink={ROUTES.ACTIVITIES_STEM_CAREERS}
+            />
+            <StorySection
+                {...EDUCATOR_GUIDE_SECTIONS[5]}
+                summary="More than just tools"
+                details="Students will learn about incised stone artifacts and then participate in an interpretation discussion."
+                description="Students will create their own versions of incised stones using river rocks and sharpies."
+                image={
+                    <ResponsiveImage
+                        containerProps={{ className: styles.workbookImage }}
+                        src={incisedStone}
+                        alt="List of different careers in science"
+                    />
+                }
+                pacing="60 minutes (Short on time? It also can be completed in 30 minutes.)"
+                activityLink={ROUTES.ACTIVITIES_INCISED_STONES}
             />
         </StoryPage>
     )

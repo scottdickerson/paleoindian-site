@@ -2,7 +2,6 @@ import { StoryPage } from '@/components/story-page'
 import { StorySection } from '@/components/story-section'
 import styles from '@/styles/Activities.module.scss'
 import { TocScrollableProps } from '@/components/toc-scrollable'
-import { ROUTES } from '@/utils/routes'
 import { ActivityBlock } from '@/components/activity-block'
 import { ActivitiesNavigator } from '@/components/activities-navigator'
 import { DownloadFiles } from '@/components/download-files'
@@ -142,22 +141,7 @@ export const ActivitiesWorkbook = () => {
                     </div>
                 }
             />
-            <ActivitiesNavigator
-                activitiesLinks={[
-                    {
-                        title: 'A time before texas card game',
-                        href: ROUTES.ACTIVITIES_CARD_GAME,
-                    },
-                    {
-                        title: 'Stem careers',
-                        href: ROUTES.ACTIVITIES_STEM_CAREERS,
-                    },
-                    {
-                        title: 'Jump into Archeology',
-                        href: ROUTES.ACTIVITIES_CLASSROOM,
-                    },
-                ]}
-            />
+            <ActivitiesNavigator />
         </StoryPage>
     )
 }

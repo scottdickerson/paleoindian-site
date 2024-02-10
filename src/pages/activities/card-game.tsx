@@ -7,6 +7,8 @@ import { ActivityBlock } from '@/components/activity-block'
 import { ActivitiesNavigator } from '@/components/activities-navigator'
 import { DownloadFiles } from '@/components/download-files'
 import { PageLink } from '@/components/page-link'
+import { YouTubeVideo } from '@/components/youtube-video'
+import { YOUTUBE_VIDEOS } from '@/data/data'
 
 const ACTIVITIES_CARD_GAME_SECTIONS: TocScrollableProps['storySections'] = [
     {
@@ -79,13 +81,21 @@ export const ActivityCardGame = () => {
             <StorySection
                 {...ACTIVITIES_CARD_GAME_SECTIONS[2]}
                 details={
-                    <ul className={styles.materials}>
-                        <li>Print cards and instructions.</li>
-                        <li>
-                            Read instructions and be prepared to explain the
-                            game to students.
-                        </li>
-                    </ul>
+                    <div
+                        id="youtube-fullscreen"
+                        style={{ display: 'flex', flexDirection: 'column' }}
+                    >
+                        <ul className={styles.materials}>
+                            <li>Print cards and instructions.</li>
+                            <li>
+                                Read game instructions or watch the video below
+                                and be prepared to explain the game to students.
+                            </li>
+                        </ul>
+                        <YouTubeVideo
+                            {...YOUTUBE_VIDEOS['how-to-play-card-game']}
+                        />
+                    </div>
                 }
             />
             <StorySection
@@ -172,22 +182,7 @@ export const ActivityCardGame = () => {
                     </div>
                 }
             />
-            <ActivitiesNavigator
-                activitiesLinks={[
-                    {
-                        title: 'Stem careers',
-                        href: ROUTES.ACTIVITIES_STEM_CAREERS,
-                    },
-                    {
-                        title: 'Jump into Archeology',
-                        href: ROUTES.ACTIVITIES_CLASSROOM,
-                    },
-                    {
-                        title: 'Hunting and gathering',
-                        href: ROUTES.ACTIVITIES_WORKBOOK,
-                    },
-                ]}
-            />
+            <ActivitiesNavigator />
         </StoryPage>
     )
 }

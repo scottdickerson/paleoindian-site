@@ -2,11 +2,13 @@
     height: 100%;
     width: 100%;
     position: relative;
+    display: flex;
+    flex-flow: column;
 }
 
 .responsiveImage {
     position: relative;
-    width: 100%;
+    width: auto;
+    object-fit: contain;
     height: 100%;
-    flex-shrink: 0;
 }

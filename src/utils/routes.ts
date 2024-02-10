@@ -12,6 +12,7 @@ export const ROUTES = {
     ACTIVITIES_WORKBOOK: '/activities/workbook',
     ACTIVITIES_CARD_GAME: '/activities/card-game',
     ACTIVITIES_STEM_CAREERS: '/activities/stem-careers',
+    ACTIVITIES_INCISED_STONES: '/activities/incised-stones',
 
     SACRED_STORIES: '/bibliography/sacred-stories',
     MONSTERS_AND_MAYHEM: '/bibliography/monsters-and-mayhem',
