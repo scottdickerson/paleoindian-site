@@ -51,20 +51,13 @@ export const ImageSelector = ({
     )
 }
 
-export const ImageDetails = ({
-    src,
-    title,
-    photoCredit,
-}: ImageDetailsProps) => {
+export const ImageDetails = ({ title, photoCredit }: ImageDetailsProps) => {
     return (
-        <div className={imageModal.content}>
-            <ResponsiveImage src={src} alt={title} />
-            <div className={imageModal.details}>
-                <span className={captionedImageStyles.caption}>{title}</span>
-                <span className={captionedImageStyles.photoCredit}>
-                    {photoCredit}
-                </span>
-            </div>
+        <div className={imageModal.details}>
+            <span className={captionedImageStyles.caption}>{title}</span>
+            <span className={captionedImageStyles.photoCredit}>
+                {photoCredit}
+            </span>
         </div>
     )
 }
@@ -79,13 +72,17 @@ export const ImageModal = ({
     onSelectImage,
     ...props
 }: ImageModalProps) => {
+    const image =
+        stoneImages.find((image) => image.title === selectedImage) ??
+        stoneImages[0]
     return (
         <Modal {...props}>
-            <ImageDetails
-                {...(stoneImages.find(
-                    (image) => image.title === selectedImage
-                ) ?? stoneImages[0])}
+            <ResponsiveImage
+                {...image}
+                alt={image.title}
+                className={imageModal.image}
             />
+            <ImageDetails {...image} />
             <footer className={imageModal.footer}>
                 <ImageSelector
                     images={stoneImages}

@@ -1,9 +1,10 @@
 .modal {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     inset: 40px;
-    position: absolute;
+    background-color: white;
 }
 
 .overlayOpen {
@@ -19,15 +20,6 @@
     right: 0;
     bottom: 0;
     z-index: 6000;
-}
-
-.content {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    position: relative;
-    background-color: white;
-    max-height: calc(100vh - 80px);
 }
 
 .close {

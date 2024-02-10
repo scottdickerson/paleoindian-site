@@ -1,16 +1,19 @@
-.content {
-    display: flex;
-    position: relative;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    max-height: calc(100% - $footer-height);
+$min_footer_height: 140px;
+$bottom_space_tablet: calc(2 * $min_footer_height);
+$bottom_space_mobile: calc(4 * $min_footer_height);
+
+.image {
+    max-height: calc(100% - $min_footer_height);
 }
 
 .details {
     position: absolute;
     left: 42px;
-    bottom: 32px;
+    bottom: $min_footer_height;
+
+    @media screen and (max-width: 908px) {
+        bottom: 16px;
+    }
     display: flex;
     flex-flow: column;
     max-width: 220px;
@@ -18,8 +21,15 @@
 .footer {
     background-color: #d9d9d9;
     padding: 1rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     img {
         max-height: 94px;
+    }
+    @media screen and (max-width: 908px) {
+        visibility: hidden;
     }
 }
 .button {
