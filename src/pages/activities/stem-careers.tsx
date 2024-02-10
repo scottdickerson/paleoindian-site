@@ -181,22 +181,7 @@ export const ActivityStemCareers = () => {
                     </div>
                 }
             />
-            <ActivitiesNavigator
-                activitiesLinks={[
-                    {
-                        title: 'Jump into Archeology',
-                        href: ROUTES.ACTIVITIES_CLASSROOM,
-                    },
-                    {
-                        title: 'Hunting and gathering',
-                        href: ROUTES.ACTIVITIES_WORKBOOK,
-                    },
-                    {
-                        title: 'A time before texas card game',
-                        href: ROUTES.ACTIVITIES_CARD_GAME,
-                    },
-                ]}
-            />
+            <ActivitiesNavigator />
         </StoryPage>
     )
 }

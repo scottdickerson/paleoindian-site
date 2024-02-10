@@ -172,22 +172,7 @@ export const ActivityCardGame = () => {
                     </div>
                 }
             />
-            <ActivitiesNavigator
-                activitiesLinks={[
-                    {
-                        title: 'Stem careers',
-                        href: ROUTES.ACTIVITIES_STEM_CAREERS,
-                    },
-                    {
-                        title: 'Jump into Archeology',
-                        href: ROUTES.ACTIVITIES_CLASSROOM,
-                    },
-                    {
-                        title: 'Hunting and gathering',
-                        href: ROUTES.ACTIVITIES_WORKBOOK,
-                    },
-                ]}
-            />
+            <ActivitiesNavigator />
         </StoryPage>
     )
 }

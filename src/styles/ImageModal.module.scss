@@ -1,0 +1,36 @@
+$footer-height: 156px;
+
+.content {
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(100% - $footer-height);
+}
+
+.details {
+    position: absolute;
+    left: 42px;
+    bottom: 32px;
+    display: flex;
+    flex-flow: column;
+    max-width: 220px;
+}
+.footer {
+    background-color: #d9d9d9;
+}
+
+.imageSelector {
+    display: flex;
+    flex-wrap: nowrap;
+    min-height: $footer-height;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imageSelectorImage {
+    border: 1px solid #cbcbcb;
+}
