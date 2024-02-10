@@ -21,6 +21,7 @@ $font_black: 900;
 
 $color_yellow: #f3bb41;
 $color_purple: #691256;
+$color_light_green: #bdcd86;
 
 $header_height: 84px;
 $footer_height: 60px;
@@ -34,7 +35,7 @@ $simple_header_height_mobile: 60px;
 $three_cards_visible_width: calc($tablet-breakpoint - 1px);
 
 @mixin origin-stories {
-    background-color: #bdcd86;
+    background-color: $color_light_green;
     color: #33541d;
 }
 

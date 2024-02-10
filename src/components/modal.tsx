@@ -24,10 +24,12 @@ export const Modal = ({
             overlayClassName={modalStyles.overlay}
             className={modalStyles.modal}
         >
-            {children}
-            <button onClick={onClose} className={modalStyles.close}>
-                <Image src={closeButton} alt="Close" />
-            </button>
+            <div className={modalStyles.content}>
+                {children}
+                <button onClick={onClose} className={modalStyles.close}>
+                    <Image src={closeButton} alt="Close" />
+                </button>
+            </div>
         </ReactModal>
     )
 }

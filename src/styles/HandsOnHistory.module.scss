@@ -1,0 +1,18 @@
+.container {
+    background-color: $color_light_green;
+    div img {
+        scale: 1.8;
+        aspect-ratio: 519/424;
+        transform: rotateZ(15deg);
+        height: unset;
+        @media screen and (max-width: $tablet_breakpoint) {
+            transform: rotateZ(0deg);
+        }
+    }
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

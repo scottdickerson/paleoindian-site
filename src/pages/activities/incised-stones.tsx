@@ -1,6 +1,7 @@
 import { StoryPage } from '@/components/story-page'
 import { StorySection } from '@/components/story-section'
-import styles from '@/styles/Activities.module.scss'
+import styles from '@/styles/IncisedStones.module.scss'
+import activityStyles from '@/styles/Activities.module.scss'
 import { TocScrollableProps } from '@/components/toc-scrollable'
 import { ActivityBlock } from '@/components/activity-block'
 import { ActivitiesNavigator } from '@/components/activities-navigator'
@@ -41,7 +42,7 @@ const ACTIVITIES_SECTIONS: TocScrollableProps['storySections'] = [
 export const stoneImages: ImageDetailsProps[] = [
     {
         src: deerStone,
-        title: 'Deer Stone1',
+        title: 'Deer Stone',
         photoCredit:
             'Courtesy of the Gault School of Archaeological Research Laboratory',
     },
@@ -92,7 +93,7 @@ export const ActivitiesWorkbook = () => {
             <StorySection
                 {...ACTIVITIES_SECTIONS[1]}
                 details={
-                    <dl className={styles.dictionaryList}>
+                    <dl className={activityStyles.dictionaryList}>
                         <div>
                             <dt>Incised Stones</dt>
                             <dd>
@@ -119,7 +120,7 @@ export const ActivitiesWorkbook = () => {
                 {...ACTIVITIES_SECTIONS[2]}
                 details={
                     <>
-                        <ul className={styles.materials}>
+                        <ul className={activityStyles.materials}>
                             <li>
                                 River rocks (smooth and flat surfaces
                                 recommended)
@@ -190,7 +191,7 @@ export const ActivitiesWorkbook = () => {
             <StorySection
                 {...ACTIVITIES_SECTIONS[4]}
                 details={
-                    <div className={styles.activityBlocks}>
+                    <div className={activityStyles.activityBlocks}>
                         <ActivityBlock>
                             <h4>Introduction:</h4>
                             <p>
@@ -209,6 +210,7 @@ export const ActivitiesWorkbook = () => {
                                 life and culture of ancient people.
                             </p>
                             <ImageSelector
+                                className={styles.imageSelector}
                                 images={stoneImages}
                                 onSelectImage={setSelectedImage}
                             />

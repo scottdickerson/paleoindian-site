@@ -5,6 +5,7 @@ import texasSizedDiscoveryThumbnail from './origin-stories/videos/1-5_TitleCard@
 import moreThanStoneThumbnail from './daily-life/videos/3-2_TitleCard@2x.webp'
 import fromTheTopThumbnail from './home/videos/00_TitleCard@2x.webp'
 import monstersAndMayhemThumbnail from './ice-age-texas/videos/2-3_TitleCard@2x.webp'
+import howToPlayCardGameThumbnail from './educator-guide/HowtoPlay_TitleCard@2x.webp'
 
 export const TOOLTIP_CONTENT = {
     ancestors: 'A person related to you that lived a long time ago.',
@@ -78,6 +79,13 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         thumbnail: {
             src: monstersAndMayhemThumbnail,
             alt: 'Monsters screaming!',
+        },
+    },
+    'how-to-play-card-game': {
+        src: 'https://www.youtube.com/watch?v=jLjoQ3Cix38',
+        thumbnail: {
+            src: howToPlayCardGameThumbnail,
+            alt: 'The words "Game play instructions" with picture of cards on a table.',
         },
     },
 }

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import imageModal from '@/styles/ImageModal.module.scss'
 
 import { ResponsiveImage } from './responsive-image'
@@ -6,6 +6,7 @@ import { Dispatch, HTMLAttributes, SetStateAction } from 'react'
 import { Modal, ModalProps } from './modal'
 import { stoneImages } from '@/pages/activities/incised-stones'
 import captionedImageStyles from '@/styles/CaptionedImage.module.scss'
+import classNames from 'classnames'
 
 export interface ImageDetailsProps {
     src: StaticImageData
@@ -21,16 +22,21 @@ interface ImageSelectorProps extends HTMLAttributes<HTMLDivElement> {
 export const ImageSelector = ({
     images,
     onSelectImage,
+    className,
+    ...rest
 }: ImageSelectorProps) => {
     return (
-        <div className={imageModal.imageSelector}>
+        <div
+            {...rest}
+            className={classNames(imageModal.imageSelector, className)}
+        >
             {images.map((image) => (
-                <button onClick={() => onSelectImage(image.title)}>
-                    <Image
+                <button
+                    className={imageModal.button}
+                    onClick={() => onSelectImage(image.title)}
+                >
+                    <ResponsiveImage
                         key={image.title}
-                        height={94}
-                        width={94}
-                        className={imageModal.imageSelectorImage}
                         src={image.src}
                         alt={image.title}
                     />

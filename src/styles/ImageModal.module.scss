@@ -19,6 +19,17 @@ $footer-height: 156px;
 }
 .footer {
     background-color: #d9d9d9;
+    img {
+        max-height: 94px;
+    }
+}
+.button {
+    border: 2px solid transparent;
+    padding: 0rem;
+    background-color: white;
+}
+.button:hover {
+    border: 2px solid $color_light_green;
 }
 
 .imageSelector {
@@ -29,8 +40,4 @@ $footer-height: 156px;
     align-items: center;
     justify-content: center;
     gap: 20px;
-}
-
-.imageSelectorImage {
-    border: 1px solid #cbcbcb;
 }

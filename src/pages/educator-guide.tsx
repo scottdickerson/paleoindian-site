@@ -18,6 +18,7 @@ import { ResponsiveImage } from '@/components/responsive-image'
 import classNames from 'classnames'
 import { PageLink } from '@/components/page-link'
 import { ROUTES } from '@/utils/routes'
+import { HandsOnHistory } from '@/components/hands-on-history'
 
 const EDUCATOR_GUIDE_SECTIONS: TocScrollableProps['storySections'] = [
     {
@@ -219,6 +220,7 @@ const EducatorGuide = () => {
                     <br />
                     The Time Before Texas Team
                 </p>
+                <HandsOnHistory />
             </div>
 
             <StorySection
