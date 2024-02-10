@@ -11,10 +11,15 @@ import { PageLink } from '@/components/page-link'
 import { ImageModal, ImageSelector } from '@/components/image-modal'
 import { useState } from 'react'
 import { ImageDetailsProps } from '@/components/image-modal'
-import deerStone from '@/data/educator-guide/Incised Stones/1994 Deer Stone_3x.webp'
-import stone42391 from '@/data/educator-guide/Incised Stones/4239-1_3x.webp'
-import stone48015 from '@/data/educator-guide/Incised Stones/4801-5_3x.webp'
-import stone48016 from '@/data/educator-guide/Incised Stones/4801-6_3x.webp'
+import deerStoneLarge from '@/data/educator-guide/Incised Stones/1994 Deer Stone_3x.webp'
+import stone42391Large from '@/data/educator-guide/Incised Stones/4239-1_3x.webp'
+import stone48015Large from '@/data/educator-guide/Incised Stones/4801-5_3x.webp'
+import stone48016Large from '@/data/educator-guide/Incised Stones/4801-6_3x.webp'
+
+import deerStone from '@/data/educator-guide/Incised Stones/1994 Deer Stone_1x.webp'
+import stone42391 from '@/data/educator-guide/Incised Stones/4239-1_1x.webp'
+import stone48015 from '@/data/educator-guide/Incised Stones/4801-5_1x.webp'
+import stone48016 from '@/data/educator-guide/Incised Stones/4801-6_1x.webp'
 
 const ACTIVITIES_SECTIONS: TocScrollableProps['storySections'] = [
     {
@@ -42,24 +47,28 @@ const ACTIVITIES_SECTIONS: TocScrollableProps['storySections'] = [
 export const stoneImages: ImageDetailsProps[] = [
     {
         src: deerStone,
+        largeSrc: deerStoneLarge,
         title: 'Deer Stone',
         photoCredit:
             'Courtesy of the Gault School of Archaeological Research Laboratory',
     },
     {
         src: stone42391,
+        largeSrc: stone42391Large,
         title: 'Deer Stone2',
         photoCredit:
             'Courtesy of the Gault School of Archaeological Research Laboratory',
     },
     {
         src: stone48015,
+        largeSrc: stone48015Large,
         title: 'Deer Stone3',
         photoCredit:
             'Courtesy of the Gault School of Archaeological Research Laboratory',
     },
     {
         src: stone48016,
+        largeSrc: stone48016Large,
         title: 'Deer Stone4',
         photoCredit:
             'Courtesy of the Gault School of Archaeological Research Laboratory',

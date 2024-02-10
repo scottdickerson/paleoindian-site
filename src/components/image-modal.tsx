@@ -10,6 +10,7 @@ import classNames from 'classnames'
 
 export interface ImageDetailsProps {
     src: StaticImageData
+    largeSrc?: StaticImageData
     title: string
     photoCredit: string
 }
@@ -78,7 +79,7 @@ export const ImageModal = ({
     return (
         <Modal {...props}>
             <ResponsiveImage
-                {...image}
+                src={image.largeSrc ?? image.src}
                 alt={image.title}
                 className={imageModal.image}
             />

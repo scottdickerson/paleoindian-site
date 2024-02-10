@@ -1,4 +1,4 @@
-import flake from '@/data/educator-guide/Incised Stones/4801-6_3x.webp'
+import flake from '@/data/educator-guide/Incised Stones/4801-6_1x.webp'
 import { EmphasisBanner } from './emphasis-banner'
 import { ResponsiveImage } from './responsive-image'
 import styles from '@/styles/HandsOnHistory.module.scss'
