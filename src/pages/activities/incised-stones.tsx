@@ -11,10 +11,10 @@ import { PageLink } from '@/components/page-link'
 import { ImageModal, ImageSelector } from '@/components/image-modal'
 import { useState } from 'react'
 import { ImageDetailsProps } from '@/components/image-modal'
-import deerStone from '@/data/educator-guide/Incised Stones/1994 Deer Stone_1x.webp'
-import stone42391 from '@/data/educator-guide/Incised Stones/4239-1_1x.webp'
-import stone48015 from '@/data/educator-guide/Incised Stones/4801-5_1x.webp'
-import stone48016 from '@/data/educator-guide/Incised Stones/4801-6_1x.webp'
+import deerStone from '@/data/educator-guide/Incised Stones/1994 Deer Stone_3x.webp'
+import stone42391 from '@/data/educator-guide/Incised Stones/4239-1_3x.webp'
+import stone48015 from '@/data/educator-guide/Incised Stones/4801-5_3x.webp'
+import stone48016 from '@/data/educator-guide/Incised Stones/4801-6_3x.webp'
 
 const ACTIVITIES_SECTIONS: TocScrollableProps['storySections'] = [
     {
