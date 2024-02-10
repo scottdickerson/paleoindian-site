@@ -1,10 +1,11 @@
 import dynamic from 'next/dynamic'
-import Image, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
 import { DetailedHTMLProps, ImgHTMLAttributes, useState } from 'react'
 import { PlayButton } from './video'
 import responsiveStyles from '@/styles/ResponsiveImage.module.scss'
 import styles from '@/styles/YouTubeVideo.module.scss'
 import classNames from 'classnames'
+import { ResponsiveImage } from './responsive-image'
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
@@ -24,7 +25,10 @@ export interface YouTubeVideoProps {
 }
 
 const VideoThumbnail = ({ ...props }: YouTubeVideoProps['thumbnail']) => (
-    <Image {...props} className={responsiveStyles.responsiveImage}></Image>
+    <ResponsiveImage
+        {...props}
+        className={responsiveStyles.responsiveImage}
+    ></ResponsiveImage>
 )
 
 export const YouTubeVideo = ({
