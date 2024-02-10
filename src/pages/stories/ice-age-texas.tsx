@@ -218,8 +218,8 @@ const OriginStories = () => {
                             ago are now deep underwater.{' '}
                         </p>
                         <p>
-                            Flip pieces of the photo below to explore techniques
-                            used in underwater archeology.{' '}
+                            Flip pieces of the picture below to explore
+                            techniques used in underwater archeology.{' '}
                         </p>
                     </>
                 }
@@ -280,7 +280,7 @@ const OriginStories = () => {
                         Earth has had several extinction events. Scientists want
                         to understand why some animals (looking at you,
                         crocodiles) lived through several while other animals
-                        (RIP sabertooth cats) didn’t.
+                        (RIP sabertoothed cats) didn’t.
                     </p>
                 }
             />
@@ -309,7 +309,7 @@ const OriginStories = () => {
                             details={{
                                 title: 'Bison bones',
                                 subtitle:
-                                    '10,000 BP, Bonfire Shelter, Val Verde County, TX',
+                                    '10,000 Years Old, Bonfire Shelter, Val Verde County, TX',
                                 details:
                                     'Tiny bone leftovers can tell us what people ate for dinner, what kind of hunting strategies they used, and even if a certain camp was a seasonal hunting location.',
                             }}
@@ -323,7 +323,7 @@ const OriginStories = () => {
                             details={{
                                 title: 'Lithic debitage',
                                 subtitle:
-                                    '12,000 BP, Wilson Leonard Site, Williamson County, TX',
+                                    '12,000 Years Old, Wilson Leonard Site, Williamson County, TX',
                                 details:
                                     'When people chip away at stone to make tools, tiny flakes like these break off. Archeologists study them to identify where the stone came from and even what kind of thing the stone tool artist was making.  ',
                             }}

@@ -148,8 +148,15 @@ const OriginStories = () => {
                         img2={{
                             src: clovisMap2,
                             alt: 'Pre-Clovis sites shown on a map of the United States',
-                            caption:
-                                'Places with some evidence of people living before 13,000 years ago.',
+                            caption: (
+                                <span>
+                                    Places with some evidence of people living{' '}
+                                    <span style={{ fontStyle: 'italic' }}>
+                                        before{' '}
+                                    </span>{' '}
+                                    13,000 years ago.
+                                </span>
+                            ),
                         }}
                     />
                 }

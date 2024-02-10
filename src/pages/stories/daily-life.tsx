@@ -245,10 +245,14 @@ const DailyLife = () => {
                                 trigger="descended"
                                 content={TOOLTIP_CONTENT.descended}
                             />
-                            from a line of grey wolves in Eurasia. Scientists
-                            can trace their DNA back through generations to
-                            learn more about how dogs – and their friendships
-                            with people – changed over time.
+                            from a line of grey wolves in{' '}
+                            <Tooltip
+                                trigger="Eurasia."
+                                content={TOOLTIP_CONTENT.eurasia}
+                            />
+                            Scientists can trace their DNA back through
+                            generations to learn more about how dogs – and their
+                            friendships with people – changed over time.
                         </p>
                     </>
                 }

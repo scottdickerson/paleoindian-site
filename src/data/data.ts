@@ -36,18 +36,20 @@ export const TOOLTIP_CONTENT = {
         'Methods to determine specific age of an object (within a time range).',
     relativeDating:
         'Methods to figure out if one artifact is older or younger than another artifact.',
+    eurasia:
+        'Eurasia is the largest continental area on Earth, comprising all of Europe and Asia.',
 }
 
 export const YOUTUBE_VIDEOS: YouTubeVideosType = {
     'not-just-stone-age': {
-        src: 'https://youtu.be/YG3yx7fE1R8',
+        src: 'https://youtu.be/tHQVMWJruY8',
         thumbnail: {
             src: moreThanStoneThumbnail,
             alt: 'Two people holding a stone spear',
         },
     },
     'sacred-stories': {
-        src: 'https://youtu.be/B1W4sKyyHIA',
+        src: 'https://youtu.be/EuxlVMBQ5bc',
         thumbnail: { src: sacredStoriesThumbnail, alt: 'A long time ago' },
     },
     'how-did-people-get-here': {
@@ -72,7 +74,7 @@ export const YOUTUBE_VIDEOS: YouTubeVideosType = {
         },
     },
     'monsters-and-mayhem': {
-        src: 'https://youtu.be/L54HqtEaFUQ',
+        src: 'https://youtu.be/ylgZ598Chp4',
         thumbnail: {
             src: monstersAndMayhemThumbnail,
             alt: 'Monsters screaming!',

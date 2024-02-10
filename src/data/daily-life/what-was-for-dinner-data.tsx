@@ -35,7 +35,7 @@ export const WhatWasForDinnerData = [
         image: duck,
         alt: 'duck',
         caption:
-            'Ducks and other waterfowl migrated through Texas at certain times of years. Paleoindians would have learned their movement patterns and known when to expect these delicious, feathered friends.',
+            'Ducks and other waterfowl migrated through Texas at certain times of year. Paleoindians would have learned their movement patterns and known when to expect these delicious, feathered friends.',
     },
     {
         id: uuidv4(),

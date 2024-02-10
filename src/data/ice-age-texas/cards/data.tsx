@@ -15,7 +15,7 @@ export const cardData = [
         image: mammoth,
         alt: 'Woolly Mammoth',
         caption:
-            'An adult, male mammoth would feed a group of 30 people for two weeks! But it was probably a uncommon meal. It’s possible that bringing home this big boi was all about the bragging rights!',
+            'An adult, male mammoth would feed a group of 30 people for two weeks! But it was probably an uncommon meal. It’s possible that bringing home this big boi was all about the bragging rights!',
     },
     {
         id: uuidv4(),

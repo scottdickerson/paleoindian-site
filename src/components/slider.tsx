@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { ReactCompareSlider, styleFitContainer } from 'react-compare-slider'
 import styles from '@/styles/Slider.module.scss'
 import Image, { StaticImageData } from 'next/image'
@@ -12,7 +12,7 @@ import classNames from 'classnames'
 interface SliderImage {
     src: StaticImageData
     alt: string
-    caption: string
+    caption: ReactNode
 }
 
 interface SliderProps {

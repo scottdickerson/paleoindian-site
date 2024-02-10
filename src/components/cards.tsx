@@ -121,8 +121,10 @@ const Cards = ({ cards, cardBack }: CardProps) => {
                     href={ROUTES.ACTIVITIES_CARD_GAME}
                 >
                     <span className={styles.playAlong}>Play along!</span> Click
-                    here to download printable cards and play the
-                    hunter-gatherer game.
+                    here to download printable cards and play{' '}
+                    <span style={{ fontStyle: 'italic' }}>
+                        A Year of Survival.
+                    </span>
                 </Link>
                 {/* This div is to handle the swipe animation */}
                 <motion.div

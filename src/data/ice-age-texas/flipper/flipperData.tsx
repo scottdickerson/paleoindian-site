@@ -40,7 +40,7 @@ export const FlipperImages = [
         id: 'flipperFour',
         closed: flipper7,
         opened: flipper8,
-        closedText: 'Geospacial seafloor mapping',
+        closedText: 'Geospatial seafloor mapping',
         openedText:
             'Sonar devices scan the seafloor to map ancient landscapes or track the location of scattered artifacts.',
         alt: 'A boat using a scanner on the ocean floor and a satelite scanning from the air with a city behind it.',
