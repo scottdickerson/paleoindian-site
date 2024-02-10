@@ -6,6 +6,10 @@
     position: absolute;
 }
 
+.overlayOpen {
+    overflow-y: hidden;
+}
+
 .overlay {
     color: black;
     background-color: rgba(0, 0, 0, 0.7);
@@ -17,18 +21,19 @@
     z-index: 6000;
 }
 
+.content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    max-height: calc(100vh - 80px);
+}
+
 .close {
     position: absolute;
     top: 40px;
     right: 40px;
     height: 40px;
     width: 40px;
-}
-
-.content {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    position: relative;
-    max-height: calc(100vh - 80px);
 }

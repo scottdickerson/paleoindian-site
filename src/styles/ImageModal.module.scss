@@ -1,5 +1,3 @@
-$footer-height: 156px;
-
 .content {
     display: flex;
     position: relative;
@@ -19,7 +17,7 @@ $footer-height: 156px;
 }
 .footer {
     background-color: #d9d9d9;
-    padding: 0 1rem;
+    padding: 1rem;
     img {
         max-height: 94px;
     }
@@ -36,8 +34,7 @@ $footer-height: 156px;
 
 .imageSelector {
     display: flex;
-    flex-wrap: nowrap;
-    min-height: $footer-height;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: center;

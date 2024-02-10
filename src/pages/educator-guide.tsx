@@ -71,7 +71,7 @@ const TOCExample = () => (
 
 const OriginStoriesOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={originStoriesImage}
                 alt="Paleoindian"
@@ -103,7 +103,7 @@ const OriginStoriesOverview = () => (
 
 const IceAgeTexasOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={iceTexasImage}
                 alt="Armadillo"
@@ -138,7 +138,7 @@ const IceAgeTexasOverview = () => (
 
 const DailyLifeOverview = () => (
     <div className={classNames(styles.educatorGuideRow, sectionStyles.details)}>
-        <p>
+        <p className={styles.floatingParagraph}>
             <ResponsiveImage
                 src={dailyLifeImage}
                 alt="Bag used by paleoindians made from deer hide."

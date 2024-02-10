@@ -23,6 +23,7 @@ export const Modal = ({
             onRequestClose={onClose}
             overlayClassName={modalStyles.overlay}
             className={modalStyles.modal}
+            bodyOpenClassName={modalStyles.overlayOpen}
         >
             <div className={modalStyles.content}>
                 {children}
