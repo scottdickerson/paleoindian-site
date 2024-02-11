@@ -1,9 +1,9 @@
 .container {
     background-color: $color_light_green;
     div img {
-        scale: 1.3;
+        scale: 1.4;
         max-width: 100%;
-        transform: rotateZ(15deg);
+        transform: rotateZ(25deg);
         @media screen and (max-width: $tablet_breakpoint) {
             transform: rotateZ(0deg);
             scale: 1;
