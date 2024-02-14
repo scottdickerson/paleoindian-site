@@ -12,22 +12,24 @@ export const PhotoCredits = ({
     courtesy,
 }: PhotoCreditsProps) => (
     <p>
-        {title && title}
+        {title && (
+            <>
+                {title}
+                <br />
+            </>
+        )}
         {description && (
             <>
-                <br /> {description}
+                {description}
+                <br />
             </>
         )}
         {credits && (
             <>
-                <br /> {credits}
+                {credits}
+                <br />
             </>
         )}
-        {courtesy && (
-            <>
-                <br /> {courtesy}
-            </>
-        )}
-        <br />
+        {courtesy && <>{courtesy}</>}
     </p>
 )

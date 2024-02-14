@@ -154,8 +154,6 @@ const CopyrightSection = () => (
                 <em>Incised Stone</em> Artifact Images:
             </span>
             <PhotoCredits
-                title="All Artifacts"
-                credits="Original photography by MuseWork"
                 courtesy="Courtesy of
                 the Gault School of Archaeological Research Laboratory"
             />
