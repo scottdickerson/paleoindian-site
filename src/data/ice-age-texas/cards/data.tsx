@@ -34,9 +34,9 @@ export const cardData = [
     {
         id: uuidv4(),
         image: sabertoothCat,
-        alt: 'sabertooth cat',
+        alt: 'sabertoothed cat',
         caption:
-            'Sabertooth cats were heavy and muscular, unlike modern big cats. They did not chase down prey, but instead would pounce and ambush their dinner.',
+            'Sabertoothed cats were heavy and muscular, unlike modern big cats. They did not chase down prey, but instead would pounce and ambush their dinner.',
     },
     {
         id: uuidv4(),

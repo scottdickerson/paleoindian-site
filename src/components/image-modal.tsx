@@ -11,6 +11,7 @@ import classNames from 'classnames'
 export interface ImageDetailsProps {
     src: StaticImageData
     largeSrc?: StaticImageData
+    id: string
     title: string
     photoCredit: string
 }
@@ -37,12 +38,12 @@ export const ImageSelector = ({
                 <button
                     className={classNames(
                         imageModal.button,
-                        selectedImage === image.title && imageModal.selected
+                        selectedImage === image.id && imageModal.selected
                     )}
-                    onClick={() => onSelectImage(image.title)}
+                    onClick={() => onSelectImage(image.id)}
                 >
                     <ResponsiveImage
-                        key={image.title}
+                        key={image.id}
                         src={image.src}
                         alt={image.title}
                     />
@@ -74,7 +75,7 @@ export const ImageModal = ({
     ...props
 }: ImageModalProps) => {
     const image =
-        stoneImages.find((image) => image.title === selectedImage) ??
+        stoneImages.find((image) => image.id === selectedImage) ??
         stoneImages[0]
     return (
         <Modal {...props}>

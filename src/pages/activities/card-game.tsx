@@ -42,7 +42,7 @@ export const ActivityCardGame = () => {
         >
             <StorySection
                 {...ACTIVITIES_CARD_GAME_SECTIONS[0]}
-                title="A Time Before Texas card game"
+                title="A Year of Survival"
                 summary="Playing is learning!"
                 description="Gather edible plants, hunt sneaky rabbits, and survive ambushes to earn points in this card game."
                 details="Students will work together as a group to test their skills at navigating the tough ice-age landscape. "

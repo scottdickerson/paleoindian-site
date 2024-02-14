@@ -34,7 +34,7 @@ const EDUCATOR_GUIDE_SECTIONS: TocScrollableProps['storySections'] = [
         id: 'hunting-and-gathering',
     },
     {
-        title: 'A time before texas card game',
+        title: 'A year of survival',
         id: 'card-game',
     },
     {

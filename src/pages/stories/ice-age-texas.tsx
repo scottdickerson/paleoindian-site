@@ -254,7 +254,7 @@ const OriginStories = () => {
             />
             <StorySection
                 {...ICE_AGE_TEXAS_SECTIONS[4]}
-                summary="What happened to the mammoths, sabertooth cats, and giant sloths?"
+                summary="What happened to the mammoths, sabertoothed cats, and giant sloths?"
                 description={
                     <>
                         <p>

@@ -199,7 +199,7 @@ const OriginStories = () => {
             />
             <StorySection
                 {...ORIGIN_STORY_SECTIONS[3]}
-                summary="¯\\_(ツ)_/¯ Unclear, but we’re excited to find out!"
+                summary="¯\_(ツ)_/¯ Unclear, but we’re excited to find out!"
                 description={
                     <>
                         <p>

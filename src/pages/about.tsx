@@ -135,7 +135,7 @@ const CopyrightSection = () => (
                 <em>Written in Stone</em> Artifact Images:
             </span>
             <PhotoCredits
-                title="Broken Point Base"
+                title="Broken Projectile Point Base"
                 description="41EP5269 Obsidian flake"
                 credits="Original photography
                 by MuseWork"
@@ -145,6 +145,17 @@ const CopyrightSection = () => (
             <PhotoCredits
                 title="All Other Artifacts"
                 credits="Original photography by MuseWork "
+                courtesy="Courtesy of
+                the Gault School of Archaeological Research Laboratory"
+            />
+        </section>
+        <section className={styles.copyright}>
+            <span className={styles.copyrightSubtitle}>
+                <em>Incised Stone</em> Artifact Images:
+            </span>
+            <PhotoCredits
+                title="All Artifacts"
+                credits="Original photography by MuseWork"
                 courtesy="Courtesy of
                 the Gault School of Archaeological Research Laboratory"
             />

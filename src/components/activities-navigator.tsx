@@ -17,7 +17,7 @@ export const activitiesNavigatorLinks = [
         href: ROUTES.ACTIVITIES_WORKBOOK,
     },
     {
-        title: 'A time before texas card game',
+        title: 'A year of survival',
         href: ROUTES.ACTIVITIES_CARD_GAME,
     },
     { title: 'Incised stones', href: ROUTES.ACTIVITIES_INCISED_STONES },

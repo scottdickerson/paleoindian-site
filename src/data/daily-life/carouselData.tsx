@@ -18,7 +18,7 @@ export const carouselData = [
     {
         id: 'carouseltwo',
         image: carousel2,
-        title: 'Broken Point Base',
+        title: 'Broken Projectile Point Base',
         description: '13,000-12,000 Years Old, Kincaid Site, Uvalde County, TX',
         text: 'Archeologists used stone sourcing to learn that this tool is made of a type of obsidian which comes from Querétaro, Mexico—more than 600 miles to the south of where it was found. Stone sourcing helps us learn about ancient people’s travel and trade.',
     },

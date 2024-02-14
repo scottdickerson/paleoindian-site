@@ -35,7 +35,7 @@ export default function Home() {
                 />
                 <section className={styles.intro} ref={firstLinkRef}>
                     <p className={styles.description}>
-                        When mammoths, saber-toothed cats, and giant sloths
+                        When mammoths, sabertoothed cats, and giant sloths
                         roamed Texas, people were there too.
                     </p>
                     <p className={styles.details}>
