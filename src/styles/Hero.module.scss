@@ -23,7 +23,7 @@
         font-size: 130px;
         line-height: 105px;
     }
-    @media screen and (max-width: calc($tablet-breakpoint + 200px)) {
+    @media screen and (max-width: calc($desktop-breakpoint)) {
         background-image: url('/images/hero/hero@2x.webp');
         font-size: 120px;
         line-height: 100px;
