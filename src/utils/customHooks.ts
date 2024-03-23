@@ -1,4 +1,5 @@
 import { RefObject, useEffect, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 export const useOnScreen = (
     ref: RefObject<HTMLElement>,
@@ -26,4 +27,8 @@ export const useOnScreen = (
         }
     }, []) // Empty array ensures that effect is only run on mount and unmount
     return isIntersecting
+}
+
+export const useIsDesktop = (): boolean => {
+    return useMediaQuery({ query: '(min-width: 1025px)' })
 }

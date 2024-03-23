@@ -10,6 +10,7 @@ import { useMediaQuery } from 'react-responsive'
 import { TexasAndTribesSharedTraditionsWorkbook } from '@/components/tribes-workbook'
 import classNames from 'classnames'
 import { PropsWithChildren } from 'react'
+import { useIsDesktop } from '@/utils/customHooks'
 
 const IntroSection = () => (
     <section className={sectionStyles.details}>
@@ -225,8 +226,7 @@ const TXDotAndTribesNonDesktop = () => {
 }
 
 const TXDotAndTribes = () => {
-    // responsive to check desktop or not
-    const isDesktop = useMediaQuery({ query: '(min-width: 1025px)' })
+    const isDesktop = useIsDesktop()
     return (
         <>
             <Head>
