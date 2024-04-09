@@ -13,7 +13,7 @@
     line-height: 140px;
     text-transform: uppercase;
     font-family: var(--glass-antiqua);
-    background-image: url('/images/hero/hero@4x.webp');
+    // background-image: url('/images/hero/hero@4x.webp');
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     background-size: cover;
@@ -23,7 +23,7 @@
         font-size: 130px;
         line-height: 105px;
     }
-    @media screen and (max-width: calc($tablet-breakpoint + 200px)) {
+    @media screen and (max-width: calc($desktop-breakpoint)) {
         background-image: url('/images/hero/hero@2x.webp');
         font-size: 120px;
         line-height: 100px;
@@ -44,4 +44,16 @@
 
 .before {
     font-family: var(--rubik-dirt);
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
 }

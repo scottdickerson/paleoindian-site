@@ -59,6 +59,7 @@ const DetailsSection = () => {
                         Center for Archaeological Studies, Texas State
                         University
                     </li>
+                    <li>Gault School of Archaeological Research</li>
                     <li>ICF</li>
                     <li>Mescalero Apache Tribe</li>
                     <li>MuseWork Exhibits</li>
@@ -176,11 +177,25 @@ const CopyrightSection = () => (
     </div>
 )
 
+const ContactSection = () => (
+    <div className={styles.copyrightSection}>
+        <section>
+            <span className={styles.copyrightTitle}>
+                Questions? Contact{' '}
+                <a href="emailto:Rebekah.Dobrasko@txdot.gov">
+                    Rebekah.Dobrasko@txdot.gov
+                </a>
+            </span>
+        </section>
+    </div>
+)
+
 const AboutTablet = () => (
     <div className={styles.tabletWrapper}>
         <Heading />
         <Description />
         <DetailsSection />
+        <ContactSection />
         <CopyrightSection />
     </div>
 )
@@ -199,6 +214,7 @@ const AboutDesktop = () => {
                     <Description />
                 </div>
                 <DetailsSection />
+                <ContactSection />
                 <CopyrightSection />
             </div>
         </>
